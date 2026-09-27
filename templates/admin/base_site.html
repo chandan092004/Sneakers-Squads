@@ -1,0 +1,73 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | SNEAKER SQUAD Master Admin{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/admin-custom.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>
+  if (localStorage.getItem('sneaker_admin_theme') === 'light') {
+    document.documentElement.classList.add('light-theme');
+  }
+</script>
+{% endblock %}
+
+{% block branding %}
+<div id="site-name">
+  <a href="{% url 'admin:index' %}" style="display: inline-flex; align-items: center; gap: 12px; font-weight: 900; font-size: 1.35rem; text-decoration: none;">
+    <span style="font-size: 1.6rem;">👟</span>
+    <span style="letter-spacing: 0.8px; color: #ffffff;">SNEAKER <span style="color: #ff5a1f;">SQUAD</span></span>
+    <span style="font-size: 0.75rem; background: rgba(255, 90, 31, 0.2); color: #ff5a1f; border: 1px solid rgba(255, 90, 31, 0.4); padding: 3px 10px; border-radius: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Admin Hub</span>
+  </a>
+</div>
+{% endblock %}
+
+{% block userlinks %}
+  <a href="/" style="color: #38bdf8; font-weight: 700; margin-right: 18px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px;" target="_blank">
+    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live Store
+  </a>
+  {{ block.super }}
+  <button type="button" id="admin-theme-toggle" title="Toggle Light / Dark Mode" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.18); color: #f8fafc; cursor: pointer; padding: 6px 13px; border-radius: 8px; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; margin-left: 10px; transition: all 0.2s ease;">
+    <i id="admin-theme-icon" class="fa-solid fa-moon"></i>
+  </button>
+
+  <script>
+    (function() {
+      // Check saved theme or default to dark
+      const savedTheme = localStorage.getItem('sneaker_admin_theme');
+      const icon = document.getElementById('admin-theme-icon');
+      const toggleBtn = document.getElementById('admin-theme-toggle');
+
+      if (savedTheme === 'light') {
+        document.documentElement.classList.add('light-theme');
+        document.body.classList.add('light-theme');
+        if (icon) {
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        }
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+          const isLight = document.body.classList.toggle('light-theme');
+          document.documentElement.classList.toggle('light-theme', isLight);
+          if (isLight) {
+            localStorage.setItem('sneaker_admin_theme', 'light');
+            if (icon) {
+              icon.classList.remove('fa-moon');
+              icon.classList.add('fa-sun');
+            }
+          } else {
+            localStorage.setItem('sneaker_admin_theme', 'dark');
+            if (icon) {
+              icon.classList.remove('fa-sun');
+              icon.classList.add('fa-moon');
+            }
+          }
+        });
+      }
+    })();
+  </script>
+{% endblock %}

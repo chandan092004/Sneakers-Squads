@@ -1,0 +1,82 @@
+<!-- Top Announcement Bar -->
+{% load static %}
+<script>
+  if (localStorage.getItem('sneaker_store_theme') === 'light') {
+    document.documentElement.classList.add('light-theme');
+  }
+</script>
+<div class="announcement-bar">
+  <div class="container">
+    ⚡ <span>SNEAKER SQUAD:</span> Free Express Shipping across India on orders over ₹2,999! Use code: <strong>SQUAD20</strong>
+  </div>
+</div>
+
+<!-- Shared Header (Sticky Flexbox Navbar) -->
+<header class="header">
+  <div class="container header-wrapper">
+    
+    <!-- Mobile Toggle & Logo -->
+    <div class="logo-container">
+      <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <a href="index.html" class="logo">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="logo-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div>
+            SNEAKER
+            <span>SQUAD</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="men.html" class="nav-link">Men</a></li>
+        <li><a href="women.html" class="nav-link">Women</a></li>
+        <li><a href="accessories.html" class="nav-link">Accessories</a></li>
+        {% for nav_cat in nav_categories %}
+        <li><a href="/{{ nav_cat.slug }}.html" class="nav-link">{{ nav_cat.name }}</a></li>
+        {% endfor %}
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <!-- Live Search Box -->
+    <div class="search-wrapper" style="position: relative;">
+      <form class="search-form" role="search" id="global-search-form">
+        <input type="text" class="search-input" id="global-search-input" placeholder="Search sneakers, kicks & shoe care..." aria-label="Search" autocomplete="off">
+        <button type="submit" class="search-btn" aria-label="Search Submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div class="search-dropdown-menu" id="search-dropdown" style="display: none; position: absolute; top: calc(100% + 8px); left: 0; right: 0; background: #14171f; border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 1000; max-height: 350px; overflow-y: auto;"></div>
+    </div>
+
+
+    <!-- User, Wishlist, Theme Toggle & Cart Action Icons -->
+    <div class="header-actions">
+      <button type="button" class="action-btn theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme" style="background: rgba(255,255,255,0.08); border: 1px solid var(--border); cursor: pointer; border-radius: 10px; width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem; color: #f59e0b; transition: var(--transition);">
+        <i class="fa-solid fa-moon" id="theme-icon"></i>
+      </button>
+      <a href="/dashboard.html#wishlist" class="action-btn" id="header-wishlist-btn" title="My Wishlist" aria-label="Wishlist">
+        <i class="fa-regular fa-heart"></i>
+        <span class="wishlist-badge" id="header-wishlist-badge" style="display:none;">0</span>
+      </a>
+      <a href="#" class="action-btn auth-trigger-btn" id="auth-btn" title="Account Login / Sign Up" aria-label="Account">
+        <i class="fa-regular fa-user" id="header-user-icon"></i>
+      </a>
+      <a href="#" class="action-btn" id="cart-btn" title="View Cart" aria-label="Shopping Bag">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">0</span>
+      </a>
+    </div>
+
+  </div>
+</header>

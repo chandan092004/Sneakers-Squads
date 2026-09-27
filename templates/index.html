@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNEAKER SQUAD | Men & Women Footwear</title>
+  <meta name="description" content="Discover premium sneakers for Men & Women at Sneaker Squad.">
+  
+  <script>
+    if (localStorage.getItem('sneaker_store_theme') === 'light') {
+      document.documentElement.classList.add('light-theme');
+    }
+  </script>
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Files (Direct & Server Compatible) -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+  <link rel="stylesheet" href="../static/css/landing.css">
+  <link rel="stylesheet" href="/static/css/landing.css">
+</head>
+
+<body>
+
+  <!-- Clean Top Header -->
+  <header class="header">
+    <a href="index.html" class="brand-logo">
+      <i class="fa-solid fa-bolt" style="color: #ff5a1f;"></i>
+      SNEAKER <span>SQUAD</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="men.html">Men's Shoes</a></li>
+      <li><a href="women.html">Women's Shoes</a></li>
+      <li><a href="accessories.html">Care & Accessories</a></li>
+    </ul>
+
+    <div class="header-actions">
+      <button type="button" class="icon-btn theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme" style="background: rgba(255,255,255,0.08); border: 1px solid var(--border); cursor: pointer; border-radius: 10px; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem; color: #f59e0b; transition: var(--transition);">
+        <i class="fa-solid fa-moon" id="theme-icon"></i>
+      </button>
+      <a href="#" class="icon-btn auth-trigger-btn" id="auth-btn" title="Account"><i class="fa-regular fa-user"></i></a>
+      <a href="#" class="icon-btn" id="cart-btn" title="Shopping Cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Simple Men & Women Split Screen -->
+  <main class="split-container">
+
+    <!-- WOMEN SECTION -->
+    <a href="women.html" class="split-side" aria-label="Shop Women's Collection">
+      <div class="split-bg" style="background-image: url('{% static 'img/women_shoes-banner.jpg' %}');"></div>
+      <div class="split-overlay"></div>
+      <div class="split-box">
+        <span class="split-tag"><i class="fa-solid fa-sparkles"></i> Women's Kicks</span>
+        <h2 class="split-title">WOMEN</h2>
+        <span class="split-btn">
+          Shop Women <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </div>
+    </a>
+
+    <!-- Center Line -->
+    <div class="divider-line"></div>
+
+    <!-- MEN SECTION -->
+    <a href="men.html" class="split-side" aria-label="Shop Men's Collection">
+      <div class="split-bg" style="background-image: url('{% static 'img/men_shoes-banner.jpg' %}');"></div>
+      <div class="split-overlay"></div>
+      <div class="split-box">
+        <span class="split-tag"><i class="fa-solid fa-fire" style="color: #ff5a1f;"></i> Men's Kicks</span>
+        <h2 class="split-title">MEN</h2>
+        <span class="split-btn">
+          Shop Men <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </div>
+    </a>
+
+  </main>
+
+  <!-- Clean Bottom Bar -->
+  <div class="footer-bar">
+    <div class="footer-badge">
+      <i class="fa-solid fa-shield-halved" style="color: #ff5a1f;"></i>
+      <span>100% Verified Authentic Sneakers</span>
+    </div>
+    <div class="footer-badge">
+      <i class="fa-solid fa-truck-fast" style="color: #ff5a1f;"></i>
+      <span>Free Express Shipping Across India</span>
+    </div>
+  </div>
+
+  <!-- Slide-over Cart Drawer Component -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag">
+    <div class="cart-drawer-header">
+      <h3><i class="fa-solid fa-bag-shopping" style="color: var(--primary);"></i> Your Bag</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Bag"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">₹0</span>
+      </div>
+      <button class="btn-checkout" id="btn-checkout">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <script src="{% static 'js/script.js' %}"></script>
+  <script src="../static/js/script.js"></script>
+  <script src="/static/js/script.js"></script>
+  
+  <script src="{% static 'js/auth-drawer.js' %}"></script>
+  <script src="../static/js/auth-drawer.js"></script>
+  <script src="/static/js/auth-drawer.js"></script>
+</body>
+</html>
+

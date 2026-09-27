@@ -1,0 +1,421 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneaker Care & Accessories | SNEAKER SQUAD</title>
+  <meta name="description" content="Explore sneaker care kits, crease protectors, shoe cleaning foam, and accessories.">
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Files (Direct & Server Compatible) -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  
+  <link rel="stylesheet" href="{% static 'css/accessories.css' %}">
+  <link rel="stylesheet" href="../static/css/accessories.css">
+  <link rel="stylesheet" href="/static/css/accessories.css">
+</head>
+
+<body>
+
+  {% include 'header.html' %}
+
+  <!-- Accessories Hero Banner Section -->
+  <section class="hero-section">
+    <div class="container hero-content-wrapper">
+      <div class="hero-text">
+        <span class="hero-badge">✨ Sneaker Maintenance</span>
+        <h1 class="hero-title">
+          PRO CARE & <br>
+          <span class="highlight">SNEAKER ESSENTIALS.</span>
+        </h1>
+        <p class="hero-desc">
+          Keep your deadstock kicks pristine forever. Premium water-repellent sprays, horsehair brushes, foam cleansers, and magnetic display cases.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#accessories-products" class="btn btn-primary">
+            <i class="fa-solid fa-spray-can"></i> Shop Care Kits
+          </a>
+          <a href="#accessories-products" class="btn btn-secondary">
+            Crease Guards <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-card">
+          <img src="{% static 'img/accessories-1.jpg' %}" onerror="this.onerror=null;this.src='../static/img/accessories-1.jpg'" alt="Accessories Hero">
+          <div class="hero-floating-tag">
+            <i class="fa-solid fa-spray-can-sparkles" style="color: var(--primary);"></i> Pro Clean Ultimate Kit
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Product Listing Section -->
+  <main class="main-content" id="accessories-products">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tagline">Care & Protection</span>
+        <h2 class="section-title">Sneaker Care & Accessories</h2>
+      </div>
+
+      <!-- Filter & Sort Toolbar -->
+      <div class="filter-toolbar">
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all">All Gear</button>
+          <button class="filter-btn" data-filter="care">Cleaning & Care</button>
+          <button class="filter-btn" data-filter="storage">Display Cases</button>
+          <button class="filter-btn" data-filter="protection">Shields & Sole Guards</button>
+          <button class="filter-btn" data-filter="laces">Laces & Accessories</button>
+        </div>
+
+        <div class="filter-controls-right">
+          <span class="products-count" id="products-count-text">Showing 12 items</span>
+          <div class="sort-select-wrapper">
+            <select class="sort-select" id="sort-select" aria-label="Sort products">
+              <option value="featured">Sort by: Featured</option>
+              <option value="price-low-high">Price: Low to High</option>
+              <option value="price-high-low">Price: High to Low</option>
+              <option value="rating-high">Highest Rated</option>
+              <option value="name-az">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="product-grid">
+        <article class="product-card" data-id="a12" data-tag="laces accessories" data-price="799" data-rating="4.8">
+          <div class="product-image-box">
+            <span class="product-badge limited">Night Glow</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a12" class="product-img-link" title="Glow-In-The-Dark Flat Street Rope Laces (3 Pairs)">
+              <img src="/static/img/accessories-1.jpg" alt="Glow-In-The-Dark Flat Street Rope Laces (3 Pairs)" onerror="this.onerror=null;this.src='../static/img/accessories-1.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Custom Laces & Aglets</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a12">Glow-In-The-Dark Flat Street Rope Laces (3 Pairs)</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(160)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹799</span>
+              <span class="original-price">₹1,199</span>
+              <span class="discount-tag">-33%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a12" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a12')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-id="a11" data-tag="care" data-price="699" data-rating="4.7">
+          <div class="product-image-box">
+            <span class="product-badge sale">Pro Tool</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a11" class="product-img-link" title="Premium Brass Bristle Heavy-Duty Midsole Brush">
+              <img src="/static/img/accessories-2.jpg" alt="Premium Brass Bristle Heavy-Duty Midsole Brush" onerror="this.onerror=null;this.src='../static/img/accessories-2.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Sneaker Cleaning Tools</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a11">Premium Brass Bristle Heavy-Duty Midsole Brush</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(88)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹699</span>
+              <span class="original-price">₹999</span>
+              <span class="discount-tag">-30%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a11" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a11')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-id="a10" data-tag="care protection" data-price="2199" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge hot">Smart Tech</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a10" class="product-img-link" title="Electric Smart USB Sneaker Dryer & UV Deodorizer">
+              <img src="/static/img/accessories-3.jpg" alt="Electric Smart USB Sneaker Dryer & UV Deodorizer" onerror="this.onerror=null;this.src='../static/img/accessories-3.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Sneaker Care & Tech</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a10">Electric Smart USB Sneaker Dryer & UV Deodorizer</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(92)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹2,199</span>
+              <span class="original-price">₹2,999</span>
+              <span class="discount-tag">-26%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a10" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a10')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-id="a9" data-tag="protection care" data-price="899" data-rating="4.8">
+          <div class="product-image-box">
+            <span class="product-badge new">Monsoon Ready</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a9" class="product-img-link" title="Squad Waterproof Silicone Rain Shoe Booties (Pair)">
+              <img src="/static/img/accessories-4.jpg" alt="Squad Waterproof Silicone Rain Shoe Booties (Pair)" onerror="this.onerror=null;this.src='../static/img/accessories-4.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Sneaker Care & Protection</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a9">Squad Waterproof Silicone Rain Shoe Booties (Pair)</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(145)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹899</span>
+              <span class="original-price">₹1,299</span>
+              <span class="discount-tag">-30%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a9" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a9')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-id="a8" data-tag="storage" data-price="3499" data-rating="4.8">
+          <div class="product-image-box">
+            <span class="product-badge limited">Shoe Duffel</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a8" class="product-img-link" title="Sneakerhead Travel Duffel with 3 Shoe Dividers">
+              <img src="/static/img/accessories-5.jpg" alt="Sneakerhead Travel Duffel with 3 Shoe Dividers" onerror="this.onerror=null;this.src='../static/img/accessories-5.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Sneaker Storage & Travel</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a8">Sneakerhead Travel Duffel with 3 Shoe Dividers</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(195)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹3,499</span>
+              <span class="original-price">₹4,499</span>
+              <span class="discount-tag">-22%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a8" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a8')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-id="a7" data-tag="care" data-price="1299" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge sale">Restoration</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a7" class="product-img-link" title="Squad Midsole Whitener & Sneaker Touch-Up Pen (2-Pack)">
+              <img src="/static/img/accessories-6.jpg" alt="Squad Midsole Whitener & Sneaker Touch-Up Pen (2-Pack)" onerror="this.onerror=null;this.src='../static/img/accessories-6.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Midsole Restoration Pen</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a7">Squad Midsole Whitener & Sneaker Touch-Up Pen (2-Pack)</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(820)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹1,299</span>
+              <span class="original-price">₹1,699</span>
+              <span class="discount-tag">-23%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a7" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a7')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-id="a6" data-tag="protection care" data-price="1899" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge new">Nano Tech</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a6" class="product-img-link" title="Nano-Shield Hydrophobic Stain Repellent (250ml)">
+              <img src="/static/img/accessories-7.jpg" alt="Nano-Shield Hydrophobic Stain Repellent (250ml)" onerror="this.onerror=null;this.src='../static/img/accessories-7.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Sneaker Care & Protection</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a6">Nano-Shield Hydrophobic Stain Repellent (250ml)</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(470)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹1,899</span>
+              <span class="original-price">₹2,399</span>
+              <span class="discount-tag">-20%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a6" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a6')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-id="a5" data-tag="laces accessories" data-price="799" data-rating="4.7">
+          <div class="product-image-box">
+            <span class="product-badge sale">Popular</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a5" class="product-img-link" title="3M Reflective Rope Laces & Metal Aglets">
+              <img src="/static/img/accessories-8.jpg" alt="3M Reflective Rope Laces & Metal Aglets" onerror="this.onerror=null;this.src='../static/img/accessories-8.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Custom Laces & Aglets</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a5">3M Reflective Rope Laces & Metal Aglets</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(310)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹799</span>
+              <span class="original-price">₹1,099</span>
+              <span class="discount-tag">-27%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a5" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a5')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-id="a4" data-tag="care" data-price="1499" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge limited">Quick Clean</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a4" class="product-img-link" title="Rapid Dry Cleaning Foam & Soft Bristle Brush">
+              <img src="/static/img/accessories-1.jpg" alt="Rapid Dry Cleaning Foam & Soft Bristle Brush" onerror="this.onerror=null;this.src='../static/img/accessories-1.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Sneaker Cleaning Care</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a4">Rapid Dry Cleaning Foam & Soft Bristle Brush</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(290)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹1,499</span>
+              <span class="original-price">₹1,899</span>
+              <span class="discount-tag">-21%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a4" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a4')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-id="a3" data-tag="protection" data-price="999" data-rating="4.8">
+          <div class="product-image-box">
+            <span class="product-badge sale">Top Pick</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a3" class="product-img-link" title="Anti-Crease Sneaker Toe Shields (3 Pairs)">
+              <img src="/static/img/accessories-2.jpg" alt="Anti-Crease Sneaker Toe Shields (3 Pairs)" onerror="this.onerror=null;this.src='../static/img/accessories-2.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Crease & Sole Protection</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a3">Anti-Crease Sneaker Toe Shields (3 Pairs)</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(530)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹999</span>
+              <span class="original-price">₹1,399</span>
+              <span class="discount-tag">-28%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a3" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a3')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-id="a2" data-tag="storage" data-price="4999" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge new">Bestseller</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a2" class="product-img-link" title="Magnetic Drop-Front Sneaker Display (Pack of 6)">
+              <img src="/static/img/accessories-3.jpg" alt="Magnetic Drop-Front Sneaker Display (Pack of 6)" onerror="this.onerror=null;this.src='../static/img/accessories-3.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Sneaker Display & Storage</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a2">Magnetic Drop-Front Sneaker Display (Pack of 6)</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(412)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹4,999</span>
+              <span class="original-price">₹6,499</span>
+              <span class="discount-tag">-23%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a2" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a2')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-id="a1" data-tag="care protection" data-price="2499" data-rating="5.0">
+          <div class="product-image-box">
+            <span class="product-badge limited">Essential</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=a1" class="product-img-link" title="Squad Hydro-Shield Complete Care Kit">
+              <img src="/static/img/accessories-4.jpg" alt="Squad Hydro-Shield Complete Care Kit" onerror="this.onerror=null;this.src='../static/img/accessories-4.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Sneaker Care & Cleaning Kit</span>
+            <h3 class="product-title"><a href="product-detail.html?id=a1">Squad Hydro-Shield Complete Care Kit</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(640)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹2,499</span>
+              <span class="original-price">₹3,199</span>
+              <span class="discount-tag">-22%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=a1" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('a1')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  {% include 'footer.html' %}
+  <!-- Page Specific JavaScript -->
+  <script src="{% static 'js/accessories.js' %}"></script>
+  <script src="../static/js/accessories.js"></script>
+  <script src="/static/js/accessories.js"></script>
+</body>
+</html>
+

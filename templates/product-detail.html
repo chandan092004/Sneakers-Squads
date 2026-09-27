@@ -1,0 +1,301 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | SNEAKER SQUAD</title>
+  <meta name="description" content="View authentic sneaker specifications, multi-angle images, shoe features, and size guides on Sneaker Squad.">
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Files (Direct & Server Compatible) -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  
+  <link rel="stylesheet" href="{% static 'css/product.css' %}">
+  <link rel="stylesheet" href="../static/css/product.css">
+  <link rel="stylesheet" href="/static/css/product.css">
+</head>
+
+<body>
+
+  {% include 'header.html' %}
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb-section">
+    <div class="container">
+      <ul class="breadcrumb-list">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+        <li><a href="index.html" id="breadcrumb-category-link">Sneakers</a></li>
+        <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+        <li class="breadcrumb-current" id="breadcrumb-product-name">Product Name</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Product Detail Section -->
+  <main class="product-detail-section">
+    <div class="container">
+      <div class="product-detail-grid">
+
+        <!-- Left Column: Gallery & Thumbnails -->
+        <div class="product-gallery-sticky">
+          <div class="product-main-image-wrap">
+            {% if product.badge %}
+            <span class="product-detail-badge {{ product.badge_class }}" id="product-badge">{{ product.badge }}</span>
+            {% else %}
+            <span class="product-detail-badge" id="product-badge" style="display:none;">New Drop</span>
+            {% endif %}
+            <button class="wishlist-btn" id="detail-wishlist-btn" title="Add to Wishlist" aria-label="Wishlist" style="position:absolute; top:18px; right:18px; z-index:3;">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="{{ product.main_image|default:'/static/img/shoe-1.jpg' }}" alt="{{ product.name }}" id="main-product-img" onerror="this.onerror=null;this.src='/static/img/shoe-1.jpg'">
+          </div>
+
+          <!-- Multi-angle Thumbnails Row -->
+          <div class="gallery-thumbnails-row" id="gallery-thumbnails">
+            <!-- Populated dynamically via JS -->
+          </div>
+
+          <!-- Same Shoe Available Colorways Card Showcase -->
+          <div class="same-shoe-colors-section" id="same-shoe-colors-section">
+            <div class="same-shoe-colors-header">
+              <div class="colors-header-title">
+                <i class="fa-solid fa-palette" style="color: var(--primary);"></i>
+                <span>Available Colors of this Shoe:</span>
+              </div>
+              <span class="colors-section-count" id="same-shoe-colors-count">Colors</span>
+            </div>
+            <div class="same-shoe-colors-grid" id="same-shoe-colors-grid">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Info, Sizes, Specs, & Purchase -->
+        <div class="product-info-panel">
+          
+          <!-- Category & Brand Header -->
+          <div class="product-header-meta">
+            <span class="product-brand-chip" id="product-brand">{{ product.brand.name|default:"Sneaker Squad" }}</span>
+            <span class="product-category-text" id="product-category">{{ product.category_name }}</span>
+          </div>
+
+          <!-- Product Title -->
+          <h1 class="product-main-title" id="product-title">{{ product.name }}</h1>
+
+          <!-- Ratings & Reviews -->
+          <div class="product-ratings-summary">
+            <div class="product-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span class="product-rating-val" id="product-rating-val">{{ product.rating|floatformat:1 }}</span>
+            <span class="product-reviews-link" id="product-reviews-count">({{ product.reviews_count }} verified buyer reviews)</span>
+          </div>
+
+          <!-- Price Row -->
+          <div class="product-pricing-card">
+            <span class="product-detail-current-price" id="product-current-price">₹{{ product.price|floatformat:0 }}</span>
+            {% if product.original_price %}
+            <span class="product-detail-original-price" id="product-original-price">₹{{ product.original_price|floatformat:0 }}</span>
+            {% endif %}
+            {% if product.discount %}
+            <span class="product-detail-discount" id="product-discount">{{ product.discount }} OFF</span>
+            {% endif %}
+          </div>
+
+          <!-- Short Highlight -->
+          <p class="product-short-desc" id="product-short-desc">
+            {{ product.description|default:"Engineered for optimum performance, cushioning, and streetwear presence." }}
+          </p>
+
+          <!-- Color Selector -->
+          <div class="product-option-block">
+            <div class="option-label-row">
+              <span>Selected Colorway: <strong id="selected-color-name" style="color:var(--primary);">Default</strong></span>
+            </div>
+            <div class="color-options-row" id="color-options-container">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Size Selector -->
+          <div class="product-option-block">
+            <div class="option-label-row">
+              <span>Select Indian Size: <strong id="selected-size-name" style="color:var(--primary);">IND 8</strong></span>
+              <button type="button" class="size-guide-btn" onclick="alert('Indian Shoe Size Chart (IND Size Standard):\n\nIND 3 = 22.5 cm\nIND 4 = 23.5 cm\nIND 5 = 24.0 cm\nIND 6 = 25.0 cm\nIND 7 = 25.5 cm\nIND 8 = 26.5 cm\nIND 9 = 27.5 cm\nIND 10 = 28.5 cm\nIND 11 = 29.5 cm\nIND 12 = 30.5 cm\n\nAll sneakers adhere to Indian standard sizing.');">
+                <i class="fa-solid fa-ruler-horizontal"></i> IND Size Chart
+              </button>
+            </div>
+            <div class="size-options-grid" id="size-options-container">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Quantity & Action Buttons -->
+          <div class="purchase-action-group">
+            <div class="qty-and-buttons">
+              <!-- Quantity Counter -->
+              <div class="qty-selector">
+                <button type="button" class="qty-btn" id="qty-minus" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                <input type="text" class="qty-input" id="qty-input" value="1" readonly>
+                <button type="button" class="qty-btn" id="qty-plus" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+              </div>
+
+              <!-- Add To Cart Button -->
+              <button type="button" class="btn-detail-cart" id="btn-add-to-cart-detail">
+                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+              </button>
+            </div>
+
+            <!-- Instant Buy Now Button -->
+            <button type="button" class="btn-detail-buy" id="btn-buy-now-detail">
+              <i class="fa-solid fa-bolt"></i> Instant Purchase / Buy Now
+            </button>
+          </div>
+
+          <!-- Delivery Pincode Check -->
+          <div class="pincode-card">
+            <div class="pincode-header">
+              <i class="fa-solid fa-truck-fast"></i>
+              <span>Delivery & Pincode Availability</span>
+            </div>
+            <div class="pincode-form">
+              <input type="text" class="pincode-input" id="pincode-input" placeholder="Enter 6-digit Pincode (e.g. 110001)" maxlength="6">
+              <button type="button" class="pincode-btn" id="pincode-btn">Check</button>
+            </div>
+            <div class="pincode-result" id="pincode-result">
+              ⚡ Free Express Delivery available in 24-48 Hours! Cash on Delivery Available.
+            </div>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="trust-badges-grid">
+            <div class="trust-item">
+              <i class="fa-solid fa-certificate trust-icon"></i>
+              <div class="trust-text">
+                <h4>100% Authentic</h4>
+                <p>Double-checked & verified</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-rotate-left trust-icon"></i>
+              <div class="trust-text">
+                <h4>7 Days Easy Return</h4>
+                <p>Hassle-free size exchange</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-truck-ramp-box trust-icon"></i>
+              <div class="trust-text">
+                <h4>Free Shipping</h4>
+                <p>On all orders over ₹2,999</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-shield-halved trust-icon"></i>
+              <div class="trust-text">
+                <h4>Secure Payments</h4>
+                <p>UPI, Cards & COD supported</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Extended Tabs Section: Features, Specs, Story, Care -->
+      <section class="product-details-extended">
+        
+        <!-- Tabs Navigation Bar -->
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="tab-features"><i class="fa-solid fa-list-check"></i> Shoe Features</button>
+          <button class="tab-btn" data-tab="tab-specs"><i class="fa-solid fa-gears"></i> Technical Specs</button>
+          <button class="tab-btn" data-tab="tab-story"><i class="fa-solid fa-book-open"></i> Full Description</button>
+          <button class="tab-btn" data-tab="tab-care"><i class="fa-solid fa-spray-can-sparkles"></i> Care & Cleaning</button>
+        </div>
+
+        <!-- Tab 1: Shoe Features -->
+        <div class="tab-content-panel active" id="tab-features">
+          <div class="features-bullet-grid" id="features-container">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Tab 2: Technical Specs Table -->
+        <div class="tab-content-panel" id="tab-specs">
+          <div class="specs-table-wrapper">
+            <table class="specs-table">
+              <tbody id="specs-table-body">
+                <!-- Populated via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 3: Story & Description -->
+        <div class="tab-content-panel" id="tab-story">
+          <div class="story-text-wrap" id="story-content">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Tab 4: Care & Maintenance -->
+        <div class="tab-content-panel" id="tab-care">
+          <div class="features-bullet-grid">
+            <div class="feature-bullet-card">
+              <i class="fa-solid fa-water"></i>
+              <span>Use mild sneaker cleaning foam and a soft horsehair brush. Never submerge suede or knit pairs directly in water.</span>
+            </div>
+            <div class="feature-bullet-card">
+              <i class="fa-solid fa-sun"></i>
+              <span>Air dry naturally in shade at room temperature. Avoid direct midday sun exposure or machine dryers which can warp midsoles.</span>
+            </div>
+            <div class="feature-bullet-card">
+              <i class="fa-solid fa-shield"></i>
+              <span>Apply hydrophobic waterproofing repellent spray every 3-4 weeks to shield against coffee, dust, and rain puddles.</span>
+            </div>
+            <div class="feature-bullet-card">
+              <i class="fa-solid fa-box-archive"></i>
+              <span>Store in UV-protected drop-front sneaker crates with silica gel pouches to maintain deadstock condition.</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Related Sneakers Section -->
+      <section class="related-section">
+        <div class="section-header">
+          <span class="section-tagline">Complete Your Rotation</span>
+          <h2 class="section-title">Similar & Recommended Sneakers</h2>
+        </div>
+
+        <div class="product-grid" id="related-products-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  {% include 'footer.html' %}
+  <script src="{% static 'js/product-detail.js' %}"></script>
+</body>
+</html>
+

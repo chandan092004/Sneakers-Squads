@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ category.name }} Collection | SNEAKER SQUAD</title>
+  <meta name="description" content="{{ category.description|default:'Explore our latest curated sneakers and drops.' }}">
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  
+  <link rel="stylesheet" href="{% static 'css/men.css' %}">
+  <link rel="stylesheet" href="../static/css/men.css">
+  <link rel="stylesheet" href="/static/css/men.css">
+</head>
+
+<body>
+
+  {% include 'header.html' %}
+
+  <!-- Dynamic Category Hero Banner Section -->
+  <section class="hero-section" style="background: radial-gradient(circle at 80% 20%, rgba(255, 90, 31, 0.12) 0%, transparent 60%), #0b0e14;">
+    <div class="container hero-content-wrapper">
+      <div class="hero-text">
+        <span class="hero-badge">
+          <i class="fa-solid {{ category.icon_class|default:'fa-shoe-prints' }}"></i> {{ category.name }} Category
+        </span>
+        <h1 class="hero-title" style="text-transform: uppercase;">
+          {{ category.name }} <br>
+          <span class="highlight">ROTATION & DROPS.</span>
+        </h1>
+        <p class="hero-desc">
+          {{ category.description|default:"Curated street collection engineered for comfort, style, and iconic silhouette rotation. Explore deadstock authenticity guaranteed." }}
+        </p>
+        <div class="hero-cta-group">
+          <a href="#category-products" class="btn btn-primary">
+            <i class="fa-solid fa-fire"></i> Explore {{ category.name }}
+          </a>
+          <a href="/index.html" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Back to Home
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-card">
+          <img src="{{ category.banner_image|default:'/static/img/shoe-1.jpg' }}" onerror="this.onerror=null;this.src='{% static 'img/shoe-1.jpg' %}';" alt="{{ category.name }} Hero">
+          <div class="hero-floating-tag">
+            <i class="fa-solid fa-bolt" style="color: var(--primary);"></i> {{ category.name }} Verified Deadstock
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Product Listing Section -->
+  <main class="main-content" id="category-products">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tagline">{{ category.name }} Catalog</span>
+        <h2 class="section-title">{{ category.name }} Sneaker Collection</h2>
+      </div>
+
+      <!-- Filter & Sort Toolbar -->
+      <div class="filter-toolbar">
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all">All Items</button>
+          <button class="filter-btn" data-filter="high-top">High-Tops</button>
+          <button class="filter-btn" data-filter="running">Running</button>
+          <button class="filter-btn" data-filter="basketball">Basketball</button>
+          <button class="filter-btn" data-filter="chunky">Chunky Sole</button>
+          <button class="filter-btn" data-filter="retro">Retro</button>
+        </div>
+
+        <div class="filter-controls-right">
+          <span class="products-count" id="products-count-text">Showing {{ category.name }} sneakers</span>
+          <div class="sort-select-wrapper">
+            <select class="sort-select" id="sort-select" aria-label="Sort products">
+              <option value="featured">Sort by: Featured</option>
+              <option value="price-low-high">Price: Low to High</option>
+              <option value="price-high-low">Price: High to Low</option>
+              <option value="rating-high">Highest Rated</option>
+              <option value="name-az">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Grid (Dynamic Items or Blank Scaffold State) -->
+      <div class="product-grid" id="category-product-grid">
+        
+        <!-- Default State for New Category -->
+        <div style="grid-column: 1 / -1; background: #0b0e14; border: 1.5px dashed rgba(255,255,255,0.12); border-radius: 20px; padding: 60px 24px; text-align: center; margin: 20px 0;">
+          <div style="width: 76px; height: 76px; background: rgba(255,90,31,0.1); border: 2px solid rgba(255,90,31,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; color: var(--primary); font-size: 2rem;">
+            <i class="fa-solid {{ category.icon_class|default:'fa-shoe-prints' }}"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 8px;">
+            {{ category.name }} Drops Coming Soon!
+          </h3>
+          <p style="color: #94a3b8; font-size: 0.95rem; max-width: 520px; margin: 0 auto 24px; line-height: 1.6;">
+            This category has been activated by the Squad Admin. New exclusive kicks and silhouettes for <strong>{{ category.name }}</strong> will appear here soon.
+          </p>
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="/men.html" class="btn btn-primary">
+              <i class="fa-solid fa-fire"></i> Explore Men's Kicks
+            </a>
+            <a href="/women.html" class="btn btn-secondary">
+              <i class="fa-solid fa-sparkles"></i> Explore Women's Kicks
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  {% include 'footer.html' %}
+
+</body>
+</html>

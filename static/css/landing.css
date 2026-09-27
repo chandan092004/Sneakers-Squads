@@ -1,0 +1,215 @@
+/* ==========================================================================
+   LANDING / HOME PAGE STYLING (landing.css)
+   Yeh CSS file sirf Home page (index.html) ke Split-screen layout ke liye hai.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. LANDING TOP HEADER
+   -------------------------------------------------------------------------- */
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background: rgba(11, 13, 19, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand-logo {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--text-white);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-logo span {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-btn {
+  color: var(--text-white);
+  font-size: 1.2rem;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   2. SPLIT SCREEN CONTAINER (WOMEN vs MEN 50/50 Layout)
+   -------------------------------------------------------------------------- */
+.split-container {
+  display: flex;
+  min-height: calc(100vh - 130px);
+  position: relative;
+  overflow: hidden;
+}
+
+.split-side {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-white);
+  overflow: hidden;
+  transition: flex 0.4s ease;
+}
+
+.split-side:hover {
+  flex: 1.15;
+}
+
+.split-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.split-side:hover .split-bg {
+  transform: scale(1.05);
+}
+
+.split-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 13, 19, 0.65);
+  transition: background 0.4s ease;
+}
+
+.split-side:hover .split-overlay {
+  background: rgba(11, 13, 19, 0.4);
+}
+
+.split-box {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 30px;
+}
+
+.split-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.split-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.split-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.split-side:hover .split-btn {
+  transform: translateY(-3px);
+  background: var(--primary-hover);
+}
+
+.divider-line {
+  width: 2px;
+  background: var(--border);
+  position: relative;
+  z-index: 5;
+}
+
+/* --------------------------------------------------------------------------
+   3. BOTTOM GUARANTEE BAR
+   -------------------------------------------------------------------------- */
+.footer-bar {
+  height: 60px;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.footer-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   4. MOBILE RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .split-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .split-side {
+    height: 320px;
+    flex: none;
+  }
+
+  .split-title {
+    font-size: 2.5rem;
+  }
+
+  .footer-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+    gap: 10px;
+  }
+}

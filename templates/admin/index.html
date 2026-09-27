@@ -1,0 +1,160 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static "admin/css/dashboard.css" %}">
+<style>
+  .admin-hero-banner {
+    background: linear-gradient(135deg, #131c2c 0%, #1e293b 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 26px 32px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  .admin-hero-text h2 {
+    margin: 0 0 6px 0;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+  }
+  .admin-hero-text p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 0.95rem;
+  }
+  .admin-hero-badge {
+    background: rgba(255, 90, 31, 0.15);
+    border: 1px solid rgba(255, 90, 31, 0.4);
+    color: #ff5a1f;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .admin-hero-badge i {
+    font-size: 1rem;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .app-icon-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    margin-right: 12px;
+    font-size: 1rem;
+  }
+  .model-name-link {
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: #f1f5f9 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .model-name-link:hover {
+    color: #ff5a1f !important;
+  }
+
+  /* Light Theme Dashboard Banner & Links */
+  body.light-theme .admin-hero-banner {
+    background: linear-gradient(135deg, #edf1f6 0%, #dde3eb 100%) !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  }
+  body.light-theme .admin-hero-text h2 {
+    color: #0f172a !important;
+  }
+  body.light-theme .admin-hero-text p {
+    color: #475569 !important;
+  }
+  body.light-theme .model-name-link {
+    color: #0f172a !important;
+  }
+  body.light-theme .model-name-link:hover {
+    color: #ff5a1f !important;
+  }
+  body.light-theme .app-icon-badge {
+    background: rgba(2, 132, 199, 0.12) !important;
+    color: #0284c7 !important;
+  }
+</style>
+{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+
+{% block nav-breadcrumbs %}{% endblock %}
+
+{% block nav-sidebar %}{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+  <!-- Welcome Dashboard Hero -->
+  <div class="admin-hero-banner">
+    <div class="admin-hero-text">
+      <h2>Welcome to Sneaker Squad Hub 👋</h2>
+      <p>Manage your customers, security tokens, wishlist items, and storefront settings in one place.</p>
+    </div>
+    <div class="admin-hero-badge">
+      <i class="fa-solid fa-bolt"></i> Database Active (MySQL)
+    </div>
+  </div>
+
+  {% include "admin/app_list.html" with app_list=app_list %}
+
+</div>
+{% endblock %}
+
+{% block sidebar %}
+<div id="content-related">
+    <div class="module" id="recent-actions-module">
+        <h2><i class="fa-solid fa-clock-rotate-left" style="color: #38bdf8; margin-right: 8px;"></i> {% translate 'Recent actions' %}</h2>
+        <h3>{% translate 'My actions' %}</h3>
+            {% load log %}
+            {% get_admin_log 10 as admin_log for_user user %}
+            {% if not admin_log %}
+            <p style="color: #94a3b8; padding: 12px 0;">{% translate 'None available' %}</p>
+            {% else %}
+            <ul class="actionlist">
+            {% for entry in admin_log %}
+            <li class="{% if entry.is_addition %}addlink{% endif %}{% if entry.is_change %}changelink{% endif %}{% if entry.is_deletion %}deletelink{% endif %}">
+                {% if entry.is_deletion or not entry.get_admin_url %}
+                    {{ entry.object_repr }}
+                {% else %}
+                    <a href="{{ entry.get_admin_url }}">{{ entry.object_repr }}</a>
+                {% endif %}
+                <br>
+                {% if entry.content_type %}
+                    <span class="mini quiet">{% filter capfirst %}{{ entry.content_type.name }}{% endfilter %}</span>
+                {% else %}
+                    <span class="mini quiet">{% translate 'Unknown content' %}</span>
+                {% endif %}
+            </li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+    </div>
+</div>
+{% endblock %}

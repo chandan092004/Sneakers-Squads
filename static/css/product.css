@@ -1,0 +1,913 @@
+/* ==========================================================================
+   SNEAKER SQUAD - PRODUCT DETAIL PAGE STYLES (product.css)
+   Clean, modern, responsive 2-column layout + extended tabs + recommendations
+   ========================================================================== */
+
+/* ==========================================================================
+   1. BREADCRUMBS
+   ========================================================================== */
+.breadcrumb-section {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  background: #0b0e14;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-list a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.breadcrumb-list a:hover {
+  color: var(--primary);
+}
+
+.breadcrumb-separator {
+  font-size: 0.7rem;
+  color: #475569;
+}
+
+.breadcrumb-current {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   2. MAIN 2-COLUMN DETAIL LAYOUT
+   ========================================================================== */
+.product-detail-section {
+  padding: 40px 0 60px;
+}
+
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ==========================================================================
+   3. LEFT COLUMN: IMAGE & GALLERY
+   ========================================================================== */
+.product-gallery-sticky {
+  position: sticky;
+  top: 90px;
+}
+
+/* Main Big Image Wrap */
+.product-main-image-wrap {
+  width: 100%;
+  height: 460px;
+  background: #141722;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+}
+
+.product-main-image-wrap img {
+  max-width: 90%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.product-detail-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  z-index: 2;
+  letter-spacing: 0.5px;
+}
+
+.product-detail-badge.limited {
+  background: #a855f7;
+}
+
+.product-detail-badge.hot {
+  background: #ef4444;
+}
+
+.product-detail-badge.sale {
+  background: #eab308;
+  color: #000;
+}
+
+/* Multi-angle Thumbnails Row */
+.gallery-thumbnails-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.gallery-thumb-btn {
+  width: 76px;
+  height: 76px;
+  background: #141722;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.gallery-thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.gallery-thumb-btn.active,
+.gallery-thumb-btn:hover {
+  border-color: var(--primary);
+  background: #1e2230;
+  transform: translateY(-2px);
+}
+
+/* Available Colors Showcase Box */
+.same-shoe-colors-section {
+  background: #141722;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.same-shoe-colors-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.colors-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.colors-section-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.same-shoe-colors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.same-shoe-color-card {
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #0b0e14;
+  transition: var(--transition);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.same-shoe-color-card:hover,
+.same-shoe-color-card.active {
+  border-color: var(--primary);
+  background: rgba(255, 90, 31, 0.08);
+}
+
+.color-card-img-wrap {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.color-card-img-wrap img {
+  max-width: 90%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.color-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.color-card-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.color-card-active-tag {
+  display: none;
+  font-size: 0.68rem;
+  color: var(--primary);
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.same-shoe-color-card.active .color-card-active-tag {
+  display: block;
+}
+
+/* ==========================================================================
+   4. RIGHT COLUMN: PRODUCT INFO & PURCHASE CONTROLS
+   ========================================================================== */
+.product-info-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.product-brand-chip {
+  background: rgba(255, 90, 31, 0.15);
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.product-category-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.product-main-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+/* Ratings Summary */
+.product-ratings-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.product-stars {
+  color: #f59e0b;
+  font-size: 0.92rem;
+}
+
+.product-rating-val {
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.product-reviews-link {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Pricing Card */
+.product-pricing-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #141722;
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+
+.product-detail-current-price {
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.product-detail-original-price {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.product-detail-discount {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.product-short-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Size & Color Selectors */
+.product-option-block {
+  margin-bottom: 24px;
+}
+
+.option-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+}
+
+.size-guide-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+}
+
+.size-guide-btn:hover {
+  text-decoration: underline;
+}
+
+.color-options-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.color-swatch-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 3px solid #141722;
+  box-shadow: 0 0 0 1px var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+}
+
+.color-swatch-btn.active,
+.color-swatch-btn:hover {
+  box-shadow: 0 0 0 2px var(--primary);
+  transform: scale(1.1);
+}
+
+.size-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.size-option-btn {
+  background: #141722;
+  border: 1px solid var(--border);
+  color: #ffffff;
+  padding: 12px 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.size-option-btn:hover,
+.size-option-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Quantity & Action Buttons */
+.purchase-action-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 28px;
+}
+
+.qty-and-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.qty-selector {
+  display: flex;
+  align-items: center;
+  background: #141722;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.qty-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  width: 44px;
+  height: 52px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.qty-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--primary);
+}
+
+.qty-input {
+  width: 44px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  outline: none;
+}
+
+.btn-detail-cart {
+  flex: 1;
+  background: #1f2433;
+  color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  transition: var(--transition);
+}
+
+.btn-detail-cart:hover {
+  background: #282e42;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-detail-buy {
+  width: 100%;
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  transition: var(--transition);
+  box-shadow: 0 8px 24px rgba(255, 90, 31, 0.35);
+}
+
+.btn-detail-buy:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 90, 31, 0.5);
+}
+
+/* Delivery Pincode Card */
+.pincode-card {
+  background: #141722;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.pincode-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.pincode-header i {
+  color: var(--primary);
+}
+
+.pincode-form {
+  display: flex;
+  gap: 8px;
+}
+
+.pincode-input {
+  flex: 1;
+  background: #0b0e14;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.pincode-input:focus {
+  border-color: var(--primary);
+}
+
+.pincode-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0 18px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pincode-btn:hover {
+  background: var(--primary-hover);
+}
+
+.pincode-result {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #22c55e;
+  line-height: 1.5;
+}
+
+/* Trust Badges Grid */
+.trust-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+}
+
+.trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.trust-icon {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-top: 2px;
+}
+
+.trust-text h4 {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 2px 0;
+}
+
+.trust-text p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   5. EXTENDED TABS SECTION (Features, Specs, Story, Care)
+   ========================================================================== */
+.product-details-extended {
+  margin-top: 60px;
+  background: #141722;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+
+.tabs-nav {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+  margin-bottom: 28px;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: rgba(255, 90, 31, 0.15);
+  color: var(--primary);
+}
+
+.tab-content-panel {
+  display: none;
+  animation: fadeInTab 0.3s ease;
+}
+
+.tab-content-panel.active {
+  display: block;
+}
+
+@keyframes fadeInTab {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tab 1: Features Grid */
+.features-bullet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.feature-bullet-card {
+  background: #0b0e14;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: var(--transition);
+}
+
+.feature-bullet-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.feature-bullet-card i {
+  color: #22c55e;
+  font-size: 1.25rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.feature-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.feature-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.feature-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Tab 2: Specs Table */
+.specs-table-wrapper {
+  overflow-x: auto;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.specs-table tr:last-child {
+  border-bottom: none;
+}
+
+.specs-table th {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffffff;
+  width: 32%;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.specs-table td {
+  padding: 14px 18px;
+  font-size: 0.92rem;
+  color: #cbd5e1;
+}
+
+/* Tab 3: Story & Full Description */
+.story-header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.story-highlight-box {
+  background: rgba(255, 90, 31, 0.1);
+  border-left: 4px solid var(--primary);
+  padding: 16px 20px;
+  border-radius: 0 10px 10px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.story-guarantee-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.story-guarantee-item {
+  background: #0b0e14;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.story-guarantee-item i {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   6. SIMILAR & RECOMMENDED SNEAKERS SECTION
+   ========================================================================== */
+.related-section {
+  margin-top: 70px;
+}
+
+.related-section .section-header {
+  margin-bottom: 30px;
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast-msg {
+  background: #141722;
+  border: 1px solid var(--primary);
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.toast-msg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   7. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 992px) {
+  .product-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .product-gallery-sticky {
+    position: static;
+  }
+
+  .product-main-image-wrap {
+    height: 380px;
+  }
+
+  .product-details-extended {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-main-title {
+    font-size: 1.75rem;
+  }
+
+  .product-main-image-wrap {
+    height: 300px;
+  }
+
+  .trust-badges-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-table th {
+    width: 40%;
+  }
+}

@@ -1,0 +1,574 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women's Sneakers & Platform Kicks | SNEAKER SQUAD</title>
+  <meta name="description" content="Discover women's sneakers, high-cushion platform shoes, pastel street kicks, and performance runners.">
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Files (Direct & Server Compatible) -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  
+  <link rel="stylesheet" href="{% static 'css/women.css' %}">
+  <link rel="stylesheet" href="../static/css/women.css">
+  <link rel="stylesheet" href="/static/css/women.css">
+</head>
+
+<body>
+
+  {% include 'header.html' %}
+
+  <!-- Women's Hero Banner Section -->
+  <section class="hero-section">
+    <div class="container hero-content-wrapper">
+      <div class="hero-text">
+        <span class="hero-badge">🛹 Women's Elevated Kicks</span>
+        <h1 class="hero-title">
+          WOMEN'S CHIC & <br>
+          <span class="highlight">PLATFORM SNEAKERS.</span>
+        </h1>
+        <p class="hero-desc">
+          Designed with pastel aesthetics, cloud-soft cushioning, and elevated chunky platform soles for street chic luxury.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#womens-products" class="btn btn-primary">
+            <i class="fa-solid fa-sparkles"></i> Explore Women's Drop
+          </a>
+          <a href="#womens-products" class="btn btn-secondary">
+            Platform Soles <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-card">
+          <img src="{% static 'img/women_shoes-2.jpg' %}" onerror="this.onerror=null;this.src='../static/img/women_shoes-2.jpg'" alt="Women's Sneaker Hero">
+          <div class="hero-floating-tag">
+            <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--primary);"></i> Aura Cloud Edition 2026
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Technologies & Brands Bar -->
+  <div class="brand-tech-bar">
+    <div class="container">
+      <div class="brand-tech-header">Crafted With Signature Cushioning & Soles</div>
+      <div class="brand-tech-list">
+        <div class="brand-pill"><i class="fa-solid fa-cloud"></i> Cloud-Foam Midsole</div>
+        <div class="brand-pill"><i class="fa-solid fa-feather"></i> Lightweight Comfort</div>
+        <div class="brand-pill"><i class="fa-solid fa-sparkles"></i> Pastel Leather Finish</div>
+        <div class="brand-pill"><i class="fa-solid fa-shield"></i> Anti-Slip Sole Grip</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Product Listing Section -->
+  <main class="main-content" id="womens-products">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tagline">Curated For Her</span>
+        <h2 class="section-title">Women's Sneaker Collection</h2>
+      </div>
+
+      <!-- Filter & Sort Toolbar -->
+      <div class="filter-toolbar">
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all">All Kicks</button>
+          <button class="filter-btn" data-filter="platform">Platform Soles</button>
+          <button class="filter-btn" data-filter="basketball">Basketball</button>
+          <button class="filter-btn" data-filter="high-top">High-Tops</button>
+          <button class="filter-btn" data-filter="running">Running</button>
+          <button class="filter-btn" data-filter="chunky">Chunky Sole</button>
+          <button class="filter-btn" data-filter="retro">Retro Classics</button>
+        </div>
+
+        <div class="filter-controls-right">
+          <span class="products-count" id="products-count-text">Showing 16 sneakers</span>
+          <div class="sort-select-wrapper">
+            <select class="sort-select" id="sort-select" aria-label="Sort products">
+              <option value="featured">Sort by: Featured</option>
+              <option value="price-low-high">Price: Low to High</option>
+              <option value="price-high-low">Price: High to Low</option>
+              <option value="rating-high">Highest Rated</option>
+              <option value="name-az">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid (100% Women Sneakers Collection) -->
+      <div class="product-grid">
+
+        <!-- Shoe 1 -->
+        <article class="product-card" data-id="w1" data-tag="platform chunky" data-price="9999" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge new">Bestseller</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w1" class="product-img-link" title="Nova Pastel Platform Chunky">
+              <img src="/static/img/women_shoes-1.jpg" alt="Nova Pastel Platform Chunky" onerror="this.onerror=null;this.src='../static/img/women_shoes-1.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Platform Sneakers / Pastel</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w1">Nova Pastel Platform Chunky</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(289)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹9,999</span>
+              <span class="original-price">₹12,499</span>
+              <span class="discount-tag">-20%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w1" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w1')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 2 -->
+        <article class="product-card" data-id="w2" data-tag="platform chunky" data-price="11499" data-rating="5.0">
+          <div class="product-image-box">
+            <span class="product-badge limited">Cloud Edition</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w2" class="product-img-link" title="Aero Cloud Triple White Platform">
+              <img src="/static/img/women_shoes-2.jpg" alt="Aero Cloud Triple White Platform" onerror="this.onerror=null;this.src='../static/img/women_shoes-2.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Platform / High Cushion</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w2">Aero Cloud Triple White Platform</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(370)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹11,499</span>
+              <span class="original-price">₹14,999</span>
+              <span class="discount-tag">-23%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w2" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w2')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 3 -->
+        <article class="product-card" data-id="w3" data-tag="retro" data-price="8499" data-rating="4.8">
+          <div class="product-image-box">
+            <span class="product-badge sale">Trending</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w3" class="product-img-link" title="Rose Blush Suede Court Low">
+              <img src="/static/img/women_shoes-3.jpg" alt="Rose Blush Suede Court Low" onerror="this.onerror=null;this.src='../static/img/women_shoes-3.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Retro Classic / Suede</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w3">Rose Blush Suede Court Low</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span class="rating-count">(194)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹8,499</span>
+              <span class="original-price">₹10,999</span>
+              <span class="discount-tag">-22%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w3" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w3')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 4 -->
+        <article class="product-card" data-id="w4" data-tag="running" data-price="7999" data-rating="4.7">
+          <div class="product-image-box">
+            <span class="product-badge new">New</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w4" class="product-img-link" title="Aura Flow Lightweight Gym Sneaker">
+              <img src="/static/img/women_shoes-4.jpg" alt="Aura Flow Lightweight Gym Sneaker" onerror="this.onerror=null;this.src='../static/img/women_shoes-4.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Gym & Training / Breathable</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w4">Aura Flow Lightweight Gym Sneaker</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(165)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹7,999</span>
+              <span class="original-price">₹9,999</span>
+              <span class="discount-tag">-20%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w4" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w4')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 5 -->
+        <article class="product-card" data-id="w5" data-tag="chunky" data-price="12999" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge limited">Exclusive</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w5" class="product-img-link" title="Cyber Neon Chunky Sole Walker">
+              <img src="/static/img/women_shoes-5.jpg" alt="Cyber Neon Chunky Sole Walker" onerror="this.onerror=null;this.src='../static/img/women_shoes-5.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Chunky Streetwear Kicks</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w5">Cyber Neon Chunky Sole Walker</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(280)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹12,999</span>
+              <span class="original-price">₹15,999</span>
+              <span class="discount-tag">-18%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w5" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w5')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 6 -->
+        <article class="product-card" data-id="w6" data-tag="retro high-top" data-price="8999" data-rating="4.8">
+          <div class="product-image-box">
+            <span class="product-badge sale">Hot Pick</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w6" class="product-img-link" title="Vintage Lavender High Canvas">
+              <img src="/static/img/women_shoes-6.jpg" alt="Vintage Lavender High Canvas" onerror="this.onerror=null;this.src='../static/img/women_shoes-6.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Vintage Canvas / High-Top</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w6">Vintage Lavender High Canvas</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              <span class="rating-count">(112)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹8,999</span>
+              <span class="original-price">₹10,999</span>
+              <span class="discount-tag">-18%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w6" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w6')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 7 -->
+        <article class="product-card" data-id="w7" data-tag="platform" data-price="6999" data-rating="4.6">
+          <div class="product-image-box">
+            <span class="product-badge new">Essential</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w7" class="product-img-link" title="Minimalist Slip-on Platform Mules">
+              <img src="/static/img/women_shoes-7.jpg" alt="Minimalist Slip-on Platform Mules" onerror="this.onerror=null;this.src='../static/img/women_shoes-7.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Everyday / Slip-On</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w7">Minimalist Slip-on Platform Mules</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+              <span class="rating-count">(91)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹6,999</span>
+              <span class="original-price">₹8,999</span>
+              <span class="discount-tag">-22%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w7" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w7')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 8 -->
+        <article class="product-card" data-id="w8" data-tag="running retro" data-price="10499" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge new">New</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w8" class="product-img-link" title="Retro Speedster Pastel Runner">
+              <img src="/static/img/women_shoes-8.jpg" alt="Retro Speedster Pastel Runner" onerror="this.onerror=null;this.src='../static/img/women_shoes-8.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Athletic Footwear / Suede</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w8">Retro Speedster Pastel Runner</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(205)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹10,499</span>
+              <span class="original-price">₹13,499</span>
+              <span class="discount-tag">-22%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w8" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w8')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 9 -->
+        <article class="product-card" data-id="w9" data-tag="basketball high-top" data-price="14999" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge hot">Trending Pick</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w9" class="product-img-link" title="Air Jordan 1 Mid 'Dutch Pink'">
+              <img src="/static/img/shoe-1515955656352-a1fa3ffcd111.jpg" alt="Air Jordan 1 Mid 'Dutch Pink'" onerror="this.onerror=null;this.src='../static/img/shoe-1515955656352-a1fa3ffcd111.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Women High-Top Basketball</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w9">Air Jordan 1 Mid 'Dutch Pink'</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(380)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹14,999</span>
+              <span class="original-price">₹17,999</span>
+              <span class="discount-tag">-16%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w9" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w9')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 10 -->
+        <article class="product-card" data-id="w10" data-tag="basketball high-top retro" data-price="12499" data-rating="4.8">
+          <div class="product-image-box">
+            <span class="product-badge new">New Drop</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w10" class="product-img-link" title="Nike Dunk High 'Pastel Bliss'">
+              <img src="/static/img/shoe-1584735935682-2f2b69dff9d2.jpg" alt="Nike Dunk High 'Pastel Bliss'" onerror="this.onerror=null;this.src='../static/img/shoe-1584735935682-2f2b69dff9d2.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Women High-Top Retro</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w10">Nike Dunk High 'Pastel Bliss'</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(225)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹12,499</span>
+              <span class="original-price">₹14,999</span>
+              <span class="discount-tag">-16%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w10" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w10')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 11 -->
+        <article class="product-card" data-id="w11" data-tag="retro" data-price="10999" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge hot">Viral Sensation</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w11" class="product-img-link" title="Adidas Samba OG 'Blush Edition'">
+              <img src="/static/img/shoe-1549298916-b41d501d3772.jpg" alt="Adidas Samba OG 'Blush Edition'" onerror="this.onerror=null;this.src='../static/img/shoe-1549298916-b41d501d3772.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Women Vintage Terrace</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w11">Adidas Samba OG 'Blush Edition'</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(490)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹10,999</span>
+              <span class="original-price">₹12,999</span>
+              <span class="discount-tag">-15%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w11" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w11')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 12 -->
+        <article class="product-card" data-id="w12" data-tag="retro basketball" data-price="11999" data-rating="4.8">
+          <div class="product-image-box">
+            <span class="product-badge sale">Street Classic</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w12" class="product-img-link" title="New Balance 550 'Peach Court'">
+              <img src="/static/img/shoe-1560769629-975ec94e6a86.jpg" alt="New Balance 550 'Peach Court'" onerror="this.onerror=null;this.src='../static/img/shoe-1560769629-975ec94e6a86.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Women Retro Court Low</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w12">New Balance 550 'Peach Court'</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(310)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹11,999</span>
+              <span class="original-price">₹13,999</span>
+              <span class="discount-tag">-14%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w12" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w12')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 13 -->
+        <article class="product-card" data-id="w13" data-tag="running" data-price="17999" data-rating="5.0">
+          <div class="product-image-box">
+            <span class="product-badge new">Marathon Elite</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w13" class="product-img-link" title="Nike ZoomX Vaporfly 'Mint Breeze'">
+              <img src="/static/img/shoe-1525966222134-fcfa99b8ae77.jpg" alt="Nike ZoomX Vaporfly 'Mint Breeze'" onerror="this.onerror=null;this.src='../static/img/shoe-1525966222134-fcfa99b8ae77.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Women Carbon Plate Running</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w13">Nike ZoomX Vaporfly 'Mint Breeze'</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(140)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹17,999</span>
+              <span class="original-price">₹21,499</span>
+              <span class="discount-tag">-16%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w13" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w13')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 14 -->
+        <article class="product-card" data-id="w14" data-tag="platform chunky" data-price="8499" data-rating="4.7">
+          <div class="product-image-box">
+            <span class="product-badge sale">Stacked Height</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w14" class="product-img-link" title="Puma Mayze Stack Suede Platform">
+              <img src="/static/img/shoe-1595341888016-a392ef81b7de.jpg" alt="Puma Mayze Stack Suede Platform" onerror="this.onerror=null;this.src='../static/img/shoe-1595341888016-a392ef81b7de.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Women Chunky Platform</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w14">Puma Mayze Stack Suede Platform</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(265)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹8,499</span>
+              <span class="original-price">₹10,499</span>
+              <span class="discount-tag">-19%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w14" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w14')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 15 -->
+        <article class="product-card" data-id="w15" data-tag="retro" data-price="9499" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge hot">Iconic Chic</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w15" class="product-img-link" title="Onitsuka Tiger Mexico 66 'Rose Gold'">
+              <img src="/static/img/shoe-1506152983158-b4a74a01c721.jpg" alt="Onitsuka Tiger Mexico 66 'Rose Gold'" onerror="this.onerror=null;this.src='../static/img/shoe-1506152983158-b4a74a01c721.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Women Sleek Lifestyle</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w15">Onitsuka Tiger Mexico 66 'Rose Gold'</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(320)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹9,499</span>
+              <span class="original-price">₹11,499</span>
+              <span class="discount-tag">-17%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w15" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w15')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shoe 16 -->
+        <article class="product-card" data-id="w16" data-tag="chunky platform" data-price="22999" data-rating="4.9">
+          <div class="product-image-box">
+            <span class="product-badge limited">Luxury Platform</span>
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="product-detail.html?id=w16" class="product-img-link" title="Alexander McQueen Oversized Chunky">
+              <img src="/static/img/shoe-1595950653106-6c9ebd614d3a.jpg" alt="Alexander McQueen Oversized Chunky" onerror="this.onerror=null;this.src='../static/img/shoe-1595950653106-6c9ebd614d3a.jpg'" loading="lazy">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-category-meta">Women Luxury Chunky</span>
+            <h3 class="product-title"><a href="product-detail.html?id=w16">Alexander McQueen Oversized Chunky</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <span class="rating-count">(115)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹22,999</span>
+              <span class="original-price">₹27,999</span>
+              <span class="discount-tag">-18%</span>
+            </div>
+            <div class="product-action-row">
+              <a href="product-detail.html?id=w16" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('w16')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+
+  {% include 'footer.html' %}
+  <!-- Page Specific JavaScript -->
+  <script src="{% static 'js/women.js' %}"></script>
+  <script src="../static/js/women.js"></script>
+  <script src="/static/js/women.js"></script>
+</body>
+</html>
+
