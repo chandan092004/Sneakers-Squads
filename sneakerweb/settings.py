@@ -10,10 +10,22 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Automatically load environment variables from .env if present
+env_file = BASE_DIR / '.env'
+if env_file.exists():
+    with open(env_file, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                k, v = line.split('=', 1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
 
 # Quick-start development settings - unsuitable for production
@@ -74,37 +86,24 @@ WSGI_APPLICATION = 'sneakerweb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
-def get_database_config():
-    import socket
-    mysql_host = '127.0.0.1'
-    mysql_port = 3306
-    
-    # Quick probe to check if MySQL is running on port 3306
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(0.8)
-    try:
-        s.connect((mysql_host, mysql_port))
-        s.close()
-        return {
-            'default': {
-                'ENGINE': 'django.db.backends.mysql',
-                'NAME': 'sneaker_db',
-                'USER': 'root',
-                'PASSWORD': '',
-                'HOST': mysql_host,
-                'PORT': str(mysql_port),
-            }
-        }
-    except Exception:
-        # Safe fallback to SQLite if MySQL is offline
-        return {
-            'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': BASE_DIR / 'db.sqlite3',
-            }
-        }
+DATABASE_URL = os.environ.get('DATABASE_URL')
 
-DATABASES = get_database_config()
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=DATABASE_URL,
+            conn_max_age=600,
+            conn_health_checks=True,
+        )
+    }
+else:
+    # Safe local fallback to SQLite if DATABASE_URL is not present in the environment
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation

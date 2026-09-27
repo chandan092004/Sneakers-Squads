@@ -1,0 +1,70 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$iUTrTZP8wpN14YCvDt1G49$HvctMJ2/RxQCFu5APkGRoXeSDts0dNFDwlG+6A5mo6c=",
+    "last_login": "2026-09-23T18:10:54.805Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-22T16:25:12.910Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$lV3b79wEB7ZbYngqNgshgd$cDJq15RRumB+lnkEe8VKVCiMcTVpNixVWhW/bVlUYvQ=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "chandan",
+    "first_name": "",
+    "last_name": "",
+    "email": "chandankumarsharma813@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-23T16:52:32.766Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0e5e74572f0cejom9znto1ea4fptk7sy",
+  "fields": {
+    "session_data": "e30:1x9RQD:6pGePZVi0YZr1ixkOewxD8zIg4kD7yXMvZ1y71VkoLA",
+    "expire_date": "2027-09-23T18:10:21.319Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bn5sddbvj0a250s34vg95jvmt9arihrs",
+  "fields": {
+    "session_data": "e30:1x9RQk:mKtBJpHCSYdhftVzdGD5EblzlCtUbAWjWZ4X1VdmJPQ",
+    "expire_date": "2027-09-23T18:10:54.797Z"
+  }
+},
+{
+  "model": "accounts.userprofile",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "phone": null,
+    "avatar": "",
+    "avatar_url": null,
+    "gender": null,
+    "city": null,
+    "state": null,
+    "is_verified": false,
+    "created_at": "2026-09-25T09:17:36.148Z",
+    "updated_at": "2026-09-25T09:17:36.148Z"
+  }
+}
+]
