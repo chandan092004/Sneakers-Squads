@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -97,11 +98,29 @@ if DATABASE_URL:
         )
     }
 else:
-    # Safe local fallback to SQLite if DATABASE_URL is not present in the environment
+    # Serverless (Vercel / AWS Lambda) writable fallback for SQLite
+    is_serverless = bool(
+        os.environ.get('VERCEL') or 
+        os.environ.get('AWS_LAMBDA_FUNCTION_NAME') or 
+        str(BASE_DIR).startswith('/var/task')
+    )
+    if is_serverless:
+        import shutil
+        tmp_db = Path('/tmp/db.sqlite3')
+        seed_db = BASE_DIR / 'db.sqlite3'
+        if not tmp_db.exists() and seed_db.exists():
+            try:
+                shutil.copyfile(seed_db, tmp_db)
+            except Exception:
+                pass
+        db_path = tmp_db if tmp_db.exists() else seed_db
+    else:
+        db_path = BASE_DIR / 'db.sqlite3'
+
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'NAME': db_path,
         }
     }
 
