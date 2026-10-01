@@ -3,68 +3,7 @@
    Yeh CSS file sirf Home page (index.html) ke Split-screen layout ke liye hai.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. LANDING TOP HEADER
-   -------------------------------------------------------------------------- */
-.header {
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-  background: rgba(11, 13, 19, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.brand-logo {
-  font-size: 1.3rem;
-  font-weight: 900;
-  color: var(--text-white);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.brand-logo span {
-  color: var(--primary);
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 24px;
-}
-
-.nav-links a {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: var(--primary);
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.icon-btn {
-  color: var(--text-white);
-  font-size: 1.2rem;
-  text-decoration: none;
-  position: relative;
-  cursor: pointer;
-}
+/* (Shared Header is styled cleanly in style.css) */
 
 /* --------------------------------------------------------------------------
    2. SPLIT SCREEN CONTAINER (WOMEN vs MEN 50/50 Layout)

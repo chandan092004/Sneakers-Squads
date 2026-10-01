@@ -89,47 +89,55 @@ function initMobileMenu() {
   const overlay = document.getElementById('mobile-menu-overlay');
   const closeBtn = document.getElementById('drawer-close-btn');
 
-  if (!mobileToggle || !navMenu) return;
-
   function openDrawer() {
-    navMenu.classList.add('open');
-    if (overlay) overlay.classList.add('open');
+    const m = document.getElementById('nav-menu') || document.querySelector('.nav-menu');
+    const o = document.getElementById('mobile-menu-overlay');
+    if (m) m.classList.add('open');
+    if (o) o.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
   function closeDrawer() {
-    navMenu.classList.remove('open');
-    if (overlay) overlay.classList.remove('open');
+    const m = document.getElementById('nav-menu') || document.querySelector('.nav-menu');
+    const o = document.getElementById('mobile-menu-overlay');
+    if (m) m.classList.remove('open');
+    if (o) o.classList.remove('open');
     document.body.style.overflow = '';
   }
 
-  mobileToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (navMenu.classList.contains('open')) {
-      closeDrawer();
-    } else {
-      openDrawer();
+  // Global document click delegation for 100% reliable trigger on all mobile browsers
+  document.addEventListener('click', (e) => {
+    const toggle = e.target.closest('#mobile-menu-toggle, .mobile-toggle');
+    if (toggle) {
+      e.preventDefault();
+      e.stopPropagation();
+      const m = document.getElementById('nav-menu') || document.querySelector('.nav-menu');
+      if (m && m.classList.contains('open')) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+      return;
     }
-  });
 
-  if (closeBtn) {
-    closeBtn.addEventListener('click', (e) => {
+    const close = e.target.closest('#drawer-close-btn, .drawer-close-btn');
+    if (close) {
+      e.preventDefault();
       e.stopPropagation();
       closeDrawer();
-    });
-  }
+      return;
+    }
 
-  if (overlay) {
-    overlay.addEventListener('click', () => {
+    const ov = e.target.closest('#mobile-menu-overlay, .mobile-menu-overlay');
+    if (ov) {
       closeDrawer();
-    });
-  }
+      return;
+    }
 
-  // Close menu when clicking any nav link
-  navMenu.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
+    const navLink = e.target.closest('.nav-menu .nav-link');
+    if (navLink) {
       closeDrawer();
-    });
+    }
   });
 }
 

@@ -247,13 +247,15 @@ img {
   justify-content: center;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
 .mobile-toggle {
   display: none;
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 1.3rem;
-  cursor: pointer;
 }
 
 /* ==========================================================================
@@ -1514,7 +1516,27 @@ img {
   }
 
   .mobile-toggle {
-    display: flex;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    z-index: 10;
+  }
+
+  .logo-container {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
   }
 
   .search-form {
@@ -1667,13 +1689,49 @@ img {
   }
 }
 
-@media (max-width: 480px) {
-  .logo span {
-    display: inline;
+@media (max-width: 576px) {
+  .container {
+    width: 95%;
+    padding: 0 4px;
   }
 
-  .header-actions button span {
-    display: none; /* Icon-only compact for tiny screens */
+  .header-wrapper {
+    padding: 10px 0;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 1.05rem;
+    gap: 6px;
+  }
+
+  .logo-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .mobile-toggle {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    font-size: 1.15rem;
+  }
+
+  /* Keep top header clean by hiding extra action buttons on phones */
+  .header-pwa-install-btn,
+  #header-wishlist-btn {
+    display: none !important;
+  }
+
+  .action-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .logo span {
+    display: inline;
   }
 
   .product-image-box {
