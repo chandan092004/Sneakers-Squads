@@ -55,8 +55,8 @@
         <button type="button" class="btn-pwa-install" id="btn-pwa-install-action">
           <i class="fa-solid fa-download"></i> Install
         </button>
-        <button type="button" class="btn-pwa-dismiss" id="btn-pwa-dismiss-action" title="Dismiss">&times;</button>
       </div>
+      <button type="button" class="btn-pwa-dismiss" id="btn-pwa-dismiss-action" title="Close" aria-label="Close Install Banner">&times;</button>
     `;
     document.body.appendChild(banner);
 
