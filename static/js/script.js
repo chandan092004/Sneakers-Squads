@@ -81,42 +81,54 @@ function initActiveNavLink() {
 }
 
 /* ==========================================================================
-   2. MOBILE HAMBURGER MENU
+   2. MOBILE HAMBURGER MENU & DRAWER
    ========================================================================== */
 function initMobileMenu() {
-  const mobileToggle = document.querySelector('.mobile-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+  const mobileToggle = document.getElementById('mobile-menu-toggle') || document.querySelector('.mobile-toggle');
+  const navMenu = document.getElementById('nav-menu') || document.querySelector('.nav-menu');
+  const overlay = document.getElementById('mobile-menu-overlay');
+  const closeBtn = document.getElementById('drawer-close-btn');
 
   if (!mobileToggle || !navMenu) return;
 
+  function openDrawer() {
+    navMenu.classList.add('open');
+    if (overlay) overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    navMenu.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
   mobileToggle.addEventListener('click', (e) => {
     e.stopPropagation();
-    navMenu.classList.toggle('open');
-    const icon = mobileToggle.querySelector('i');
-    if (icon) {
-      if (navMenu.classList.contains('open')) {
-        icon.className = 'fa-solid fa-xmark';
-      } else {
-        icon.className = 'fa-solid fa-bars';
-      }
+    if (navMenu.classList.contains('open')) {
+      closeDrawer();
+    } else {
+      openDrawer();
     }
   });
 
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-      navMenu.classList.remove('open');
-      const icon = mobileToggle.querySelector('i');
-      if (icon) icon.className = 'fa-solid fa-bars';
-    }
-  });
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeDrawer();
+    });
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      closeDrawer();
+    });
+  }
 
   // Close menu when clicking any nav link
   navMenu.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      const icon = mobileToggle.querySelector('i');
-      if (icon) icon.className = 'fa-solid fa-bars';
+      closeDrawer();
     });
   });
 }

@@ -1390,7 +1390,37 @@ img {
   border-color: var(--primary);
 }
 
+/* Mobile Drawer Items (Hidden on Desktop) */
+.mobile-drawer-header,
+.mobile-menu-overlay,
+.drawer-divider,
+.mobile-only-drawer-item,
+.drawer-support-box {
+  display: none;
+}
+
 @media (max-width: 992px) {
+  /* Mobile Backdrop Overlay */
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    z-index: 1040;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-menu-overlay.open {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .nav-menu {
     position: fixed;
     top: 0;
@@ -1398,13 +1428,13 @@ img {
     width: 290px;
     height: 100vh;
     background: #0f131c;
-    border-right: 1px solid var(--border);
-    padding: 70px 20px 30px;
+    border-right: 1.5px solid rgba(255, 90, 31, 0.3);
+    padding: 20px 16px 30px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    align-items: stretch;
+    gap: 6px;
     z-index: 1050;
-    box-shadow: 12px 0 40px rgba(0, 0, 0, 0.85);
+    box-shadow: 14px 0 45px rgba(0, 0, 0, 0.9);
     transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     overflow-y: auto;
   }
@@ -1413,16 +1443,67 @@ img {
     left: 0;
   }
 
+  .mobile-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .drawer-close-btn {
+    background: #1a2030;
+    border: 1px solid var(--border);
+    color: #ffffff;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+
+  .drawer-close-btn:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .drawer-divider {
+    display: block;
+    height: 1px;
+    background: var(--border);
+    margin: 10px 0;
+  }
+
+  .mobile-only-drawer-item {
+    display: block;
+    width: 100%;
+  }
+
+  .drawer-support-box {
+    display: block;
+    width: 100%;
+    background: #141722;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 14px;
+    border: 1px solid var(--border);
+  }
+
   .nav-link {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 700;
     width: 100%;
-    padding: 12px 16px;
+    padding: 11px 14px;
     border-radius: 10px;
     border-left: 3px solid transparent;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    color: #cbd5e1;
   }
 
   .nav-link:hover,

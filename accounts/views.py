@@ -12,7 +12,10 @@ from django.views.decorators.http import require_POST, require_GET
 from django.db.models import Avg, Count, Q
 from django.core.mail import send_mail
 from django.conf import settings
-import razorpay
+try:
+    import razorpay
+except ImportError:
+    razorpay = None
 from .models import UserProfile, UserAddress, WishlistItem, PasswordResetToken, Order, OrderItem, Product, ProductReview
 
 

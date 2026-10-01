@@ -26,7 +26,7 @@
     
     <!-- Mobile Toggle & Logo -->
     <div class="logo-container">
-      <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
         <i class="fa-solid fa-bars"></i>
       </button>
       <a href="index.html" class="logo">
@@ -42,17 +42,44 @@
       </a>
     </div>
 
-    <!-- Navigation Links -->
+    <!-- Mobile Drawer Overlay Backdrop -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+    <!-- Navigation Links & Drawer -->
     <nav>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="men.html" class="nav-link">Men</a></li>
-        <li><a href="women.html" class="nav-link">Women</a></li>
-        <li><a href="accessories.html" class="nav-link">Accessories</a></li>
+      <ul class="nav-menu" id="nav-menu">
+        <div class="mobile-drawer-header">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div class="logo-icon" style="width:30px; height:30px; font-size:0.8rem;"><i class="fa-solid fa-bolt"></i></div>
+            <span style="font-weight:900; font-size:1.1rem; color:#fff;">SNEAKER <span style="color:var(--primary);">SQUAD</span></span>
+          </div>
+          <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Menu">&times;</button>
+        </div>
+
+        <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house" style="color:#ff5a1f;"></i> <span>Home</span></a></li>
+        <li><a href="men.html" class="nav-link"><i class="fa-solid fa-shoe-prints" style="color:#38bdf8;"></i> <span>Men's Kicks</span></a></li>
+        <li><a href="women.html" class="nav-link"><i class="fa-solid fa-wand-magic-sparkles" style="color:#ec4899;"></i> <span>Women's Kicks</span></a></li>
+        <li><a href="accessories.html" class="nav-link"><i class="fa-solid fa-spray-can-sparkles" style="color:#a855f7;"></i> <span>Accessories & Care</span></a></li>
         {% for nav_cat in nav_categories %}
-        <li><a href="/{{ nav_cat.slug }}.html" class="nav-link">{{ nav_cat.name }}</a></li>
+        <li><a href="/{{ nav_cat.slug }}.html" class="nav-link"><i class="fa-solid fa-tag" style="color:#f59e0b;"></i> <span>{{ nav_cat.name }}</span></a></li>
         {% endfor %}
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-headset" style="color:#22c55e;"></i> <span>Contact & Support</span></a></li>
+
+        <div class="drawer-divider"></div>
+
+        <!-- Quick Access Section inside Drawer -->
+        <li class="mobile-only-drawer-item"><a href="/dashboard.html#orders" class="nav-link"><i class="fa-solid fa-box-open" style="color:#f59e0b;"></i> <span>My Orders & Invoices</span></a></li>
+        <li class="mobile-only-drawer-item"><a href="/dashboard.html#wishlist" class="nav-link"><i class="fa-solid fa-heart" style="color:#ef4444;"></i> <span>My Wishlist</span></a></li>
+        <li class="mobile-only-drawer-item"><a href="#" onclick="window.installSneakerSquadPWA(); return false;" class="nav-link" style="color:#ff5a1f;"><i class="fa-solid fa-mobile-screen-button"></i> <span>Install Mobile App</span></a></li>
+
+        <!-- Quick Support Footer in Drawer -->
+        <div class="drawer-support-box">
+          <span style="font-size:0.75rem; color:#94a3b8; display:block; margin-bottom:6px;">Need Instant Help?</span>
+          <div style="display:flex; gap:8px;">
+            <a href="tel:+917488291737" style="flex:1; background:#1e2433; color:#fff; padding:8px 10px; border-radius:8px; font-size:0.75rem; font-weight:700; text-align:center; display:flex; align-items:center; justify-content:center; gap:4px;"><i class="fa-solid fa-phone" style="color:#ff5a1f;"></i> Call</a>
+            <a href="https://wa.me/917488291737?text=Hi%20Sneaker%20Squad%20Support" target="_blank" style="flex:1; background:rgba(34,197,94,0.15); border:1px solid rgba(34,197,94,0.3); color:#22c55e; padding:8px 10px; border-radius:8px; font-size:0.75rem; font-weight:700; text-align:center; display:flex; align-items:center; justify-content:center; gap:4px;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
       </ul>
     </nav>
 
