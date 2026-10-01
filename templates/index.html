@@ -40,33 +40,7 @@
 
 <body>
 
-  <!-- Clean Top Header -->
-  <header class="header">
-    <a href="index.html" class="brand-logo">
-      <i class="fa-solid fa-bolt" style="color: #ff5a1f;"></i>
-      SNEAKER <span>SQUAD</span>
-    </a>
-
-    <ul class="nav-links">
-      <li><a href="men.html">Men's Shoes</a></li>
-      <li><a href="women.html">Women's Shoes</a></li>
-      <li><a href="accessories.html">Care & Accessories</a></li>
-    </ul>
-
-    <div class="header-actions">
-      <button type="button" class="header-pwa-install-btn" id="header-pwa-btn" onclick="window.installSneakerSquadPWA()" title="Install Sneakers Squad Mobile App">
-        <i class="fa-solid fa-mobile-screen-button"></i> <span>Install App</span>
-      </button>
-      <button type="button" class="icon-btn theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme" style="background: rgba(255,255,255,0.08); border: 1px solid var(--border); cursor: pointer; border-radius: 10px; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem; color: #f59e0b; transition: var(--transition);">
-        <i class="fa-solid fa-moon" id="theme-icon"></i>
-      </button>
-      <a href="#" class="icon-btn auth-trigger-btn" id="auth-btn" title="Account"><i class="fa-regular fa-user"></i></a>
-      <a href="#" class="icon-btn" id="cart-btn" title="Shopping Cart">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <span class="cart-badge">0</span>
-      </a>
-    </div>
-  </header>
+  {% include 'header.html' %}
 
   <!-- Simple Men & Women Split Screen -->
   <main class="split-container">

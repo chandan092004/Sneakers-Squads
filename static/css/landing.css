@@ -195,21 +195,63 @@
   .split-container {
     flex-direction: column;
     min-height: auto;
+    padding: 12px 14px;
+    gap: 14px;
+  }
+
+  .divider-line {
+    display: none;
   }
 
   .split-side {
-    height: 320px;
+    height: 270px;
     flex: none;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .split-box {
+    padding: 20px;
+  }
+
+  .split-tag {
+    font-size: 0.78rem;
+    padding: 4px 12px;
+    margin-bottom: 8px;
   }
 
   .split-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .split-btn {
+    padding: 9px 22px;
+    font-size: 0.88rem;
   }
 
   .footer-bar {
     flex-direction: column;
     height: auto;
-    padding: 16px;
-    gap: 10px;
+    padding: 14px 16px;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .footer-badge {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .split-side {
+    height: 240px;
+  }
+
+  .split-title {
+    font-size: 1.85rem;
   }
 }

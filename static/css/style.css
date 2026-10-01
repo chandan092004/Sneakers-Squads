@@ -1367,9 +1367,79 @@ img {
 
 
 /* ==========================================================================
-   8. RESPONSIVE MEDIA QUERIES
+   8. RESPONSIVE MEDIA QUERIES & MOBILE DRAWER NAVIGATION
    ========================================================================== */
-@media (max-width: 900px) {
+.mobile-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.mobile-toggle:hover {
+  background: rgba(255, 90, 31, 0.2);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+@media (max-width: 992px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 290px;
+    height: 100vh;
+    background: #0f131c;
+    border-right: 1px solid var(--border);
+    padding: 70px 20px 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    z-index: 1050;
+    box-shadow: 12px 0 40px rgba(0, 0, 0, 0.85);
+    transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow-y: auto;
+  }
+
+  .nav-menu.open {
+    left: 0;
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+    font-weight: 700;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border-left: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(255, 90, 31, 0.15);
+    color: var(--primary);
+    border-left-color: var(--primary);
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .search-form {
+    width: 200px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -1377,31 +1447,160 @@ img {
 }
 
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none; /* Mobile menu can be toggled */
+  .container {
+    width: 94%;
+    padding: 0 4px;
   }
-  
-  .mobile-toggle {
-    display: block;
+
+  .header-wrapper {
+    padding: 12px 0;
+    gap: 10px;
   }
-  
-  .search-form {
-    display: none;
+
+  .logo {
+    font-size: 1.15rem;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .search-wrapper {
+    display: none; /* Clean uncluttered mobile header */
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .action-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  .header-pwa-install-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+
+  /* 2-Column Responsive Product Cards on Phones */
+  .product-grid,
+  .sneakers-grid,
+  .accessories-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .product-card {
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .product-image-box {
+    height: 140px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .product-title {
+    font-size: 0.88rem;
+    line-height: 1.35;
+    margin: 4px 0 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .product-price-row {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .current-price {
+    font-size: 0.95rem;
+    font-weight: 800;
+  }
+
+  .original-price {
+    font-size: 0.78rem;
+  }
+
+  .discount-tag {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+  }
+
+  .product-action-row {
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .btn-view-product,
+  .btn-add-cart {
+    width: 100%;
+    padding: 7px 10px;
+    font-size: 0.78rem;
+    justify-content: center;
+  }
+
+  .hero-section {
+    padding: 40px 0 30px;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+    line-height: 1.25;
+  }
+
+  .hero-desc {
+    font-size: 0.88rem;
   }
 
   .filter-toolbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .filter-toolbar select,
+  .filter-toolbar input {
+    width: 100%;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
-  .footer-bottom {
+  .footer-bottom-wrapper {
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo span {
+    display: inline;
+  }
+
+  .header-actions button span {
+    display: none; /* Icon-only compact for tiny screens */
+  }
+
+  .product-image-box {
+    height: 125px;
+  }
+
+  .hero-title {
+    font-size: 1.65rem;
   }
 }
 
