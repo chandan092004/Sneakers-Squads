@@ -28,10 +28,21 @@ urlpatterns = [
     path('api/profile/update/', views.api_profile_update, name='api_profile_update'),
     path('api/change-password/', views.api_change_password, name='api_change_password'),
     path('api/forgot-password/', views.api_forgot_password, name='api_forgot_password'),
+    path('api/verify-otp-reset/', views.api_verify_otp_and_reset_password, name='api_verify_otp_reset'),
     path('api/reset-password/submit/', views.api_reset_password_submit, name='api_reset_password_submit'),
+
 
     # Checkout & Orders APIs
     path('api/checkout/', views.api_checkout, name='api_checkout'),
+    path('api/payment/create-order/', views.api_create_razorpay_order, name='api_create_razorpay_order'),
+    path('api/payment/verify/', views.api_verify_payment, name='api_verify_payment'),
+    path('order/<str:order_id>/invoice/', views.invoice_view, name='order_invoice'),
     path('api/order/<str:order_id>/cancel/', views.api_cancel_order, name='api_cancel_order'),
     path('api/order/<str:order_id>/delete/', views.api_delete_order, name='api_delete_order'),
+
+    # Product Reviews & Ratings APIs
+    path('api/reviews/submit/', views.api_submit_review, name='api_submit_review'),
+    path('api/reviews/<str:product_code>/', views.api_get_reviews, name='api_get_reviews'),
+
+
 ]

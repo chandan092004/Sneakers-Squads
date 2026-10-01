@@ -45,30 +45,35 @@
     <!-- 2. Support Channels -->
     <section class="support-channels">
       <div class="channel-card">
-        <div class="channel-icon"><i class="fa-brands fa-whatsapp"></i></div>
-        <h3 class="channel-title">WhatsApp Chat</h3>
-        <p class="channel-desc">Instant responses for delivery status, sizing help & returns.</p>
-        <a href="https://wa.me/919876543210" target="_blank" class="channel-link">Chat on WhatsApp <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="channel-icon"><i class="fa-brands fa-whatsapp" style="color: #22c55e;"></i></div>
+        <h3 class="channel-title">WhatsApp Support</h3>
+        <p class="channel-desc">+91 74882 91737<br>Instant responses for order status, sizing help & returns.</p>
+        <a href="https://wa.me/917488291737?text=Hi%20Sneaker%20Squad%20Support!%20I%20have%20a%20query%20regarding%20my%20order." target="_blank" class="channel-link">Chat on WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
       </div>
 
       <div class="channel-card">
-        <div class="channel-icon"><i class="fa-solid fa-phone"></i></div>
-        <h3 class="channel-title">Direct Calling</h3>
-        <p class="channel-desc">+91 98765 43210<br>Mon – Sat, 9:00 AM – 9:00 PM IST.</p>
-        <a href="tel:+919876543210" class="channel-link">Call Helpdesk <i class="fa-solid fa-phone"></i></a>
+        <div class="channel-icon"><i class="fa-solid fa-phone" style="color: #ff5a1f;"></i></div>
+        <h3 class="channel-title">Direct Calling Desk</h3>
+        <p class="channel-desc"><strong style="color:#ffffff; font-size:1.05rem;">+91 74882 91737</strong><br>Mon – Sun, 9:00 AM – 10:00 PM IST.</p>
+        <div style="display:flex; gap:8px; margin-top:10px;">
+          <a href="tel:+917488291737" class="channel-link" style="flex:1; text-align:center;">Call Now <i class="fa-solid fa-phone"></i></a>
+          <button type="button" onclick="copyContactNumber('7488291737')" class="channel-link" style="background:rgba(255,90,31,0.15); border:1px solid rgba(255,90,31,0.4); color:#ff5a1f; cursor:pointer; padding:8px 12px; border-radius:8px; font-weight:700;">
+            <i class="fa-regular fa-copy"></i> <span id="copy-btn-text">Copy</span>
+          </button>
+        </div>
       </div>
 
       <div class="channel-card">
-        <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
-        <h3 class="channel-title">Email Desk</h3>
-        <p class="channel-desc">Official support & bulk order inquiries.</p>
-        <a href="mailto:support@sneakersquad.in" class="channel-link">support@sneakersquad.in <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="channel-icon"><i class="fa-solid fa-envelope" style="color: #38bdf8;"></i></div>
+        <h3 class="channel-title">Official Email Desk</h3>
+        <p class="channel-desc">chandankumarsharma813@gmail.com<br>Fast replies within 2-4 hours.</p>
+        <a href="mailto:chandankumarsharma813@gmail.com" class="channel-link">Send Email <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
       <div class="channel-card">
-        <div class="channel-icon"><i class="fa-solid fa-rotate-left"></i></div>
-        <h3 class="channel-title">30-Day Returns</h3>
-        <p class="channel-desc">Doorstep reverse pickup & 100% money back.</p>
+        <div class="channel-icon"><i class="fa-solid fa-rotate-left" style="color: #a855f7;"></i></div>
+        <h3 class="channel-title">30-Day Easy Returns</h3>
+        <p class="channel-desc">Doorstep reverse pickup & 100% money back exchange.</p>
         <a href="#contact-form-section" class="channel-link">Request Return <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </section>
@@ -292,6 +297,28 @@
           submitBtn.innerHTML = originalBtnHtml;
         }
       });
+    }
+
+    function copyContactNumber(phoneNum) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(phoneNum);
+      } else {
+        const input = document.createElement('input');
+        input.value = phoneNum;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        input.remove();
+      }
+      const btnText = document.getElementById('copy-btn-text');
+      if (btnText) {
+        btnText.textContent = 'Copied! ✓';
+        btnText.style.color = '#22c55e';
+        setTimeout(() => {
+          btnText.textContent = 'Copy';
+          btnText.style.color = '';
+        }, 2500);
+      }
     }
   </script>
 </body>

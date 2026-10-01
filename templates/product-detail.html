@@ -276,6 +276,166 @@
 
       </section>
 
+      <!-- ======================================================= -->
+      <!-- 5. CUSTOMER REVIEWS & SNEAKER PHOTO GALLERY SECTION     -->
+      <!-- ======================================================= -->
+      <section class="reviews-section" id="reviews-section">
+        <div class="section-header" style="text-align: left; margin-bottom: 28px;">
+          <span class="section-tagline"><i class="fa-solid fa-camera-retro" style="color:var(--primary); margin-right:6px;"></i> Verified Squad Feedback</span>
+          <h2 class="section-title">Customer Reviews & On-Feet Photos</h2>
+        </div>
+
+        <!-- Rating Summary Box & Breakdown -->
+        <div class="reviews-summary-card">
+          <!-- Overall Score -->
+          <div class="overall-score-col">
+            <span class="overall-score-number" id="review-summary-avg">4.9</span>
+            <div class="summary-stars" id="review-summary-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span class="summary-total-text" id="review-summary-count">Based on verified reviews</span>
+          </div>
+
+          <!-- Star Breakdown Progress Bars -->
+          <div class="rating-breakdown-col" id="rating-breakdown-container">
+            <div class="breakdown-row">
+              <span class="breakdown-label">5 <i class="fa-solid fa-star"></i></span>
+              <div class="breakdown-bar-bg"><div class="breakdown-bar-fill" id="bar-5" style="width: 85%;"></div></div>
+              <span class="breakdown-count" id="count-5">85%</span>
+            </div>
+            <div class="breakdown-row">
+              <span class="breakdown-label">4 <i class="fa-solid fa-star"></i></span>
+              <div class="breakdown-bar-bg"><div class="breakdown-bar-fill" id="bar-4" style="width: 12%;"></div></div>
+              <span class="breakdown-count" id="count-4">12%</span>
+            </div>
+            <div class="breakdown-row">
+              <span class="breakdown-label">3 <i class="fa-solid fa-star"></i></span>
+              <div class="breakdown-bar-bg"><div class="breakdown-bar-fill" id="bar-3" style="width: 3%;"></div></div>
+              <span class="breakdown-count" id="count-3">3%</span>
+            </div>
+            <div class="breakdown-row">
+              <span class="breakdown-label">2 <i class="fa-solid fa-star"></i></span>
+              <div class="breakdown-bar-bg"><div class="breakdown-bar-fill" id="bar-2" style="width: 0%;"></div></div>
+              <span class="breakdown-count" id="count-2">0%</span>
+            </div>
+            <div class="breakdown-row">
+              <span class="breakdown-label">1 <i class="fa-solid fa-star"></i></span>
+              <div class="breakdown-bar-bg"><div class="breakdown-bar-fill" id="bar-1" style="width: 0%;"></div></div>
+              <span class="breakdown-count" id="count-1">0%</span>
+            </div>
+          </div>
+
+          <!-- Write a Review Button Box -->
+          <div class="write-review-cta-col">
+            <div class="cta-inner">
+              <i class="fa-solid fa-pen-nib" style="font-size:2.2rem; color:var(--primary); margin-bottom:12px;"></i>
+              <h4 style="color:#ffffff; font-size:1.15rem; margin-bottom:6px; font-weight:800;">Copped This Pair?</h4>
+              <p style="color:#94a3b8; font-size:0.85rem; margin-bottom:16px;">Share your on-feet look, fit & rating with the Sneaker Squad community!</p>
+              <button type="button" class="btn-open-review-form" id="btn-toggle-review-form">
+                <i class="fa-solid fa-star"></i> Write a Review & Upload Photo
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Review Submission Form (Expandable) -->
+        <div class="review-form-wrapper" id="review-form-container" style="display: none;">
+          <form class="review-submission-form" id="review-form" enctype="multipart/form-data">
+            <div class="form-header-row">
+              <h3 style="color:#ffffff; font-size:1.25rem; font-weight:800; display:flex; align-items:center; gap:10px;">
+                <i class="fa-solid fa-camera" style="color:var(--primary);"></i> Drop Your Sneaker Review & Photo
+              </h3>
+              <button type="button" class="form-close-btn" id="btn-close-review-form">&times;</button>
+            </div>
+
+            <!-- Interactive Star Rating Picker -->
+            <div class="review-form-field">
+              <label class="form-label">Overall Rating: <span id="selected-rating-text" style="color:var(--primary); font-weight:800;">5 Stars - Excellent Drop 🔥</span></label>
+              <div class="star-rating-picker" id="star-rating-picker">
+                <i class="fa-solid fa-star star-pick active" data-rating="1"></i>
+                <i class="fa-solid fa-star star-pick active" data-rating="2"></i>
+                <i class="fa-solid fa-star star-pick active" data-rating="3"></i>
+                <i class="fa-solid fa-star star-pick active" data-rating="4"></i>
+                <i class="fa-solid fa-star star-pick active" data-rating="5"></i>
+              </div>
+              <input type="hidden" name="rating" id="rating-input" value="5">
+              <input type="hidden" name="product_code" id="review-product-code" value="">
+            </div>
+
+            <div class="form-grid-2">
+              <div class="review-form-field">
+                <label class="form-label" for="review-user-name">Your Name / Sneakerhead Tag *</label>
+                <input type="text" class="review-input" id="review-user-name" name="user_name" placeholder="e.g. Chandan K. or @kicks_lover" required>
+              </div>
+              <div class="review-form-field">
+                <label class="form-label" for="review-user-email">Your Email Address (Optional for verification)</label>
+                <input type="email" class="review-input" id="review-user-email" name="user_email" placeholder="e.g. user@example.com">
+              </div>
+            </div>
+
+            <div class="review-form-field">
+              <label class="form-label" for="review-title">Review Headline *</label>
+              <input type="text" class="review-input" id="review-title" name="title" placeholder="e.g. Unbelievable comfort & deadstock fresh!" required>
+            </div>
+
+            <div class="review-form-field">
+              <label class="form-label" for="review-comment">Detailed Review & Sizing Experience *</label>
+              <textarea class="review-textarea" id="review-comment" name="comment" rows="4" placeholder="How is the fit? Is it true to size? Cushioning feedback..." required></textarea>
+            </div>
+
+            <!-- Customer Sneaker Photo Upload with Live Preview -->
+            <div class="review-form-field">
+              <label class="form-label">
+                <i class="fa-solid fa-image" style="color:var(--primary);"></i> Upload Sneaker Photo (On-Feet / Unboxing)
+              </label>
+              <div class="photo-upload-dropzone" id="photo-dropzone">
+                <input type="file" id="review-image-input" name="review_image" accept="image/*" style="display:none;">
+                <div class="dropzone-prompt" id="dropzone-prompt" onclick="document.getElementById('review-image-input').click();">
+                  <i class="fa-solid fa-cloud-arrow-up" style="font-size:2rem; color:var(--primary); margin-bottom:8px;"></i>
+                  <span style="color:#ffffff; font-weight:700; font-size:0.95rem;">Click or drag to attach your Sneaker photo</span>
+                  <span style="color:#94a3b8; font-size:0.8rem;">Supports JPG, PNG, WEBP up to 10MB</span>
+                </div>
+                <!-- Live Thumbnail Preview -->
+                <div class="dropzone-preview" id="dropzone-preview" style="display:none;">
+                  <img id="dropzone-preview-img" src="" alt="Sneaker Photo Preview">
+                  <button type="button" class="btn-remove-photo" id="btn-remove-photo" title="Remove photo">&times;</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn-submit-review" id="btn-submit-review">
+                <i class="fa-solid fa-paper-plane"></i> Submit Sneaker Review & Photo
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Customer Reviews Stream / Cards List -->
+        <div class="reviews-list-container" id="reviews-list-container">
+          <!-- Loaded dynamically via JS -->
+          <div class="reviews-loading-state" id="reviews-loading-state" style="text-align:center; padding:40px; color:#94a3b8;">
+            <i class="fa-solid fa-circle-notch fa-spin" style="font-size:2rem; color:var(--primary); margin-bottom:12px;"></i>
+            <p>Loading authentic customer reviews & on-feet photos...</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Lightbox Modal for Customer Sneaker Photos -->
+      <div class="photo-lightbox-modal" id="photo-lightbox-modal" style="display:none;">
+        <div class="lightbox-overlay" id="lightbox-overlay"></div>
+        <div class="lightbox-content">
+          <button type="button" class="lightbox-close-btn" id="lightbox-close-btn">&times;</button>
+          <img id="lightbox-img" src="" alt="Enlarged Customer Sneaker Photo">
+          <div class="lightbox-caption" id="lightbox-caption">Verified On-Feet Shot</div>
+        </div>
+      </div>
+
       <!-- Related Sneakers Section -->
       <section class="related-section">
         <div class="section-header">

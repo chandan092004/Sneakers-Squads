@@ -136,23 +136,23 @@
               </button>
             </form>
 
-            <!-- View 3: Forgot Password Form -->
+            <!-- View 3: Forgot Password Form (Phone or Email) -->
             <form class="auth-form-view" id="form-forgot-view">
               <div class="auth-welcome-text">
-                <h3>Reset Password</h3>
-                <p>Enter your registered email to receive password reset instructions.</p>
+                <h3>Forgot Password</h3>
+                <p>Enter your registered <strong>Mobile Number</strong> or <strong>Email</strong> to receive an instant verification OTP.</p>
               </div>
 
               <div class="auth-input-group">
-                <label for="forgot-email">Registered Email</label>
+                <label for="forgot-identifier">Mobile Number or Email</label>
                 <div class="auth-input-wrapper">
-                  <i class="fa-solid fa-envelope input-icon"></i>
-                  <input type="email" id="forgot-email" class="auth-input-field" placeholder="name@domain.com" required>
+                  <i class="fa-solid fa-mobile-screen-button input-icon"></i>
+                  <input type="text" id="forgot-identifier" class="auth-input-field" placeholder="e.g. 9876543210 or name@domain.com" required>
                 </div>
               </div>
 
-              <button type="submit" class="btn-auth-submit">
-                <i class="fa-solid fa-paper-plane"></i> Send Reset Link
+              <button type="submit" class="btn-auth-submit" id="btn-submit-forgot">
+                <i class="fa-solid fa-paper-plane"></i> Send 6-Digit OTP
               </button>
 
               <div style="text-align:center; margin-top:16px;">
@@ -161,6 +161,50 @@
                 </a>
               </div>
             </form>
+
+            <!-- View 5: Direct 6-Digit OTP Verification & Password Reset -->
+            <form class="auth-form-view" id="form-otp-view" style="display:none;">
+              <div class="auth-welcome-text">
+                <h3><i class="fa-solid fa-shield-halved" style="color:var(--primary);"></i> Verify 6-Digit OTP</h3>
+                <p id="otp-instruction-text" style="color:#cbd5e1;">Enter the 6-digit OTP code sent to your phone/email to set your new password.</p>
+              </div>
+
+              <input type="hidden" id="otp-hidden-identifier">
+              <input type="hidden" id="otp-hidden-token">
+
+              <div class="auth-input-group">
+                <label for="otp-code-input">Enter 6-Digit OTP</label>
+                <div class="auth-input-wrapper">
+                  <i class="fa-solid fa-key input-icon"></i>
+                  <input type="text" id="otp-code-input" class="auth-input-field" placeholder="------" maxlength="6" style="letter-spacing: 6px; font-size: 1.3rem; font-weight: 900; text-align: center; color: var(--primary); font-family: monospace;" required autocomplete="one-time-code">
+                </div>
+              </div>
+
+              <div class="auth-input-group">
+                <label for="otp-new-password">New Strong Password</label>
+                <div class="auth-input-wrapper">
+                  <i class="fa-solid fa-lock input-icon"></i>
+                  <input type="password" id="otp-new-password" class="auth-input-field" placeholder="Min. 6 characters" required minlength="6">
+                  <button type="button" class="toggle-password-btn" id="btn-toggle-otp-pass">
+                    <i class="fa-solid fa-eye" id="icon-otp-pass"></i>
+                  </button>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-auth-submit" id="btn-submit-otp-verify" style="background: linear-gradient(135deg, #ff5a1f, #22c55e);">
+                <i class="fa-solid fa-circle-check"></i> Verify OTP & Reset Password
+              </button>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:16px; font-size:0.85rem;">
+                <a href="#" id="otp-back-to-forgot" style="color:#94a3b8; text-decoration:none; font-weight:600;">
+                  <i class="fa-solid fa-arrow-left"></i> Change Number
+                </a>
+                <a href="#" id="otp-resend-link" style="color:var(--primary); text-decoration:none; font-weight:700;">
+                  <i class="fa-solid fa-rotate-right"></i> Resend Code
+                </a>
+              </div>
+            </form>
+
 
             <!-- View 4: Logged-in Profile View -->
             <div class="auth-form-view" id="form-profile-view">
@@ -249,9 +293,10 @@
     const formLogin = document.getElementById('form-login-view');
     const formSignup = document.getElementById('form-signup-view');
     const formForgot = document.getElementById('form-forgot-view');
+    const formOtp = document.getElementById('form-otp-view');
     const formProfile = document.getElementById('form-profile-view');
 
-    [formLogin, formSignup, formForgot, formProfile].forEach(f => f && f.classList.remove('active'));
+    [formLogin, formSignup, formForgot, formOtp, formProfile].forEach(f => f && f.classList.remove('active'));
 
     if (viewName === 'profile') {
       if (tabsRow) tabsRow.style.display = 'none';
@@ -269,9 +314,13 @@
       } else if (viewName === 'forgot') {
         if (tabsRow) tabsRow.style.display = 'none';
         if (formForgot) formForgot.classList.add('active');
+      } else if (viewName === 'otp') {
+        if (tabsRow) tabsRow.style.display = 'none';
+        if (formOtp) formOtp.classList.add('active');
       }
     }
   }
+
 
   function bindAuthEvents() {
     const closeBtn = document.getElementById('auth-close-btn');
@@ -318,6 +367,21 @@
         } else {
           inputSignupPass.type = 'password';
           iconSignupPass.className = 'fa-solid fa-eye';
+        }
+      };
+    }
+
+    const toggleOtpPass = document.getElementById('btn-toggle-otp-pass');
+    const inputOtpPass = document.getElementById('otp-new-password');
+    const iconOtpPass = document.getElementById('icon-otp-pass');
+    if (toggleOtpPass && inputOtpPass) {
+      toggleOtpPass.onclick = () => {
+        if (inputOtpPass.type === 'password') {
+          inputOtpPass.type = 'text';
+          iconOtpPass.className = 'fa-solid fa-eye-slash';
+        } else {
+          inputOtpPass.type = 'password';
+          iconOtpPass.className = 'fa-solid fa-eye';
         }
       };
     }
@@ -402,13 +466,16 @@
       };
     }
 
-    // Forgot Password Form Submit
+    // Forgot Password Form Submit (Phone or Email)
     const formForgot = document.getElementById('form-forgot-view');
     if (formForgot) {
       formForgot.onsubmit = async (e) => {
         e.preventDefault();
         hideAlert();
-        const email = document.getElementById('forgot-email').value;
+        const identifier = document.getElementById('forgot-identifier').value.trim();
+        const submitBtn = document.getElementById('btn-submit-forgot');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Generating 6-Digit OTP...';
 
         try {
           const res = await fetch('/accounts/api/forgot-password/', {
@@ -417,19 +484,123 @@
               'Content-Type': 'application/json',
               'X-CSRFToken': getCookie('csrftoken')
             },
-            body: JSON.stringify({ email })
+            body: JSON.stringify({ identifier })
           });
           const data = await res.json();
-          if (data.resetUrl) {
-            showAlert(`${data.message}<div style="margin-top:10px; padding:10px; background:rgba(0,0,0,0.3); border-radius:8px; text-align:center;"><a href="${data.resetUrl}" style="color:#ff5a1f; font-weight:800; text-decoration:underline; font-size:0.95rem; display:inline-block; margin-bottom:6px;">👉 Click Here To Reset Password Now</a><br><span style="font-size:0.85rem; color:#e2e8f0;">Verification OTP: <strong style="color:#ff5a1f; letter-spacing:2px; font-size:1rem;">${data.otp || ''}</strong></span></div>`, true);
+          if (data.success) {
+            document.getElementById('otp-hidden-identifier').value = data.identifier || identifier;
+            document.getElementById('otp-hidden-token').value = data.token || '';
+            document.getElementById('otp-instruction-text').innerHTML = `OTP generated for <strong>${data.user_name || identifier}</strong>. You can click the 1-click reset link below or enter OTP here:`;
+            
+            showView('otp');
+
+            // Rich Alert with 1-Click Direct Button + OTP Badge + Email Notification
+            const directUrl = data.resetUrl || `/accounts/reset-password/${data.token}/`;
+            showAlert(`
+              <div style="text-align:center; padding:6px 0;">
+                <div style="font-size:0.92rem; font-weight:700; color:#fff; margin-bottom:8px;">
+                  <i class="fa-solid fa-paper-plane" style="color:#22c55e;"></i> OTP & Reset Link Generated!
+                </div>
+                
+                <!-- 1-Click Direct Button -->
+                <a href="${directUrl}" style="background:linear-gradient(135deg, #ff5a1f, #e04812); color:#fff; text-decoration:none; padding:10px 18px; border-radius:10px; font-weight:800; font-size:0.92rem; display:inline-flex; align-items:center; gap:8px; margin-bottom:10px; box-shadow:0 4px 14px rgba(255,90,31,0.4);">
+                  👉 Click Here To Reset Password Now
+                </a>
+
+                <!-- OTP Code Display -->
+                <div style="background:rgba(0,0,0,0.4); border:1px dashed rgba(255,90,31,0.5); border-radius:8px; padding:8px 12px; margin-bottom:6px; color:#cbd5e1; font-size:0.85rem;">
+                  Verification OTP: <strong style="color:#ff5a1f; font-size:1.15rem; letter-spacing:4px; font-family:monospace;">${data.otp || ''}</strong>
+                </div>
+
+                <div style="font-size:0.75rem; color:#94a3b8;">
+                  ✉️ A copy has also been sent to your registered email!
+                </div>
+              </div>
+            `, true);
+
+            setTimeout(() => {
+              const otpInp = document.getElementById('otp-code-input');
+              if (otpInp) {
+                if (data.otp) otpInp.value = data.otp;
+                otpInp.focus();
+              }
+            }, 200);
           } else {
-            showAlert(data.message, true);
+            showAlert(data.message || 'No registered account found with this Phone/Email.');
           }
         } catch (err) {
-          showAlert('Unable to send reset link.');
+          showAlert('Unable to send verification OTP.');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send 6-Digit OTP';
         }
       };
     }
+
+
+    // Direct OTP Verification & Password Reset Submit
+    const formOtpView = document.getElementById('form-otp-view');
+    if (formOtpView) {
+      formOtpView.onsubmit = async (e) => {
+        e.preventDefault();
+        hideAlert();
+        const identifier = document.getElementById('otp-hidden-identifier').value;
+        const token = document.getElementById('otp-hidden-token').value;
+        const otp = document.getElementById('otp-code-input').value.trim();
+        const new_password = document.getElementById('otp-new-password').value.trim();
+        const submitBtn = document.getElementById('btn-submit-otp-verify');
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Verifying OTP & Updating...';
+
+        try {
+          const res = await fetch('/accounts/api/verify-otp-reset/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': getCookie('csrftoken')
+            },
+            body: JSON.stringify({ identifier, token, otp, new_password })
+          });
+          const data = await res.json();
+          if (data.success) {
+            currentUser = data.user;
+            localStorage.setItem('sneaker_squad_user', JSON.stringify(currentUser));
+            updateHeaderUserState();
+            showAlert('🎉 Password Reset Successfully! You are now logged in.', true);
+            setTimeout(() => {
+              closeDrawer();
+              window.location.reload();
+            }, 1000);
+          } else {
+            showAlert(data.message || 'Invalid or expired OTP code.');
+          }
+        } catch (err) {
+          showAlert('Network error while verifying OTP.');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Verify OTP & Reset Password';
+        }
+      };
+    }
+
+    const otpBackBtn = document.getElementById('otp-back-to-forgot');
+    if (otpBackBtn) otpBackBtn.onclick = (e) => { e.preventDefault(); showView('forgot'); };
+
+    const otpResendBtn = document.getElementById('otp-resend-link');
+    if (otpResendBtn) {
+      otpResendBtn.onclick = (e) => {
+        e.preventDefault();
+        const identifier = document.getElementById('otp-hidden-identifier').value;
+        if (identifier) {
+          document.getElementById('forgot-identifier').value = identifier;
+          document.getElementById('form-forgot-view').dispatchEvent(new Event('submit'));
+        } else {
+          showView('forgot');
+        }
+      };
+    }
+
 
     // Dashboard Drawer Links
     document.querySelectorAll('.drawer-dash-link').forEach(link => {

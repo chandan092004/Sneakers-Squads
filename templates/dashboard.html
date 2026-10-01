@@ -856,18 +856,26 @@
               <div style="font-size: 0.82rem; color: #94a3b8;">
                 <i class="fa-solid fa-location-dot" style="color:var(--primary);"></i> Delivering to: <strong style="color:#fff;">{{ order.full_name }}</strong>, {{ order.street_address }}, {{ order.city }} - {{ order.pincode }} (Ph: {{ order.phone }})
               </div>
-              <div>
+              <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <!-- Download Invoice Button -->
+                {% if order.status != 'CANCELLED' %}
+                <a href="/accounts/order/{{ order.order_id }}/invoice/" target="_blank" class="btn btn-secondary" style="font-size: 0.82rem; padding: 8px 16px; color: #38bdf8; border-color: rgba(56, 189, 248, 0.4); text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                  <i class="fa-solid fa-file-invoice-dollar"></i> Download Bill
+                </a>
+                {% endif %}
+
                 {% if order.status == 'CONFIRMED' or order.status == 'PACKED' %}
                 <button type="button" class="btn btn-secondary" onclick="cancelOrder('{{ order.order_id }}')" style="font-size: 0.82rem; padding: 8px 16px; color: #ef4444; border-color: rgba(239,68,68,0.4); cursor:pointer;">
                   <i class="fa-solid fa-ban"></i> Cancel Order
                 </button>
-                {% elif order.status == 'CANCELLED' %}
-                <button type="button" class="btn btn-secondary" onclick="deleteOrder('{{ order.order_id }}')" style="font-size: 0.82rem; padding: 8px 16px; color: #ef4444; border-color: rgba(239,68,68,0.4); cursor:pointer;">
-                  <i class="fa-solid fa-trash"></i> Remove from List
+                {% else %}
+                <button type="button" class="btn btn-secondary" onclick="deleteOrder('{{ order.order_id }}')" style="font-size: 0.82rem; padding: 8px 16px; color: #94a3b8; border-color: rgba(148, 163, 184, 0.3); cursor:pointer;" title="Permanently remove order & bill from history">
+                  <i class="fa-solid fa-trash"></i> Delete Record
                 </button>
                 {% endif %}
               </div>
             </div>
+
 
           </div>
           {% empty %}

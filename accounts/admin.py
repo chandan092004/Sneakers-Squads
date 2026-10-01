@@ -9,8 +9,10 @@ from .models import (
     OrderItem,
     Category,
     Product,
-    ContactMessage
+    ContactMessage,
+    ProductReview
 )
+
 
 # Customize Admin Site Headers
 admin.site.site_header = "SNEAKER SQUAD Admin Control"
@@ -262,3 +264,75 @@ class WishlistItemAdmin(admin.ModelAdmin):
     search_fields = ('user__username', 'product_id', 'product_name')
     list_filter = ('added_at',)
     fields = ('user', 'product_id', 'product_name', 'product_price', 'product_image')
+
+
+from django.utils.safestring import mark_safe
+
+
+@admin.register(ProductReview)
+class ProductReviewAdmin(admin.ModelAdmin):
+    list_display = (
+        'product_code',
+        'user_name',
+        'star_rating_badge',
+        'title',
+        'photo_thumbnail',
+        'is_verified_buyer',
+        'is_approved',
+        'created_at'
+    )
+    list_display_links = ('product_code', 'user_name')
+    list_editable = ('is_approved', 'is_verified_buyer')
+    list_filter = ('rating', 'is_approved', 'is_verified_buyer', 'created_at')
+    search_fields = ('product_code', 'user_name', 'user_email', 'title', 'comment')
+    readonly_fields = ('created_at', 'photo_preview')
+    list_per_page = 20
+
+    fieldsets = (
+        ('⭐ Review Details (Quick Edit)', {
+            'fields': (
+                ('product_code', 'product'),
+                ('user_name', 'user_email'),
+                ('rating', 'is_verified_buyer', 'is_approved'),
+                'title',
+                'comment',
+            )
+        }),
+        ('📸 Customer Photo & Advanced Details (Optional)', {
+            'classes': ('collapse',),
+            'fields': (
+                'user',
+                'review_image',
+                'photo_preview',
+                'created_at'
+            )
+        }),
+    )
+
+    def star_rating_badge(self, obj):
+        stars = '★' * obj.rating + '☆' * (5 - obj.rating)
+        color = '#ff5a1f' if obj.rating >= 4 else ('#eab308' if obj.rating == 3 else '#ef4444')
+        return format_html(
+            '<span style="color: {}; font-weight: 800; font-size: 1.1rem; letter-spacing: 2px;">{} <small>({}/5)</small></span>',
+            color, stars, obj.rating
+        )
+    star_rating_badge.short_description = "Rating"
+
+    def photo_thumbnail(self, obj):
+        if obj.review_image:
+            return format_html(
+                '<a href="{}" target="_blank"><img src="{}" style="width: 44px; height: 44px; object-fit: cover; border-radius: 8px; border: 1.5px solid #ff5a1f;" /></a>',
+                obj.review_image.url, obj.review_image.url
+            )
+        return format_html('<span style="color: #94a3b8; font-size: 0.8rem;">{}</span>', 'No Photo')
+    photo_thumbnail.short_description = "Customer Photo"
+
+    def photo_preview(self, obj):
+        if obj.review_image:
+            return format_html(
+                '<img src="{}" style="max-width: 280px; max-height: 280px; border-radius: 12px; border: 2px solid #ff5a1f;" />',
+                obj.review_image.url
+            )
+        return "No Photo Attached"
+    photo_preview.short_description = "Attached Sneaker Photo"
+

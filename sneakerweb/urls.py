@@ -26,7 +26,13 @@ urlpatterns = [
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('dashboard.html', account_views.dashboard_view, name='dashboard_html'),
     path('dashboard/', account_views.dashboard_view, name='dashboard_page'),
+    path('order/<str:order_id>/invoice/', account_views.invoice_view, name='root_order_invoice'),
     path('api/checkout/', account_views.api_checkout, name='root_api_checkout'),
+    path('api/payment/create-order/', account_views.api_create_razorpay_order, name='root_api_create_razorpay_order'),
+    path('api/payment/verify/', account_views.api_verify_payment, name='root_api_verify_payment'),
+    path('api/reviews/submit/', account_views.api_submit_review, name='root_api_submit_review'),
+    path('api/reviews/<str:product_code>/', account_views.api_get_reviews, name='root_api_get_reviews'),
+
     
     # Dynamic Products Database APIs & JS Sync
     path('api/products/', views.api_products_json, name='api_products_json'),
@@ -35,6 +41,10 @@ urlpatterns = [
     # Dynamic Admin-Created Category Pages (e.g. /kids.html, /running.html, /category/kids/)
     path('category/<slug:slug>/', views.category_view, name='category_page_slug'),
     path('<slug:slug>.html', views.category_view, name='category_page_html'),
+
+    # PWA Manifest & Service Worker Root Routes
+    path('manifest.json', views.pwa_manifest, name='pwa_manifest'),
+    path('sw.js', views.pwa_service_worker, name='pwa_service_worker'),
 ]
 
 # Serve static & media files in development

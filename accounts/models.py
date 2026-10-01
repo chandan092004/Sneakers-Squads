@@ -168,6 +168,12 @@ class Order(models.Model):
     payment_status = models.CharField(max_length=20, default='Pending')
     status = models.CharField(max_length=30, choices=STATUS_CHOICES, default='CONFIRMED')
     
+    # Razorpay / Payment Gateway Audit Fields
+    razorpay_order_id = models.CharField(max_length=100, blank=True, null=True)
+    razorpay_payment_id = models.CharField(max_length=100, blank=True, null=True)
+    razorpay_signature = models.CharField(max_length=255, blank=True, null=True)
+    invoice_number = models.CharField(max_length=50, blank=True, null=True)
+    
     courier_partner = models.CharField(max_length=100, default='Blue Dart Express (Air Speed)', blank=True)
     tracking_number = models.CharField(max_length=100, blank=True, null=True)
     estimated_delivery = models.CharField(max_length=100, blank=True, null=True)
@@ -188,6 +194,8 @@ class Order(models.Model):
             self.order_id = f"SQUAD-{random.randint(10000, 99999)}"
         if not self.tracking_number:
             self.tracking_number = f"BD-{random.randint(10000000, 99999999)}"
+        if not self.invoice_number:
+            self.invoice_number = f"INV-{timezone.now().strftime('%Y%m')}-{random.randint(1000, 9999)}"
         if not self.estimated_delivery:
             est_date = (timezone.now() + timedelta(days=4)).strftime("%d %b %Y")
             self.estimated_delivery = est_date
@@ -203,6 +211,23 @@ class Order(models.Model):
             'CANCELLED': 0,
         }
         return steps.get(self.status, 1)
+
+    def get_tax_breakup(self):
+        """Calculate GST 18% inclusive breakup for invoice"""
+        total = float(self.total_amount)
+        # Price inclusive of 18% GST: Base = Total / 1.18, Tax = Total - Base
+        base_price = round(total / 1.18, 2)
+        tax_amount = round(total - base_price, 2)
+        cgst = round(tax_amount / 2, 2)
+        sgst = round(tax_amount / 2, 2)
+        return {
+            'base_price': base_price,
+            'tax_amount': tax_amount,
+            'cgst': cgst,
+            'sgst': sgst,
+            'total': total
+        }
+
 
 
 class OrderItem(models.Model):
@@ -440,5 +465,65 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return f"[{self.get_status_display()}] {self.name} - {self.get_issue_type_display()} ({self.created_at.strftime('%d %b %Y')})"
+
+
+class ProductReview(models.Model):
+    RATING_CHOICES = (
+        (5, '★★★★★ (5/5) - Outstanding / Fire'),
+        (4, '★★★★☆ (4/5) - Great Quality'),
+        (3, '★★★☆☆ (3/5) - Average / Good'),
+        (2, '★★☆☆☆ (2/5) - Below Average'),
+        (1, '★☆☆☆☆ (1/5) - Poor / Disappointed'),
+    )
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='reviews', null=True, blank=True)
+    product_code = models.CharField(max_length=100, help_text="Product Code / Slug", db_index=True)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='product_reviews')
+    user_name = models.CharField(max_length=120, help_text="Reviewer Name")
+    user_email = models.EmailField(blank=True, default='')
+    rating = models.PositiveSmallIntegerField(choices=RATING_CHOICES, default=5, help_text="Star Rating (1 to 5)")
+    title = models.CharField(max_length=200, blank=True, null=True, help_text="Review Headline / Summary")
+    comment = models.TextField(help_text="Detailed review comments")
+    review_image = models.FileField(upload_to='review_photos/', blank=True, null=True, help_text="Customer photo of sneaker")
+    is_verified_buyer = models.BooleanField(default=True, help_text="Display Verified Buyer Squad Badge")
+    is_approved = models.BooleanField(default=True, help_text="Check to make visible on live store")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'Customer Sneaker Review'
+        verbose_name_plural = 'Customer Sneaker Reviews'
+
+    def __str__(self):
+        return f"{self.user_name} - {self.rating}★ for {self.product_code}"
+
+    def get_avatar_url(self):
+        if self.user and hasattr(self.user, 'profile') and self.user.profile.avatar:
+            return self.user.profile.get_avatar_url()
+        initials = ''.join([part[0] for part in self.user_name.split()[:2]]).upper() if self.user_name else 'SQ'
+        return f"https://ui-avatars.com/api/?name={initials}&background=ff5a1f&color=ffffff&bold=true&size=100"
+
+    def get_stars_array(self):
+        return list(range(1, 6))
+
+    def to_dict(self):
+        image_url = ''
+        if self.review_image:
+            try:
+                image_url = self.review_image.url
+            except Exception:
+                image_url = str(self.review_image)
+        return {
+            'id': self.id,
+            'userName': self.user_name,
+            'avatar': self.get_avatar_url(),
+            'rating': self.rating,
+            'title': self.title or '',
+            'comment': self.comment,
+            'image': image_url,
+            'isVerified': self.is_verified_buyer,
+            'date': self.created_at.strftime("%d %b %Y")
+        }
+
 
 

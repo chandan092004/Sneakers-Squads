@@ -132,3 +132,26 @@ def dynamic_products_js(request):
     return HttpResponse(js_content, content_type="application/javascript")
 
 
+# 9. PWA Manifest & Service Worker Endpoints
+def pwa_manifest(request):
+    import os
+    from django.conf import settings
+    manifest_path = os.path.join(settings.STATICFILES_DIRS[0], 'manifest.json')
+    if os.path.exists(manifest_path):
+        with open(manifest_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return HttpResponse(content, content_type="application/manifest+json")
+    return JsonResponse({"name": "SNEAKERS SQUAD", "display": "standalone"})
+
+
+def pwa_service_worker(request):
+    import os
+    from django.conf import settings
+    sw_path = os.path.join(settings.STATICFILES_DIRS[0], 'sw.js')
+    if os.path.exists(sw_path):
+        with open(sw_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return HttpResponse(content, content_type="application/javascript")
+    return HttpResponse("// sw.js empty", content_type="application/javascript")
+
+

@@ -1,5 +1,14 @@
-<!-- Top Announcement Bar -->
 {% load static %}
+<!-- PWA Manifest & Meta Tags -->
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#ff5a1f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SneakersSquad">
+<link rel="apple-touch-icon" href="{% static 'img/pwa-icon-192.png' %}">
+<link rel="stylesheet" href="{% static 'css/pwa-install.css' %}">
+
+<!-- Top Announcement Bar -->
 <script>
   if (localStorage.getItem('sneaker_store_theme') === 'light') {
     document.documentElement.classList.add('light-theme');
@@ -62,6 +71,9 @@
 
     <!-- User, Wishlist, Theme Toggle & Cart Action Icons -->
     <div class="header-actions">
+      <button type="button" class="header-pwa-install-btn" id="header-pwa-btn" onclick="window.installSneakerSquadPWA()" title="Install Sneakers Squad App">
+        <i class="fa-solid fa-mobile-screen-button"></i> <span>App</span>
+      </button>
       <button type="button" class="action-btn theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme" style="background: rgba(255,255,255,0.08); border: 1px solid var(--border); cursor: pointer; border-radius: 10px; width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem; color: #f59e0b; transition: var(--transition);">
         <i class="fa-solid fa-moon" id="theme-icon"></i>
       </button>

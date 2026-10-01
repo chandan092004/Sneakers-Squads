@@ -287,6 +287,8 @@ function initCheckoutModal() {
       let shipping = (subtotal - discount) >= 2999 ? 0 : (subtotal > 0 ? 150 : 0);
       let grandTotal = (subtotal - discount) + shipping;
 
+      const selectedPayment = document.querySelector('input[name="chk_payment"]:checked')?.value || 'RAZORPAY';
+
       const orderPayload = {
         full_name: document.getElementById('chk_name').value.trim(),
         phone: document.getElementById('chk_phone').value.trim(),
@@ -294,7 +296,7 @@ function initCheckoutModal() {
         address: document.getElementById('chk_address').value.trim(),
         city: document.getElementById('chk_city').value.trim(),
         postal_code: document.getElementById('chk_pincode').value.trim(),
-        payment_method: document.querySelector('input[name="chk_payment"]:checked')?.value || 'COD',
+        payment_method: selectedPayment,
         total_amount: grandTotal,
         items: cart.map(it => ({
           id: it.id,
@@ -321,49 +323,178 @@ function initCheckoutModal() {
         return cookieValue;
       }
 
+      function handleOrderSuccess(data) {
+        // Clear cart
+        cart = [];
+        saveCart();
+        updateCartBadge();
+        renderCartItems();
+
+        // Hide checkout modal
+        modalOverlay.style.display = 'none';
+        form.reset();
+
+        // Show confirmation modal
+        const formattedOrderId = data.order_id || 'SQUAD-ORDER';
+        const orderIdEl = document.getElementById('success-order-id');
+        if (orderIdEl) orderIdEl.innerText = `#${formattedOrderId}`;
+
+        const invoiceBtn = document.getElementById('success-invoice-btn');
+        if (invoiceBtn) {
+          invoiceBtn.href = data.invoice_url || `/accounts/order/${formattedOrderId}/invoice/`;
+        }
+
+        const estEl = document.getElementById('success-est-delivery');
+        if (estEl && data.estimated_delivery) {
+          estEl.innerText = `${data.estimated_delivery} (${data.courier || 'Blue Dart'})`;
+        }
+
+        if (successModal) successModal.style.display = 'flex';
+        showToast(`Order #${formattedOrderId} placed! 🚀`, 'fa-circle-check');
+      }
+
       try {
-        const response = await fetch('/api/checkout/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRFToken': getCookie('csrftoken')
-          },
-          body: JSON.stringify(orderPayload)
-        });
+        // Option 1: ONLINE PAYMENT VIA RAZORPAY (UPI, QR, CARDS, NETBANKING)
+        if (selectedPayment === 'RAZORPAY' || selectedPayment === 'UPI') {
+          submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Initializing Payment Gateway...';
+          
+          const createRes = await fetch('/api/payment/create-order/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': getCookie('csrftoken')
+            },
+            body: JSON.stringify(orderPayload)
+          });
 
-        const data = await response.json();
+          const createData = await createRes.json();
+          if (!createRes.ok || !createData.success) {
+            throw new Error(createData.message || 'Failed to initialize payment gateway.');
+          }
 
-        if (response.ok && (data.status === 'success' || data.success)) {
-          // Clear cart
-          cart = [];
-          saveCart();
-          updateCartBadge();
-          renderCartItems();
+          // Check if Razorpay JS SDK loaded
+          if (typeof Razorpay !== 'undefined' && createData.key_id && !createData.key_id.startsWith('rzp_test_squadsneakers')) {
+            const rzpOptions = {
+              key: createData.key_id,
+              amount: createData.amount,
+              currency: createData.currency || 'INR',
+              name: 'SNEAKERS SQUADS',
+              description: `Order #${createData.order_id} - Verified Deadstock Kicks`,
+              image: '/static/img/shoe-1.jpg',
+              order_id: createData.razorpay_order_id,
+              handler: async function (paymentResponse) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Verifying Payment Signature...';
+                
+                try {
+                  const verifyRes = await fetch('/api/payment/verify/', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                      'X-CSRFToken': getCookie('csrftoken')
+                    },
+                    body: JSON.stringify({
+                      order_id: createData.order_id,
+                      razorpay_order_id: paymentResponse.razorpay_order_id,
+                      razorpay_payment_id: paymentResponse.razorpay_payment_id,
+                      razorpay_signature: paymentResponse.razorpay_signature
+                    })
+                  });
+                  const verifyData = await verifyRes.json();
+                  if (verifyRes.ok && verifyData.success) {
+                    handleOrderSuccess(verifyData);
+                  } else {
+                    errAlert.style.display = 'block';
+                    errAlert.innerText = verifyData.message || 'Payment signature verification failed.';
+                  }
+                } catch (vErr) {
+                  errAlert.style.display = 'block';
+                  errAlert.innerText = 'Error while verifying transaction with server.';
+                } finally {
+                  submitBtn.disabled = false;
+                  submitBtn.innerHTML = '<i class="fa-solid fa-lock"></i> Proceed to Pay Securely';
+                }
+              },
+              prefill: {
+                name: createData.customer_name,
+                email: createData.customer_email,
+                contact: createData.customer_phone
+              },
+              theme: {
+                color: '#ff5a1f'
+              },
+              modal: {
+                ondismiss: function () {
+                  submitBtn.disabled = false;
+                  submitBtn.innerHTML = '<i class="fa-solid fa-lock"></i> Proceed to Pay Securely';
+                  showToast('Payment window was closed. Try again when ready.', 'fa-circle-info');
+                }
+              }
+            };
 
-          // Hide checkout modal
-          modalOverlay.style.display = 'none';
-          form.reset();
+            const rzp = new Razorpay(rzpOptions);
+            rzp.on('payment.failed', function (resp) {
+              errAlert.style.display = 'block';
+              errAlert.innerText = `Payment Failed: ${resp.error.description || 'Transaction declined'}`;
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = '<i class="fa-solid fa-lock"></i> Proceed to Pay Securely';
+            });
+            rzp.open();
+          } else {
+            // Test Mode Instant Simulator (Seamlessly verifies and confirms without real bank charge)
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing Test Payment (UPI / QR)...';
+            
+            const verifyRes = await fetch('/api/payment/verify/', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCookie('csrftoken')
+              },
+              body: JSON.stringify({
+                order_id: createData.order_id,
+                razorpay_order_id: createData.razorpay_order_id,
+                razorpay_payment_id: `pay_test_${Math.random().toString(36).substring(2, 11)}`,
+                razorpay_signature: 'test_signature_valid'
+              })
+            });
 
-          // Show confirmation modal
-          const formattedOrderId = data.order_id || 'SQUAD-ORDER';
-          const orderIdEl = document.getElementById('success-order-id');
-          if (orderIdEl) orderIdEl.innerText = `#${formattedOrderId}`;
-          if (successModal) successModal.style.display = 'flex';
-          showToast(`Order #${formattedOrderId} placed! 🚀`, 'fa-circle-check');
+            const verifyData = await verifyRes.json();
+            if (verifyRes.ok && verifyData.success) {
+              handleOrderSuccess(verifyData);
+            } else {
+              throw new Error(verifyData.message || 'Payment confirmation failed.');
+            }
+          }
         } else {
-          errAlert.style.display = 'block';
-          errAlert.innerText = data.message || 'Failed to place order. Please check details.';
+          // Option 2: CASH ON DELIVERY (COD)
+          const response = await fetch('/api/checkout/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': getCookie('csrftoken')
+            },
+            body: JSON.stringify(orderPayload)
+          });
+
+          const data = await response.json();
+          if (response.ok && (data.status === 'success' || data.success)) {
+            handleOrderSuccess(data);
+          } else {
+            errAlert.style.display = 'block';
+            errAlert.innerText = data.message || 'Failed to place order. Please check details.';
+          }
         }
       } catch (err) {
         errAlert.style.display = 'block';
-        errAlert.innerText = 'Network error while connecting to server. Please try again.';
+        errAlert.innerText = err.message || 'Network error while connecting to server. Please try again.';
       } finally {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="fa-solid fa-lock"></i> Place Order Now';
+        submitBtn.innerHTML = '<i class="fa-solid fa-lock"></i> Proceed to Pay Securely';
       }
     });
   }
 }
+
 
 function updateCheckoutSummary() {
   const subtotalEl = document.getElementById('chk_summary_subtotal');

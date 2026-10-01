@@ -19,11 +19,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
+  <!-- PWA Manifest & Mobile App Capabilities -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ff5a1f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SneakersSquad">
+  <link rel="apple-touch-icon" href="{% static 'img/pwa-icon-192.png' %}">
+
   <!-- CSS Files (Direct & Server Compatible) -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="../static/css/style.css">
   <link rel="stylesheet" href="/static/css/style.css">
   
+  <link rel="stylesheet" href="{% static 'css/pwa-install.css' %}">
   <link rel="stylesheet" href="{% static 'css/landing.css' %}">
   <link rel="stylesheet" href="../static/css/landing.css">
   <link rel="stylesheet" href="/static/css/landing.css">
@@ -45,6 +54,9 @@
     </ul>
 
     <div class="header-actions">
+      <button type="button" class="header-pwa-install-btn" id="header-pwa-btn" onclick="window.installSneakerSquadPWA()" title="Install Sneakers Squad Mobile App">
+        <i class="fa-solid fa-mobile-screen-button"></i> <span>Install App</span>
+      </button>
       <button type="button" class="icon-btn theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme" style="background: rgba(255,255,255,0.08); border: 1px solid var(--border); cursor: pointer; border-radius: 10px; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem; color: #f59e0b; transition: var(--transition);">
         <i class="fa-solid fa-moon" id="theme-icon"></i>
       </button>
@@ -126,6 +138,9 @@
   <script src="{% static 'js/auth-drawer.js' %}"></script>
   <script src="../static/js/auth-drawer.js"></script>
   <script src="/static/js/auth-drawer.js"></script>
+
+  <!-- PWA Install & Service Worker Script -->
+  <script src="{% static 'js/pwa-install.js' %}"></script>
 </body>
 </html>
 

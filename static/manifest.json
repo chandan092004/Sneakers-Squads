@@ -1,0 +1,58 @@
+{
+  "name": "SNEAKERS SQUAD - Authentic Kicks & Drops",
+  "short_name": "SneakersSquad",
+  "description": "India's premier sneaker store for 100% authentic deadstock sneakers, streetwear, and exclusive drops.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "window-controls-overlay", "minimal-ui"],
+  "background_color": "#0b0d13",
+  "theme_color": "#ff5a1f",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["shopping", "lifestyle", "fashion"],
+  "icons": [
+    {
+      "src": "/static/img/pwa-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/img/pwa-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/img/pwa-icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Men's Sneakers",
+      "short_name": "Men",
+      "description": "Explore Men's Sneaker Drops",
+      "url": "/men.html?source=pwa",
+      "icons": [{ "src": "/static/img/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Women's Sneakers",
+      "short_name": "Women",
+      "description": "Explore Women's Sneaker Drops",
+      "url": "/women.html?source=pwa",
+      "icons": [{ "src": "/static/img/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "My Orders & Tracking",
+      "short_name": "Orders",
+      "description": "Track your sneaker orders and invoices",
+      "url": "/dashboard.html#orders?source=pwa",
+      "icons": [{ "src": "/static/img/pwa-icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

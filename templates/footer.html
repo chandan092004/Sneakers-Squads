@@ -76,13 +76,23 @@
         <div style="margin-bottom: 20px;">
           <label style="font-size: 0.85rem; font-weight: 700; color: #cbd5e1; display: block; margin-bottom: 8px;">Select Payment Mode:</label>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-            <label style="display: flex; align-items: center; gap: 8px; background: #0b0d13; border: 1px solid rgba(255,255,255,0.12); padding: 10px 12px; border-radius: 8px; cursor: pointer;">
-              <input type="radio" name="chk_payment" value="COD" checked>
-              <span style="font-size: 0.88rem; font-weight: 600;"><i class="fa-solid fa-hand-holding-dollar" style="color: #ff5a1f;"></i> Cash On Delivery</span>
+            <label style="display: flex; align-items: center; gap: 8px; background: #0b0d13; border: 1px solid rgba(255,255,255,0.12); padding: 12px; border-radius: 10px; cursor: pointer; transition: border-color 0.2s ease;">
+              <input type="radio" name="chk_payment" value="RAZORPAY" checked>
+              <div>
+                <div style="font-size: 0.88rem; font-weight: 700; color: #fff;">
+                  <i class="fa-solid fa-qrcode" style="color: #ff5a1f;"></i> UPI / QR / Card
+                </div>
+                <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 2px;">GPay, PhonePe, Cards</div>
+              </div>
             </label>
-            <label style="display: flex; align-items: center; gap: 8px; background: #0b0d13; border: 1px solid rgba(255,255,255,0.12); padding: 10px 12px; border-radius: 8px; cursor: pointer;">
-              <input type="radio" name="chk_payment" value="UPI">
-              <span style="font-size: 0.88rem; font-weight: 600;"><i class="fa-solid fa-qrcode" style="color: #ff5a1f;"></i> Instant UPI / QR</span>
+            <label style="display: flex; align-items: center; gap: 8px; background: #0b0d13; border: 1px solid rgba(255,255,255,0.12); padding: 12px; border-radius: 10px; cursor: pointer; transition: border-color 0.2s ease;">
+              <input type="radio" name="chk_payment" value="COD">
+              <div>
+                <div style="font-size: 0.88rem; font-weight: 700; color: #fff;">
+                  <i class="fa-solid fa-hand-holding-dollar" style="color: #22c55e;"></i> Cash on Delivery
+                </div>
+                <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 2px;">Pay upon delivery</div>
+              </div>
             </label>
           </div>
         </div>
@@ -108,7 +118,7 @@
         </div>
 
         <button type="submit" id="chk_submit_btn" style="width: 100%; background: linear-gradient(135deg, #ff5a1f, #e04812); color: #fff; border: none; padding: 14px; border-radius: 10px; font-size: 1.05rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 8px 25px rgba(255, 90, 31, 0.4);">
-          <i class="fa-solid fa-lock"></i> Place Order Now
+          <i class="fa-solid fa-lock"></i> Proceed to Pay Securely
         </button>
       </form>
     </div>
@@ -116,38 +126,47 @@
 
   <!-- Order Success Confirmation Modal -->
   <div class="order-success-modal" id="order-success-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 10000; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
-    <div style="background: #14171f; border: 1px solid rgba(255,90,31,0.4); border-radius: 20px; width: 90%; max-width: 500px; padding: 32px 24px; text-align: center; color: #fff; box-shadow: 0 20px 50px rgba(0,0,0,0.7);">
+    <div style="background: #14171f; border: 1px solid rgba(255,90,31,0.4); border-radius: 20px; width: 90%; max-width: 520px; padding: 32px 24px; text-align: center; color: #fff; box-shadow: 0 20px 50px rgba(0,0,0,0.7);">
       <div style="width: 70px; height: 70px; background: rgba(34,197,94,0.15); border: 2px solid #22c55e; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #22c55e; margin: 0 auto 16px;">
         <i class="fa-solid fa-check"></i>
       </div>
       <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 8px;">Order Confirmed! 🚀</h3>
-      <p style="color: #94a3b8; font-size: 0.92rem; margin-bottom: 16px;">Thank you for your purchase. Your kicks are being prepared for dispatch.</p>
+      <p style="color: #94a3b8; font-size: 0.92rem; margin-bottom: 16px;">Thank you for your purchase. Your deadstock kicks are being prepared for dispatch.</p>
       
       <div style="background: #0b0d13; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px; margin-bottom: 20px; text-align: left; font-size: 0.88rem;">
         <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
           <span style="color: #94a3b8;">Order Number:</span>
-          <strong id="success-order-id" style="color: #ff5a1f;">#ORD-0001</strong>
+          <strong id="success-order-id" style="color: #ff5a1f;">#SQUAD-00000</strong>
         </div>
         <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
           <span style="color: #94a3b8;">Estimated Delivery:</span>
-          <span>2 - 4 Business Days</span>
+          <span id="success-est-delivery">2 - 4 Business Days (Blue Dart Air)</span>
         </div>
         <div style="display: flex; justify-content: space-between;">
-          <span style="color: #94a3b8;">Tracking Update:</span>
-          <span>Sent via SMS & WhatsApp</span>
+          <span style="color: #94a3b8;">Tax Invoice Status:</span>
+          <span style="color: #22c55e; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> Generated & Ready</span>
         </div>
       </div>
 
-      <div style="display: flex; gap: 10px; justify-content: center;">
-        <a href="/dashboard.html#orders" style="flex: 1; background: #ff5a1f; color: #fff; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
-          <i class="fa-solid fa-truck-fast"></i> Track Live Order
-        </a>
-        <button id="success-modal-close" style="flex: 1; background: #202634; border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; cursor: pointer;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; gap: 10px; justify-content: center;">
+          <a href="#" id="success-invoice-btn" target="_blank" style="flex: 1; background: rgba(56,189,248,0.15); border: 1px solid #38bdf8; color: #38bdf8; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+            <i class="fa-solid fa-file-invoice-dollar"></i> Download Invoice
+          </a>
+          <a href="/accounts/dashboard.html#orders" style="flex: 1; background: #ff5a1f; color: #fff; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+            <i class="fa-solid fa-truck-fast"></i> Live Tracking
+          </a>
+        </div>
+        <button id="success-modal-close" style="width: 100%; background: #202634; border: 1px solid rgba(255,255,255,0.15); color: #cbd5e1; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 0.85rem; cursor: pointer;">
           Continue Shopping
         </button>
       </div>
     </div>
   </div>
+
+  <!-- Official Razorpay Checkout Script -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 
 
   <!-- Shared Footer (Dark-themed CSS Grid / Flexbox) -->
@@ -187,10 +206,11 @@
         <div>
           <h4 class="footer-col-title">Customer Care</h4>
           <ul class="footer-links">
+            <li><a href="tel:+917488291737"><i class="fa-solid fa-phone" style="color:#ff5a1f;"></i> +91 74882 91737</a></li>
+            <li><a href="https://wa.me/917488291737?text=Hi%20Sneaker%20Squad%20Support" target="_blank"><i class="fa-brands fa-whatsapp" style="color:#22c55e;"></i> WhatsApp Support</a></li>
+            <li><a href="mailto:chandankumarsharma813@gmail.com"><i class="fa-solid fa-envelope" style="color:#38bdf8;"></i> chandankumarsharma813@gmail.com</a></li>
             <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact & Help Support</a></li>
-            <li><a href="contact.html#track-order"><i class="fa-solid fa-angle-right"></i> Track Your Order</a></li>
             <li><a href="contact.html#returns"><i class="fa-solid fa-angle-right"></i> 30-Day Easy Returns</a></li>
-            <li><a href="contact.html#faq"><i class="fa-solid fa-angle-right"></i> Help Center & FAQs</a></li>
           </ul>
         </div>
 
@@ -231,4 +251,5 @@
   <script src="/api/products/data.js"></script>
   <script src="{% static 'js/script.js' %}"></script>
   <script src="{% static 'js/auth-drawer.js' %}"></script>
+  <script src="{% static 'js/pwa-install.js' %}"></script>
 

@@ -170,20 +170,19 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-# Email Configuration
-# - If EMAIL_HOST_USER & EMAIL_HOST_PASSWORD are set, sends real emails via Gmail SMTP.
-# - Otherwise defaults to ConsoleBackend for local testing without crashing.
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = ''  # Apni Gmail ID dalein (e.g. 'yourname@gmail.com')
-EMAIL_HOST_PASSWORD = ''  # Google 16-digit App Password dalein
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER or 'SNEAKER SQUAD <noreply@sneakersquad.com>'
+# Email Configuration (Reads from .env or environment)
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True').lower() in ('true', '1', 'yes')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '').strip()
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '').strip()
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER or 'SNEAKER SQUAD <noreply@sneakersquad.com>')
 
 if EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 # Permanent Persistent Login Sessions (1 year duration - Never logout unless user clicks sign out)
 SESSION_COOKIE_AGE = 31536000  # 365 days
@@ -192,3 +191,8 @@ SESSION_SAVE_EVERY_REQUEST = True
 CSRF_COOKIE_HTTPONLY = False
 CSRF_COOKIE_SAMESITE = 'Lax'
 SESSION_COOKIE_SAMESITE = 'Lax'
+
+# Razorpay Payment Gateway Configuration
+RAZORPAY_KEY_ID = os.environ.get('RAZORPAY_KEY_ID', 'rzp_test_squadsneakers')
+RAZORPAY_KEY_SECRET = os.environ.get('RAZORPAY_KEY_SECRET', 'test_secret_squad2026')
+
