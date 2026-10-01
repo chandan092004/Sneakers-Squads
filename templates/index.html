@@ -40,23 +40,7 @@
   <!-- Simple Men & Women Split Screen -->
   <main class="split-container">
 
-    <!-- WOMEN SECTION -->
-    <a href="women.html" class="split-side" aria-label="Shop Women's Collection">
-      <div class="split-bg" style="background-image: url('{% static 'img/women_shoes-banner.jpg' %}');"></div>
-      <div class="split-overlay"></div>
-      <div class="split-box">
-        <span class="split-tag"><i class="fa-solid fa-sparkles"></i> Women's Kicks</span>
-        <h2 class="split-title">WOMEN</h2>
-        <span class="split-btn">
-          Shop Women <i class="fa-solid fa-arrow-right"></i>
-        </span>
-      </div>
-    </a>
-
-    <!-- Center Line -->
-    <div class="divider-line"></div>
-
-    <!-- MEN SECTION -->
+    <!-- MEN SECTION (Left on Laptop, Top on Mobile) -->
     <a href="men.html" class="split-side" aria-label="Shop Men's Collection">
       <div class="split-bg" style="background-image: url('{% static 'img/men_shoes-banner.jpg' %}');"></div>
       <div class="split-overlay"></div>
@@ -65,6 +49,22 @@
         <h2 class="split-title">MEN</h2>
         <span class="split-btn">
           Shop Men <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </div>
+    </a>
+
+    <!-- Center Line -->
+    <div class="divider-line"></div>
+
+    <!-- WOMEN SECTION (Right on Laptop, Bottom on Mobile) -->
+    <a href="women.html" class="split-side" aria-label="Shop Women's Collection">
+      <div class="split-bg" style="background-image: url('{% static 'img/women_shoes-banner.jpg' %}');"></div>
+      <div class="split-overlay"></div>
+      <div class="split-box">
+        <span class="split-tag"><i class="fa-solid fa-sparkles"></i> Women's Kicks</span>
+        <h2 class="split-title">WOMEN</h2>
+        <span class="split-btn">
+          Shop Women <i class="fa-solid fa-arrow-right"></i>
         </span>
       </div>
     </a>
