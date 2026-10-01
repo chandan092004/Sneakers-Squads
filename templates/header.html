@@ -104,6 +104,22 @@
     <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Menu">&times;</button>
   </div>
 
+  <!-- User Account Card inside Mobile Drawer -->
+  <div class="drawer-user-card" id="drawer-user-card" style="background:#141722; padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,0.1); margin-bottom:12px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+      <div class="drawer-user-avatar" id="drawer-user-avatar" style="width:40px; height:40px; border-radius:50%; background:rgba(255,90,31,0.15); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.1rem; border:1px solid rgba(255,90,31,0.3); flex-shrink:0;">
+        <i class="fa-regular fa-user" id="drawer-avatar-icon"></i>
+      </div>
+      <div style="overflow:hidden;">
+        <div style="font-size:0.92rem; font-weight:800; color:#fff; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;" id="drawer-user-name">Welcome, Sneakerhead!</div>
+        <div style="font-size:0.75rem; color:#94a3b8; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;" id="drawer-user-sub">Sign in for exclusive drops & orders</div>
+      </div>
+    </div>
+    <button type="button" class="btn-drawer-auth auth-trigger-btn" id="drawer-auth-btn" style="width:100%; background:var(--primary); color:#fff; border:none; padding:9px 12px; border-radius:8px; font-size:0.85rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px;">
+      <i class="fa-solid fa-arrow-right-to-bracket"></i> <span>Sign In / Register</span>
+    </button>
+  </div>
+
   <ul class="mobile-nav-list">
     <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house" style="color:#ff5a1f;"></i> <span>Home</span></a></li>
     <li><a href="men.html" class="nav-link"><i class="fa-solid fa-shoe-prints" style="color:#38bdf8;"></i> <span>Men's Kicks</span></a></li>

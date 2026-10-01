@@ -1770,16 +1770,33 @@ img {
     font-size: 1.15rem;
   }
 
-  /* Keep top header clean by hiding extra action buttons on phones */
-  .header-pwa-install-btn,
-  #header-wishlist-btn {
-    display: none !important;
+  .header-actions {
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
   }
 
   .action-btn {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    font-size: 0.95rem;
+    border-radius: 9px;
+  }
+
+  /* Only hide standalone PWA button from top row because it's inside drawer */
+  .header-pwa-install-btn {
+    display: none !important;
+  }
+
+  #header-wishlist-btn,
+  #auth-btn,
+  #cart-btn,
+  #theme-toggle-btn {
+    display: inline-flex !important;
   }
 
   .logo span {

@@ -655,6 +655,11 @@
 
     const count = currentWishlist.length;
 
+    const drawerName = document.getElementById('drawer-user-name');
+    const drawerSub = document.getElementById('drawer-user-sub');
+    const drawerAuthBtn = document.getElementById('drawer-auth-btn');
+    const drawerAvatarIcon = document.getElementById('drawer-avatar-icon');
+
     if (currentUser) {
       if (authBtn) {
         authBtn.title = `Signed in as ${currentUser.displayName} (Click for Dashboard)`;
@@ -664,6 +669,20 @@
         headerIcon.className = 'fa-solid fa-user-check';
         headerIcon.style.color = 'var(--primary)';
       }
+      if (drawerName) drawerName.textContent = currentUser.displayName || 'Squad Member';
+      if (drawerSub) drawerSub.textContent = currentUser.email || 'View orders & profile';
+      if (drawerAvatarIcon) {
+        drawerAvatarIcon.className = 'fa-solid fa-user-check';
+        drawerAvatarIcon.style.color = 'var(--primary)';
+      }
+      if (drawerAuthBtn) {
+        drawerAuthBtn.innerHTML = '<i class="fa-solid fa-gauge-high"></i> <span>My Dashboard & Orders</span>';
+        drawerAuthBtn.onclick = (e) => {
+          e.preventDefault();
+          window.location.href = '/dashboard.html';
+        };
+      }
+
       const pName = document.getElementById('profile-user-name');
       const pEmail = document.getElementById('profile-user-email');
       const pAvatar = document.getElementById('profile-avatar-img');
@@ -686,6 +705,17 @@
         headerIcon.className = 'fa-regular fa-user';
         headerIcon.style.color = '';
       }
+      if (drawerName) drawerName.textContent = 'Welcome, Sneakerhead!';
+      if (drawerSub) drawerSub.textContent = 'Sign in for exclusive drops & orders';
+      if (drawerAvatarIcon) {
+        drawerAvatarIcon.className = 'fa-regular fa-user';
+        drawerAvatarIcon.style.color = 'var(--primary)';
+      }
+      if (drawerAuthBtn) {
+        drawerAuthBtn.innerHTML = '<i class="fa-solid fa-arrow-right-to-bracket"></i> <span>Sign In / Register</span>';
+        drawerAuthBtn.onclick = null;
+      }
+
       if (wishBadge) {
         wishBadge.textContent = count;
         wishBadge.style.display = count > 0 ? 'flex' : 'none';
