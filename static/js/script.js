@@ -134,7 +134,7 @@ function initMobileMenu() {
       return;
     }
 
-    const navLink = e.target.closest('.nav-menu .nav-link');
+    const navLink = e.target.closest('#nav-menu .nav-link, .mobile-drawer-panel .nav-link, .nav-menu .nav-link');
     if (navLink) {
       closeDrawer();
     }
