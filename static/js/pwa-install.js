@@ -16,6 +16,7 @@
         .register('/sw.js', { scope: '/' })
         .then((reg) => {
           console.log('[SneakerSquad PWA] Service Worker registered successfully! Scope:', reg.scope);
+          reg.update();
         })
         .catch((err) => {
           console.warn('[SneakerSquad PWA] Service Worker registration failed:', err);

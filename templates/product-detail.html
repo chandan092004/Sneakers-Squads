@@ -107,12 +107,6 @@
           <!-- Price Row -->
           <div class="product-pricing-card">
             <span class="product-detail-current-price" id="product-current-price">₹{{ product.price|floatformat:0 }}</span>
-            {% if product.original_price %}
-            <span class="product-detail-original-price" id="product-original-price">₹{{ product.original_price|floatformat:0 }}</span>
-            {% endif %}
-            {% if product.discount %}
-            <span class="product-detail-discount" id="product-discount">{{ product.discount }} OFF</span>
-            {% endif %}
           </div>
 
           <!-- Short Highlight -->

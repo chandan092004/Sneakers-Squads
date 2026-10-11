@@ -1507,3 +1507,9 @@
     padding: 10px;
   }
 }
+
+
+/* Clean exact amount display - hide strikethrough & discounts */
+.original-price, .discount-tag, .product-detail-original-price, .product-detail-discount {
+  display: none !important;
+}

@@ -131,8 +131,8 @@ function initProductDetailPage() {
   const discountEl = document.getElementById('product-discount');
 
   if (currentPriceEl) currentPriceEl.textContent = `₹${product.price.toLocaleString('en-IN')}`;
-  if (origPriceEl) origPriceEl.textContent = `₹${(product.originalPrice || product.price * 1.2).toLocaleString('en-IN')}`;
-  if (discountEl) discountEl.textContent = `${product.discount || '-15%'} OFF`;
+  if (origPriceEl) { origPriceEl.textContent = ''; origPriceEl.style.display = 'none'; }
+  if (discountEl) { discountEl.textContent = ''; discountEl.style.display = 'none'; }
 
   // 5. Populate Badge & Main Image
   const badgeEl = document.getElementById('product-badge');
@@ -543,8 +543,6 @@ function initProductDetailPage() {
           </div>
           <div class="product-price-row">
             <span class="current-price">₹${item.price.toLocaleString('en-IN')}</span>
-            <span class="original-price">₹${(item.originalPrice || item.price * 1.2).toLocaleString('en-IN')}</span>
-            <span class="discount-tag">${item.discount || '-15%'}</span>
           </div>
           <div class="product-action-row">
             <a href="product-detail.html?id=${item.id}" class="btn-view-product">

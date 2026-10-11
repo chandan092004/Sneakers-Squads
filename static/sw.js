@@ -4,7 +4,7 @@
  * and provides offline fallback experience.
  */
 
-const CACHE_NAME = 'sneaker-squad-pwa-v1.0';
+const CACHE_NAME = 'sneaker-squad-pwa-v2.1';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -27,17 +27,18 @@ const STATIC_ASSETS = [
 
 // Install Event: Cache Core Static Shell
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log('[SneakerSquad PWA] Pre-caching static app shell');
       return cache.addAll(STATIC_ASSETS).catch((err) => {
         console.warn('[SneakerSquad PWA] Partial cache error (ignoring non-critical):', err);
       });
-    }).then(() => self.skipWaiting())
+    })
   );
 });
 
-// Activate Event: Clean Old Caches
+// Activate Event: Clean Old Caches immediately
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keyList) => {
@@ -53,7 +54,7 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch Event: Network First for Dynamic/API, Stale-While-Revalidate for Static Assets
+// Fetch Event: Network First so fresh price and content changes appear immediately
 self.addEventListener('fetch', (event) => {
   const requestUrl = new URL(event.request.url);
 
@@ -69,20 +70,21 @@ self.addEventListener('fetch', (event) => {
   }
 
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      // Fetch from network in background or when not cached
-      const fetchPromise = fetch(event.request)
-        .then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
-            const responseToCache = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(event.request, responseToCache);
-            });
+    fetch(event.request)
+      .then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200) {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
+        }
+        return networkResponse;
+      })
+      .catch(() => {
+        return caches.match(event.request).then((cachedResponse) => {
+          if (cachedResponse) {
+            return cachedResponse;
           }
-          return networkResponse;
-        })
-        .catch(() => {
-          // If network fails and no cache exists, return offline fallback HTML if requesting a page
           if (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html')) {
             return caches.match('/index.html') || new Response(
               `<!DOCTYPE html>
@@ -112,8 +114,6 @@ self.addEventListener('fetch', (event) => {
             );
           }
         });
-
-      return cachedResponse || fetchPromise;
-    })
+      })
   );
 });

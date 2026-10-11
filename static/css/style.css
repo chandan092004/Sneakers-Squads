@@ -2202,3 +2202,9 @@ body.light-theme .split-btn:hover {
   background: var(--primary) !important;
   color: #ffffff !important;
 }
+
+
+/* Clean exact amount display - hide strikethrough & discounts */
+.original-price, .discount-tag, .product-detail-original-price, .product-detail-discount {
+  display: none !important;
+}
