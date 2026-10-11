@@ -217,19 +217,19 @@
                 <p class="auth-user-email" id="profile-user-email" style="font-size:0.86rem; color:var(--text-muted); margin-bottom:18px;">member@sneakersquad.com</p>
                 
                 <div style="display: flex; flex-direction: column; gap: 9px; width: 100%;">
-                  <a href="/dashboard.html#overview" class="btn btn-primary drawer-dash-link" style="width:100%; justify-content:flex-start; text-decoration:none; padding:12px 16px; font-weight:800; gap:12px; box-sizing:border-box;">
+                  <a href="/dashboard#overview" class="btn btn-primary drawer-dash-link" style="width:100%; justify-content:flex-start; text-decoration:none; padding:12px 16px; font-weight:800; gap:12px; box-sizing:border-box;">
                     <i class="fa-solid fa-gauge-high" style="font-size:1.1rem; width:20px; text-align:center;"></i> My Dashboard Overview
                   </a>
-                  <a href="/dashboard.html#orders" class="btn btn-secondary drawer-dash-link" style="width:100%; justify-content:flex-start; text-decoration:none; padding:12px 16px; gap:12px; box-sizing:border-box; color:#fff;">
+                  <a href="/dashboard#orders" class="btn btn-secondary drawer-dash-link" style="width:100%; justify-content:flex-start; text-decoration:none; padding:12px 16px; gap:12px; box-sizing:border-box; color:#fff;">
                     <i class="fa-solid fa-box-open" style="color:var(--primary); font-size:1.1rem; width:20px; text-align:center;"></i> My Orders & Tracking
                   </a>
-                  <a href="/dashboard.html#wishlist" class="btn btn-secondary drawer-dash-link" style="width:100%; justify-content:flex-start; text-decoration:none; padding:12px 16px; gap:12px; box-sizing:border-box; color:#fff;">
+                  <a href="/dashboard#wishlist" class="btn btn-secondary drawer-dash-link" style="width:100%; justify-content:flex-start; text-decoration:none; padding:12px 16px; gap:12px; box-sizing:border-box; color:#fff;">
                     <i class="fa-solid fa-heart" style="color:#ec4899; font-size:1.1rem; width:20px; text-align:center;"></i> My Wishlist (<span id="drawer-wishlist-count">0</span>)
                   </a>
-                  <a href="/dashboard.html#addresses" class="btn btn-secondary drawer-dash-link" style="width:100%; justify-content:flex-start; text-decoration:none; padding:12px 16px; gap:12px; box-sizing:border-box; color:#fff;">
+                  <a href="/dashboard#addresses" class="btn btn-secondary drawer-dash-link" style="width:100%; justify-content:flex-start; text-decoration:none; padding:12px 16px; gap:12px; box-sizing:border-box; color:#fff;">
                     <i class="fa-solid fa-map-location-dot" style="color:#38bdf8; font-size:1.1rem; width:20px; text-align:center;"></i> Saved Addresses
                   </a>
-                  <a href="/dashboard.html#profile" class="btn btn-secondary drawer-dash-link" style="width:100%; justify-content:flex-start; text-decoration:none; padding:12px 16px; gap:12px; box-sizing:border-box; color:#fff;">
+                  <a href="/dashboard#profile" class="btn btn-secondary drawer-dash-link" style="width:100%; justify-content:flex-start; text-decoration:none; padding:12px 16px; gap:12px; box-sizing:border-box; color:#fff;">
                     <i class="fa-solid fa-user-gear" style="color:#a855f7; font-size:1.1rem; width:20px; text-align:center;"></i> Profile & Security
                   </a>
                   <button type="button" class="btn btn-secondary" id="btn-user-logout" style="width:100%; justify-content:flex-start; padding:12px 16px; gap:12px; color:#ef4444; border-color:rgba(239,68,68,0.3); margin-top:6px; box-sizing:border-box; cursor:pointer;">
@@ -679,7 +679,7 @@
         drawerAuthBtn.innerHTML = '<i class="fa-solid fa-gauge-high"></i> <span>My Dashboard & Orders</span>';
         drawerAuthBtn.onclick = (e) => {
           e.preventDefault();
-          window.location.href = '/dashboard.html';
+          window.location.href = '/dashboard';
         };
       }
 

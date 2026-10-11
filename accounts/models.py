@@ -400,7 +400,7 @@ class Product(models.Model):
             'categoryTag': self.tag,
             'gender': self.gender,
             'price': float(self.price),
-            'originalPrice': float(self.original_price) if self.original_price else float(self.price * 1.2),
+            'originalPrice': float(self.original_price) if self.original_price else round(float(self.price) * 1.2, 2),
             'discount': f"-{discount_pct}%" if discount_pct > 0 else '',
             'rating': float(self.rating),
             'reviewsCount': self.reviews_count,

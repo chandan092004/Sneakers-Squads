@@ -66,13 +66,17 @@ function initThemeToggle() {
    1. ACTIVE NAVIGATION LINK DETECTION
    ========================================================================== */
 function initActiveNavLink() {
-  const currentPath = window.location.pathname;
-  const pageName = currentPath.substring(currentPath.lastIndexOf('/') + 1) || 'index.html';
+  const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+  const cleanCurrent = currentPath.replace('.html', '').toLowerCase();
   
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === pageName || (pageName === '' && href === 'index.html')) {
+    let href = (link.getAttribute('href') || '').replace(/\/$/, '');
+    if (!href.startsWith('/') && href !== '') href = '/' + href;
+    if (href === '') href = '/';
+    const cleanHref = href.replace('.html', '').toLowerCase();
+
+    if (cleanHref === cleanCurrent || (cleanCurrent === '/' && (cleanHref === '/' || cleanHref === '/index'))) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
@@ -743,7 +747,7 @@ function initLiveSearch() {
       const query = searchInput.value.toLowerCase().trim();
       const productCards = document.querySelectorAll('.product-grid .product-card');
       if (productCards.length === 0 && query) {
-        window.location.href = `men.html?q=${encodeURIComponent(query)}`;
+        window.location.href = `/men?q=${encodeURIComponent(query)}`;
       } else {
         filterProductsByQuery(query);
       }
@@ -783,7 +787,7 @@ function showSearchSuggestions(query, dropdown) {
   }
 
   dropdown.innerHTML = matches.map(p => `
-    <a href="product-detail.html?id=${p.id}" style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: #fff; transition: background 0.2s ease;">
+    <a href="/product-detail?id=${p.id}" style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: #fff; transition: background 0.2s ease;">
       <img src="${p.mainImage || (p.colors && p.colors[0] ? p.colors[0].mainImage : '')}" alt="${p.name}" style="width: 42px; height: 42px; object-fit: cover; border-radius: 8px; background: #0b0d13;">
       <div style="flex: 1;">
         <div style="font-weight: 700; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.name}</div>
@@ -793,7 +797,7 @@ function showSearchSuggestions(query, dropdown) {
     </a>
   `).join('') + `
     <div style="padding: 8px; text-align: center; background: #0b0d13; border-radius: 0 0 12px 12px;">
-      <a href="men.html?q=${encodeURIComponent(query)}" style="font-size: 0.82rem; color: #ff5a1f; font-weight: 700; text-decoration: none;">View all results &rarr;</a>
+      <a href="/men?q=${encodeURIComponent(query)}" style="font-size: 0.82rem; color: #ff5a1f; font-weight: 700; text-decoration: none;">View all results &rarr;</a>
     </div>
   `;
   dropdown.style.display = 'block';

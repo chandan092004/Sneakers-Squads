@@ -720,7 +720,7 @@
               <h3 class="wishlist-card-title">{{ item.product_name|default:item.product_id }}</h3>
               <div class="wishlist-card-price">₹{{ item.product_price|floatformat:0 }}</div>
               <div class="wishlist-card-btn-row">
-                <a href="/product-detail.html?id={{ item.product_id }}" class="btn-wish-buy">
+                <a href="/product?id={{ item.product_id }}" class="btn-wish-buy">
                   <i class="fa-solid fa-eye"></i> View Shoe
                 </a>
                 <button type="button" class="btn-wish-remove" onclick="removeWishlistItem('{{ item.product_id }}')" title="Remove from wishlist">
@@ -733,7 +733,7 @@
               <i class="fa-regular fa-heart" style="font-size: 3rem; color: #475569; margin-bottom: 14px;"></i>
               <p style="font-size: 1.1rem; color: #fff; font-weight: 700;">Your Wishlist is Empty!</p>
               <p>Explore Men and Women sneakers and tap the ❤️ icon to save your favorites.</p>
-              <a href="/men.html" class="btn btn-primary" style="margin-top: 18px; display: inline-flex;">
+              <a href="/men" class="btn btn-primary" style="margin-top: 18px; display: inline-flex;">
                 Explore Kicks Now
               </a>
             </div>
@@ -885,7 +885,7 @@
             <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 480px; margin: 0 auto 24px;">
               You have not placed any orders yet. Add your favorite kicks to your bag and checkout to enjoy express delivery with real-time tracking!
             </p>
-            <a href="/men.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; text-decoration:none;">
+            <a href="/men" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; text-decoration:none;">
               <i class="fa-solid fa-bolt"></i> Start Shopping Now
             </a>
           </div>

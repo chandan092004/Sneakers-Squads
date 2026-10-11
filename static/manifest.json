@@ -37,21 +37,21 @@
       "name": "Men's Sneakers",
       "short_name": "Men",
       "description": "Explore Men's Sneaker Drops",
-      "url": "/men.html?source=pwa",
+      "url": "/men?source=pwa",
       "icons": [{ "src": "/static/img/pwa-icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Women's Sneakers",
       "short_name": "Women",
       "description": "Explore Women's Sneaker Drops",
-      "url": "/women.html?source=pwa",
+      "url": "/women?source=pwa",
       "icons": [{ "src": "/static/img/pwa-icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "My Orders & Tracking",
       "short_name": "Orders",
       "description": "Track your sneaker orders and invoices",
-      "url": "/dashboard.html#orders?source=pwa",
+      "url": "/dashboard#orders?source=pwa",
       "icons": [{ "src": "/static/img/pwa-icon-192.png", "sizes": "192x192" }]
     }
   ]

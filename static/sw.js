@@ -4,9 +4,15 @@
  * and provides offline fallback experience.
  */
 
-const CACHE_NAME = 'sneaker-squad-pwa-v2.2';
+const CACHE_NAME = 'sneaker-squad-pwa-v2.3';
 const STATIC_ASSETS = [
   '/',
+  '/men',
+  '/women',
+  '/accessories',
+  '/contact',
+  '/dashboard',
+  '/product-detail',
   '/index.html',
   '/men.html',
   '/women.html',

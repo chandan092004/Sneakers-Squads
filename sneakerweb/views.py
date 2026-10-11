@@ -31,9 +31,13 @@ def accessories(request):
 # 5. Product Detail Page
 def product_detail(request, code=None):
     product = None
-    if code:
-        product = Product.objects.filter(code=code, is_active=True).first()
-    return render(request, 'product-detail.html', {'product': product})
+    target_code = code or request.GET.get('id') or request.GET.get('code')
+    if target_code:
+        product = Product.objects.filter(code=target_code, is_active=True).first()
+    return render(request, 'product-detail.html', {
+        'product': product,
+        'product_code': target_code or ''
+    })
 
 # 6. Contact & Customer Support Page
 def contact(request):

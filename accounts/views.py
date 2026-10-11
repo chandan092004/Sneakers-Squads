@@ -1058,7 +1058,7 @@ def invoice_view(request, order_id):
                 <p style="color:#94a3b8; font-size:1.1rem; max-width:500px; margin:0 auto 24px;">
                     This order or payment record does not exist or has been deleted from the database.
                 </p>
-                <a href="/accounts/dashboard.html" style="background:#ff5a1f; color:#fff; padding:12px 24px; border-radius:10px; text-decoration:none; font-weight:700;">
+                <a href="/dashboard" style="background:#ff5a1f; color:#fff; padding:12px 24px; border-radius:10px; text-decoration:none; font-weight:700;">
                     Return to Dashboard
                 </a>
             </div>

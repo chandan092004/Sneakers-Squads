@@ -31,9 +31,9 @@
   <div class="breadcrumb-section">
     <div class="container">
       <ul class="breadcrumb-list">
-        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
         <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
-        <li><a href="index.html" id="breadcrumb-category-link">Sneakers</a></li>
+        <li><a href="/" id="breadcrumb-category-link">Sneakers</a></li>
         <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
         <li class="breadcrumb-current" id="breadcrumb-product-name">Product Name</li>
       </ul>
@@ -449,6 +449,9 @@
   <div class="toast-container" id="toast-container"></div>
 
   {% include 'footer.html' %}
+  <script>
+    window.DJANGO_PRODUCT_CODE = "{{ product_code|default:'' }}";
+  </script>
   <script src="{% static 'js/product-detail.js' %}"></script>
 </body>
 </html>

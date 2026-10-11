@@ -199,3 +199,7 @@ SESSION_COOKIE_SAMESITE = 'Lax'
 RAZORPAY_KEY_ID = os.environ.get('RAZORPAY_KEY_ID', 'rzp_test_squadsneakers')
 RAZORPAY_KEY_SECRET = os.environ.get('RAZORPAY_KEY_SECRET', 'test_secret_squad2026')
 
+# Authentication Redirect URL
+LOGIN_URL = '/'
+
+

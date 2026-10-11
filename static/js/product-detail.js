@@ -53,9 +53,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initProductDetailPage() {
-  // 1. Get Product ID from URL
+  // 1. Get Product ID from URL parameters, path, or server context
   const urlParams = new URLSearchParams(window.location.search);
-  const productId = urlParams.get('id') || 'm9';
+  let productId = urlParams.get('id') || urlParams.get('code');
+
+  if (!productId) {
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    if (pathParts.length >= 2 && (pathParts[0] === 'product' || pathParts[0] === 'product-detail')) {
+      productId = pathParts[1].replace('.html', '');
+    }
+  }
+
+  if (!productId && window.DJANGO_PRODUCT_CODE) {
+    productId = window.DJANGO_PRODUCT_CODE;
+  }
+
+  productId = productId || 'm9';
   const paramColor = urlParams.get('color');
   
   // Lookup product from global data store
@@ -90,11 +103,11 @@ function initProductDetailPage() {
   if (breadcrumbCategory) {
     breadcrumbCategory.textContent = product.category || 'Sneakers';
     if (product.gender === 'men') {
-      breadcrumbCategory.href = 'men.html';
+      breadcrumbCategory.href = '/men';
     } else if (product.gender === 'women') {
-      breadcrumbCategory.href = 'women.html';
+      breadcrumbCategory.href = '/women';
     } else {
-      breadcrumbCategory.href = 'accessories.html';
+      breadcrumbCategory.href = '/accessories';
     }
   }
   if (breadcrumbProduct) breadcrumbProduct.textContent = product.name;
@@ -542,14 +555,14 @@ function initProductDetailPage() {
         <div class="product-image-box">
           <span class="product-badge ${item.badgeClass || 'new'}">${item.badge || 'Recommended'}</span>
           <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
-          <a href="product-detail.html?id=${item.id}" class="product-img-link" title="${item.name}">
+          <a href="/product-detail?id=${item.id}" class="product-img-link" title="${item.name}">
             <img src="${item.mainImage}" alt="${item.name}" onerror="this.onerror=null;this.src='/static/img/shoe-1.jpg'" loading="lazy">
           </a>
         </div>
         <div class="product-info">
           <span class="product-category-meta">${item.category || 'Sneakers'}</span>
           <h3 class="product-title">
-            <a href="product-detail.html?id=${item.id}">${item.name}</a>
+            <a href="/product-detail?id=${item.id}">${item.name}</a>
           </h3>
           <div class="product-rating">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -559,7 +572,7 @@ function initProductDetailPage() {
             <span class="current-price">₹${item.price.toLocaleString('en-IN')}</span>
           </div>
           <div class="product-action-row">
-            <a href="product-detail.html?id=${item.id}" class="btn-view-product">
+            <a href="/product-detail?id=${item.id}" class="btn-view-product">
               <i class="fa-solid fa-eye"></i> View
             </a>
             <button class="btn-add-cart" onclick="quickAddRelated('${item.id}')">
