@@ -207,6 +207,15 @@ function initCart() {
   document.querySelectorAll('.btn-add-cart').forEach(button => {
     button.addEventListener('click', function(e) {
       e.preventDefault();
+      if (typeof window.isUserAuthenticated === 'function' && !window.isUserAuthenticated()) {
+        if (typeof showToast === 'function') {
+          showToast('Please sign in first to add sneakers to your bag! 🔒', 'fa-lock');
+        }
+        if (typeof window.openAuthDrawer === 'function') {
+          window.openAuthDrawer('login');
+        }
+        return;
+      }
       const card = this.closest('.product-card');
       if (!card) return;
 
@@ -217,7 +226,6 @@ function initCart() {
       const image = card.querySelector('.product-image-box img')?.src || '';
 
       addToCart({ id, title, price, image });
-      showToast(`Added <strong>${title}</strong> to your bag!`, 'fa-bag-shopping');
     });
   });
 
@@ -245,6 +253,15 @@ function initCheckoutModal() {
 
   if (checkoutBtn && modalOverlay) {
     checkoutBtn.addEventListener('click', () => {
+      if (typeof window.isUserAuthenticated === 'function' && !window.isUserAuthenticated()) {
+        if (typeof showToast === 'function') {
+          showToast('Please sign in first to proceed to checkout! 🔒', 'fa-lock');
+        }
+        if (typeof window.openAuthDrawer === 'function') {
+          window.openAuthDrawer('login');
+        }
+        return;
+      }
       if (!cart || cart.length === 0) {
         showToast('Your bag is empty! Add kicks to proceed.', 'fa-triangle-exclamation');
         return;
@@ -546,6 +563,16 @@ function updateCheckoutSummary() {
 
 
 function addToCart(product) {
+  if (typeof window.isUserAuthenticated === 'function' && !window.isUserAuthenticated()) {
+    if (typeof showToast === 'function') {
+      showToast('Please sign in first to add sneakers to your bag! 🔒', 'fa-lock');
+    }
+    if (typeof window.openAuthDrawer === 'function') {
+      window.openAuthDrawer('login');
+    }
+    return;
+  }
+
   if (typeof product === 'string') {
     const pData = (typeof PRODUCTS_DATA !== 'undefined' && PRODUCTS_DATA[product]) ? PRODUCTS_DATA[product] : null;
     if (pData) {
@@ -623,10 +650,26 @@ function animateCartBadge() {
 }
 
 function renderCartItems() {
-  cart = JSON.parse(localStorage.getItem('sneaker_squad_cart')) || [];
   const cartContainer = document.getElementById('cart-drawer-body');
   const subtotalEl = document.getElementById('cart-subtotal');
   if (!cartContainer || !subtotalEl) return;
+
+  if (typeof window.isUserAuthenticated === 'function' && !window.isUserAuthenticated()) {
+    cartContainer.innerHTML = `
+      <div class="cart-empty-state" style="padding: 30px 16px; text-align: center;">
+        <i class="fa-solid fa-lock" style="font-size: 2.8rem; color: #ff5a1f; margin-bottom: 14px; display: block;"></i>
+        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">Sign In to Shop</h4>
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 18px;">Please log in to add items to your cart, save your wishlist, and proceed with orders.</p>
+        <button type="button" class="btn btn-primary" onclick="if(window.openAuthDrawer) window.openAuthDrawer('login');" style="padding: 10px 24px; font-weight: 700; border-radius: 10px; cursor: pointer;">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In / Register
+        </button>
+      </div>
+    `;
+    subtotalEl.innerText = '₹0';
+    return;
+  }
+
+  cart = JSON.parse(localStorage.getItem('sneaker_squad_cart')) || [];
 
   if (cart.length === 0) {
     cartContainer.innerHTML = `

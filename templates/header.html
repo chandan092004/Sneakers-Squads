@@ -13,6 +13,11 @@
   if (localStorage.getItem('sneaker_store_theme') === 'light') {
     document.documentElement.classList.add('light-theme');
   }
+  window.DJANGO_USER = {
+    isAuthenticated: {{ request.user.is_authenticated|yesno:"true,false" }},
+    username: "{{ request.user.username|default:'' }}",
+    email: "{{ request.user.email|default:'' }}"
+  };
 </script>
 <div class="announcement-bar">
   <div class="container">

@@ -345,12 +345,26 @@ function initProductDetailPage() {
 
   if (addToCartBtn) {
     addToCartBtn.addEventListener('click', () => {
+      if (typeof window.isUserAuthenticated === 'function' && !window.isUserAuthenticated()) {
+        showToastNotification('Please sign in first to add sneakers to your bag! 🔒');
+        if (typeof window.openAuthDrawer === 'function') {
+          window.openAuthDrawer('login');
+        }
+        return;
+      }
       addItemToCart(product, currentQuantity, currentSelectedSize, selectedColorObj);
     });
   }
 
   if (buyNowBtn) {
     buyNowBtn.addEventListener('click', () => {
+      if (typeof window.isUserAuthenticated === 'function' && !window.isUserAuthenticated()) {
+        showToastNotification('Please sign in first to purchase sneakers! 🔒');
+        if (typeof window.openAuthDrawer === 'function') {
+          window.openAuthDrawer('login');
+        }
+        return;
+      }
       addItemToCart(product, currentQuantity, currentSelectedSize, selectedColorObj);
       const cartDrawer = document.getElementById('cart-drawer');
       const cartOverlay = document.getElementById('cart-drawer-overlay') || document.getElementById('cart-overlay');
@@ -580,6 +594,13 @@ function initProductReviews(productId) {
   // 1. Toggle Form Visibility
   if (toggleBtn && formContainer) {
     toggleBtn.addEventListener('click', () => {
+      if (typeof window.isUserAuthenticated === 'function' && !window.isUserAuthenticated()) {
+        showToastNotification('Please sign in first to write a review! 🔒');
+        if (typeof window.openAuthDrawer === 'function') {
+          window.openAuthDrawer('login');
+        }
+        return;
+      }
       if (formContainer.style.display === 'none' || !formContainer.style.display) {
         formContainer.style.display = 'block';
         formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -691,6 +712,14 @@ function initProductReviews(productId) {
   if (reviewForm) {
     reviewForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      if (typeof window.isUserAuthenticated === 'function' && !window.isUserAuthenticated()) {
+        showToastNotification('Please sign in first to submit a review! 🔒');
+        if (typeof window.openAuthDrawer === 'function') {
+          window.openAuthDrawer('login');
+        }
+        return;
+      }
 
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -932,6 +961,14 @@ function setupPhotoLightbox() {
  * Add Item to global Cart & sync with LocalStorage
  */
 function addItemToCart(product, quantity, size, colorParam) {
+  if (typeof window.isUserAuthenticated === 'function' && !window.isUserAuthenticated()) {
+    showToastNotification('Please sign in first to add sneakers to your bag! 🔒');
+    if (typeof window.openAuthDrawer === 'function') {
+      window.openAuthDrawer('login');
+    }
+    return;
+  }
+
   let cartData = JSON.parse(localStorage.getItem('sneaker_squad_cart')) || [];
   
   const colorName = typeof colorParam === 'object' && colorParam !== null ? colorParam.name : (colorParam || "Default");

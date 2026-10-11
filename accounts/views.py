@@ -747,6 +747,14 @@ def api_create_razorpay_order(request):
     Creates an official Razorpay Order ID for UPI/Cards/Netbanking checkout.
     Seamlessly works with both live Razorpay keys and instant test mode simulator.
     """
+    if not request.user.is_authenticated:
+        return JsonResponse({
+            'status': 'error',
+            'success': False,
+            'requireLogin': True,
+            'message': 'Please sign in or create an account to initiate payment.'
+        }, status=401)
+
     data = get_request_data(request)
     full_name = data.get('full_name', '').strip()
     email = data.get('email', '').strip()
@@ -841,6 +849,14 @@ def api_verify_payment(request):
     """
     Verifies Razorpay payment signature & confirms the order
     """
+    if not request.user.is_authenticated:
+        return JsonResponse({
+            'status': 'error',
+            'success': False,
+            'requireLogin': True,
+            'message': 'Please sign in to complete payment.'
+        }, status=401)
+
     data = get_request_data(request)
     order_id = data.get('order_id', '').strip()
     razorpay_order_id = data.get('razorpay_order_id', '').strip()
@@ -895,6 +911,14 @@ def api_verify_payment(request):
 @require_POST
 def api_checkout(request):
     """Standard / COD Checkout API"""
+    if not request.user.is_authenticated:
+        return JsonResponse({
+            'status': 'error',
+            'success': False,
+            'requireLogin': True,
+            'message': 'Please sign in or create an account to place an order.'
+        }, status=401)
+
     data = get_request_data(request)
     full_name = data.get('full_name', '').strip()
     email = data.get('email', '').strip()
@@ -1110,6 +1134,13 @@ def api_submit_review(request):
     """
     Submits a customer sneaker review with rating (1-5), comments, and optional sneaker photo.
     """
+    if not request.user.is_authenticated:
+        return JsonResponse({
+            'success': False,
+            'requireLogin': True,
+            'message': 'Please sign in or create an account to write a review.'
+        }, status=401)
+
     # Parse POST parameters and uploaded photo
     product_code = request.POST.get('product_code', '').strip()
     rating = request.POST.get('rating', '5').strip()

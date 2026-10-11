@@ -756,11 +756,27 @@
     });
   }
 
+  function isUserAuthenticated() {
+    if (typeof window.DJANGO_USER !== 'undefined' && typeof window.DJANGO_USER.isAuthenticated === 'boolean') {
+      if (window.DJANGO_USER.isAuthenticated) return true;
+    }
+    if (currentUser && currentUser.username) return true;
+    try {
+      const u = JSON.parse(localStorage.getItem('sneaker_squad_user'));
+      return !!(u && (u.username || u.email));
+    } catch(e) {
+      return false;
+    }
+  }
+
   // Core Wishlist Toggle Engine
   async function handleWishlistToggle(prodId, prodName, prodPrice, prodImg) {
-    if (!currentUser) {
+    if (!isUserAuthenticated()) {
       openDrawer('login');
-      showAlert('Please log in to save kicks to your permanent squad wishlist!');
+      showAlert('Please log in to save kicks to your wishlist!');
+      if (typeof showToast === 'function') {
+        showToast('Please log in first to save kicks to your wishlist! 🔒', 'fa-lock');
+      }
       return;
     }
 
@@ -797,6 +813,36 @@
       console.error('Wishlist error:', err);
     }
   }
+
+  // Fetch initial user state on page load and sync with Django backend
+  document.addEventListener('DOMContentLoaded', async () => {
+    setupAuthDrawer();
+    updateHeaderUserState();
+    syncWishlistHeartsUI();
+
+    try {
+      const res = await fetch('/accounts/api/user-state/');
+      const data = await res.json();
+      if (data.isAuthenticated) {
+        currentUser = data.user;
+        currentWishlist = data.wishlist || [];
+        localStorage.setItem('sneaker_squad_user', JSON.stringify(currentUser));
+        localStorage.setItem('sneaker_squad_wishlist', JSON.stringify(currentWishlist));
+        updateHeaderUserState();
+        syncWishlistHeartsUI();
+      } else {
+        // If server says unauthenticated, clear local state
+        currentUser = null;
+        currentWishlist = [];
+        localStorage.removeItem('sneaker_squad_user');
+        localStorage.removeItem('sneaker_squad_wishlist');
+        updateHeaderUserState();
+        syncWishlistHeartsUI();
+      }
+    } catch (err) {
+      console.warn('User state server hydration offline.');
+    }
+  });
 
   // Global Wishlist Button Click Event Listener
   document.addEventListener('click', (e) => {
@@ -845,36 +891,7 @@
     }
   });
 
-  // Fetch initial user state on page load and sync with Django backend
-  document.addEventListener('DOMContentLoaded', async () => {
-    setupAuthDrawer();
-    updateHeaderUserState();
-    syncWishlistHeartsUI();
-
-    try {
-      const res = await fetch('/accounts/api/user-state/');
-      const data = await res.json();
-      if (data.isAuthenticated) {
-        currentUser = data.user;
-        currentWishlist = data.wishlist || [];
-        localStorage.setItem('sneaker_squad_user', JSON.stringify(currentUser));
-        localStorage.setItem('sneaker_squad_wishlist', JSON.stringify(currentWishlist));
-        updateHeaderUserState();
-        syncWishlistHeartsUI();
-      } else {
-        // If server says unauthenticated, clear local state
-        currentUser = null;
-        currentWishlist = [];
-        localStorage.removeItem('sneaker_squad_user');
-        localStorage.removeItem('sneaker_squad_wishlist');
-        updateHeaderUserState();
-        syncWishlistHeartsUI();
-      }
-    } catch (err) {
-      console.warn('User state server hydration offline.');
-    }
-  });
-
+  window.isUserAuthenticated = isUserAuthenticated;
   window.openAuthDrawer = openDrawer;
   window.closeAuthDrawer = closeDrawer;
   window.handleWishlistToggle = handleWishlistToggle;
