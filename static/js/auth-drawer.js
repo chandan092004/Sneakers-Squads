@@ -1116,6 +1116,21 @@
     } catch (err) {
       console.warn('User state server hydration offline, preserving persistent squad user profile.');
     }
+
+    // Check if redirect requested auth modal
+    if (window.location.search.includes('auth=required') || window.location.search.includes('auth=login')) {
+      if (!isUserAuthenticated()) {
+        setTimeout(() => {
+          openDrawer('login');
+          showAlert('Please log in to access your Squad account & dashboard! 👟');
+        }, 300);
+      }
+      try {
+        const url = new URL(window.location.href);
+        url.searchParams.delete('auth');
+        window.history.replaceState({}, '', url.pathname + (url.search ? url.search : '') + url.hash);
+      } catch (e) {}
+    }
   });
 
   // Global Wishlist Button Click Event Listener
