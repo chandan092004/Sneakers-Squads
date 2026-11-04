@@ -101,7 +101,12 @@
       } catch (err) {
         console.warn('Session auto-restore error:', err);
       }
-      // If no permanent token or deactivated user, redirect to homepage
+      // If no permanent token or deactivated user, clear stale localStorage and redirect to homepage with auth prompt
+      try {
+        localStorage.removeItem('sneaker_squad_user');
+        localStorage.removeItem('sneaker_squad_auth_token');
+        localStorage.removeItem('sneaker_squad_wishlist');
+      } catch(e) {}
       window.location.replace('/?auth=required');
     })();
   </script>

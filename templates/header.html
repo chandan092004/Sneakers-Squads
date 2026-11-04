@@ -38,6 +38,156 @@
     email: "{{ request.user.email|default:'' }}"
   };
 
+  // Pure source-of-truth authentication check
+  window.isUserAuthenticated = function() {
+    if (typeof window.DJANGO_USER !== 'undefined' && typeof window.DJANGO_USER.isAuthenticated === 'boolean') {
+      return window.DJANGO_USER.isAuthenticated;
+    }
+    return false;
+  };
+
+  // Early Global Toast Notification Helper
+  window.showToast = function(message, iconClass) {
+    iconClass = iconClass || 'fa-circle-check';
+    var container = document.querySelector('.toast-container');
+    if (!container) {
+      container = document.createElement('div');
+      container.className = 'toast-container';
+      document.body.appendChild(container);
+    }
+    var toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = '<i class="fa-solid ' + iconClass + '"></i><span>' + message + '</span>';
+    container.appendChild(toast);
+    requestAnimationFrame(function() { toast.classList.add('show'); });
+    setTimeout(function() {
+      toast.classList.remove('show');
+      setTimeout(function() { toast.remove(); }, 300);
+    }, 3200);
+  };
+  window.showToastNotification = window.showToast;
+
+  // Early Auth Drawer Opener Stub
+  window._pendingAuthDrawer = null;
+  window.openAuthDrawer = function(view) {
+    window._pendingAuthDrawer = view || 'login';
+    var drawer = document.getElementById('auth-drawer');
+    var overlay = document.getElementById('auth-drawer-overlay');
+    if (drawer && overlay) {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      if (typeof window.showAuthView === 'function') {
+        window.showAuthView(view || 'login');
+      }
+    }
+  };
+
+  // Global Capturing Event Listener for 100% Strict Guest Action Blocking
+  document.addEventListener('click', function(e) {
+    if (window.isUserAuthenticated && window.isUserAuthenticated()) {
+      return;
+    }
+
+    // 1. Add to Cart / Bag (Cards, Product Detail, or anywhere)
+    var addBtn = e.target.closest('.btn-add-cart, .btn-detail-cart, .add-to-cart-btn, [data-action="add-to-cart"], .add-to-bag-btn');
+    if (addBtn) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      if (typeof window.showToast === 'function') {
+        window.showToast('Please sign in first to add sneakers to your bag! 🔒', 'fa-lock');
+      }
+      if (typeof window.openAuthDrawer === 'function') {
+        window.openAuthDrawer('login');
+      }
+      return false;
+    }
+
+    // 2. Wishlist (❤️ Heart Icon) (Cards, Detail, Header, or Drawer)
+    var wishBtn = e.target.closest('.wishlist-btn, #detail-wishlist-btn, #header-wishlist-btn, .header-wishlist-trigger, a[href*="/dashboard#wishlist"]');
+    if (wishBtn) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      if (typeof window.showToast === 'function') {
+        window.showToast('Please log in first to save kicks to your wishlist! 🔒', 'fa-lock');
+      }
+      if (typeof window.openAuthDrawer === 'function') {
+        window.openAuthDrawer('login');
+      }
+      return false;
+    }
+
+    // 3. Buy Now Button (Product Detail Page)
+    var buyBtn = e.target.closest('#btn-buy-now-detail, .btn-detail-buy, [data-action="buy-now"]');
+    if (buyBtn) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      if (typeof window.showToast === 'function') {
+        window.showToast('Please sign in first to purchase sneakers! 🔒', 'fa-lock');
+      }
+      if (typeof window.openAuthDrawer === 'function') {
+        window.openAuthDrawer('login');
+      }
+      return false;
+    }
+
+    // 4. Header Shopping Bag Icon
+    var cartTrigger = e.target.closest('#cart-btn, .cart-btn, a[aria-label="Shopping Bag"], button[aria-label="Shopping Bag"], .open-cart-trigger');
+    if (cartTrigger && !cartTrigger.closest('#cart-drawer')) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      if (typeof window.showToast === 'function') {
+        window.showToast('Please sign in first to access your shopping bag! 🔒', 'fa-lock');
+      }
+      if (typeof window.openAuthDrawer === 'function') {
+        window.openAuthDrawer('login');
+      }
+      return false;
+    }
+
+    // 5. Proceed to Checkout
+    var chkBtn = e.target.closest('#btn-checkout, .btn-checkout');
+    if (chkBtn) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      if (typeof window.showToast === 'function') {
+        window.showToast('Please sign in first to proceed to checkout! 🔒', 'fa-lock');
+      }
+      if (typeof window.openAuthDrawer === 'function') {
+        window.openAuthDrawer('login');
+      }
+      return false;
+    }
+
+    // 6. Write a Review & Rating
+    var revBtn = e.target.closest('#btn-toggle-review-form, .btn-open-review-form, #btn-submit-review');
+    if (revBtn) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      if (typeof window.showToast === 'function') {
+        window.showToast('Please sign in first to write a review! 🔒', 'fa-lock');
+      }
+      if (typeof window.openAuthDrawer === 'function') {
+        window.openAuthDrawer('login');
+      }
+      return false;
+    }
+
+    // 7. Dashboard & Orders Links
+    var dashLink = e.target.closest('a[href^="/dashboard"], a[href*="/dashboard#orders"], a[href*="/dashboard#wishlist"], .drawer-dash-link');
+    if (dashLink) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      if (typeof window.showToast === 'function') {
+        window.showToast('Please sign in first to access your dashboard & orders! 🔒', 'fa-lock');
+      }
+      if (typeof window.openAuthDrawer === 'function') {
+        window.openAuthDrawer('login');
+      }
+      return false;
+    }
+  }, true);
+
   // Global Fetch Interceptor to guarantee squad auth token and credentials on all requests
   (function() {
     var originalFetch = window.fetch;

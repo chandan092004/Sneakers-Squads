@@ -49,9 +49,12 @@ def verify_admin_token(token):
     try:
         payload = signing.loads(token, salt=ADMIN_AUTH_SALT, max_age=PERMANENT_AUTH_MAX_AGE)
         user_id = payload.get('user_id')
-        if not user_id:
-            return None
-        user = User.objects.filter(id=user_id, is_active=True).first()
+        username = payload.get('username')
+        user = None
+        if user_id:
+            user = User.objects.filter(id=user_id, is_active=True).first()
+        if not user and username:
+            user = User.objects.filter(username__iexact=username, is_active=True).first()
         if user and (user.is_staff or user.is_superuser):
             return user
     except (signing.BadSignature, signing.SignatureExpired):
@@ -83,10 +86,29 @@ def verify_permanent_token(token):
     try:
         payload = signing.loads(token, salt=CUSTOMER_AUTH_SALT, max_age=PERMANENT_AUTH_MAX_AGE)
         user_id = payload.get('user_id')
-        if not user_id:
-            return None
-        user = User.objects.filter(id=user_id, is_active=True).first()
-        if user:
+        username = payload.get('username')
+        email = payload.get('email')
+
+        user = None
+        if user_id:
+            user = User.objects.filter(id=user_id, is_active=True).first()
+        if not user and username:
+            user = User.objects.filter(username__iexact=username, is_active=True).first()
+        if not user and email:
+            user = User.objects.filter(email__iexact=email, is_active=True).first()
+
+        # Resilient serverless container user re-hydration:
+        # If cryptographically signed token is authentic but the ephemeral serverless container's SQLite was recycled:
+        if not user and username:
+            try:
+                user, _ = User.objects.get_or_create(
+                    username=username,
+                    defaults={'email': email or f"{username}@example.com", 'is_active': True}
+                )
+            except Exception:
+                user = User.objects.filter(username__iexact=username).first()
+
+        if user and user.is_active:
             return user
     except (signing.BadSignature, signing.SignatureExpired):
         pass

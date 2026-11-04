@@ -23,6 +23,7 @@ RESET_VERIFIED_SALT = 'squad_otp_verified_salt_v3'
 def generate_signed_otp_token(user, otp_code):
     payload = {
         'user_id': user.id,
+        'username': user.username,
         'email': user.email or '',
         'otp_code': str(otp_code),
         'created_at': int(time.time()),
@@ -35,10 +36,18 @@ def verify_signed_otp_token(token_str, otp_entered, max_minutes=10):
     try:
         payload = signing.loads(token_str, salt=RESET_OTP_SALT, max_age=max_minutes * 60)
         user_id = payload.get('user_id')
+        username = payload.get('username')
+        email = payload.get('email')
         expected_otp = payload.get('otp_code')
         if not user_id or str(expected_otp).strip() != str(otp_entered).strip():
             return None
-        user = User.objects.filter(id=user_id, is_active=True).first()
+        user = None
+        if user_id:
+            user = User.objects.filter(id=user_id, is_active=True).first()
+        if not user and username:
+            user = User.objects.filter(username__iexact=username, is_active=True).first()
+        if not user and email:
+            user = User.objects.filter(email__iexact=email, is_active=True).first()
         if user:
             return user
     except Exception:
@@ -48,6 +57,7 @@ def verify_signed_otp_token(token_str, otp_entered, max_minutes=10):
 def generate_signed_verified_token(user):
     payload = {
         'user_id': user.id,
+        'username': user.username,
         'email': user.email or '',
         'verified_at': int(time.time()),
     }
@@ -59,9 +69,17 @@ def verify_signed_verified_token(token_str, max_minutes=15):
     try:
         payload = signing.loads(token_str, salt=RESET_VERIFIED_SALT, max_age=max_minutes * 60)
         user_id = payload.get('user_id')
+        username = payload.get('username')
+        email = payload.get('email')
         if not user_id:
             return None
-        user = User.objects.filter(id=user_id, is_active=True).first()
+        user = None
+        if user_id:
+            user = User.objects.filter(id=user_id, is_active=True).first()
+        if not user and username:
+            user = User.objects.filter(username__iexact=username, is_active=True).first()
+        if not user and email:
+            user = User.objects.filter(email__iexact=email, is_active=True).first()
         if user:
             return user
     except Exception:
@@ -755,7 +773,7 @@ def api_forgot_password(request):
 
     # 3. Send SMS if phone is available
     if target_phone:
-        send_mobile_sms(target_phone, token_obj.otp_code)
+        send_mobile_sms(target_phone, otp_code)
 
     # 4. Send stylized Email if email is available
     email_sent = False
@@ -765,7 +783,7 @@ def api_forgot_password(request):
         message = f"""
 Hi {user_display},
 
-Your Sneaker Squad 6-digit Verification Code is: {token_obj.otp_code}
+Your Sneaker Squad 6-digit Verification Code is: {otp_code}
 
 Or click the link below to set a new password:
 {reset_url}
@@ -784,7 +802,7 @@ Team SNEAKER SQUAD 👟
             <p style="color:#94a3b8; font-size:15px;">Hi <strong>{user_display}</strong>, enter your verification code below to reset password:</p>
             <div style="background:#0b0e14; border:2px dashed #ff5a1f; border-radius:12px; padding:16px; margin:20px 0; color:#cbd5e1;">
               <span style="font-size:13px; text-transform:uppercase; color:#94a3b8; display:block; margin-bottom:4px;">Verification OTP Code</span>
-              <strong style="color:#ff5a1f; font-size:28px; letter-spacing:6px; font-family:monospace;">{token_obj.otp_code}</strong>
+              <strong style="color:#ff5a1f; font-size:28px; letter-spacing:6px; font-family:monospace;">{otp_code}</strong>
             </div>
             <div style="margin:20px 0;">
               <a href="{reset_url}" style="background:#ff5a1f; color:#ffffff; padding:12px 26px; border-radius:10px; text-decoration:none; font-weight:bold; font-size:14px; display:inline-block;">👉 Open Password Reset Page</a>
