@@ -23,7 +23,9 @@
         if (!document.cookie || document.cookie.indexOf('squad_auth_token=') === -1) {
           var maxAge = 315360000; // 10 years (3650 days)
           var exp = new Date(Date.now() + maxAge * 1000).toUTCString();
-          document.cookie = 'squad_auth_token=' + encodeURIComponent(tok) + '; path=/; max-age=' + maxAge + '; expires=' + exp + '; SameSite=Lax';
+          var isHttps = window.location.protocol === 'https:';
+          var sec = isHttps ? '; Secure' : '';
+          document.cookie = 'squad_auth_token=' + encodeURIComponent(tok) + '; path=/; max-age=' + maxAge + '; expires=' + exp + '; SameSite=Lax' + sec;
         }
       }
     } catch(e) {}

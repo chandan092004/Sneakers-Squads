@@ -222,6 +222,8 @@ class PermanentAuthMiddleware:
             except Exception:
                 pass
 
+            is_secure = request.is_secure() or request.META.get('HTTP_X_FORWARDED_PROTO') == 'https'
+
             # Maintain & renew customer permanent token cookie (10 years sliding window)
             try:
                 auth_tok = request.COOKIES.get('squad_auth_token')
@@ -234,7 +236,7 @@ class PermanentAuthMiddleware:
                     path='/',
                     samesite='Lax',
                     httponly=False,
-                    secure=False
+                    secure=is_secure
                 )
             except Exception as e:
                 logger.debug(f"Error setting squad_auth_token on response: {e}")
@@ -252,7 +254,7 @@ class PermanentAuthMiddleware:
                         path='/',
                         samesite='Lax',
                         httponly=True,
-                        secure=False
+                        secure=is_secure
                     )
                 except Exception as e:
                     logger.debug(f"Error setting squad_admin_token on response: {e}")

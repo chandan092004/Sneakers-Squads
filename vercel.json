@@ -4,7 +4,10 @@
     {
       "src": "sneakerweb/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb" }
+      "config": {
+        "maxLambdaSize": "15mb",
+        "includeFiles": ["db.sqlite3", "templates/**", "static/**"]
+      }
     }
   ],
   "routes": [

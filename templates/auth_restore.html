@@ -83,7 +83,9 @@
           // Immediately set cookie so all future requests send it
           const maxAge = 315360000; // 10 years
           const exp = new Date(Date.now() + maxAge * 1000).toUTCString();
-          document.cookie = 'squad_auth_token=' + encodeURIComponent(token) + '; path=/; max-age=' + maxAge + '; expires=' + exp + '; SameSite=Lax';
+          const isHttps = window.location.protocol === 'https:';
+          const sec = isHttps ? '; Secure' : '';
+          document.cookie = 'squad_auth_token=' + encodeURIComponent(token) + '; path=/; max-age=' + maxAge + '; expires=' + exp + '; SameSite=Lax' + sec;
 
           // Call user-state API to re-establish server session
           const res = await fetch('/accounts/api/user-state/?auth_token=' + encodeURIComponent(token), {

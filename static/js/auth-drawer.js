@@ -547,7 +547,9 @@
               try {
                 var maxAge = 315360000;
                 var exp = new Date(Date.now() + maxAge * 1000).toUTCString();
-                document.cookie = 'squad_auth_token=' + encodeURIComponent(data.token) + '; path=/; max-age=' + maxAge + '; expires=' + exp + '; SameSite=Lax';
+                var isHttps = window.location.protocol === 'https:';
+                var sec = isHttps ? '; Secure' : '';
+                document.cookie = 'squad_auth_token=' + encodeURIComponent(data.token) + '; path=/; max-age=' + maxAge + '; expires=' + exp + '; SameSite=Lax' + sec;
               } catch(e) {}
             }
             localStorage.setItem('sneaker_squad_user', JSON.stringify(currentUser));
@@ -598,7 +600,9 @@
               try {
                 var maxAge = 315360000;
                 var exp = new Date(Date.now() + maxAge * 1000).toUTCString();
-                document.cookie = 'squad_auth_token=' + encodeURIComponent(data.token) + '; path=/; max-age=' + maxAge + '; expires=' + exp + '; SameSite=Lax';
+                var isHttps = window.location.protocol === 'https:';
+                var sec = isHttps ? '; Secure' : '';
+                document.cookie = 'squad_auth_token=' + encodeURIComponent(data.token) + '; path=/; max-age=' + maxAge + '; expires=' + exp + '; SameSite=Lax' + sec;
               } catch(e) {}
             }
             localStorage.setItem('sneaker_squad_user', JSON.stringify(currentUser));
