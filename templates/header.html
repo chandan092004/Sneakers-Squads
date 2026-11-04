@@ -13,11 +13,57 @@
   if (localStorage.getItem('sneaker_store_theme') === 'light') {
     document.documentElement.classList.add('light-theme');
   }
+
+  // Persistent Login & Indefinite Session Self-Healing
+  (function() {
+    try {
+      var tok = localStorage.getItem('sneaker_squad_auth_token');
+      if (tok) {
+        // Ensure squad_auth_token cookie is always present with 10-year max-age
+        if (!document.cookie || document.cookie.indexOf('squad_auth_token=') === -1) {
+          var maxAge = 315360000; // 10 years (3650 days)
+          var exp = new Date(Date.now() + maxAge * 1000).toUTCString();
+          document.cookie = 'squad_auth_token=' + encodeURIComponent(tok) + '; path=/; max-age=' + maxAge + '; expires=' + exp + '; SameSite=Lax';
+        }
+      }
+    } catch(e) {}
+  })();
+
+  // Global Django User State
   window.DJANGO_USER = {
     isAuthenticated: {{ request.user.is_authenticated|yesno:"true,false" }},
     username: "{{ request.user.username|default:'' }}",
     email: "{{ request.user.email|default:'' }}"
   };
+
+  // Global Fetch Interceptor to guarantee squad auth token and credentials on all requests
+  (function() {
+    var originalFetch = window.fetch;
+    window.fetch = function(url, options) {
+      options = options || {};
+      try {
+        var token = localStorage.getItem('sneaker_squad_auth_token');
+        if (token) {
+          options.headers = options.headers || {};
+          if (options.headers instanceof Headers) {
+            if (!options.headers.has('X-Squad-Auth-Token')) {
+              options.headers.set('X-Squad-Auth-Token', token);
+            }
+          } else if (Array.isArray(options.headers)) {
+            options.headers.push(['X-Squad-Auth-Token', token]);
+          } else {
+            if (!options.headers['X-Squad-Auth-Token']) {
+              options.headers['X-Squad-Auth-Token'] = token;
+            }
+          }
+        }
+      } catch (e) {}
+      if (typeof options.credentials === 'undefined') {
+        options.credentials = 'include';
+      }
+      return originalFetch.apply(this, arguments);
+    };
+  })();
 </script>
 <div class="announcement-bar">
   <div class="container">

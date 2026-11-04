@@ -84,11 +84,11 @@
   </div>
 
   <!-- Slide-over Cart Drawer Component -->
-  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
-  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag">
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay" onclick="closeCartDrawer()"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
     <div class="cart-drawer-header">
       <h3><i class="fa-solid fa-bag-shopping" style="color: var(--primary);"></i> Your Bag</h3>
-      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Bag"><i class="fa-solid fa-xmark"></i></button>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Bag" onclick="closeCartDrawer()"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="cart-drawer-body" id="cart-drawer-body"></div>
     <div class="cart-drawer-footer">
@@ -100,10 +100,10 @@
     </div>
   </aside>
 
-  <script src="{% static 'js/products-data.js' %}"></script>
-  <script src="{% static 'js/script.js' %}"></script>
-  <script src="{% static 'js/auth-drawer.js' %}"></script>
-  <script src="{% static 'js/pwa-install.js' %}"></script>
+  <script src="{% static 'js/products-data.js' %}?v=4.0"></script>
+  <script src="{% static 'js/script.js' %}?v=4.0"></script>
+  <script src="{% static 'js/auth-drawer.js' %}?v=4.0"></script>
+  <script src="{% static 'js/pwa-install.js' %}?v=4.0"></script>
 </body>
 </html>
 

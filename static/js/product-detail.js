@@ -747,6 +747,7 @@ function initProductReviews(productId) {
       try {
         const response = await fetch('/api/reviews/submit/', {
           method: 'POST',
+          credentials: 'include',
           body: formData
         });
         const res = await response.json();

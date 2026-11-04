@@ -558,7 +558,13 @@
         <div class="user-profile-identity">
           <img src="{{ profile.get_avatar_url }}" alt="{{ profile.get_display_name }}" class="user-avatar-large" id="dash-avatar-preview">
           <div class="user-info-text">
+            {% if user.is_staff or user.is_superuser %}
+            <span class="user-badge-tag" style="background: rgba(255, 90, 31, 0.2); color: #ff5a1f; border-color: rgba(255, 90, 31, 0.5);">
+              <i class="fa-solid fa-shield-halved"></i> Store Administrator
+            </span>
+            {% else %}
             <span class="user-badge-tag">👑 Squad Member</span>
+            {% endif %}
             <h1 id="dash-user-name">{{ profile.get_display_name }}</h1>
             <div class="user-info-meta">
               <span><i class="fa-solid fa-envelope"></i> {{ user.email }}</span>
@@ -600,7 +606,11 @@
           <i class="fa-solid fa-shield-halved"></i> Security & Password
         </button>
         {% if user.is_staff or user.is_superuser %}
-        <a href="/admin/" target="_blank" class="dash-menu-btn" style="color: #ff5a1f; background: rgba(255,90,31,0.1); border: 1px dashed rgba(255,90,31,0.4); text-decoration: none; margin-top: 4px;">
+        <div style="border-top: 1px dashed rgba(255,90,31,0.3); margin: 8px 0 4px;"></div>
+        <div style="font-size: 0.72rem; color: #ff5a1f; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 4px 18px 2px;">
+          Admin Only
+        </div>
+        <a href="/admin/" target="_blank" class="dash-menu-btn" style="color: #ff5a1f; background: rgba(255,90,31,0.1); border: 1px dashed rgba(255,90,31,0.4); text-decoration: none;">
           <i class="fa-solid fa-screwdriver-wrench" style="color: #ff5a1f;"></i> Admin Control Panel
         </a>
         {% endif %}
@@ -868,9 +878,9 @@
                 <button type="button" class="btn btn-secondary" onclick="cancelOrder('{{ order.order_id }}')" style="font-size: 0.82rem; padding: 8px 16px; color: #ef4444; border-color: rgba(239,68,68,0.4); cursor:pointer;">
                   <i class="fa-solid fa-ban"></i> Cancel Order
                 </button>
-                {% else %}
-                <button type="button" class="btn btn-secondary" onclick="deleteOrder('{{ order.order_id }}')" style="font-size: 0.82rem; padding: 8px 16px; color: #94a3b8; border-color: rgba(148, 163, 184, 0.3); cursor:pointer;" title="Permanently remove order & bill from history">
-                  <i class="fa-solid fa-trash"></i> Delete Record
+                {% elif user.is_staff or user.is_superuser %}
+                <button type="button" class="btn btn-secondary" onclick="deleteOrder('{{ order.order_id }}')" style="font-size: 0.82rem; padding: 8px 16px; color: #ef4444; border-color: rgba(239, 68, 68, 0.3); cursor:pointer;" title="Admin Only: Permanently remove order & bill from database">
+                  <i class="fa-solid fa-trash"></i> Delete Record (Admin)
                 </button>
                 {% endif %}
               </div>
@@ -894,23 +904,131 @@
 
         <!-- TAB 5: Security & Password -->
         <div class="dash-tab-panel" id="tab-security">
-          <div class="tab-section-header">
-            <h2 class="tab-section-title"><i class="fa-solid fa-lock"></i> Change Master Password</h2>
+          <div class="tab-section-header" style="margin-bottom: 20px;">
+            <div>
+              <h2 class="tab-section-title"><i class="fa-solid fa-shield-halved"></i> Password & Security</h2>
+              <p style="color: var(--text-muted); font-size: 0.88rem; margin: 4px 0 0;">Update your password or reset directly via Gmail OTP if you forgot your old password.</p>
+            </div>
           </div>
-          <form id="change-password-form" style="max-width: 500px;">
-            {% csrf_token %}
-            <div class="form-field-group">
-              <label>Current Password</label>
-              <input type="password" class="dash-input" name="old_password" required placeholder="Enter current password">
-            </div>
-            <div class="form-field-group">
-              <label>New Password (Min. 6 characters)</label>
-              <input type="password" class="dash-input" name="new_password" required placeholder="Enter new strong password">
-            </div>
-            <button type="submit" class="btn-dash-save">
-              <i class="fa-solid fa-key"></i> Update Password
+
+          <!-- Mode Toggle Tabs -->
+          <div style="display: flex; gap: 8px; margin-bottom: 24px; background: rgba(0,0,0,0.35); border: 1px solid var(--border); border-radius: 12px; padding: 6px; max-width: 520px;">
+            <button type="button" id="btn-sec-mode-normal" onclick="switchSecurityMode('normal')" style="flex: 1; padding: 10px 14px; border-radius: 8px; border: none; font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: all 0.2s; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; gap: 8px;">
+              <i class="fa-solid fa-key"></i> I Know Old Password
             </button>
-          </form>
+            <button type="button" id="btn-sec-mode-otp" onclick="switchSecurityMode('otp')" style="flex: 1; padding: 10px 14px; border-radius: 8px; border: none; font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: all 0.2s; background: transparent; color: #94a3b8; display: flex; align-items: center; justify-content: center; gap: 8px;">
+              <i class="fa-solid fa-envelope-circle-check"></i> Forgot Old Password?
+            </button>
+          </div>
+
+          <!-- Security Alert Box -->
+          <div id="dash-security-alert" style="display: none; max-width: 520px; border-radius: 12px; padding: 14px 18px; margin-bottom: 20px; font-size: 0.9rem; font-weight: 600;"></div>
+
+          <!-- PANEL 1: Normal Password Change (With Current Password) -->
+          <div id="panel-security-normal" style="max-width: 520px;">
+            <form id="change-password-form">
+              {% csrf_token %}
+              <div class="form-field-group">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <label style="margin-bottom: 0;">Current Password</label>
+                  <a href="javascript:void(0)" onclick="switchSecurityMode('otp')" style="color: var(--primary); font-size: 0.82rem; font-weight: 700; text-decoration: none;">
+                    <i class="fa-solid fa-circle-question"></i> Forgot old password?
+                  </a>
+                </div>
+                <input type="password" class="dash-input" name="old_password" required placeholder="Enter current password">
+              </div>
+              <div class="form-field-group">
+                <label>New Password (Min. 6 characters)</label>
+                <input type="password" class="dash-input" name="new_password" required minlength="6" placeholder="Enter new strong password">
+              </div>
+              <button type="submit" class="btn-dash-save" id="btn-submit-change-pass">
+                <i class="fa-solid fa-key"></i> Update Password
+              </button>
+            </form>
+          </div>
+
+          <!-- PANEL 2: Forgot Old Password (OTP directly to Gmail) -->
+          <div id="panel-security-otp" style="display: none; max-width: 520px;">
+            <div style="background: rgba(255, 90, 31, 0.08); border: 1px solid rgba(255, 90, 31, 0.25); border-radius: 14px; padding: 18px 20px; margin-bottom: 22px;">
+              <div style="display: flex; gap: 14px; align-items: flex-start;">
+                <div style="width: 42px; height: 42px; border-radius: 12px; background: rgba(255,90,31,0.2); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.25rem; flex-shrink: 0;">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                  <h4 style="font-size: 0.98rem; font-weight: 800; color: #fff; margin: 0 0 4px;">Don't Remember Your Current Password?</h4>
+                  <p style="font-size: 0.85rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+                    No problem! You don't need your old password. We will send a secure 6-digit OTP code to your registered Gmail: 
+                    <strong style="color: #ff5a1f;">{{ user.email }}</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- OTP Step 1: Request OTP -->
+            <div id="dash-otp-step1">
+              <div class="form-field-group">
+                <label for="dash-otp-email-input">Registered Email Address</label>
+                <input type="email" class="dash-input" id="dash-otp-email-input" value="{{ user.email }}" required placeholder="Enter registered email address" autocomplete="email">
+              </div>
+              <button type="button" class="btn-dash-save" id="btn-dash-send-otp" style="width: auto; padding: 13px 26px; justify-content: center; gap: 10px;">
+                <i class="fa-solid fa-paper-plane"></i> Send OTP
+              </button>
+            </div>
+
+            <!-- OTP Step 2: Verify OTP -->
+            <div id="dash-otp-step2" style="display: none;">
+              <div id="dash-otp-info-msg" style="background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.35); border-radius: 12px; padding: 14px 18px; margin-bottom: 22px; color: #86efac; font-size: 0.88rem; font-weight: 600;">
+                <i class="fa-solid fa-circle-check"></i> OTP sent to your email (<strong id="dash-otp-target-email">{{ user.email }}</strong>). Code is valid for 10 minutes.
+              </div>
+
+              <input type="hidden" id="dash-otp-token" value="">
+
+              <div class="form-field-group">
+                <label><i class="fa-solid fa-key" style="color:var(--primary); margin-right:4px;"></i> Enter 6-Digit OTP from Email</label>
+                <input type="text" class="dash-input" id="dash-otp-code-input" maxlength="6" placeholder="------" style="letter-spacing: 6px; font-size: 1.35rem; font-weight: 900; text-align: center; color: var(--primary); font-family: monospace;" required autocomplete="one-time-code">
+              </div>
+
+              <div style="display: flex; gap: 12px; align-items: center; margin-top: 20px; flex-wrap: wrap;">
+                <button type="button" class="btn-dash-save" id="btn-dash-verify-otp" style="flex: 1; padding: 13px; justify-content: center; min-width: 160px;">
+                  <i class="fa-solid fa-circle-check"></i> Verify OTP
+                </button>
+                <button type="button" class="btn btn-secondary" id="btn-dash-resend-otp" style="padding: 12px 18px; font-size: 0.86rem; color: #cbd5e1; border-color: rgba(255,255,255,0.15); cursor: pointer;">
+                  <i class="fa-solid fa-rotate-right"></i> Resend OTP<span id="dash-resend-countdown"></span>
+                </button>
+              </div>
+
+              <div style="margin-top: 14px;">
+                <a href="javascript:void(0)" id="dash-otp-back-step1" style="color: #94a3b8; font-size: 0.85rem; text-decoration: none; font-weight: 600;">
+                  <i class="fa-solid fa-arrow-left"></i> Change Email
+                </a>
+              </div>
+            </div>
+
+            <!-- OTP Step 3: Reset Password (Unlocked after OTP Verified) -->
+            <div id="dash-otp-step3" style="display: none;">
+              <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 14px 18px; margin-bottom: 22px; color: #7dd3fc; font-size: 0.88rem; font-weight: 600;">
+                <i class="fa-solid fa-circle-check"></i> OTP verified successfully! Enter your new password below.
+              </div>
+
+              <form id="dash-password-reset-form">
+                {% csrf_token %}
+                <div class="form-field-group">
+                  <label><i class="fa-solid fa-lock" style="color:var(--primary); margin-right:4px;"></i> New Password (Min. 8 characters)</label>
+                  <input type="password" class="dash-input" id="dash-new-pass" minlength="8" placeholder="At least 8 characters (letters & numbers)" required autocomplete="new-password">
+                  <div style="font-size:0.75rem; color:#94a3b8; margin-top:4px;">Minimum 8 characters with at least one letter and one number.</div>
+                </div>
+
+                <div class="form-field-group">
+                  <label><i class="fa-solid fa-shield-halved" style="color:var(--primary); margin-right:4px;"></i> Confirm New Password</label>
+                  <input type="password" class="dash-input" id="dash-confirm-pass" minlength="8" placeholder="Re-enter new password" required autocomplete="new-password">
+                </div>
+
+                <button type="submit" class="btn-dash-save" id="btn-dash-update-pass" style="background: linear-gradient(135deg, #ff5a1f, #22c55e); width: 100%; padding: 13px; justify-content: center; margin-top: 16px;">
+                  <i class="fa-solid fa-key"></i> Update Password
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
 
       </section>
@@ -1023,22 +1141,305 @@
       }
     });
 
-    // Change password form
-    document.getElementById('change-password-form').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const formData = new FormData(e.target);
-      const res = await fetch('/accounts/api/change-password/', {
-        method: 'POST',
-        body: formData
-      });
-      const data = await res.json();
-      if (data.success) {
-        alert(data.message);
-        e.target.reset();
+    // Security Mode Switcher
+    function switchSecurityMode(mode) {
+      const btnNormal = document.getElementById('btn-sec-mode-normal');
+      const btnOtp = document.getElementById('btn-sec-mode-otp');
+      const panelNormal = document.getElementById('panel-security-normal');
+      const panelOtp = document.getElementById('panel-security-otp');
+      const alertBox = document.getElementById('dash-security-alert');
+      if (alertBox) alertBox.style.display = 'none';
+
+      if (mode === 'otp') {
+        if (btnNormal) {
+          btnNormal.style.background = 'transparent';
+          btnNormal.style.color = '#94a3b8';
+        }
+        if (btnOtp) {
+          btnOtp.style.background = 'var(--primary)';
+          btnOtp.style.color = '#fff';
+        }
+        if (panelNormal) panelNormal.style.display = 'none';
+        if (panelOtp) panelOtp.style.display = 'block';
       } else {
-        alert(data.message || 'Error changing password');
+        if (btnNormal) {
+          btnNormal.style.background = 'var(--primary)';
+          btnNormal.style.color = '#fff';
+        }
+        if (btnOtp) {
+          btnOtp.style.background = 'transparent';
+          btnOtp.style.color = '#94a3b8';
+        }
+        if (panelNormal) panelNormal.style.display = 'block';
+        if (panelOtp) panelOtp.style.display = 'none';
       }
-    });
+    }
+
+    function showSecurityAlert(msg, isSuccess = false) {
+      const alertBox = document.getElementById('dash-security-alert');
+      if (!alertBox) return;
+      alertBox.style.display = 'block';
+      alertBox.style.background = isSuccess ? 'rgba(34, 197, 94, 0.15)' : 'rgba(239, 68, 68, 0.15)';
+      alertBox.style.border = isSuccess ? '1px solid #22c55e' : '1px solid #ef4444';
+      alertBox.style.color = isSuccess ? '#86efac' : '#fca5a5';
+      alertBox.innerHTML = `${isSuccess ? '<i class="fa-solid fa-circle-check"></i>' : '<i class="fa-solid fa-triangle-exclamation"></i>'} ${msg}`;
+    }
+
+    // Normal Change Password Form
+    const changePassForm = document.getElementById('change-password-form');
+    if (changePassForm) {
+      changePassForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = document.getElementById('btn-submit-change-pass');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Updating...';
+        }
+        const formData = new FormData(e.target);
+        try {
+          const res = await fetch('/accounts/api/change-password/', {
+            method: 'POST',
+            body: formData
+          });
+          const data = await res.json();
+          if (data.success) {
+            showSecurityAlert(data.message || 'Password updated successfully!', true);
+            e.target.reset();
+          } else {
+            showSecurityAlert(data.message || 'Error changing password', false);
+          }
+        } catch (err) {
+          showSecurityAlert('Network error while updating password.', false);
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-solid fa-key"></i> Update Password';
+          }
+        }
+      });
+    }
+
+    // ==========================================
+    // Dashboard Forgot Password / OTP Flow Engine
+    // ==========================================
+    let dashOtpCountdownTimer = null;
+    function startDashOtpCountdown(seconds = 60) {
+      if (dashOtpCountdownTimer) clearInterval(dashOtpCountdownTimer);
+      let timeLeft = seconds;
+      const resendBtn = document.getElementById('btn-dash-resend-otp');
+      const timerSpan = document.getElementById('dash-resend-countdown');
+      if (!resendBtn) return;
+      resendBtn.disabled = true;
+      resendBtn.style.opacity = '0.5';
+      resendBtn.style.pointerEvents = 'none';
+      if (timerSpan) timerSpan.textContent = ` (${timeLeft}s)`;
+
+      dashOtpCountdownTimer = setInterval(() => {
+        timeLeft--;
+        if (timeLeft > 0) {
+          if (timerSpan) timerSpan.textContent = ` (${timeLeft}s)`;
+        } else {
+          clearInterval(dashOtpCountdownTimer);
+          dashOtpCountdownTimer = null;
+          resendBtn.disabled = false;
+          resendBtn.style.opacity = '1';
+          resendBtn.style.pointerEvents = 'auto';
+          if (timerSpan) timerSpan.textContent = '';
+        }
+      }, 1000);
+    }
+
+    // Step 1: Send OTP
+    async function triggerDashboardOtp(isResend = false) {
+      const emailInput = document.getElementById('dash-otp-email-input');
+      const userEmail = emailInput ? emailInput.value.trim() : '';
+      if (!userEmail || !userEmail.includes('@')) {
+        showSecurityAlert('Please enter a valid registered email address.', false);
+        return;
+      }
+
+      const activeBtn = isResend ? document.getElementById('btn-dash-resend-otp') : document.getElementById('btn-dash-send-otp');
+      if (activeBtn) {
+        activeBtn.disabled = true;
+        activeBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ' + (isResend ? 'Resending...' : 'Sending OTP...');
+      }
+
+      try {
+        const res = await fetch('/accounts/api/forgot-password/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: userEmail, identifier: userEmail })
+        });
+        const data = await res.json();
+        if (data.success) {
+          document.getElementById('dash-otp-token').value = data.token || '';
+          const targetEl = document.getElementById('dash-otp-target-email');
+          if (targetEl) targetEl.textContent = data.masked_email || userEmail;
+          
+          document.getElementById('dash-otp-step1').style.display = 'none';
+          document.getElementById('dash-otp-step2').style.display = 'block';
+          document.getElementById('dash-otp-step3').style.display = 'none';
+          
+          showSecurityAlert(data.message || `OTP sent to your email (${data.masked_email || userEmail})!`, true);
+          startDashOtpCountdown(60);
+
+          setTimeout(() => {
+            const otpCodeInput = document.getElementById('dash-otp-code-input');
+            if (otpCodeInput) {
+              otpCodeInput.value = '';
+              otpCodeInput.focus();
+            }
+          }, 200);
+        } else {
+          showSecurityAlert(data.message || 'No registered account found with this email.', false);
+        }
+      } catch (err) {
+        showSecurityAlert('Network error while requesting OTP code.', false);
+      } finally {
+        const sendBtn = document.getElementById('btn-dash-send-otp');
+        if (sendBtn) {
+          sendBtn.disabled = false;
+          sendBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send OTP';
+        }
+        const resendBtn = document.getElementById('btn-dash-resend-otp');
+        if (resendBtn && !dashOtpCountdownTimer) {
+          resendBtn.disabled = false;
+          resendBtn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> Resend OTP<span id="dash-resend-countdown"></span>';
+        }
+      }
+    }
+
+    const btnSendOtp = document.getElementById('btn-dash-send-otp');
+    if (btnSendOtp) btnSendOtp.onclick = () => triggerDashboardOtp(false);
+
+    const btnResendOtp = document.getElementById('btn-dash-resend-otp');
+    if (btnResendOtp) btnResendOtp.onclick = () => triggerDashboardOtp(true);
+
+    const backStep1Btn = document.getElementById('dash-otp-back-step1');
+    if (backStep1Btn) {
+      backStep1Btn.onclick = () => {
+        document.getElementById('dash-otp-step1').style.display = 'block';
+        document.getElementById('dash-otp-step2').style.display = 'none';
+        document.getElementById('dash-otp-step3').style.display = 'none';
+      };
+    }
+
+    // Step 2: Verify OTP
+    const btnVerifyOtp = document.getElementById('btn-dash-verify-otp');
+    if (btnVerifyOtp) {
+      btnVerifyOtp.onclick = async () => {
+        const otpCode = document.getElementById('dash-otp-code-input').value.trim();
+        const token = document.getElementById('dash-otp-token').value.trim();
+        const email = document.getElementById('dash-otp-email-input').value.trim();
+
+        if (otpCode.length !== 6 || !/^\d{6}$/.test(otpCode)) {
+          showSecurityAlert('Please enter the 6-digit numeric OTP code sent to your email.', false);
+          return;
+        }
+
+        btnVerifyOtp.disabled = true;
+        btnVerifyOtp.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Verifying OTP...';
+
+        try {
+          const res = await fetch('/accounts/api/verify-otp/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, token: token, otp: otpCode })
+          });
+          const data = await res.json();
+          if (data.success) {
+            if (dashOtpCountdownTimer) {
+              clearInterval(dashOtpCountdownTimer);
+              dashOtpCountdownTimer = null;
+            }
+            if (data.token) {
+              document.getElementById('dash-otp-token').value = data.token;
+            }
+            document.getElementById('dash-otp-step1').style.display = 'none';
+            document.getElementById('dash-otp-step2').style.display = 'none';
+            document.getElementById('dash-otp-step3').style.display = 'block';
+            showSecurityAlert('OTP verified successfully! Now enter your new password.', true);
+
+            setTimeout(() => {
+              const newPassInp = document.getElementById('dash-new-pass');
+              if (newPassInp) newPassInp.focus();
+            }, 200);
+          } else {
+            showSecurityAlert(data.message || 'Invalid or expired OTP code. Please check your email.', false);
+          }
+        } catch (err) {
+          showSecurityAlert('Network error during OTP verification.', false);
+        } finally {
+          btnVerifyOtp.disabled = false;
+          btnVerifyOtp.innerHTML = '<i class="fa-solid fa-circle-check"></i> Verify OTP';
+        }
+      };
+    }
+
+    // Step 3: Reset / Update Password Form
+    const formDashReset = document.getElementById('dash-password-reset-form');
+    if (formDashReset) {
+      formDashReset.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const newPass = document.getElementById('dash-new-pass').value.trim();
+        const confirmPass = document.getElementById('dash-confirm-pass').value.trim();
+        const token = document.getElementById('dash-otp-token').value.trim();
+        const updateBtn = document.getElementById('btn-dash-update-pass');
+
+        // Form Validation: minimum 8 characters & basic strength requirements
+        if (newPass.length < 8) {
+          showSecurityAlert('Password must be at least 8 characters long.', false);
+          return;
+        }
+        if (!/[A-Za-z]/.test(newPass) || !/\d/.test(newPass)) {
+          showSecurityAlert('Password must contain at least one letter and one number.', false);
+          return;
+        }
+        if (newPass !== confirmPass) {
+          showSecurityAlert('Passwords do not match! Please check and re-enter.', false);
+          return;
+        }
+
+        if (updateBtn) {
+          updateBtn.disabled = true;
+          updateBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Updating Password...';
+        }
+
+        try {
+          const res = await fetch('/accounts/api/reset-password/submit/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              token: token,
+              new_password: newPass,
+              confirm_password: confirmPass
+            })
+          });
+          const data = await res.json();
+          if (data.success) {
+            // Step 4: Success Message
+            showSecurityAlert('Password updated successfully! Redirecting...', true);
+            formDashReset.reset();
+            setTimeout(() => {
+              document.getElementById('dash-otp-step1').style.display = 'block';
+              document.getElementById('dash-otp-step2').style.display = 'none';
+              document.getElementById('dash-otp-step3').style.display = 'none';
+              switchSecurityMode('normal');
+              showSecurityAlert('Password updated successfully! Your new password is now active.', true);
+            }, 2000);
+          } else {
+            showSecurityAlert(data.message || 'Error updating password. Please try requesting a new OTP.', false);
+          }
+        } catch (err) {
+          showSecurityAlert('Network error while updating password.', false);
+        } finally {
+          if (updateBtn) {
+            updateBtn.disabled = false;
+            updateBtn.innerHTML = '<i class="fa-solid fa-key"></i> Update Password';
+          }
+        }
+      });
+    }
 
     // Address Modal Handlers
     const addrModal = document.getElementById('add-address-modal');
@@ -1137,15 +1538,29 @@
     }
 
     // Sign out button
-    document.getElementById('btn-dashboard-logout').onclick = async () => {
-      if (confirm('Are you sure you want to sign out?')) {
-        await fetch('/accounts/api/logout/', {
-          method: 'POST',
-          headers: { 'X-CSRFToken': getCookie('csrftoken') }
-        });
-        window.location.href = '/';
-      }
-    };
+    const dashLogoutBtn = document.getElementById('btn-dashboard-logout');
+    if (dashLogoutBtn) {
+      dashLogoutBtn.onclick = async () => {
+        if (confirm('Are you sure you want to sign out?')) {
+          try {
+            await fetch('/accounts/api/logout/', {
+              method: 'POST',
+              credentials: 'include',
+              headers: { 'X-CSRFToken': getCookie('csrftoken') }
+            });
+          } catch(e) {}
+          localStorage.removeItem('sneaker_squad_user');
+          localStorage.removeItem('sneaker_squad_wishlist');
+          localStorage.removeItem('sneaker_squad_auth_token');
+          try {
+            document.cookie = 'squad_auth_token=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';
+            document.cookie = 'squad_admin_token=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';
+            document.cookie = 'sessionid=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';
+          } catch(e) {}
+          window.location.href = '/';
+        }
+      };
+    }
 
     function getCookie(name) {
       let cookieValue = null;

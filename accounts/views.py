@@ -9,9 +9,11 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt, ensure_csrf_cookie
 from django.views.decorators.http import require_POST, require_GET
+from django.views.decorators.cache import never_cache
 from django.db.models import Avg, Count, Q
 from django.core.mail import send_mail
 from django.conf import settings
+from .middleware import generate_permanent_token, verify_permanent_token, PERMANENT_AUTH_MAX_AGE
 try:
     import razorpay
 except ImportError:
@@ -119,7 +121,14 @@ def api_register(request):
         profile.save()
 
     # Auto-login the newly registered user
+    user.backend = 'django.contrib.auth.backends.ModelBackend'
     login(request, user)
+    request.session.set_expiry(PERMANENT_AUTH_MAX_AGE)
+    request.session.modified = True
+    try:
+        request.session.save()
+    except Exception:
+        pass
 
     # Fetch initial wishlist
     wishlist_ids = list(WishlistItem.objects.filter(user=user).values_list('product_id', flat=True))
@@ -184,12 +193,23 @@ Team SNEAKER SQUAD 👟
     except Exception:
         pass
 
-    return JsonResponse({
+    auth_token = generate_permanent_token(user)
+    response = JsonResponse({
         'success': True,
         'message': f'Welcome to Sneaker Squad, {display_name}! 🎉 (Welcome Email Dispatched)',
         'user': serialize_user(user),
+        'token': auth_token,
         'wishlist': wishlist_ids
     })
+    response.set_cookie(
+        'squad_auth_token',
+        auth_token,
+        max_age=PERMANENT_AUTH_MAX_AGE,
+        path='/',
+        samesite='Lax',
+        httponly=False
+    )
+    return response
 
 
 
@@ -220,17 +240,35 @@ def api_login(request):
         if not user.is_active:
             return JsonResponse({'success': False, 'message': 'Your account is disabled.'}, status=403)
         
+        user.backend = 'django.contrib.auth.backends.ModelBackend'
         login(request, user)
+        request.session.set_expiry(PERMANENT_AUTH_MAX_AGE)
+        request.session.modified = True
+        try:
+            request.session.save()
+        except Exception:
+            pass
         wishlist_ids = list(WishlistItem.objects.filter(user=user).values_list('product_id', flat=True))
         profile = get_user_profile(user)
         display_name = profile.get_display_name() if profile else user.username
+        auth_token = generate_permanent_token(user)
 
-        return JsonResponse({
+        response = JsonResponse({
             'success': True,
             'message': f'Welcome back, {display_name}! 🔥',
             'user': serialize_user(user),
+            'token': auth_token,
             'wishlist': wishlist_ids
         })
+        response.set_cookie(
+            'squad_auth_token',
+            auth_token,
+            max_age=PERMANENT_AUTH_MAX_AGE,
+            path='/',
+            samesite='Lax',
+            httponly=False
+        )
+        return response
     else:
         return JsonResponse({'success': False, 'message': 'Invalid email/username or password. Please try again.'}, status=401)
 
@@ -239,26 +277,70 @@ def api_login(request):
 def api_logout(request):
     if request.user.is_authenticated:
         logout(request)
-    return JsonResponse({'success': True, 'message': 'Logged out successfully.'})
+    response = JsonResponse({'success': True, 'message': 'Logged out successfully.'})
+    response.delete_cookie('squad_auth_token', path='/')
+    response.delete_cookie(settings.SESSION_COOKIE_NAME, path='/')
+    return response
 
 
+@never_cache
 @require_GET
 def api_user_state(request):
-    """Provides instant hydration data for frontend header and wishlist sync"""
-    if request.user.is_authenticated:
-        wishlist_ids = list(WishlistItem.objects.filter(user=request.user).values_list('product_id', flat=True))
-        return JsonResponse({
+    """Provides instant hydration data for frontend header and wishlist sync with persistent permanent auth"""
+    user = request.user
+    if not user or not user.is_authenticated:
+        token = (
+            request.COOKIES.get('squad_auth_token') or 
+            request.META.get('HTTP_X_SQUAD_AUTH_TOKEN') or 
+            request.GET.get('auth_token')
+        )
+        if token:
+            restored_user = verify_permanent_token(token)
+            if restored_user and restored_user.is_active:
+                try:
+                    restored_user.backend = 'django.contrib.auth.backends.ModelBackend'
+                    login(request, restored_user)
+                    request.session.set_expiry(PERMANENT_AUTH_MAX_AGE)
+                    request.session.modified = True
+                    user = restored_user
+                except Exception:
+                    user = restored_user
+
+    if user and user.is_authenticated:
+        wishlist_ids = list(WishlistItem.objects.filter(user=user).values_list('product_id', flat=True))
+        auth_token = generate_permanent_token(user)
+        response = JsonResponse({
             'isAuthenticated': True,
-            'user': serialize_user(request.user),
+            'user': serialize_user(user),
+            'token': auth_token,
             'wishlist': wishlist_ids,
             'wishlistCount': len(wishlist_ids)
         })
-    return JsonResponse({
+        response.set_cookie(
+            'squad_auth_token',
+            auth_token,
+            max_age=PERMANENT_AUTH_MAX_AGE,
+            path='/',
+            samesite='Lax',
+            httponly=False,
+            secure=False
+        )
+        response['Cache-Control'] = 'no-cache, no-store, must-revalidate, private, max-age=0'
+        response['Pragma'] = 'no-cache'
+        response['Expires'] = '0'
+        return response
+
+    response = JsonResponse({
         'isAuthenticated': False,
         'user': None,
+        'token': '',
         'wishlist': [],
         'wishlistCount': 0
     })
+    response['Cache-Control'] = 'no-cache, no-store, must-revalidate, private, max-age=0'
+    response['Pragma'] = 'no-cache'
+    response['Expires'] = '0'
+    return response
 
 
 # ==========================================
@@ -487,9 +569,30 @@ def api_change_password(request):
     request.user.set_password(new_password)
     request.user.save()
     # Re-authenticate session so user stays logged in
+    request.user.backend = 'django.contrib.auth.backends.ModelBackend'
     login(request, request.user)
-
-    return JsonResponse({'success': True, 'message': 'Password changed successfully!'})
+    request.session.set_expiry(PERMANENT_AUTH_MAX_AGE)
+    request.session.modified = True
+    try:
+        request.session.save()
+    except Exception:
+        pass
+    auth_token = generate_permanent_token(request.user)
+    response = JsonResponse({
+        'success': True,
+        'message': 'Password changed successfully!',
+        'token': auth_token,
+        'user': serialize_user(request.user)
+    })
+    response.set_cookie(
+        'squad_auth_token',
+        auth_token,
+        max_age=PERMANENT_AUTH_MAX_AGE,
+        path='/',
+        samesite='Lax',
+        httponly=False
+    )
+    return response
 
 
 # ==========================================
@@ -583,6 +686,8 @@ def api_forgot_password(request):
         send_mobile_sms(target_phone, token_obj.otp_code)
 
     # 4. Send stylized Email if email is available
+    email_sent = False
+    email_error = None
     if target_email:
         subject = "SNEAKER SQUAD - Reset Your Password & OTP"
         message = f"""
@@ -612,6 +717,7 @@ Team SNEAKER SQUAD 👟
             <div style="margin:20px 0;">
               <a href="{reset_url}" style="background:#ff5a1f; color:#ffffff; padding:12px 26px; border-radius:10px; text-decoration:none; font-weight:bold; font-size:14px; display:inline-block;">👉 Open Password Reset Page</a>
             </div>
+            <p style="color:#64748b; font-size:12px; margin-top:20px; line-height: 1.4;">This OTP code is valid for 10 minutes. If you did not request this, please disregard this email.</p>
           </div>
         </body>
         </html>
@@ -625,17 +731,74 @@ Team SNEAKER SQUAD 👟
                 html_message=html_message,
                 fail_silently=False,
             )
-        except Exception:
-            pass
+            email_sent = True
+        except Exception as e:
+            import logging
+            logging.getLogger(__name__).error(f"Failed to send password reset email to {target_email}: {e}")
+            email_error = str(e)
+
+    # Mask target email for user privacy (e.g. ch***13@gmail.com)
+    masked_email = target_email or ''
+    if target_email and '@' in target_email:
+        u_part, d_part = target_email.split('@', 1)
+        if len(u_part) > 3:
+            masked_email = f"{u_part[:2]}***{u_part[-1]}@{d_part}"
+        else:
+            masked_email = f"{u_part[:1]}***@{d_part}"
+
+    resp_payload = {
+        'success': True,
+        'message': f'6-Digit OTP code has been sent to your Gmail ({masked_email})!' if email_sent else f'Password reset initiated. Please check your Gmail ({masked_email}).',
+        'identifier': identifier,
+        'token': token_obj.token,
+        'user_name': user_display,
+        'email_sent': email_sent,
+        'masked_email': masked_email,
+    }
+
+    if not email_sent and email_error:
+        resp_payload['email_error'] = email_error
+
+    return JsonResponse(resp_payload)
+
+
+@csrf_exempt
+@require_POST
+def api_verify_otp(request):
+    """
+    Step 2: Validates the 6-digit OTP code before displaying new password form
+    """
+    data = get_request_data(request)
+    otp_code = data.get('otp', data.get('otp_code', '')).strip()
+    token_str = data.get('token', '').strip()
+    identifier = data.get('identifier', data.get('email', '')).strip()
+
+    if not otp_code or len(otp_code) != 6:
+        return JsonResponse({'success': False, 'message': 'Please enter the 6-digit OTP code.'}, status=400)
+
+    token_obj = None
+    if token_str:
+        token_obj = PasswordResetToken.objects.filter(token=token_str, is_used=False).first()
+
+    if not token_obj and identifier:
+        user = User.objects.filter(email__iexact=identifier).first() or User.objects.filter(username__iexact=identifier).first()
+        if user:
+            token_obj = PasswordResetToken.objects.filter(user=user, otp_code=otp_code, is_used=False).order_by('-created_at').first()
+
+    if not token_obj and otp_code:
+        token_obj = PasswordResetToken.objects.filter(otp_code=otp_code, is_used=False).order_by('-created_at').first()
+
+    if not token_obj or not token_obj.is_valid(max_minutes=10):
+        return JsonResponse({'success': False, 'message': 'Invalid or expired OTP code (valid for 10 minutes). Please check your email or click Resend OTP.'}, status=400)
+
+    # Double check matching OTP code if looked up by token
+    if token_obj.otp_code != otp_code:
+        return JsonResponse({'success': False, 'message': 'Incorrect OTP code. Please check your email.'}, status=400)
 
     return JsonResponse({
         'success': True,
-        'message': f'6-Digit OTP code sent for {user_display}!',
-        'identifier': identifier,
-        'token': token_obj.token,
-        'otp': token_obj.otp_code,
-        'resetUrl': reset_url,
-        'user_name': user_display
+        'message': 'OTP verified successfully! Now create your new password.',
+        'token': token_obj.token
     })
 
 
@@ -646,16 +809,23 @@ def api_verify_otp_and_reset_password(request):
     Verifies 6-digit OTP and directly sets new password from Phone / Modal
     """
     data = get_request_data(request)
-    identifier = data.get('identifier', '').strip()
+    identifier = data.get('identifier', data.get('email', '')).strip()
     otp_code = data.get('otp', data.get('otp_code', '')).strip()
     new_password = data.get('new_password', '').strip()
+    confirm_password = data.get('confirm_password', data.get('confirmPassword', '')).strip()
     token_str = data.get('token', '').strip()
 
     if not otp_code or not new_password:
         return JsonResponse({'success': False, 'message': 'Please enter the 6-digit OTP and your new password.'}, status=400)
 
-    if len(new_password) < 6:
-        return JsonResponse({'success': False, 'message': 'New password must be at least 6 characters long.'}, status=400)
+    if confirm_password and new_password != confirm_password:
+        return JsonResponse({'success': False, 'message': 'Passwords do not match! Please check and re-enter.'}, status=400)
+
+    if len(new_password) < 8:
+        return JsonResponse({'success': False, 'message': 'Password must be at least 8 characters long.'}, status=400)
+
+    if not re.search(r'[A-Za-z]', new_password) or not re.search(r'\d', new_password):
+        return JsonResponse({'success': False, 'message': 'Password must contain at least one letter and one number.'}, status=400)
 
     token_obj = None
 
@@ -664,11 +834,19 @@ def api_verify_otp_and_reset_password(request):
         token_obj = PasswordResetToken.objects.filter(token=token_str, is_used=False).first()
 
     # 2. Search by OTP code and identifier if not matched
+    if not token_obj and identifier:
+        user = User.objects.filter(email__iexact=identifier).first() or User.objects.filter(username__iexact=identifier).first()
+        if user:
+            token_obj = PasswordResetToken.objects.filter(user=user, otp_code=otp_code, is_used=False).order_by('-created_at').first()
+
     if not token_obj and otp_code:
         token_obj = PasswordResetToken.objects.filter(otp_code=otp_code, is_used=False).order_by('-created_at').first()
 
-    if not token_obj or not token_obj.is_valid():
-        return JsonResponse({'success': False, 'message': 'Invalid or expired OTP code. Please request a new OTP.'}, status=400)
+    if not token_obj or not token_obj.is_valid(max_minutes=10):
+        return JsonResponse({'success': False, 'message': 'Invalid or expired OTP code (valid for 10 minutes). Please request a new OTP.'}, status=400)
+
+    if token_obj.otp_code != otp_code:
+        return JsonResponse({'success': False, 'message': 'Incorrect OTP code. Please check your email.'}, status=400)
 
     # Update Password
     user = token_obj.user
@@ -678,15 +856,34 @@ def api_verify_otp_and_reset_password(request):
     # Mark Token as Used
     token_obj.is_used = True
     token_obj.save()
+    PasswordResetToken.objects.filter(user=user, is_used=False).update(is_used=True)
 
     # Auto-login the user seamlessly
+    user.backend = 'django.contrib.auth.backends.ModelBackend'
     login(request, user)
+    request.session.set_expiry(PERMANENT_AUTH_MAX_AGE)
+    request.session.modified = True
+    try:
+        request.session.save()
+    except Exception:
+        pass
+    auth_token = generate_permanent_token(user)
 
-    return JsonResponse({
+    response = JsonResponse({
         'success': True,
-        'message': 'Password reset successfully! You are now logged in. 🔥',
-        'user': serialize_user(user)
+        'message': 'Password updated successfully! Redirecting to login...',
+        'user': serialize_user(user),
+        'token': auth_token
     })
+    response.set_cookie(
+        'squad_auth_token',
+        auth_token,
+        max_age=PERMANENT_AUTH_MAX_AGE,
+        path='/',
+        samesite='Lax',
+        httponly=False
+    )
+    return response
 
 
 @csrf_exempt
@@ -695,17 +892,27 @@ def api_reset_password_submit(request):
     data = get_request_data(request)
     token_str = data.get('token', '').strip()
     new_password = data.get('new_password', '').strip()
+    confirm_password = data.get('confirm_password', data.get('confirmPassword', '')).strip()
 
     if not token_str or not new_password:
         return JsonResponse({'success': False, 'message': 'Token and new password are required.'}, status=400)
 
+    if confirm_password and new_password != confirm_password:
+        return JsonResponse({'success': False, 'message': 'Passwords do not match! Please check and re-enter.'}, status=400)
+
+    if len(new_password) < 8:
+        return JsonResponse({'success': False, 'message': 'Password must be at least 8 characters long.'}, status=400)
+
+    if not re.search(r'[A-Za-z]', new_password):
+        return JsonResponse({'success': False, 'message': 'Password must contain at least one letter.'}, status=400)
+
+    if not re.search(r'\d', new_password):
+        return JsonResponse({'success': False, 'message': 'Password must contain at least one number.'}, status=400)
+
     token_obj = PasswordResetToken.objects.filter(token=token_str).first()
 
-    if not token_obj or not token_obj.is_valid():
-        return JsonResponse({'success': False, 'message': 'This reset link has expired or has already been used.'}, status=400)
-
-    if len(new_password) < 6:
-        return JsonResponse({'success': False, 'message': 'Password must be at least 6 characters long.'}, status=400)
+    if not token_obj or not token_obj.is_valid(max_minutes=10):
+        return JsonResponse({'success': False, 'message': 'This reset session has expired (valid for 10 minutes) or has already been used. Please request a new OTP.'}, status=400)
 
     user = token_obj.user
     user.set_password(new_password)
@@ -713,15 +920,35 @@ def api_reset_password_submit(request):
 
     token_obj.is_used = True
     token_obj.save()
+    PasswordResetToken.objects.filter(user=user, is_used=False).update(is_used=True)
 
-    # Auto-login the user with new credentials
-    login(request, user)
+    # Auto-login the user with new credentials if session is present
+    if hasattr(request, 'session'):
+        user.backend = 'django.contrib.auth.backends.ModelBackend'
+        login(request, user)
+        request.session.set_expiry(PERMANENT_AUTH_MAX_AGE)
+        request.session.modified = True
+        try:
+            request.session.save()
+        except Exception:
+            pass
+    auth_token = generate_permanent_token(user)
 
-    return JsonResponse({
+    response = JsonResponse({
         'success': True,
-        'message': 'Password reset successfully! You are now logged in. 🔥',
-        'user': serialize_user(user)
+        'message': 'Password updated successfully! Redirecting to login...',
+        'user': serialize_user(user),
+        'token': auth_token
     })
+    response.set_cookie(
+        'squad_auth_token',
+        auth_token,
+        max_age=PERMANENT_AUTH_MAX_AGE,
+        path='/',
+        samesite='Lax',
+        httponly=False
+    )
+    return response
 
 
 
@@ -1024,9 +1251,9 @@ def api_delete_order(request, order_id):
     if not order:
         return JsonResponse({'success': False, 'message': 'Order not found.'}, status=404)
 
-    is_owner = (order.user == request.user) or (request.user.email and order.email.lower() == request.user.email.lower())
-    if not is_owner and not request.user.is_staff:
-        return JsonResponse({'success': False, 'message': 'Unauthorized.'}, status=403)
+    # Strictly allow only staff/superuser administrators to permanently delete orders
+    if not request.user.is_staff and not request.user.is_superuser:
+        return JsonResponse({'success': False, 'message': 'Permission denied. Only store administrators can permanently delete order records.'}, status=403)
 
     # Delete order and all associated items & invoice from database
     order.delete()
@@ -1081,9 +1308,45 @@ def invoice_view(request, order_id):
 # 7. HTML PAGE VIEWS (Dashboard & Reset Page)
 # ==========================================
 
-@login_required(login_url='/')
 def dashboard_view(request):
     user = request.user
+    if not user or not user.is_authenticated:
+        # Check if auth token is present in cookies, custom headers, or query parameters
+        token = (
+            request.COOKIES.get('squad_auth_token') or 
+            request.META.get('HTTP_X_SQUAD_AUTH_TOKEN') or 
+            request.GET.get('auth_token') or
+            request.GET.get('squad_auth_token')
+        )
+        if token:
+            candidate = verify_permanent_token(token)
+            if candidate and candidate.is_active:
+                candidate.backend = 'django.contrib.auth.backends.ModelBackend'
+                login(request, candidate)
+                request.session.set_expiry(PERMANENT_AUTH_MAX_AGE)
+                request.session.modified = True
+                user = candidate
+
+    if not user or not user.is_authenticated:
+        # Check if staff admin is accessing the dashboard
+        admin_token = (
+            request.COOKIES.get('squad_admin_token') or 
+            request.META.get('HTTP_X_SQUAD_ADMIN_TOKEN') or
+            request.GET.get('admin_token')
+        )
+        if admin_token:
+            admin_user = verify_admin_token(admin_token)
+            if admin_user and admin_user.is_active:
+                admin_user.backend = 'django.contrib.auth.backends.ModelBackend'
+                login(request, admin_user)
+                request.session.set_expiry(PERMANENT_AUTH_MAX_AGE)
+                request.session.modified = True
+                user = admin_user
+
+    if not user or not user.is_authenticated:
+        # If still unauthenticated, render the client-side self-healing bridge that checks localStorage
+        return render(request, 'auth_restore.html', {'next': request.get_full_path()})
+
     profile = get_user_profile(user)
     addresses = UserAddress.objects.filter(user=user)
     wishlist_items = WishlistItem.objects.filter(user=user)

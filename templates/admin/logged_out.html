@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logged Out | SNEAKER SQUAD Master Admin</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #ff5a1f;
+      --primary-hover: #ff7438;
+      --bg-dark: #080a0f;
+      --card-bg: rgba(18, 22, 32, 0.92);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 30%, rgba(255, 90, 31, 0.15) 0%, transparent 55%),
+        linear-gradient(180deg, #07090e 0%, #0c0f17 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-main);
+      padding: 30px 20px;
+    }
+
+    .logout-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 44px 38px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .logout-icon-box {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(34, 197, 94, 0.12);
+      border: 2px solid rgba(34, 197, 94, 0.4);
+      color: #22c55e;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 22px;
+    }
+
+    .logout-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .logout-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .btn-login-again {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      margin-bottom: 12px;
+    }
+
+    .btn-login-again:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(255, 90, 31, 0.35);
+    }
+
+    .return-store-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .return-store-link:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logout-card">
+    <div class="logout-icon-box">
+      <i class="fa-solid fa-lock"></i>
+    </div>
+    <h1 class="logout-title">Logged Out Securely</h1>
+    <p class="logout-desc">
+      Your administrator session and permanent security tokens on this device have been cleared successfully. Other devices remain unaffected.
+    </p>
+
+    <a href="{% url 'admin:login' %}" class="btn-login-again">
+      <i class="fa-solid fa-right-to-bracket"></i> Log In to Admin Portal
+    </a>
+
+    <a href="/" class="return-store-link">
+      <i class="fa-solid fa-arrow-left"></i> Return to Sneaker Squad Store
+    </a>
+  </div>
+
+  <script>
+    try {
+      localStorage.removeItem('sneaker_squad_user');
+      localStorage.removeItem('sneaker_squad_wishlist');
+      localStorage.removeItem('sneaker_squad_auth_token');
+      document.cookie = 'squad_auth_token=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';
+      document.cookie = 'squad_admin_token=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';
+      document.cookie = 'sessionid=; path=/; max-age=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=Lax';
+    } catch(e) {}
+  </script>
+</body>
+</html>

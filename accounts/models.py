@@ -128,9 +128,9 @@ class PasswordResetToken(models.Model):
             self.otp_code = str(random.randint(100000, 999999))
         super().save(*args, **kwargs)
 
-    def is_valid(self):
-        # Token valid for 24 hours
-        return not self.is_used and (timezone.now() - self.created_at) < timedelta(hours=24)
+    def is_valid(self, max_minutes=10):
+        # OTP token strictly valid for 10 minutes (5-10 min requirement)
+        return not self.is_used and (timezone.now() - self.created_at) < timedelta(minutes=max_minutes)
 
     def __str__(self):
         return f"Reset Token for {self.user.username} (OTP: {self.otp_code})"

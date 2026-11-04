@@ -363,6 +363,14 @@
         <p class="brand-subtitle">Enter administrator credentials to manage inventory & orders</p>
       </div>
 
+      <!-- Access Denied Banner if signed in as non-admin customer -->
+      {% if user.is_authenticated and not user.is_staff and not user.is_superuser %}
+      <div class="error-card" style="background: rgba(239, 68, 68, 0.16); border: 1px solid rgba(239, 68, 68, 0.4); color: #fca5a5; margin-bottom: 20px;">
+        <i class="fa-solid fa-shield-xmark" style="color: #ef4444; font-size: 1.2rem;"></i>
+        <span><strong>Access Restricted:</strong> You are currently signed in as customer <em>{{ user.username }}</em>. Only authorized Sneaker Squad administrators can access this portal. Please log in with administrator credentials below.</span>
+      </div>
+      {% endif %}
+
       <!-- Error message container if credentials fail -->
       {% if form.errors and not form.non_field_errors %}
       <div class="error-card">

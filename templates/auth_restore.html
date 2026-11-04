@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restoring Squad Session... | SNEAKER SQUAD</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #ff5a1f;
+      --bg: #080a0f;
+      --card: #121620;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+    body {
+      background: var(--bg);
+      background-image: radial-gradient(circle at 50% 30%, rgba(255, 90, 31, 0.15) 0%, transparent 60%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .restore-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 30px;
+      text-align: center;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+    .spinner {
+      width: 44px;
+      height: 44px;
+      border: 3px solid rgba(255, 90, 31, 0.2);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .brand-title span { color: var(--primary); }
+    .restore-subtitle {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="restore-box">
+    <div class="spinner"></div>
+    <div class="brand-title">SNEAKER <span>SQUAD</span></div>
+    <div class="restore-subtitle">Restoring your permanent session...</div>
+  </div>
+
+  <script>
+    (async function() {
+      const nextUrl = "{{ next|default:'/dashboard'|escapejs }}";
+      try {
+        const token = localStorage.getItem('sneaker_squad_auth_token');
+        if (token) {
+          // Immediately set cookie so all future requests send it
+          const maxAge = 315360000; // 10 years
+          const exp = new Date(Date.now() + maxAge * 1000).toUTCString();
+          document.cookie = 'squad_auth_token=' + encodeURIComponent(token) + '; path=/; max-age=' + maxAge + '; expires=' + exp + '; SameSite=Lax';
+
+          // Call user-state API to re-establish server session
+          const res = await fetch('/accounts/api/user-state/?auth_token=' + encodeURIComponent(token), {
+            credentials: 'include',
+            headers: { 'X-Squad-Auth-Token': token }
+          });
+          const data = await res.json();
+          if (data && data.isAuthenticated) {
+            window.location.replace(nextUrl);
+            return;
+          }
+        }
+      } catch (err) {
+        console.warn('Session auto-restore error:', err);
+      }
+      // If no permanent token or deactivated user, redirect to homepage
+      window.location.replace('/?auth=required');
+    })();
+  </script>
+
+</body>
+</html>
+

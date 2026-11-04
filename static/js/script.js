@@ -150,7 +150,7 @@ function initMobileMenu() {
    ========================================================================== */
 function openCartDrawer() {
   const cartDrawer = document.getElementById('cart-drawer');
-  const cartOverlay = document.getElementById('cart-drawer-overlay');
+  const cartOverlay = document.getElementById('cart-drawer-overlay') || document.getElementById('cart-overlay');
   renderCartItems();
   updateCartBadge();
   if (cartDrawer) {
@@ -165,7 +165,7 @@ function openCartDrawer() {
 
 function closeCartDrawer() {
   const cartDrawer = document.getElementById('cart-drawer');
-  const cartOverlay = document.getElementById('cart-drawer-overlay');
+  const cartOverlay = document.getElementById('cart-drawer-overlay') || document.getElementById('cart-overlay');
   if (cartDrawer) {
     cartDrawer.classList.remove('open');
     cartDrawer.classList.remove('active');
@@ -183,27 +183,60 @@ function initCart() {
   updateCartBadge();
   renderCartItems();
 
-  // Delegated Global Click Listener for Cart Trigger
+  // Delegated Global Click Listener for Cart Trigger and Close Button
   document.addEventListener('click', (e) => {
-    const cartTrigger = e.target.closest('#cart-btn, .cart-btn, [aria-label="Shopping Bag"], .open-cart-trigger');
-    if (cartTrigger) {
+    // 1. Right Cut / Close Button inside Cart Drawer (Top priority)
+    const closeBtn = e.target.closest('#cart-close-btn, .cart-close-btn');
+    if (closeBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      closeCartDrawer();
+      return;
+    }
+
+    // 2. Backdrop Overlay Click to Close Cart
+    const overlay = e.target.closest('#cart-drawer-overlay, #cart-overlay');
+    if (overlay) {
+      e.preventDefault();
+      e.stopPropagation();
+      closeCartDrawer();
+      return;
+    }
+
+    // 3. Open Cart Trigger (Only when outside the cart drawer itself)
+    const cartTrigger = e.target.closest('#cart-btn, .cart-btn, a[aria-label="Shopping Bag"], button[aria-label="Shopping Bag"], .open-cart-trigger');
+    if (cartTrigger && !cartTrigger.closest('#cart-drawer')) {
       e.preventDefault();
       e.stopPropagation();
       openCartDrawer();
       return;
     }
+  });
 
-    const closeBtn = e.target.closest('#cart-close-btn, .cart-close-btn');
-    if (closeBtn) {
+  // Direct element listener for Close button as a guaranteed fallback
+  const directCloseBtn = document.getElementById('cart-close-btn');
+  if (directCloseBtn) {
+    directCloseBtn.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       closeCartDrawer();
-      return;
-    }
+    });
+  }
 
-    const overlay = e.target.closest('#cart-drawer-overlay');
-    if (overlay) {
+  // Direct element listener for Overlay
+  const directOverlay = document.getElementById('cart-drawer-overlay');
+  if (directOverlay) {
+    directOverlay.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       closeCartDrawer();
-      return;
+    });
+  }
+
+  // Close Cart Drawer on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeCartDrawer();
     }
   });
 
@@ -401,6 +434,7 @@ function initCheckoutModal() {
           
           const createRes = await fetch('/api/payment/create-order/', {
             method: 'POST',
+            credentials: 'include',
             headers: {
               'Content-Type': 'application/json',
               'X-CSRFToken': getCookie('csrftoken')
@@ -430,6 +464,7 @@ function initCheckoutModal() {
                 try {
                   const verifyRes = await fetch('/api/payment/verify/', {
                     method: 'POST',
+                    credentials: 'include',
                     headers: {
                       'Content-Type': 'application/json',
                       'X-CSRFToken': getCookie('csrftoken')
@@ -487,6 +522,7 @@ function initCheckoutModal() {
             
             const verifyRes = await fetch('/api/payment/verify/', {
               method: 'POST',
+              credentials: 'include',
               headers: {
                 'Content-Type': 'application/json',
                 'X-CSRFToken': getCookie('csrftoken')
@@ -510,6 +546,7 @@ function initCheckoutModal() {
           // Option 2: CASH ON DELIVERY (COD)
           const response = await fetch('/api/checkout/', {
             method: 'POST',
+            credentials: 'include',
             headers: {
               'Content-Type': 'application/json',
               'X-CSRFToken': getCookie('csrftoken')

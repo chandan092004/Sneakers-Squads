@@ -28,6 +28,7 @@ urlpatterns = [
     path('api/profile/update/', views.api_profile_update, name='api_profile_update'),
     path('api/change-password/', views.api_change_password, name='api_change_password'),
     path('api/forgot-password/', views.api_forgot_password, name='api_forgot_password'),
+    path('api/verify-otp/', views.api_verify_otp, name='api_verify_otp'),
     path('api/verify-otp-reset/', views.api_verify_otp_and_reset_password, name='api_verify_otp_reset'),
     path('api/reset-password/submit/', views.api_reset_password_submit, name='api_reset_password_submit'),
 

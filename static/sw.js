@@ -1,23 +1,11 @@
 /**
  * SNEAKERS SQUAD - OFFICIAL PWA SERVICE WORKER (sw.js)
  * Caches core app assets, delivers lightning-fast loading,
- * and provides offline fallback experience.
+ * and preserves live dynamic user authentication state on mobile.
  */
 
-const CACHE_NAME = 'sneaker-squad-pwa-v2.3';
+const CACHE_NAME = 'sneaker-squad-pwa-v4.0';
 const STATIC_ASSETS = [
-  '/',
-  '/men',
-  '/women',
-  '/accessories',
-  '/contact',
-  '/dashboard',
-  '/product-detail',
-  '/index.html',
-  '/men.html',
-  '/women.html',
-  '/accessories.html',
-  '/contact.html',
   '/static/css/style.css',
   '/static/css/product.css',
   '/static/css/auth.css',
@@ -31,12 +19,12 @@ const STATIC_ASSETS = [
   '/static/manifest.json'
 ];
 
-// Install Event: Cache Core Static Shell
+// Install Event: Cache Core Static Assets Only (Never dynamic pages)
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SneakerSquad PWA] Pre-caching static app shell');
+      console.log('[SneakerSquad PWA] Pre-caching static assets');
       return cache.addAll(STATIC_ASSETS).catch((err) => {
         console.warn('[SneakerSquad PWA] Partial cache error (ignoring non-critical):', err);
       });
@@ -44,7 +32,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate Event: Clean Old Caches immediately
+// Activate Event: Clean Old Caches immediately to ensure fresh session state
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keyList) => {
@@ -60,25 +48,67 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch Event: Network First so fresh price and content changes appear immediately
+// Fetch Event: Network-first with dynamic bypass for auth and pages
 self.addEventListener('fetch', (event) => {
   const requestUrl = new URL(event.request.url);
 
-  // Skip non-GET requests or admin / backend API endpoints to keep them always live
+  // Skip non-GET requests, all auth/account endpoints, admin, API, and dashboard
+  // to ensure authentication cookies and tokens are ALWAYS live and never cached
   if (
     event.request.method !== 'GET' ||
     requestUrl.pathname.startsWith('/admin') ||
     requestUrl.pathname.startsWith('/api') ||
-    requestUrl.pathname.startsWith('/accounts/api') ||
+    requestUrl.pathname.startsWith('/accounts') ||
+    requestUrl.pathname.startsWith('/dashboard') ||
     requestUrl.pathname.startsWith('/order')
   ) {
     return;
   }
 
+  const isNavigation = event.request.mode === 'navigate' || 
+                       (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html'));
+
+  // Navigation requests (HTML pages): Always Network First, NEVER cache user-specific pages
+  if (isNavigation) {
+    event.respondWith(
+      fetch(event.request)
+        .catch(() => {
+          return new Response(
+            `<!DOCTYPE html>
+            <html>
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Offline | SNEAKERS SQUAD</title>
+              <style>
+                body { background: #0b0d13; color: #fff; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; text-align: center; padding: 20px; }
+                .box { background: #141722; border: 1px solid #ff5a1f; padding: 36px 24px; border-radius: 20px; max-width: 400px; }
+                h2 { color: #ff5a1f; margin-bottom: 8px; }
+                p { color: #94a3b8; font-size: 0.95rem; }
+                button { background: #ff5a1f; color: #fff; border: none; padding: 12px 24px; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 16px; }
+              </style>
+            </head>
+            <body>
+              <div class="box">
+                <h2>👟 SNEAKERS SQUAD</h2>
+                <h3>You're Currently Offline</h3>
+                <p>Check your internet connection or mobile data to browse the latest authentic sneaker drops.</p>
+                <button onclick="window.location.reload()">Retry Connection</button>
+              </div>
+            </body>
+            </html>`,
+            { headers: { 'Content-Type': 'text/html' } }
+          );
+        })
+    );
+    return;
+  }
+
+  // Static Assets: Network first with Cache fallback
   event.respondWith(
     fetch(event.request)
       .then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200) {
+        if (networkResponse && networkResponse.status === 200 && requestUrl.pathname.startsWith('/static/')) {
           const responseToCache = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
             cache.put(event.request, responseToCache);
@@ -87,39 +117,7 @@ self.addEventListener('fetch', (event) => {
         return networkResponse;
       })
       .catch(() => {
-        return caches.match(event.request).then((cachedResponse) => {
-          if (cachedResponse) {
-            return cachedResponse;
-          }
-          if (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html')) {
-            return caches.match('/index.html') || new Response(
-              `<!DOCTYPE html>
-              <html>
-              <head>
-                <meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Offline | SNEAKERS SQUAD</title>
-                <style>
-                  body { background: #0b0d13; color: #fff; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; text-align: center; padding: 20px; }
-                  .box { background: #141722; border: 1px solid #ff5a1f; padding: 36px 24px; border-radius: 20px; max-width: 400px; }
-                  h2 { color: #ff5a1f; margin-bottom: 8px; }
-                  p { color: #94a3b8; font-size: 0.95rem; }
-                  button { background: #ff5a1f; color: #fff; border: none; padding: 12px 24px; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 16px; }
-                </style>
-              </head>
-              <body>
-                <div class="box">
-                  <h2>👟 SNEAKERS SQUAD</h2>
-                  <h3>You're Currently Offline</h3>
-                  <p>Check your internet connection or mobile data to browse the latest authentic sneaker drops.</p>
-                  <button onclick="window.location.reload()">Retry Connection</button>
-                </div>
-              </body>
-              </html>`,
-              { headers: { 'Content-Type': 'text/html' } }
-            );
-          }
-        });
+        return caches.match(event.request);
       })
   );
 });
