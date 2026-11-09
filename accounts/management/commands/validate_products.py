@@ -75,3 +75,4 @@ class Command(BaseCommand):
                     for iss in issues:
                         self.stdout.write(f"    ↳ {iss}")
                 self.stdout.write(self.style.NOTICE("\nRun 'python manage.py validate_products --fix' to auto-resolve these issues."))
+

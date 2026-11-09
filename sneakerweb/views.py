@@ -16,33 +16,27 @@ def home(request):
 # 2. Men's Shoes Collection (Only Sneaker, Gender in men/unisex)
 def man(request):
     products = Product.objects.filter(category='sneaker', gender__in=['men', 'unisex'], is_active=True)
-    recommended = Product.objects.filter(category='sneaker', gender__in=['men', 'unisex'], is_active=True).order_by('-rating')[:4]
     return render(request, 'man.html', {
         'products': products,
         'products_count': products.count(),
-        'recommended': recommended,
         'page_title': "Men's Sneaker Collection"
     })
 
 # 3. Women's Shoes Collection (Only Sneaker, Gender in women/unisex)
 def woman(request):
     products = Product.objects.filter(category='sneaker', gender__in=['women', 'unisex'], is_active=True)
-    recommended = Product.objects.filter(category='sneaker', gender__in=['women', 'unisex'], is_active=True).order_by('-rating')[:4]
     return render(request, 'woman.html', {
         'products': products,
         'products_count': products.count(),
-        'recommended': recommended,
         'page_title': "Women's Sneaker Collection"
     })
 
 # 4. Accessories & Sneaker Care (Only Accessory)
 def accessory(request):
     products = Product.objects.filter(category='accessory', is_active=True)
-    recommended = Product.objects.filter(category='accessory', is_active=True).order_by('-rating')[:4]
     return render(request, 'accessory.html', {
         'products': products,
         'products_count': products.count(),
-        'recommended': recommended,
         'page_title': "Sneaker Accessories & Care"
     })
 

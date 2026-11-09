@@ -92,3 +92,4 @@ if __name__ == '__main__':
     
     args = parser.parse_args()
     process_folder(args.input, args.output, size=args.size, light_grey=args.grey)
+
