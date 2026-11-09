@@ -10,9 +10,16 @@ from .models import (
     Category,
     SubCategory,
     Product,
+    ProductImage,
     ContactMessage,
     ProductReview
 )
+
+
+class ProductImageInline(admin.TabularInline):
+    model = ProductImage
+    extra = 1
+    fields = ('image_url', 'image', 'is_primary', 'alt_text')
 
 
 # Customize Admin Site Headers
@@ -41,6 +48,7 @@ class ProductAdmin(admin.ModelAdmin):
     search_fields = ('title', 'name', 'brand', 'code', 'description', 'tag')
     list_filter = ('category', 'subcategory', 'gender', 'brand', 'is_in_stock', 'is_featured', 'is_active')
     list_per_page = 20
+    inlines = [ProductImageInline]
 
     fieldsets = (
         ('👟 Essential Product Details (Quick Fill)', {

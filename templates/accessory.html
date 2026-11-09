@@ -67,13 +67,13 @@
       <!-- Filter & Sort Toolbar (Purana Filter Style) -->
       <div class="filter-toolbar">
         <div class="filter-pills">
-          <button class="filter-btn active" data-filter="all">All Accessories</button>
-          <button class="filter-btn" data-filter="watches">Watches</button>
-          <button class="filter-btn" data-filter="bags">Bags & Backpacks</button>
-          <button class="filter-btn" data-filter="cleaning">Cleaning Kits</button>
-          <button class="filter-btn" data-filter="laces">Laces</button>
-          <button class="filter-btn" data-filter="protection">Protection & Shields</button>
-          <button class="filter-btn" data-filter="storage">Display & Storage</button>
+          <button class="filter-btn active" data-filter="all">All Care & Utility</button>
+          <button class="filter-btn" data-filter="cleaning-kits">Cleaning Kits</button>
+          <button class="filter-btn" data-filter="premium-shoelaces">Shoelaces</button>
+          <button class="filter-btn" data-filter="crease-protectors">Crease Protectors</button>
+          <button class="filter-btn" data-filter="display-crates">Display Crates</button>
+          <button class="filter-btn" data-filter="odor-eliminators">Odor Eliminators</button>
+          <button class="filter-btn" data-filter="athletic-socks">Athletic Socks</button>
         </div>
 
         <div class="filter-controls-right">
@@ -102,7 +102,7 @@
             {% endif %}
             <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
             <a href="/product-detail?id={{ product.code }}" class="product-img-link" title="{{ product.title|default:product.name }}">
-              <img src="{{ product.image_url|default:product.main_image }}" alt="{{ product.title|default:product.name }}" onerror="this.onerror=null; this.src='/static/img/shoe-1.jpg';" loading="lazy">
+              <img src="{{ product.primary_image_url }}" alt="{{ product.title|default:product.name }}" onerror="this.onerror=null; this.src='/static/img/shoe-1.jpg';" loading="lazy">
             </a>
           </div>
           <div class="product-info">

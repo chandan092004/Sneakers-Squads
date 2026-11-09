@@ -18,12 +18,17 @@ def home(request):
 def men_view(request):
     """
     Men's Collection View:
+    - Strictly Men's & Unisex sneakers (no apparel, heels, casual non-sneakers)
     - Relational Category filtering (slug='men')
-    - URL subcategory filtering (?type=shoes, ?type=apparel)
-    - Enforces .distinct() to guarantee zero duplicate product cards
+    - URL subcategory filtering (?type=high-tops, ?type=low-tops)
+    - Uses .prefetch_related('product_images').distinct() to guarantee zero duplicate product cards
     """
     cat_obj = Category.objects.filter(slug='men').first()
-    queryset = Product.objects.filter(is_active=True, gender__in=['men', 'unisex'])
+    queryset = Product.objects.filter(
+        is_active=True,
+        category__slug='men',
+        gender__in=['men', 'unisex']
+    ).prefetch_related('product_images').distinct()
 
     # Subcategory Filter via URL param ?type=
     subcat_filter = request.GET.get('type', '').strip().lower()
@@ -34,15 +39,15 @@ def men_view(request):
             Q(subcategory__slug=subcat_filter) |
             Q(subcategory__name__iexact=subcat_filter) |
             Q(tag__icontains=subcat_filter)
-        )
+        ).distinct()
 
-    products = queryset.distinct()
+    products = queryset
     subcategories = SubCategory.objects.filter(category=cat_obj) if cat_obj else []
 
     context = {
         'products': products,
         'products_count': products.count(),
-        'page_title': "Men's Footwear & Streetwear",
+        'page_title': "Men's Sneakers & Performance Footwear",
         'active_filter': active_filter,
         'subcategories': subcategories,
     }
@@ -53,12 +58,17 @@ def men_view(request):
 def women_view(request):
     """
     Women's Collection View:
+    - Strictly Women's & Unisex sneakers (no heels, flats, boots, apparel)
     - Relational Category filtering (slug='women')
-    - URL subcategory filtering (?type=sneakers, ?type=heels)
-    - Enforces .distinct() to guarantee zero duplicate product cards
+    - URL subcategory filtering (?type=platform-sneakers, ?type=slip-on-sneakers)
+    - Uses .prefetch_related('product_images').distinct() to guarantee zero duplicate product cards
     """
     cat_obj = Category.objects.filter(slug='women').first()
-    queryset = Product.objects.filter(is_active=True, gender__in=['women', 'unisex'])
+    queryset = Product.objects.filter(
+        is_active=True,
+        category__slug='women',
+        gender__in=['women', 'unisex']
+    ).prefetch_related('product_images').distinct()
 
     # Subcategory Filter via URL param ?type=
     subcat_filter = request.GET.get('type', '').strip().lower()
@@ -69,15 +79,15 @@ def women_view(request):
             Q(subcategory__slug=subcat_filter) |
             Q(subcategory__name__iexact=subcat_filter) |
             Q(tag__icontains=subcat_filter)
-        )
+        ).distinct()
 
-    products = queryset.distinct()
+    products = queryset
     subcategories = SubCategory.objects.filter(category=cat_obj) if cat_obj else []
 
     context = {
         'products': products,
         'products_count': products.count(),
-        'page_title': "Women's Designer Sneaker & Footwear Collection",
+        'page_title': "Women's Designer Sneaker Collection",
         'active_filter': active_filter,
         'subcategories': subcategories,
     }
@@ -88,16 +98,16 @@ def women_view(request):
 def accessories_view(request):
     """
     Accessories Collection View:
+    - Strictly sneaker-specific care & utility products (kits, laces, crease protectors, crates, odor, socks)
     - Relational Category filtering (slug='accessories')
-    - URL subcategory filtering (?type=watches, ?type=bags)
-    - Enforces .distinct() to guarantee zero duplicate product cards
+    - URL subcategory filtering (?type=cleaning-kits, ?type=premium-shoelaces)
+    - Uses .prefetch_related('product_images').distinct() to guarantee zero duplicate product cards
     """
     cat_obj = Category.objects.filter(slug='accessories').first()
-    queryset = Product.objects.filter(is_active=True)
-    if cat_obj:
-        queryset = queryset.filter(category=cat_obj)
-    else:
-        queryset = queryset.filter(tag__in=['watches', 'bags', 'care', 'laces'])
+    queryset = Product.objects.filter(
+        is_active=True,
+        category__slug='accessories'
+    ).prefetch_related('product_images').distinct()
 
     # Subcategory Filter via URL param ?type=
     subcat_filter = request.GET.get('type', '').strip().lower()
@@ -108,15 +118,15 @@ def accessories_view(request):
             Q(subcategory__slug=subcat_filter) |
             Q(subcategory__name__iexact=subcat_filter) |
             Q(tag__icontains=subcat_filter)
-        )
+        ).distinct()
 
-    products = queryset.distinct()
+    products = queryset
     subcategories = SubCategory.objects.filter(category=cat_obj) if cat_obj else []
 
     context = {
         'products': products,
         'products_count': products.count(),
-        'page_title': "Accessories, Timepieces & Carry Packs",
+        'page_title': "Sneaker Care, Laces & Display Accessories",
         'active_filter': active_filter,
         'subcategories': subcategories,
     }

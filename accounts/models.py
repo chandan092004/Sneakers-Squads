@@ -494,8 +494,8 @@ class Product(models.Model):
             'reviewsCount': self.reviews_count,
             'badge': self.badge_text or ('Bestseller' if self.is_trending else 'New Drop'),
             'badgeClass': self.badge_style,
-            'imageUrl': self.image_url or self.main_image,
-            'mainImage': self.image_url or self.main_image,
+            'imageUrl': self.primary_image_url,
+            'mainImage': self.primary_image_url,
             'gallery': gallery,
             'description': self.description or f"Authentic deadstock {self.name} engineered with premium materials.",
             'features': features or [
@@ -514,6 +514,58 @@ class Product(models.Model):
             'sizes': sizes,
             'inStock': self.is_in_stock and (self.stock_quantity > 0)
         }
+
+    @property
+    def primary_image_url(self):
+        """
+        Guarantees retrieval of one strictly unique hero image for card rendering.
+        Checks relational ProductImage first, then local image_file, then image_url.
+        """
+        pri = self.product_images.filter(is_primary=True).first() or self.product_images.first()
+        if pri:
+            return pri.image.url if pri.image else pri.image_url
+        if self.image_file:
+            return self.image_file.url
+        return self.image_url or self.main_image or '/static/img/shoe-1.jpg'
+
+
+class ProductImage(models.Model):
+    """
+    Dedicated Relational Image Model enforcing strict uniqueness across the catalog.
+    Prevents duplicate images via database-level unique=True constraint on image_url.
+    """
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product_images', help_text="Linked Product")
+    image = models.ImageField(upload_to='sneakers/', blank=True, null=True, help_text="Local binary image asset")
+    image_url = models.CharField(max_length=500, unique=True, help_text="Strictly unique image asset path or remote URL across catalog")
+    alt_text = models.CharField(max_length=255, blank=True, default='', help_text="Accessibility alt description")
+    is_primary = models.BooleanField(default=True, db_index=True, help_text="Hero image for category card preview")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-is_primary', 'id']
+        verbose_name = 'Product Image'
+        verbose_name_plural = 'Product Images'
+
+    def __str__(self):
+        return f"Image #{self.id} for {self.product.code} ({'Primary' if self.is_primary else 'Gallery'})"
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        # Keep Product parent model in sync if primary image
+        if self.is_primary and self.image_url:
+            p = self.product
+            needs_save = False
+            if p.image_url != self.image_url:
+                p.image_url = self.image_url
+                p.main_image = self.image_url
+                p.image = self.image_url
+                needs_save = True
+            if self.image and not p.image_file:
+                p.image_file = self.image
+                needs_save = True
+            if needs_save:
+                p.save()
+
 
 
 class ContactMessage(models.Model):
