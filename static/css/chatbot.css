@@ -3,38 +3,59 @@
    Clean, Streetwear-Themed, Responsive Floating Chat
    ========================================================================== */
 
-/* 1. Floating Launcher Button (Bottom Right) */
+/* 1. Floating Launcher Button (Distinct AI Chatbot Widget - Not an Install Button) */
 .squad-chat-launcher {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #ff5a1f, #e04812);
+  height: 52px;
+  padding: 0 18px 0 16px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #181d2a 0%, #0d1017 100%);
   color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
+  gap: 10px;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(255, 90, 31, 0.45);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 16px rgba(255, 90, 31, 0.35);
   z-index: 9990;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 90, 31, 0.6);
+  user-select: none;
 }
 
 .squad-chat-launcher:hover {
-  transform: scale(1.08) translateY(-3px);
-  box-shadow: 0 15px 35px rgba(255, 90, 31, 0.6);
+  transform: translateY(-3px) scale(1.03);
+  border-color: #ff5a1f;
+  box-shadow: 0 14px 32px rgba(255, 90, 31, 0.55);
+}
+
+.squad-chat-launcher i#chat-launcher-icon {
+  color: #ff5a1f;
+  font-size: 1.35rem;
+}
+
+.chat-launcher-pill {
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chat-launcher-pill i {
+  color: #38bdf8;
+  font-size: 0.95rem;
 }
 
 .squad-chat-launcher .chat-badge-pulse {
   position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 14px;
-  height: 14px;
+  top: -2px;
+  right: -2px;
+  width: 13px;
+  height: 13px;
   background: #22c55e;
   border: 2px solid #0b0d13;
   border-radius: 50%;
