@@ -296,14 +296,19 @@
     if (alertBox) alertBox.style.display = 'none';
   }
 
-  function openDrawer(view = 'login') {
+  function openDrawer(view = null) {
+    if (isUserAuthenticated() && (!view || view === 'login' || view === 'signup')) {
+      // If user is already authenticated, go directly to their Dashboard!
+      window.location.href = '/dashboard';
+      return;
+    }
     setupAuthDrawer();
     const d = document.getElementById('auth-drawer');
     const o = document.getElementById('auth-drawer-overlay');
     hideAlert();
 
-    if (isUserAuthenticated() && view !== 'login' && view !== 'signup' && view !== 'forgot' && view !== 'otp' && view !== 'newpass') {
-      showView('profile');
+    if (isUserAuthenticated()) {
+      showView(view || 'profile');
     } else {
       showView(view || 'login');
     }
@@ -560,12 +565,16 @@
               window.DJANGO_USER.username = currentUser.username || '';
               window.DJANGO_USER.email = currentUser.email || '';
             }
+            window._rehydratedAuth = true;
             updateHeaderUserState();
             syncWishlistHeartsUI();
-            showAlert(data.message, true);
+            showAlert((data.message || 'Login successful!') + ' Redirecting to Dashboard... 👟', true);
             setTimeout(() => {
               closeDrawer();
-            }, 800);
+              const urlParams = new URLSearchParams(window.location.search);
+              const next = urlParams.get('next') || data.redirect_url || '/dashboard';
+              window.location.href = next;
+            }, 600);
           } else {
             showAlert(data.message || 'Login failed.');
           }
@@ -618,12 +627,16 @@
               window.DJANGO_USER.username = currentUser.username || '';
               window.DJANGO_USER.email = currentUser.email || '';
             }
+            window._rehydratedAuth = true;
             updateHeaderUserState();
             syncWishlistHeartsUI();
-            showAlert(data.message, true);
+            showAlert((data.message || 'Registration successful!') + ' Redirecting to Dashboard... 👟', true);
             setTimeout(() => {
               closeDrawer();
-            }, 1000);
+              const urlParams = new URLSearchParams(window.location.search);
+              const next = urlParams.get('next') || data.redirect_url || '/dashboard';
+              window.location.href = next;
+            }, 600);
           } else {
             showAlert(data.message || 'Registration failed.');
           }
@@ -933,6 +946,11 @@
       if (authBtn) {
         authBtn.title = `Signed in as ${currentUser.displayName} (Click for Dashboard)`;
         authBtn.setAttribute('aria-label', `Account: ${currentUser.displayName}`);
+        authBtn.href = '/dashboard';
+        authBtn.onclick = (e) => {
+          e.preventDefault();
+          window.location.href = '/dashboard';
+        };
       }
       if (headerIcon) {
         headerIcon.className = 'fa-solid fa-user-check';
@@ -1026,11 +1044,19 @@
   }
 
   function isUserAuthenticated() {
-    if (typeof window.DJANGO_USER !== 'undefined' && typeof window.DJANGO_USER.isAuthenticated === 'boolean') {
-      if (window.DJANGO_USER.isAuthenticated) return true;
-      if (!window._rehydratedAuth) return false;
+    if (typeof window.DJANGO_USER !== 'undefined' && window.DJANGO_USER && window.DJANGO_USER.isAuthenticated) {
+      return true;
     }
-    if (currentUser && (currentUser.id || currentUser.username || currentUser.email)) return true;
+    if (currentUser && (currentUser.id || currentUser.username || currentUser.email)) {
+      return true;
+    }
+    try {
+      const u = JSON.parse(localStorage.getItem('sneaker_squad_user') || 'null');
+      const tok = localStorage.getItem('sneaker_squad_auth_token');
+      if (tok && u && (u.id || u.username || u.email)) {
+        return true;
+      }
+    } catch (e) {}
     return false;
   }
 
@@ -1146,12 +1172,16 @@
 
     // Check if redirect requested auth modal
     if (window.location.search.includes('auth=required') || window.location.search.includes('auth=login')) {
-      if (!isUserAuthenticated()) {
-        setTimeout(() => {
-          openDrawer('login');
-          showAlert('Please log in to access your Squad account & dashboard! 👟');
-        }, 300);
+      if (isUserAuthenticated()) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const next = urlParams.get('next') || '/dashboard';
+        window.location.href = next;
+        return;
       }
+      setTimeout(() => {
+        openDrawer('login');
+        showAlert('Please log in to access your Squad account & dashboard! 👟');
+      }, 300);
       try {
         const url = new URL(window.location.href);
         url.searchParams.delete('auth');
@@ -1219,7 +1249,11 @@
     const authBtn = e.target.closest('#auth-btn, .auth-trigger-btn');
     if (authBtn) {
       e.preventDefault();
-      openDrawer();
+      if (isUserAuthenticated()) {
+        window.location.href = '/dashboard';
+      } else {
+        openDrawer('login');
+      }
     }
   });
 

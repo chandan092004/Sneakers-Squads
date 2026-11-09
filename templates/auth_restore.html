@@ -107,7 +107,7 @@
         localStorage.removeItem('sneaker_squad_auth_token');
         localStorage.removeItem('sneaker_squad_wishlist');
       } catch(e) {}
-      window.location.replace('/?auth=required');
+      window.location.replace('/?auth=required&next=' + encodeURIComponent(nextUrl));
     })();
   </script>
 

@@ -13,7 +13,7 @@ from django.views.decorators.cache import never_cache
 from django.db.models import Avg, Count, Q
 from django.core.mail import send_mail
 from django.conf import settings
-from .middleware import generate_permanent_token, verify_permanent_token, PERMANENT_AUTH_MAX_AGE
+from .middleware import generate_permanent_token, verify_permanent_token, generate_admin_token, verify_admin_token, PERMANENT_AUTH_MAX_AGE
 import time
 from django.core import signing
 
@@ -271,7 +271,8 @@ Team SNEAKER SQUAD 👟
         'message': f'Welcome to Sneaker Squad, {display_name}! 🎉 (Welcome Email Dispatched)',
         'user': serialize_user(user),
         'token': auth_token,
-        'wishlist': wishlist_ids
+        'wishlist': wishlist_ids,
+        'redirect_url': '/dashboard'
     })
     is_secure = request.is_secure() or request.META.get('HTTP_X_FORWARDED_PROTO') == 'https'
     response.set_cookie(
@@ -332,7 +333,8 @@ def api_login(request):
             'message': f'Welcome back, {display_name}! 🔥',
             'user': serialize_user(user),
             'token': auth_token,
-            'wishlist': wishlist_ids
+            'wishlist': wishlist_ids,
+            'redirect_url': '/dashboard'
         })
         is_secure = request.is_secure() or request.META.get('HTTP_X_FORWARDED_PROTO') == 'https'
         response.set_cookie(
@@ -344,6 +346,17 @@ def api_login(request):
             httponly=False,
             secure=is_secure
         )
+        if user.is_staff or user.is_superuser:
+            admin_token = generate_admin_token(user)
+            response.set_cookie(
+                'squad_admin_token',
+                admin_token,
+                max_age=PERMANENT_AUTH_MAX_AGE,
+                path='/',
+                samesite='Lax',
+                httponly=True,
+                secure=is_secure
+            )
         return response
     else:
         return JsonResponse({'success': False, 'message': 'Invalid email/username or password. Please try again.'}, status=401)
@@ -1486,7 +1499,20 @@ def dashboard_view(request):
         'addresses_count': addresses.count(),
         'orders_count': orders.count()
     }
-    return render(request, 'dashboard.html', context)
+    response = render(request, 'dashboard.html', context)
+    if user and user.is_authenticated:
+        is_secure = request.is_secure() or request.META.get('HTTP_X_FORWARDED_PROTO') == 'https'
+        auth_tok = request.COOKIES.get('squad_auth_token') or generate_permanent_token(user)
+        response.set_cookie(
+            'squad_auth_token',
+            auth_tok,
+            max_age=PERMANENT_AUTH_MAX_AGE,
+            path='/',
+            samesite='Lax',
+            httponly=False,
+            secure=is_secure
+        )
+    return response
 
 
 def reset_password_page_view(request, token):
