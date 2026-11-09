@@ -858,10 +858,16 @@ function isCardMatchingCategory(card, filterValue) {
   if (!filterValue || filterValue === 'all') return true;
 
   const f = filterValue.toLowerCase().trim();
+  const cardSubcat = (card.getAttribute('data-subcat') || '').toLowerCase();
   const cardTag = (card.getAttribute('data-tag') || '').toLowerCase();
   const cardCat = (card.getAttribute('data-category') || '').toLowerCase();
   const title = (card.querySelector('.product-title')?.innerText || '').toLowerCase();
   const meta = (card.querySelector('.product-category-meta')?.innerText || '').toLowerCase();
+
+  // SubCategory exact match
+  if (cardSubcat && (cardSubcat === f || f.includes(cardSubcat) || cardSubcat.includes(f))) {
+    return true;
+  }
 
   // 1. Semantic aliases for perfect filtering
   if (f === 'high-top' || f === 'high-tops' || f === 'hightop') {

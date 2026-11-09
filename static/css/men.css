@@ -161,3 +161,84 @@
     justify-content: center;
   }
 }
+
+/* --------------------------------------------------------------------------
+   4. STRICT 4-COLUMN DESKTOP & 2-COLUMN MOBILE BALANCED GRID
+   -------------------------------------------------------------------------- */
+.product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+
+.product-card {
+  background: #141722;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 90, 31, 0.5);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45), 0 0 18px rgba(255, 90, 31, 0.15);
+}
+
+.product-image-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px 14px 0 0;
+}
+
+.product-img-link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0;
+}
+
+.product-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.product-card:hover .product-image-box img {
+  transform: scale(1.05);
+}
+
+.filter-pills a.filter-btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

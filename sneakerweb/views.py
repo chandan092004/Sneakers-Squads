@@ -1,7 +1,8 @@
 import json
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse, HttpResponse
-from accounts.models import Category, Product, ContactMessage
+from django.db.models import Q
+from accounts.models import Category, SubCategory, Product, ContactMessage
 
 # 1. Home / Landing Page
 def home(request):
@@ -13,37 +14,130 @@ def home(request):
     }
     return render(request, 'index.html', context)
 
-# 2. Men's Shoes Collection (Only Sneaker, Gender in men/unisex)
-def man(request):
-    products = Product.objects.filter(category='sneaker', gender__in=['men', 'unisex'], is_active=True)
-    return render(request, 'man.html', {
+# 2. Men's Catalog Controller (Dynamic Subcategory Filtering & Distinct Queryset)
+def men_view(request):
+    """
+    Men's Collection View:
+    - Relational Category filtering (slug='men')
+    - URL subcategory filtering (?type=shoes, ?type=apparel)
+    - Enforces .distinct() to guarantee zero duplicate product cards
+    """
+    cat_obj = Category.objects.filter(slug='men').first()
+    queryset = Product.objects.filter(is_active=True)
+    if cat_obj:
+        queryset = queryset.filter(Q(category=cat_obj) | Q(gender__in=['men', 'unisex'], category__isnull=True))
+    else:
+        queryset = queryset.filter(gender__in=['men', 'unisex'])
+
+    # Subcategory Filter via URL param ?type=
+    subcat_filter = request.GET.get('type', '').strip().lower()
+    active_filter = 'all'
+    if subcat_filter and subcat_filter != 'all':
+        active_filter = subcat_filter
+        queryset = queryset.filter(
+            Q(subcategory__slug=subcat_filter) |
+            Q(subcategory__name__iexact=subcat_filter) |
+            Q(tag__icontains=subcat_filter)
+        )
+
+    products = queryset.distinct()
+    subcategories = SubCategory.objects.filter(category=cat_obj) if cat_obj else []
+
+    context = {
         'products': products,
         'products_count': products.count(),
-        'page_title': "Men's Sneaker Collection"
-    })
+        'page_title': "Men's Footwear & Streetwear",
+        'active_filter': active_filter,
+        'subcategories': subcategories,
+    }
+    return render(request, 'men.html', context)
 
-# 3. Women's Shoes Collection (Only Sneaker, Gender in women/unisex)
-def woman(request):
-    products = Product.objects.filter(category='sneaker', gender__in=['women', 'unisex'], is_active=True)
-    return render(request, 'woman.html', {
+
+# 3. Women's Catalog Controller (Dynamic Subcategory Filtering & Distinct Queryset)
+def women_view(request):
+    """
+    Women's Collection View:
+    - Relational Category filtering (slug='women')
+    - URL subcategory filtering (?type=sneakers, ?type=heels)
+    - Enforces .distinct() to guarantee zero duplicate product cards
+    """
+    cat_obj = Category.objects.filter(slug='women').first()
+    queryset = Product.objects.filter(is_active=True)
+    if cat_obj:
+        queryset = queryset.filter(Q(category=cat_obj) | Q(gender__in=['women', 'unisex'], category__isnull=True))
+    else:
+        queryset = queryset.filter(gender__in=['women', 'unisex'])
+
+    # Subcategory Filter via URL param ?type=
+    subcat_filter = request.GET.get('type', '').strip().lower()
+    active_filter = 'all'
+    if subcat_filter and subcat_filter != 'all':
+        active_filter = subcat_filter
+        queryset = queryset.filter(
+            Q(subcategory__slug=subcat_filter) |
+            Q(subcategory__name__iexact=subcat_filter) |
+            Q(tag__icontains=subcat_filter)
+        )
+
+    products = queryset.distinct()
+    subcategories = SubCategory.objects.filter(category=cat_obj) if cat_obj else []
+
+    context = {
         'products': products,
         'products_count': products.count(),
-        'page_title': "Women's Sneaker Collection"
-    })
+        'page_title': "Women's Designer Sneaker & Footwear Collection",
+        'active_filter': active_filter,
+        'subcategories': subcategories,
+    }
+    return render(request, 'women.html', context)
 
-# 4. Accessories & Sneaker Care (Only Accessory)
-def accessory(request):
-    products = Product.objects.filter(category='accessory', is_active=True)
-    return render(request, 'accessory.html', {
+
+# 4. Accessories Catalog Controller (Dynamic Subcategory Filtering & Distinct Queryset)
+def accessories_view(request):
+    """
+    Accessories Collection View:
+    - Relational Category filtering (slug='accessories')
+    - URL subcategory filtering (?type=watches, ?type=bags)
+    - Enforces .distinct() to guarantee zero duplicate product cards
+    """
+    cat_obj = Category.objects.filter(slug='accessories').first()
+    queryset = Product.objects.filter(is_active=True)
+    if cat_obj:
+        queryset = queryset.filter(category=cat_obj)
+    else:
+        queryset = queryset.filter(tag__in=['watches', 'bags', 'care', 'laces'])
+
+    # Subcategory Filter via URL param ?type=
+    subcat_filter = request.GET.get('type', '').strip().lower()
+    active_filter = 'all'
+    if subcat_filter and subcat_filter != 'all':
+        active_filter = subcat_filter
+        queryset = queryset.filter(
+            Q(subcategory__slug=subcat_filter) |
+            Q(subcategory__name__iexact=subcat_filter) |
+            Q(tag__icontains=subcat_filter)
+        )
+
+    products = queryset.distinct()
+    subcategories = SubCategory.objects.filter(category=cat_obj) if cat_obj else []
+
+    context = {
         'products': products,
         'products_count': products.count(),
-        'page_title': "Sneaker Accessories & Care"
-    })
+        'page_title': "Accessories, Timepieces & Carry Packs",
+        'active_filter': active_filter,
+        'subcategories': subcategories,
+    }
+    return render(request, 'accessories.html', context)
 
-# Aliases for backward compatibility
-men = man
-women = woman
-accessories = accessory
+
+# Exact aliases for backward compatibility across all legacy routes
+man = men_view
+men = men_view
+woman = women_view
+women = women_view
+accessory = accessories_view
+accessories = accessories_view
 
 # 5. Product Detail Page
 def product_detail(request, code=None):

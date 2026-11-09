@@ -8,6 +8,7 @@ from .models import (
     Order,
     OrderItem,
     Category,
+    SubCategory,
     Product,
     ContactMessage,
     ProductReview
@@ -24,9 +25,10 @@ admin.site.index_title = "Store & Customer Management"
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'image_thumbnail',
-        'name',
+        'title',
         'brand',
         'category',
+        'subcategory',
         'gender',
         'price',
         'stock_quantity',
@@ -34,20 +36,20 @@ class ProductAdmin(admin.ModelAdmin):
         'is_featured',
         'is_active'
     )
-    list_display_links = ('image_thumbnail', 'name')
-    list_editable = ('category', 'gender', 'price', 'stock_quantity', 'is_in_stock', 'is_featured', 'is_active')
-    search_fields = ('name', 'brand', 'code', 'description', 'tag')
-    list_filter = ('category', 'gender', 'brand', 'is_in_stock', 'is_featured', 'is_active')
+    list_display_links = ('image_thumbnail', 'title')
+    list_editable = ('price', 'stock_quantity', 'is_in_stock', 'is_featured', 'is_active')
+    search_fields = ('title', 'name', 'brand', 'code', 'description', 'tag')
+    list_filter = ('category', 'subcategory', 'gender', 'brand', 'is_in_stock', 'is_featured', 'is_active')
     list_per_page = 20
 
     fieldsets = (
         ('👟 Essential Product Details (Quick Fill)', {
             'description': 'Sirf ye zaroori details bharein aur Product save karein:',
             'fields': (
-                ('name', 'brand'),
-                ('price', 'original_price'),
-                ('category', 'gender'),
-                ('main_image', 'stock_quantity'),
+                ('title', 'name'),
+                ('brand', 'price', 'original_price'),
+                ('category', 'subcategory', 'gender'),
+                ('image_url', 'main_image', 'stock_quantity'),
             )
         }),
         ('⚙️ Advanced & Optional Options (Click to Expand)', {
@@ -69,10 +71,11 @@ class ProductAdmin(admin.ModelAdmin):
     )
 
     def image_thumbnail(self, obj):
-        if obj.main_image:
+        img_src = obj.image_url or obj.main_image or obj.image
+        if img_src:
             return format_html(
                 '<img src="{}" style="width: 44px; height: 44px; object-fit: cover; border-radius: 6px; border: 1.5px solid #ff5a1f; background: #0b0d13;" />',
-                obj.main_image
+                img_src
             )
         return "No Image"
     image_thumbnail.short_description = "Preview"
@@ -152,6 +155,14 @@ class CategoryAdmin(admin.ModelAdmin):
             )
         }),
     )
+
+
+@admin.register(SubCategory)
+class SubCategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'category', 'slug', 'created_at')
+    list_filter = ('category',)
+    search_fields = ('name', 'slug')
+    prepopulated_fields = {'slug': ('name',)}
 
 
 @admin.register(ContactMessage)

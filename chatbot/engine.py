@@ -52,12 +52,12 @@ def get_df():
                 'price': float(p.price),
                 'color': color_str,
                 'size': p.size or p.sizes_list or 'UK 6, UK 7, UK 8, UK 9, UK 10, UK 11',
-                'category': str(p.category or 'sneaker').lower(),
+                'category': (p.category.slug if hasattr(p.category, 'slug') else str(p.category or 'sneaker')).lower(),
                 'gender': str(p.gender or 'men').lower(),
                 'stock': p.stock_quantity,
                 'sales': p.reviews_count or 0,  # Proxy for popularity/sales
                 'rating': float(p.rating or 4.5),
-                'main_image': p.image or p.main_image or '/static/img/shoe-1.jpg',
+                'main_image': p.image_url or p.image or p.main_image or '/static/img/shoe-1.jpg',
                 'description': p.description or ''
             })
 

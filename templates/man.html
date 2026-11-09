@@ -79,17 +79,14 @@
 
       <!-- Filter & Sort Toolbar -->
       <div class="filter-toolbar">
-        <div class="filter-pills">
-          <button class="filter-btn active" data-filter="all">All Kicks</button>
-          <button class="filter-btn" data-filter="high-top">High-Tops</button>
-          <button class="filter-btn" data-filter="running">Running</button>
-          <button class="filter-btn" data-filter="basketball">Basketball</button>
-          <button class="filter-btn" data-filter="chunky">Chunky Sole</button>
-          <button class="filter-btn" data-filter="retro">Retro Classics</button>
+        <div class="filter-pills" id="subcat-filter-pills">
+          <a href="?type=all" class="filter-btn {% if active_filter == 'all' or not active_filter %}active{% endif %}" data-filter="all">All Men</a>
+          <a href="?type=shoes" class="filter-btn {% if active_filter == 'shoes' %}active{% endif %}" data-filter="shoes">Shoes Only</a>
+          <a href="?type=apparel" class="filter-btn {% if active_filter == 'apparel' %}active{% endif %}" data-filter="apparel">Apparel</a>
         </div>
 
         <div class="filter-controls-right">
-          <span class="products-count" id="products-count-text">Showing {{ products_count|default:products.count }} sneakers</span>
+          <span class="products-count" id="products-count-text">Showing {{ products_count|default:products.count }} items</span>
           <div class="sort-select-wrapper">
             <select class="sort-select" id="sort-select" aria-label="Sort products">
               <option value="featured">Sort by: Featured</option>
@@ -102,53 +99,51 @@
         </div>
       </div>
 
-      <!-- Product Cards Grid (Dynamic Django ORM Queryset) -->
+      <!-- Product Cards Grid (Dynamic Django ORM Queryset - Strictly 4-col desktop / 2-col mobile) -->
       <div class="product-grid">
-        {% if products %}
-          {% for product in products %}
-          <article class="product-card" data-id="{{ product.code }}" data-tag="{{ product.tag|lower }}" data-price="{{ product.price }}" data-rating="{{ product.rating }}">
-            <div class="product-image-box">
-              {% if product.badge_text %}
-                <span class="product-badge {{ product.badge_style }}">{{ product.badge_text }}</span>
-              {% elif product.is_trending %}
-                <span class="product-badge hot">Trending</span>
-              {% elif product.gender == 'unisex' %}
-                <span class="product-badge" style="background:#8b5cf6;">Unisex</span>
-              {% endif %}
-              <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
-              <a href="/product-detail?id={{ product.code }}" class="product-img-link" title="{{ product.name }}">
-                <img src="{{ product.image|default:product.main_image }}" alt="{{ product.name }}" onerror="this.onerror=null; this.src='/static/img/shoe-1.jpg';" loading="lazy">
-              </a>
-            </div>
-            <div class="product-info">
-              <span class="product-category-meta">{{ product.brand }} • {% if product.gender == 'unisex' %}Unisex Kicks{% else %}Men's Sneakers{% endif %}</span>
-              <h3 class="product-title"><a href="/product-detail?id={{ product.code }}">{{ product.name }}</a></h3>
-              <div class="product-rating">
-                <i class="fa-solid fa-star"></i>
-                <span class="rating-value">{{ product.rating }}</span>
-                <span class="rating-count">({{ product.reviews_count }})</span>
-              </div>
-              <div class="product-price-row">
-                <span class="current-price">₹{{ product.price|floatformat:0 }}</span>
-                {% if product.original_price and product.original_price > product.price %}
-                  <span class="original-price">₹{{ product.original_price|floatformat:0 }}</span>
-                  <span class="discount-badge">-{{ product.get_discount_percentage }}%</span>
-                {% endif %}
-              </div>
-              <div class="product-action-row">
-                <a href="/product-detail?id={{ product.code }}" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
-                <button class="btn-add-cart" onclick="addToCart('{{ product.code }}')"><i class="fa-solid fa-cart-plus"></i> Add</button>
-              </div>
-            </div>
-          </article>
-          {% endfor %}
-        {% else %}
-          <div class="empty-products-box" style="grid-column: 1 / -1; text-align: center; padding: 70px 20px;">
-            <i class="fa-solid fa-box-open" style="font-size: 3.2rem; color: #ff5a1f; margin-bottom: 16px;"></i>
-            <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 8px;">Abhi koi product available nahi hai.</h3>
-            <p style="color: #94a3b8; font-size: 0.95rem;">Jald hi naye kicks add honge! Thodi der me check karein.</p>
+        {% for product in products %}
+        <article class="product-card" data-id="{{ product.code }}" data-tag="{{ product.tag|lower }}" data-subcat="{{ product.subcategory.slug|default:'' }}" data-price="{{ product.price }}" data-rating="{{ product.rating }}">
+          <div class="product-image-box">
+            {% if product.badge_text %}
+              <span class="product-badge {{ product.badge_style }}">{{ product.badge_text }}</span>
+            {% elif product.is_trending %}
+              <span class="product-badge hot">Trending</span>
+            {% elif product.gender == 'unisex' %}
+              <span class="product-badge" style="background:#8b5cf6;">Unisex</span>
+            {% endif %}
+            <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <a href="/product-detail?id={{ product.code }}" class="product-img-link" title="{{ product.title|default:product.name }}">
+              <img src="{{ product.image_url|default:product.main_image }}" alt="{{ product.title|default:product.name }}" onerror="this.onerror=null; this.src='/static/img/shoe-1.jpg';" loading="lazy">
+            </a>
           </div>
-        {% endif %}
+          <div class="product-info">
+            <span class="product-category-meta">{{ product.brand }} • {% if product.subcategory %}{{ product.subcategory.name }}{% elif product.gender == 'unisex' %}Unisex{% else %}Men's{% endif %}</span>
+            <h3 class="product-title"><a href="/product-detail?id={{ product.code }}">{{ product.title|default:product.name }}</a></h3>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i>
+              <span class="rating-value">{{ product.rating }}</span>
+              <span class="rating-count">({{ product.reviews_count }})</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">₹{{ product.price|floatformat:0 }}</span>
+              {% if product.original_price and product.original_price > product.price %}
+                <span class="original-price">₹{{ product.original_price|floatformat:0 }}</span>
+                <span class="discount-badge">-{{ product.get_discount_percentage }}%</span>
+              {% endif %}
+            </div>
+            <div class="product-action-row">
+              <a href="/product-detail?id={{ product.code }}" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+              <button class="btn-add-cart" onclick="addToCart('{{ product.code }}')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+            </div>
+          </div>
+        </article>
+        {% empty %}
+        <div class="empty-products-box" style="grid-column: 1 / -1; text-align: center; padding: 70px 20px;">
+          <i class="fa-solid fa-box-open" style="font-size: 3.2rem; color: #ff5a1f; margin-bottom: 16px;"></i>
+          <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 8px;">Abhi koi product available nahi hai.</h3>
+          <p style="color: #94a3b8; font-size: 0.95rem;">Jald hi naye items add honge! Thodi der me check karein.</p>
+        </div>
+        {% endfor %}
       </div>
 
     </div>
