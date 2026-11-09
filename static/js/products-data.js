@@ -284,9 +284,9 @@ const PRODUCTS_DATA = {
     "reviewsCount": 320,
     "badge": "Iconic Chic",
     "badgeClass": "hot",
-    "mainImage": "/static/img/shoe-1506152983158-b4a74a01c721.jpg",
+    "mainImage": "/static/img/women_shoes-8.jpg",
     "gallery": [
-      "/static/img/shoe-1506152983158-b4a74a01c721.jpg",
+      "/static/img/women_shoes-8.jpg",
       "/static/img/women_shoes-3.jpg",
       "/static/img/women_shoes-2.jpg",
       "/static/img/women_shoes-8.jpg"
@@ -315,9 +315,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Rose Gold & Birch",
         "hex": "#b76e79",
-        "mainImage": "/static/img/shoe-1506152983158-b4a74a01c721.jpg",
+        "mainImage": "/static/img/women_shoes-8.jpg",
         "gallery": [
-          "/static/img/shoe-1506152983158-b4a74a01c721.jpg",
+          "/static/img/women_shoes-8.jpg",
           "/static/img/women_shoes-3.jpg",
           "/static/img/women_shoes-2.jpg"
         ]
@@ -560,9 +560,9 @@ const PRODUCTS_DATA = {
     "reviewsCount": 225,
     "badge": "New Drop",
     "badgeClass": "new",
-    "mainImage": "/static/img/shoe-1584735935682-2f2b69dff9d2.jpg",
+    "mainImage": "/static/img/women_shoes-6.jpg",
     "gallery": [
-      "/static/img/shoe-1584735935682-2f2b69dff9d2.jpg",
+      "/static/img/women_shoes-6.jpg",
       "/static/img/women_shoes-6.jpg",
       "/static/img/women_shoes-1.jpg",
       "/static/img/women_shoes-2.jpg"
@@ -591,9 +591,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Pastel Bliss & White",
         "hex": "#ffccd5",
-        "mainImage": "/static/img/shoe-1584735935682-2f2b69dff9d2.jpg",
+        "mainImage": "/static/img/women_shoes-6.jpg",
         "gallery": [
-          "/static/img/shoe-1584735935682-2f2b69dff9d2.jpg",
+          "/static/img/women_shoes-6.jpg",
           "/static/img/women_shoes-6.jpg",
           "/static/img/women_shoes-1.jpg"
         ]
@@ -2277,9 +2277,9 @@ const PRODUCTS_DATA = {
     "reviewsCount": 520,
     "badge": "Collab Drop",
     "badgeClass": "limited",
-    "mainImage": "/static/img/shoe-1520975916090-3105956dac38.jpg",
+    "mainImage": "/static/img/shoe-5.jpg",
     "gallery": [
-      "/static/img/shoe-1520975916090-3105956dac38.jpg",
+      "/static/img/shoe-5.jpg",
       "/static/img/shoe-2.jpg",
       "/static/img/men_shoes-1.jpg",
       "/static/img/shoe-3.jpg"
@@ -2313,9 +2313,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Onyx Shadow Black",
         "hex": "#0a0a0a",
-        "mainImage": "/static/img/shoe-1520975916090-3105956dac38.jpg",
+        "mainImage": "/static/img/shoe-5.jpg",
         "gallery": [
-          "/static/img/shoe-1520975916090-3105956dac38.jpg",
+          "/static/img/shoe-5.jpg",
           "/static/img/shoe-2.jpg",
           "/static/img/men_shoes-1.jpg",
           "/static/img/shoe-3.jpg"
@@ -2349,9 +2349,9 @@ const PRODUCTS_DATA = {
     "reviewsCount": 104,
     "badge": "Trending",
     "badgeClass": "new",
-    "mainImage": "/static/img/shoe-1524504388940-b1c1722653e1.jpg",
+    "mainImage": "/static/img/men_shoes-1.jpg",
     "gallery": [
-      "/static/img/shoe-1524504388940-b1c1722653e1.jpg",
+      "/static/img/men_shoes-1.jpg",
       "/static/img/shoe-2.jpg",
       "/static/img/men_shoes-1.jpg",
       "/static/img/shoe-3.jpg"
@@ -2385,9 +2385,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Earthy Olive / Sand",
         "hex": "#556b2f",
-        "mainImage": "/static/img/shoe-1524504388940-b1c1722653e1.jpg",
+        "mainImage": "/static/img/men_shoes-1.jpg",
         "gallery": [
-          "/static/img/shoe-1524504388940-b1c1722653e1.jpg",
+          "/static/img/men_shoes-1.jpg",
           "/static/img/shoe-2.jpg",
           "/static/img/men_shoes-1.jpg",
           "/static/img/shoe-3.jpg"
@@ -2421,9 +2421,9 @@ const PRODUCTS_DATA = {
     "reviewsCount": 156,
     "badge": "Sale 18%",
     "badgeClass": "sale",
-    "mainImage": "/static/img/shoe-1529139574466-a303027c1d8b.jpg",
+    "mainImage": "/static/img/shoe-6.jpg",
     "gallery": [
-      "/static/img/shoe-1529139574466-a303027c1d8b.jpg",
+      "/static/img/shoe-6.jpg",
       "/static/img/shoe-2.jpg",
       "/static/img/men_shoes-1.jpg",
       "/static/img/shoe-3.jpg"
@@ -2458,9 +2458,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Royal Blue / White",
         "hex": "#2563eb",
-        "mainImage": "/static/img/shoe-1529139574466-a303027c1d8b.jpg",
+        "mainImage": "/static/img/shoe-6.jpg",
         "gallery": [
-          "/static/img/shoe-1529139574466-a303027c1d8b.jpg",
+          "/static/img/shoe-6.jpg",
           "/static/img/shoe-2.jpg",
           "/static/img/men_shoes-1.jpg",
           "/static/img/shoe-3.jpg"
