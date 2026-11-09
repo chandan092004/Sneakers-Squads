@@ -61,29 +61,11 @@
     `;
     document.body.appendChild(banner);
 
-    // 2B. Build and Inject Floating Pill Button
-    const floatBtn = document.createElement('button');
-    floatBtn.type = 'button';
-    floatBtn.id = 'pwa-floating-btn';
-    floatBtn.className = 'pwa-floating-btn';
-    floatBtn.innerHTML = '<i class="fa-solid fa-mobile-screen-button"></i> <span>Install App</span>';
-    floatBtn.title = 'Install Sneakers Squad Mobile App';
-    floatBtn.onclick = () => triggerPwaInstall(banner);
-    document.body.appendChild(floatBtn);
-
-    // 3. Auto-show Banner after 1 second
-    setTimeout(() => {
-      if (!isStandalone) {
-        banner.classList.add('show');
-      }
-    }, 800);
-
-    // 4. Capture native beforeinstallprompt
+    // 4. Capture native beforeinstallprompt (Store prompt for user-triggered install)
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
-      console.log('[SneakerSquad PWA] beforeinstallprompt captured');
-      banner.classList.add('show');
+      console.log('[SneakerSquad PWA] beforeinstallprompt captured & ready for install actions');
     });
 
     // 4. Handle Install Button Click
@@ -101,17 +83,6 @@
         banner.classList.remove('show');
         localStorage.setItem('pwa_install_dismissed', Date.now().toString());
       });
-    }
-
-    // iOS Safari fallback trigger
-    if (isIos && !isStandalone) {
-      const lastDismissed = localStorage.getItem('pwa_install_dismissed');
-      const twelveHours = 12 * 60 * 60 * 1000;
-      if (!lastDismissed || (Date.now() - parseInt(lastDismissed, 10)) > twelveHours) {
-        setTimeout(() => {
-          banner.classList.add('show');
-        }, 3000);
-      }
     }
 
     // Listen to app installed event

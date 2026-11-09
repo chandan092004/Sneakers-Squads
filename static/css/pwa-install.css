@@ -272,43 +272,44 @@
   color: #ffffff;
 }
 
-/* 4. Floating Glowing Pill Button (Always visible on mobile & desktop) */
+/* 4. Floating Pill Button (REMOVED from bottom-right as per user request) */
 .pwa-floating-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 99998;
-  background: linear-gradient(135deg, #ff5a1f 0%, #ff7844 100%);
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-weight: 800;
-  font-size: 0.92rem;
-  box-shadow: 0 10px 25px rgba(255, 90, 31, 0.6), 0 0 15px rgba(255, 90, 31, 0.4);
-  cursor: pointer;
+  display: none !important;
+}
+
+/* 5. Mobile Drawer PWA Card */
+.drawer-pwa-card {
+  background: linear-gradient(135deg, rgba(255, 90, 31, 0.16) 0%, rgba(255, 120, 68, 0.08) 100%);
+  border: 1.5px solid rgba(255, 90, 31, 0.4);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin: 12px 0;
   display: flex;
   align-items: center;
-  gap: 8px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  animation: pulseFloatingBtn 2s infinite;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(255, 90, 31, 0.15);
 }
 
-@keyframes pulseFloatingBtn {
-  0%, 100% { transform: scale(1); box-shadow: 0 10px 25px rgba(255, 90, 31, 0.6); }
-  50% { transform: scale(1.05); box-shadow: 0 14px 32px rgba(255, 90, 31, 0.85); }
+.drawer-pwa-card:hover {
+  background: linear-gradient(135deg, rgba(255, 90, 31, 0.26) 0%, rgba(255, 120, 68, 0.15) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255, 90, 31, 0.25);
 }
 
-.pwa-floating-btn:hover {
-  transform: scale(1.08) translateY(-2px);
+.drawer-pwa-card .pwa-badge {
   background: #ff5a1f;
+  color: #ffffff;
+  font-size: 0.65rem;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
-@media (max-width: 600px) {
-  .pwa-floating-btn {
-    bottom: 20px;
-    right: 16px;
-    padding: 10px 16px;
-    font-size: 0.82rem;
+@media (max-width: 768px) {
+  .header-pwa-install-btn {
+    display: none !important;
   }
 }

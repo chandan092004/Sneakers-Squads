@@ -272,6 +272,12 @@
 
     <!-- User, Wishlist, Theme Toggle & Cart Action Icons -->
     <div class="header-actions">
+      <!-- Responsive Install App Button (Visible on Desktop & Laptop) -->
+      <button type="button" class="header-pwa-install-btn" id="header-pwa-install-btn" onclick="window.installSneakerSquadPWA(); return false;" title="Install Sneakers Squad Mobile App" aria-label="Install App">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <span>Install App</span>
+      </button>
+
       <button type="button" class="action-btn theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
         <i class="fa-solid fa-moon" id="theme-icon"></i>
       </button>
@@ -343,8 +349,22 @@
     <!-- Quick Access Section inside Drawer -->
     <li class="mobile-only-drawer-item"><a href="/dashboard#orders" class="nav-link"><i class="fa-solid fa-box-open" style="color:#f59e0b;"></i> <span>My Orders & Invoices</span></a></li>
     <li class="mobile-only-drawer-item"><a href="/dashboard#wishlist" class="nav-link"><i class="fa-solid fa-heart" style="color:#ef4444;"></i> <span>My Wishlist</span></a></li>
-    <li class="mobile-only-drawer-item"><a href="#" onclick="window.installSneakerSquadPWA(); return false;" class="nav-link" style="color:#ff5a1f;"><i class="fa-solid fa-mobile-screen-button"></i> <span>Install Mobile App</span></a></li>
   </ul>
+
+  <!-- Prominent Responsive PWA Install Card in Mobile Drawer -->
+  <div class="drawer-pwa-card" onclick="window.installSneakerSquadPWA(); return false;" role="button" aria-label="Install Sneakers Squad App">
+    <div style="width: 38px; height: 38px; border-radius: 10px; background: #ff5a1f; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; box-shadow: 0 4px 10px rgba(255,90,31,0.4);">
+      <i class="fa-solid fa-mobile-screen-button"></i>
+    </div>
+    <div style="flex: 1; min-width: 0;">
+      <div style="font-size: 0.88rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 6px;">
+        Install Mobile App
+        <span class="pwa-badge">FAST</span>
+      </div>
+      <div style="font-size: 0.74rem; color: #94a3b8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Faster drops, 1-tap checkout & offline access</div>
+    </div>
+    <i class="fa-solid fa-download" style="color: #ff5a1f; font-size: 0.95rem;"></i>
+  </div>
 
   <!-- Quick Support Footer in Drawer -->
   <div class="drawer-support-box">
