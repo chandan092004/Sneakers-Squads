@@ -80,15 +80,37 @@
       });
     }
 
-    // 2. Suggestion Chips Click
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        const text = chip.getAttribute('data-query') || chip.innerText.trim();
-        sendMessage(text);
-      });
+    // 2. Click Delegation for Action Buttons & Chips
+    chatWindow.addEventListener('click', (e) => {
+      const btn = e.target.closest('.chat-action-btn') || e.target.closest('.chat-chip');
+      if (btn) {
+        const text = btn.getAttribute('data-query') || btn.innerText.trim();
+        if (text) {
+          sendMessage(text);
+        }
+      }
     });
 
-    // 3. Form Submit
+    // 3. Dynamic Rotating Placeholder
+    const placeholderHints = [
+      "Try: 'Nike shoes under 5000'...",
+      "Try: 'Trending sneakers dikhao'...",
+      "Try: 'Mera order status'...",
+      "Try: 'Sabse saste kicks'...",
+      "Try: 'White sneakers size 9'...",
+      "Try: 'Koi discount coupon hai'...",
+      "Try: 'Return policy kya hai'...",
+      "Try: 'Size chart guide'..."
+    ];
+    let placeholderIdx = 0;
+    setInterval(() => {
+      if (input && document.activeElement !== input && !input.value) {
+        placeholderIdx = (placeholderIdx + 1) % placeholderHints.length;
+        input.setAttribute('placeholder', placeholderHints[placeholderIdx]);
+      }
+    }, 3200);
+
+    // 4. Form Submit
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -108,7 +130,7 @@
     }
 
     // Append Message to UI
-    function appendMessage(sender, htmlContent, products = []) {
+    function appendMessage(sender, htmlContent, products = [], quickReplies = []) {
       const msgDiv = document.createElement('div');
       msgDiv.className = `chat-msg ${sender}`;
 
@@ -131,8 +153,16 @@
         productsHTML = `<div class="chat-product-carousel">${cards}</div>`;
       }
 
+      let quickRepliesHTML = '';
+      if (quickReplies && quickReplies.length > 0) {
+        const pills = quickReplies.map(q => `
+          <button type="button" class="chat-action-btn" data-query="${q.query}">${q.label}</button>
+        `).join('');
+        quickRepliesHTML = `<div class="chat-inline-actions">${pills}</div>`;
+      }
+
       msgDiv.innerHTML = `
-        <div class="msg-bubble">${htmlContent}${productsHTML}</div>
+        <div class="msg-bubble">${htmlContent}${productsHTML}${quickRepliesHTML}</div>
         <span class="msg-time">${formatTime()}</span>
       `;
       body.appendChild(msgDiv);
@@ -187,7 +217,7 @@
 
         if (res.ok && data) {
           const parsedText = parseMarkdown(data.text || '');
-          appendMessage('bot', parsedText, data.products || []);
+          appendMessage('bot', parsedText, data.products || [], data.quick_replies || []);
         } else {
           appendMessage('bot', '⚠️ Server se connect karne me problem aayi. Kripya dobara try karein.');
         }

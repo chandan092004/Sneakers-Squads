@@ -12,6 +12,7 @@ Final-Year CS Project Architecture:
 """
 
 import re
+import difflib
 import pandas as pd
 from django.db.models import Q
 from accounts.models import Product, Order, WishlistItem
@@ -220,27 +221,27 @@ def detect_intent(message):
     msg = message.lower().strip()
 
     # 1. RECOMMENDATION (Must run before search so 'recommend shoes' is not treated as search)
-    rec_pattern = r'\b(recommend|recommendation|suggest|suggestion|trending|popular|best\s*seller|bestseller|best\s*selling|top\s*rated|new\s*arrival|latest\s*drop|similar|gift)\b'
+    rec_pattern = r'\b(recommend|recommendation|suggest|suggestion|trending|popular|best\s*seller|bestseller|best\s*selling|top\s*rated|new\s*arrival|latest\s*drop|similar|gift|kuch\s*acha|kya\s*lu|kya\s*khareedu|kya\s*kharidu|acha\s*shoe|choice|batao|options)\b'
     if re.search(rec_pattern, msg):
         return 'recommendation'
 
     # 2. ORDER STATUS
-    order_pattern = r'\b(order|track|tracking|kahan\s*hai|kab\s*aayega|status|cancel|package|delivery\s*status)\b'
+    order_pattern = r'\b(order|track|tracking|kahan\s*hai|kab\s*aayega|status|cancel|package|delivery\s*status|pata\s*karo|mera\s*joota|parcel|aaya\s*nahi)\b'
     if re.search(order_pattern, msg) and not re.search(r'\b(place\s*order|order\s*karna)\b', msg):
         return 'order_status'
 
     # 3. OFFERS / DISCOUNT
-    offer_pattern = r'\b(offer|offers|discount|coupon|promo|voucher|code|deal|loot|discounts|squad20)\b'
+    offer_pattern = r'\b(offer|offers|discount|coupon|promo|voucher|code|deal|loot|discounts|squad20|kam\s*karo|chhoot|koi\s*code|kam\s*karwao)\b'
     if re.search(offer_pattern, msg):
         return 'offers'
 
     # 4. DELIVERY / SHIPPING
-    delivery_pattern = r'\b(delivery|shipping|ship|courier|dispatch|pincode|charge|charges|kitne\s*din|free\s*shipping)\b'
+    delivery_pattern = r'\b(delivery|shipping|ship|courier|dispatch|pincode|charge|charges|kitne\s*din|free\s*shipping|kab\s*milega)\b'
     if re.search(delivery_pattern, msg):
         return 'delivery'
 
     # 5. RETURN / EXCHANGE / REFUND
-    return_pattern = r'\b(return|exchange|refund|replace|replacement|fit\s*nahi|size\s*problem|return\s*policy)\b'
+    return_pattern = r'\b(return|exchange|refund|replace|replacement|fit\s*nahi|size\s*problem|return\s*policy|wapas|badalna)\b'
     if re.search(return_pattern, msg):
         return 'return'
 
@@ -255,19 +256,26 @@ def detect_intent(message):
         return 'product_detail'
 
     # 8. ACCOUNT / SUPPORT
-    support_pattern = r'\b(account|login|signup|register|password|bhool|reset|support|care|customer\s*care|contact|phone\s*number|call|email|help)\b'
+    support_pattern = r'\b(account|login|signup|register|password|bhool|reset|support|care|customer\s*care|contact|phone\s*number|call|email|help|madad)\b'
     if re.search(support_pattern, msg):
         return 'support'
 
     # 9. GREETING
-    greeting_pattern = r'^(hi|hello|hey|namaste|pranam|halo|good\s*morning|good\s*evening|sup|yo|hii|hiii)\b'
+    greeting_pattern = r'^(hi|hello|hey|namaste|pranam|halo|good\s*morning|good\s*evening|sup|yo|hii|hiii|hola)\b'
     if re.search(greeting_pattern, msg):
         return 'greeting'
 
     # 10. PRODUCT SEARCH (Brands, Colors, Prices, Keywords)
-    search_keywords = r'\b(shoe|shoes|sneaker|sneakers|kicks|nike|jordan|adidas|puma|asics|balenciaga|converse|new\s*balance|under|below|sasta|cheapest|upto|above|dikhao|available|stock|size|white|black|red|blue|green|pink)\b'
+    search_keywords = r'\b(shoe|shoes|sneaker|sneakers|kicks|joota|joote|juta|daam|rate|keemat|price|nike|jordan|adidas|puma|asics|balenciaga|converse|new\s*balance|under|below|sasta|saste|cheapest|upto|above|dikhao|available|stock|size|white|black|red|blue|green|pink)\b'
     if re.search(search_keywords, msg):
         return 'product_search'
+
+    # Fuzzy check: If user typed brand with typo (e.g. 'addidas', 'pooma', 'naiki')
+    known_brands_quick = ['nike', 'jordan', 'adidas', 'puma', 'asics', 'balenciaga', 'converse', 'new balance']
+    words_quick = re.findall(r'[a-zA-Z]+', msg)
+    for w in words_quick:
+        if difflib.get_close_matches(w, known_brands_quick, n=1, cutoff=0.72):
+            return 'product_search'
 
     # 11. FALLBACK
     return 'fallback'
@@ -276,8 +284,8 @@ def detect_intent(message):
 def extract_entities(message):
     """
     Extracts structured entities from user query:
-    - brand
-    - color
+    - brand (with fuzzy difflib matching)
+    - color (with fuzzy difflib matching)
     - size
     - min_price, max_price
     - cheapest (boolean flag)
@@ -292,19 +300,38 @@ def extract_entities(message):
         'cheapest': False
     }
 
-    # Brand extraction
+    # Brand extraction (Exact Regex First)
     known_brands = ['nike', 'jordan', 'adidas', 'puma', 'asics', 'balenciaga', 'converse', 'new balance', 'squad']
     for b in known_brands:
         if re.search(rf'\b{b}\b', msg):
             entities['brand'] = b
             break
 
-    # Color extraction
+    # Brand Fuzzy Fallback (Handles typos like 'addidas', 'pooma', 'naiki', 'jordn')
+    if not entities['brand']:
+        words = re.findall(r'[a-zA-Z]+', msg)
+        for w in words:
+            fuzzy_match = difflib.get_close_matches(w, known_brands, n=1, cutoff=0.72)
+            if fuzzy_match:
+                entities['brand'] = fuzzy_match[0]
+                break
+
+    # Color extraction (Exact Regex First)
     known_colors = ['black', 'white', 'red', 'blue', 'green', 'yellow', 'pink', 'grey', 'gray', 'silver', 'cream', 'orange', 'purple', 'brown']
     for c in known_colors:
         if re.search(rf'\b{c}\b', msg):
             entities['color'] = 'grey' if c == 'gray' else c
             break
+
+    # Color Fuzzy Fallback (Handles typos like 'wite', 'blck', 'gren')
+    if not entities['color']:
+        words = re.findall(r'[a-zA-Z]+', msg)
+        for w in words:
+            fuzzy_c = difflib.get_close_matches(w, known_colors, n=1, cutoff=0.75)
+            if fuzzy_c:
+                matched_c = fuzzy_c[0]
+                entities['color'] = 'grey' if matched_c == 'gray' else matched_c
+                break
 
     # Size extraction (e.g. "size 8", "uk 9", "size 10")
     size_match = re.search(r'\b(?:size|uk)\s*([6-9]|1[0-2])\b', msg)
@@ -334,8 +361,8 @@ def extract_entities(message):
         entities['min_price'] = float(between_match.group(1))
         entities['max_price'] = float(between_match.group(2))
 
-    # Case D: "Cheapest" / "Sasta"
-    if re.search(r'\b(cheapest|sasta|sabse\s*sasta|low\s*price|lowest\s*price|kam\s*daam)\b', msg):
+    # Case D: "Cheapest" / "Sasta" / Hinglish Slang
+    if re.search(r'\b(cheapest|sasta|saste|sabse\s*sasta|low\s*price|lowest\s*price|kam\s*daam|kam\s*rate|kam\s*paisa|kam\s*budget|saste\s*me)\b', msg):
         entities['cheapest'] = True
 
     return entities
@@ -492,6 +519,16 @@ def get_recommendations(df, message, user=None):
 # ==============================================================================
 # 6. MASTER REPLY GENERATOR (get_reply)
 # ==============================================================================
+
+DEFAULT_QUICK_REPLIES = [
+    {"label": "🔥 Trending Kicks", "query": "Trending sneakers dikhao"},
+    {"label": "👟 Nike under 5000", "query": "Nike shoes under 5000"},
+    {"label": "💰 Saste Shoes", "query": "Sabse saste shoes dikhao"},
+    {"label": "📦 Mera Order", "query": "Mera order kahan hai?"},
+    {"label": "🎉 Discount Coupons", "query": "Koi coupon code hai?"},
+    {"label": "📏 Size Chart Guide", "query": "Size chart dikhao"}
+]
+
 
 def get_reply(message, user=None):
     """
@@ -676,15 +713,11 @@ def get_reply(message, user=None):
         user_name = f", {user.first_name}" if user and user.is_authenticated and user.first_name else ""
         return {
             'text': (
-                f"Hello{user_name}! 👋 Main Sneaker Squad ka AI assistant hoon.\n"
-                "Main aapko sneakers dhundhne, order track karne, offers batane aur return/exchange queries me madad kar sakta hoon.\n\n"
-                "Aap mujhse aise pooch sakte hain:\n"
-                "• *'Nike white size 8 under 4000'*\n"
-                "• *'Trending sneakers dikhao'*\n"
-                "• *'Mera order kahan hai?'*\n"
-                "• *'Koi discount coupon hai?'*"
+                f"Hello{user_name}! 👋 Main **Sneaker Squad AI Assistant** hoon.\n\n"
+                "Aapko exact words bolne ki zaroorat nahi hai—aap aam bhasha me pooch sakte hain ya neeche diye gaye kisi bhi option par click kar sakte hain! 👇"
             ),
-            'products': []
+            'products': [],
+            'quick_replies': DEFAULT_QUICK_REPLIES
         }
 
     # --------------------------------------------------------------------------
@@ -692,13 +725,10 @@ def get_reply(message, user=None):
     # --------------------------------------------------------------------------
     return {
         'text': (
-            "🤔 Samajh nahi aaya! Kripya thoda saaf shabdon me pucho, jaise:\n"
-            "• *'Adidas white size 9 under 6000'*\n"
-            "• *'Sabse saste shoes dikhao'*\n"
-            "• *'Mera order status kya hai?'*\n"
-            "• *'Return policy kya hai?'*\n\n"
-            "Ya neeche diye gaye quick buttons par click karein! 👇"
+            "🤔 Mujhe aapki exact query samajh nahi aayi, par koi baat nahi!\n\n"
+            "Kya aap inme se kuch dhoondh rahe hain? Direct tap karein: 👇"
         ),
-        'products': []
+        'products': [],
+        'quick_replies': DEFAULT_QUICK_REPLIES
     }
 
