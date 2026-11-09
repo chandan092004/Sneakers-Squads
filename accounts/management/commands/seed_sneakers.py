@@ -459,7 +459,7 @@ SNEAKER_DATASET = [
         'reviews_count': 190,
         'stock': 28,
         'tag': 'running sports cushion gel nimbus sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=800&q=80',
         'description': 'Experience the softest landings imaginable with PureGEL technology embedded beneath plush FF BLAST PLUS ECO cushioning.',
         'features': [
             'PureGEL technology provides lightweight impact absorption.',
@@ -511,7 +511,7 @@ SNEAKER_DATASET = [
         'reviews_count': 135,
         'stock': 19,
         'tag': 'running tempo sports zoom next flyknit sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1588117305388-c2631a279f82?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=800&q=80',
         'description': 'Engineered to bridge the gap between daily training and race day. Visible Zoom Air pods under the ball of the foot unleash explosive bounce.',
         'features': [
             'Dual visible Zoom Air pods offer ultra-snappy energy return.',
@@ -779,7 +779,7 @@ SNEAKER_DATASET = [
         'reviews_count': 180,
         'stock': 30,
         'tag': 'slip-on ballerina softfoam comfort sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1616406432452-07bc5938759d?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80',
         'description': 'Chic ballet-sneaker crossover built for light travel, running errands, or recovery days with plush SoftFoam+ footbeds.',
         'features': [
             'Breathable mesh and neoprene slip-on construction.',
@@ -805,7 +805,7 @@ SNEAKER_DATASET = [
         'reviews_count': 155,
         'stock': 22,
         'tag': 'slip-on laceless flyknit react running sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1581101767113-1677fc2beaa8?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=800&q=80',
         'description': 'Ditching the laces entirely, Flyknit Loft brings three forefoot layers that cradle the foot directly onto Nike React foam.',
         'features': [
             'Laceless Flyknit upper features elastic molding for locked-in feel.',
@@ -831,7 +831,7 @@ SNEAKER_DATASET = [
         'reviews_count': 195,
         'stock': 24,
         'tag': 'slip-on retro canvas onitsuka mexico 66 sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?auto=format&fit=crop&w=800&q=80',
         'description': 'Laceless variation of the classic 1968 Olympic runner. Built with internal elastic banding to retain the shape while slipping on effortlessly.',
         'features': [
             'Lightweight canvas and suede upper in retro track colors.',
@@ -861,7 +861,7 @@ SNEAKER_DATASET = [
         'reviews_count': 560,
         'stock': 10,
         'tag': 'retro limited jordan 4 bred grail sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=800&q=80',
         'description': 'Tinker Hatfield\'s 1989 marvel reimagined in premium tumbled black leather with iconic side mesh quarter nets and Nike Air heels.',
         'features': [
             'Full-grain supple black tumbled leather construction.',
@@ -939,7 +939,7 @@ SNEAKER_DATASET = [
         'reviews_count': 328,
         'stock': 20,
         'tag': 'retro 90s infrared air max visible air sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1586525198428-225f6f12cff5?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&w=800&q=80',
         'description': 'Tinker Hatfield\'s 1990 masterpiece featuring radiant infrared TPU frames, visible heel Air-Sole unit, and stitched overlays.',
         'features': [
             'Classic mesh base with suede overlays and smooth leather mudguard.',

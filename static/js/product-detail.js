@@ -71,8 +71,17 @@ function initProductDetailPage() {
   productId = productId || 'm9';
   const paramColor = urlParams.get('color');
   
-  // Lookup product from global data store
-  let product = window.getProductById(productId);
+  // Lookup product from Django server context or global data store
+  let product = null;
+  if (window.DJANGO_PRODUCT && (!productId || String(window.DJANGO_PRODUCT.id).toLowerCase() === String(productId).toLowerCase())) {
+    product = window.DJANGO_PRODUCT;
+  }
+  if (!product) {
+    product = window.getProductById(productId);
+  }
+  if (!product && window.DJANGO_PRODUCT) {
+    product = window.DJANGO_PRODUCT;
+  }
   if (!product && window.PRODUCTS_DATA) {
     const firstKey = Object.keys(window.PRODUCTS_DATA)[0];
     if (firstKey) product = window.PRODUCTS_DATA[firstKey];

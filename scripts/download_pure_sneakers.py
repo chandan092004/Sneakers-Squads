@@ -38,7 +38,7 @@ MAPPING = {
     'women_shoes-4.jpg': 'photo-1562183241-b937e95585b6', # Pink Athletic Running Trainer
     'women_shoes-5.jpg': 'photo-1617606002779-51d866bdd1d1', # Lilac Chunky Platform Sneaker
     'women_shoes-6.jpg': 'photo-1584735935682-2f2b69dff9d2', # Nike AF1 Pastel Mint/Pink
-    'women_shoes-7.jpg': 'photo-1581044777550-4cfa60707c03', # Retro Court Neutral Beige
+    'women_shoes-7.jpg': 'photo-1575537302964-96cd47c06b1b', # Retro Court Neutral Beige
     'women_shoes-8.jpg': 'photo-1579338559194-a162d19bf842', # Converse Red Classic High-Top
 
     # --- Accessories (Sneaker Care, Laces, Crates, Odor, Utility) ---
@@ -62,7 +62,7 @@ MAPPING = {
     'shoe-8.jpg': 'photo-1518002171953-a080ee817e1f',       # Adidas Superstar Shell Toe
 
     # --- Legacy Unsplash Hash Keys (Strictly Sneakers only) ---
-    'shoe-1506152983158-b4a74a01c721.jpg': 'photo-1460353581641-37baddab0fa2', # Converse Low Black
+    'shoe-1506152983158-b4a74a01c721.jpg': 'photo-1595950653106-6c9ebd614d3a', # Converse Low Black
     'shoe-1515955656352-a1fa3ffcd111.jpg': 'photo-1515955656352-a1fa3ffcd111', # Blue Sport Runner
     'shoe-1520975916090-3105956dac38.jpg': 'photo-1552346154-21d32810aba3', # Jordan 1 Chicago
     'shoe-1524504388940-b1c1722653e1.jpg': 'photo-1549298916-b41d501d3772', # Multi Dad Sneaker
@@ -194,3 +194,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

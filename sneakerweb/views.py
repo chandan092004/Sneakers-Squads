@@ -147,9 +147,11 @@ def product_detail(request, code=None):
     target_code = code or request.GET.get('id') or request.GET.get('code')
     if target_code:
         product = Product.objects.filter(code=target_code, is_active=True).first()
+    product_json = json.dumps(product.to_dict()) if product else 'null'
     return render(request, 'product-detail.html', {
         'product': product,
-        'product_code': target_code or ''
+        'product_code': target_code or '',
+        'product_json': product_json,
     })
 
 # 6. Contact & Customer Support Page

@@ -284,7 +284,7 @@ CATALOG_DATASET = [
         'reviews_count': 140,
         'stock': 18,
         'tag': 'running-performance tempo zoom next flyknit sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1588117305388-c2631a279f82?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=800&q=80&sku=m-rp-12-nike-tempo-next-flyknit',
         'description': 'Dual visible Zoom Air pods offer ultra-snappy propulsion during high-speed tempo training.',
     },
 
@@ -306,7 +306,7 @@ CATALOG_DATASET = [
         'reviews_count': 560,
         'stock': 10,
         'tag': 'retro-classic limited jordan 4 bred grail sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=800&q=80&sku=m-rc-13-air-jordan-4-retro-bred',
         'description': 'Tinker Hatfield 1989 marvel reimagined in premium supple tumbled black leather with Nike Air heel.',
     },
     {
@@ -346,7 +346,7 @@ CATALOG_DATASET = [
         'reviews_count': 335,
         'stock': 22,
         'tag': 'retro-classic 90s infrared air max visible air sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1586525198428-225f6f12cff5?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&w=800&q=80&sku=m-rc-15-nike-air-max-90-infrared-vintage',
         'description': 'Tinker Hatfield 1990 masterpiece featuring radiant infrared TPU frames and visible heel Air-Sole.',
     },
     {
@@ -473,7 +473,7 @@ CATALOG_DATASET = [
         'reviews_count': 215,
         'stock': 26,
         'tag': 'platform-sneakers chunky stacked sole mayze sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1512990414988-0a005e99432f?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=800&q=80&sku=w-ps-21-puma-mayze-stack-platform-white',
         'description': 'Multi-layered elevated platform sole with jagged tooling and clean white leather upper.',
     },
     {
@@ -493,7 +493,7 @@ CATALOG_DATASET = [
         'reviews_count': 180,
         'stock': 24,
         'tag': 'platform-sneakers chunky dad platform m2k tekno sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=800&q=80&sku=w-ps-22-nike-m2k-tekno-phantom-summit',
         'description': 'Sculpted foam midsole with TPU heel clip providing futuristic lift and all-day comfort.',
     },
     {
@@ -513,7 +513,7 @@ CATALOG_DATASET = [
         'reviews_count': 190,
         'stock': 16,
         'tag': 'platform-sneakers gorpcore trail platform xt6 sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1617606002779-51d866bdd1d1?auto=format&fit=crop&w=800&q=80&sku=w-ps-23-salomon-xt6-mindful-trail',
         'description': 'High-fashion gorpcore platform sneaker with Quicklace closure and Mud Contagrip lugged outsole.',
     },
     {
@@ -533,7 +533,7 @@ CATALOG_DATASET = [
         'reviews_count': 175,
         'stock': 22,
         'tag': 'platform-sneakers chunky motion lug platform converse sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1529810313688-44ea1c2d81d3?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?auto=format&fit=crop&w=800&q=80&sku=w-ps-24-converse-run-star-motion-platform',
         'description': 'Playful and distorted lines pair ultra-comfortable CX foam with an exaggerated wavy lug platform.',
     },
 
@@ -555,7 +555,7 @@ CATALOG_DATASET = [
         'reviews_count': 195,
         'stock': 28,
         'tag': 'running-trainers sports cushion gel nimbus sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=800&q=80&sku=w-rt-25-asics-gel-nimbus-25-sunrise',
         'description': 'Ultra-soft PureGEL technology embedded beneath plush FF BLAST PLUS ECO cushioning foam.',
     },
     {
@@ -575,7 +575,7 @@ CATALOG_DATASET = [
         'reviews_count': 170,
         'stock': 22,
         'tag': 'running-trainers fresh foam sports athletic trainer sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1587245937260-496660167c52?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=800&q=80&sku=w-rt-26-new-balance-fresh-foam-1080v13',
         'description': 'Pinnacle road daily trainer with Fresh Foam X rocker geometry and an engineered breathable mesh chassis.',
     },
     {
@@ -595,7 +595,7 @@ CATALOG_DATASET = [
         'reviews_count': 230,
         'stock': 20,
         'tag': 'running-trainers hoka clifton plush road trainer sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1584735935682-45a006c6418b?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=800&q=80&sku=w-rt-27-hoka-clifton-9-rose-mist',
         'description': 'Revitalized underfoot experience with responsive new compression-molded EVA foam and sleek collar.',
     },
     {
@@ -615,7 +615,7 @@ CATALOG_DATASET = [
         'reviews_count': 260,
         'stock': 25,
         'tag': 'running-trainers air max 270 visible bubble trainer sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1515955656352-730623a8e998?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80&sku=w-rt-28-nike-air-max-270-coral-white',
         'description': 'Boasting Nike largest heel Air unit yet for a super-soft ride that feels as impossible as it looks.',
     },
 
@@ -637,7 +637,7 @@ CATALOG_DATASET = [
         'reviews_count': 410,
         'stock': 35,
         'tag': 'slip-on-sneakers laceless skate checkerboard sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1562183241-b937e95585b6?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80&sku=w-so-29-vans-classic-slip-on-checkerboard',
         'description': 'The unmistakable southern California icon with elastic side accents and signature waffle outsoles.',
     },
     {
@@ -657,7 +657,7 @@ CATALOG_DATASET = [
         'reviews_count': 160,
         'stock': 12,
         'tag': 'slip-on-sneakers sock knit luxury speed trainer sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&w=800&q=80&sku=w-so-30-balenciaga-speed-2-knit-slip-on',
         'description': 'Technical 3D knit sock runner featuring ultra-flexible molded ergonomic sole with shock absorption.',
     },
     {
@@ -677,7 +677,7 @@ CATALOG_DATASET = [
         'reviews_count': 185,
         'stock': 30,
         'tag': 'slip-on-sneakers ballerina softfoam comfort sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1616406432452-07bc5938759d?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80&sku=w-so-31-puma-adelina-comfort-slipon',
         'description': 'Chic ballet-sneaker crossover built for light travel and recovery with plush SoftFoam+ footbeds.',
     },
     {
@@ -697,7 +697,7 @@ CATALOG_DATASET = [
         'reviews_count': 210,
         'stock': 28,
         'tag': 'slip-on-sneakers laceless puremotion cloudfoam sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1575456456278-936c89ccdbdf?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=800&q=80&sku=w-so-32-adidas-puremotion-adapt-white',
         'description': 'Laceless slip-on featuring supportive crossover elastic bandage straps and plush Cloudfoam cushioning.',
     },
 
@@ -719,7 +719,7 @@ CATALOG_DATASET = [
         'reviews_count': 520,
         'stock': 40,
         'tag': 'minimalist-white triple white air force court sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?auto=format&fit=crop&w=800&q=80&sku=w-mw-33-nike-air-force-1-triple-white',
         'description': 'Pristine triple-white low silhouette with stitched leather overlays and encapsulated Air-Sole cushioning.',
     },
     {
@@ -739,7 +739,7 @@ CATALOG_DATASET = [
         'reviews_count': 230,
         'stock': 30,
         'tag': 'minimalist-white skate canvas old skool white sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=800&q=80&sku=w-mw-34-vans-old-skool-true-white',
         'description': 'Monochrome clean white canvas and suede construction with signature waffle rubber outsoles.',
     },
     {
@@ -759,7 +759,7 @@ CATALOG_DATASET = [
         'reviews_count': 185,
         'stock': 20,
         'tag': 'minimalist-white dunk pastel clean court sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&w=800&q=80&sku=w-mw-35-nike-dunk-low-barely-green',
         'description': 'Subtle pastel hue overlays over crisp white leather delivering a calm, minimalist court profile.',
     },
     {
@@ -779,7 +779,7 @@ CATALOG_DATASET = [
         'reviews_count': 195,
         'stock': 22,
         'tag': 'minimalist-white veja sustainable chrome-free leather sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=800&q=80&sku=w-mw-36-veja-campo-extra-white-natural',
         'description': 'Sustainably crafted with ChromeFree leather, Amazonian rubber soles, and iconic V-logo side panels.',
     },
 
@@ -801,7 +801,7 @@ CATALOG_DATASET = [
         'reviews_count': 275,
         'stock': 15,
         'tag': 'chunky-streetwear limited jordan shadow high sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80&sku=w-cs-37-air-jordan-1-retro-shadow-2',
         'description': 'Understated brilliance pairing plush smoke grey nubuck overlays over a rich matte black leather base.',
     },
     {
@@ -821,7 +821,7 @@ CATALOG_DATASET = [
         'reviews_count': 160,
         'stock': 20,
         'tag': 'chunky-streetwear laceless flyknit react running sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1581101767113-1677fc2beaa8?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=800&q=80&sku=w-cs-38-nike-react-phantom-run-street',
         'description': 'Laceless Flyknit Loft upper with chunky React sole unit cradling the foot with futuristic bounce.',
     },
     {
@@ -841,7 +841,7 @@ CATALOG_DATASET = [
         'reviews_count': 195,
         'stock': 24,
         'tag': 'chunky-streetwear retro canvas onitsuka mexico 66 sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?auto=format&fit=crop&w=800&q=80&sku=w-cs-39-onitsuka-tiger-mexico-66-street',
         'description': 'Vintage track heritage reimagined with distinctive cross-stripe leather side accents.',
     },
     {
@@ -861,7 +861,7 @@ CATALOG_DATASET = [
         'reviews_count': 240,
         'stock': 25,
         'tag': 'chunky-streetwear chunky dad disruptor platform sneaker',
-        'image_url': 'https://images.unsplash.com/photo-1536960456214-bc41a8307079?auto=format&fit=crop&w=800&q=80',
+        'image_url': 'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80&sku=w-cs-40-fila-disruptor-ii-premium-white',
         'description': 'The unmistakable 90s chunky silhouette with serrated sawtooth rubber outsole and molded EVA midsole.',
     },
 
@@ -1597,23 +1597,12 @@ class Command(BaseCommand):
         self.stdout.write(self.style.MIGRATE_HEADING("=" * 78 + "\n"))
 
     def create_clean_studio_asset(self, title, color_name, subcat_slug):
-        """Generates clean studio card asset for offline fallbacks"""
-        img = Image.new('RGB', (800, 800), color=(15, 18, 25))
-        draw = ImageDraw.Draw(img)
-        draw.rounded_rectangle([40, 40, 760, 760], radius=24, outline=(255, 90, 31), width=3)
-        draw.rectangle([60, 500, 740, 740], fill=(24, 29, 38))
-        draw.ellipse([260, 300, 540, 480], fill=(36, 44, 58))
-        draw.polygon([(260, 400), (520, 320), (580, 420), (220, 460)], fill=(255, 90, 31))
-
-        try:
-            draw.text((80, 80), "SNEAKER SQUAD STUDIO", fill=(255, 90, 31))
-            draw.text((80, 120), subcat_slug.upper().replace('-', ' '), fill=(148, 163, 184))
-            draw.text((80, 580), title[:38], fill=(255, 255, 255))
-            draw.text((80, 620), f"Color: {color_name}", fill=(148, 163, 184))
-            draw.text((80, 660), "100% Verified Dedicated Asset", fill=(74, 222, 128))
-        except Exception:
-            pass
-
+        """Clean white studio card asset with genuine sneaker photo for offline fallback"""
+        fallback_source = os.path.join(settings.BASE_DIR, 'static', 'img', 'shoe-1.jpg')
+        if os.path.exists(fallback_source):
+            with open(fallback_source, 'rb') as f:
+                return f.read()
+        img = Image.new('RGB', (800, 800), color=(255, 255, 255))
         buf = BytesIO()
-        img.save(buf, format='JPEG', quality=90)
+        img.save(buf, format='JPEG', quality=95)
         return buf.getvalue()

@@ -1,3232 +1,7048 @@
 /**
  * SNEAKER SQUAD - Master Dynamic Product Database
- * All clean, isolated authentic sneakers & care gear
+ * Auto-synced from Django Database with 100% verified pure sneaker studio assets
+ * Total Products: 64 (+ legacy alias keys)
  */
 const PRODUCTS_DATA = {
-  "a12": {
-    "id": "a12",
-    "name": "Glow-In-The-Dark Flat Street Rope Laces (3 Pairs)",
-    "brand": "Squad Labs",
-    "category": "Custom Laces & Aglets",
-    "categoryTag": "laces",
-    "gender": "accessories",
-    "price": 499.0,
-    "originalPrice": 499.0,
-    "discount": "",
-    "rating": 4.8,
-    "reviewsCount": 160,
-    "badge": "Night Glow",
-    "badgeClass": "limited",
-    "mainImage": "/static/img/accessories-1.jpg",
-    "gallery": [
-      "/static/img/accessories-1.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
-    ],
-    "description": "Photoluminescent fibers absorb daylight and emit vibrant neon green glow at night. Metal engraved Squad aglets.",
-    "features": [
-      "High-Intensity Luminescent Fibers: Charges under daylight or UV light and glows vivid neon green in the dark.",
-      "Heavy-Duty Braided Weave: Dual-layer high-density polyester resists fraying and knot loosening.",
-      "Clear Engraved Aglet Tips: Durable clear plastic aglets for easy threading through standard eyelets.",
-      "Pack of 3 Pairs: Includes 120cm, 140cm, and 160cm lengths to fit low-tops, mid-tops, and high-tops."
-    ],
-    "specs": {
-      "Material": "Photoluminescent Polyester Blend",
-      "Glow Duration": "Up to 4-6 Hours per light charge",
-      "Width": "8mm Flat / 5mm Rope",
-      "Included Lengths": "120cm, 140cm, 160cm",
-      "Warranty": "6 Months Squad Quality Assurance"
-    },
-    "sizes": [
-      "120cm (Low Top)",
-      "140cm (Mid Top)",
-      "160cm (High Top)"
-    ],
-    "colors": [
-      {
-        "name": "Neon Luminescent",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/accessories-1.jpg",
-        "gallery": [
-          "/static/img/accessories-1.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "a11": {
-    "id": "a11",
-    "name": "Premium Brass Bristle Heavy-Duty Midsole Brush",
-    "brand": "Squad Labs",
-    "category": "Sneaker Cleaning Tools",
-    "categoryTag": "care",
-    "gender": "accessories",
-    "price": 399.0,
-    "originalPrice": 399.0,
-    "discount": "",
-    "rating": 4.7,
-    "reviewsCount": 88,
-    "badge": "Pro Tool",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/accessories-2.jpg",
-    "gallery": [
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
-    ],
-    "description": "Crafted with stiff brass wire bristles embedded in polished beechwood to restore yellowed and deeply stained midsoles.",
-    "features": [
-      "Fine Brass Wire Bristles: Safely strips tough dried mud, road tar, and yellowed grime from rubber outsoles.",
-      "Ergonomic Handcrafted Beechwood Handle: Natural wax-finished contoured grip for superior scrubbing leverage.",
-      "Dual Edge Cleaning Profile: Tapered bristle edge cleans tight grooves and pivot circles on outsoles.",
-      "Long-Lasting Durability: Resists rust, bending, and bristle shedding through hundreds of deep clean sessions."
-    ],
-    "specs": {
-      "Bristle Material": "High-Tensile Brass Wire",
-      "Handle Material": "Natural German Beechwood",
-      "Dimensions": "12cm x 4cm x 3.5cm",
-      "Recommended For": "Rubber Midsoles, Outsoles & Textured Welts",
-      "Warranty": "Lifetime Quality Guarantee"
-    },
-    "sizes": [
-      "Standard Brush Size"
-    ],
-    "colors": [
-      {
-        "name": "Natural Beechwood",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/accessories-2.jpg",
-        "gallery": [
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "a10": {
-    "id": "a10",
-    "name": "Electric Smart USB Sneaker Dryer & UV Deodorizer",
-    "brand": "Squad Labs",
-    "category": "Sneaker Care & Tech",
-    "categoryTag": "care",
-    "gender": "accessories",
-    "price": 1299.0,
-    "originalPrice": 1299.0,
-    "discount": "",
+  "acc-as-61-retro-ribbed-crew-socks-3pk-white": {
+    "id": "acc-as-61-retro-ribbed-crew-socks-3pk-white",
+    "title": "Heavy-Cushion Retro Ribbed Crew Socks 3-Pack - White",
+    "name": "Heavy-Cushion Retro Ribbed Crew Socks 3-Pack - White",
+    "brand": "Squad Apparel",
+    "category": "accessories",
+    "subcategory": "athletic-socks",
+    "categoryTag": "accessories athletic-socks athletic-socks crew socks heavy cushion white retro socks",
+    "gender": "unisex",
+    "price": 699.0,
+    "originalPrice": 999.0,
+    "discount": "-30%",
     "rating": 4.9,
-    "reviewsCount": 92,
-    "badge": "Smart Tech",
-    "badgeClass": "hot",
-    "mainImage": "/static/img/accessories-3.jpg",
+    "reviewsCount": 480,
+    "badge": "Terry Cushion",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
+    "mainImage": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
     "gallery": [
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
+      "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg"
     ],
-    "description": "Constant temperature 360-degree heat circulation with built-in UV sterilizer to eliminate bacteria and foul odor overnight.",
+    "description": "Thick french terry bottom padding provides pillow-like impact buffering under high-abrasion basketball shoes.",
     "features": [
-      "360-Degree Radial Heat: Circulates 55\u00b0C constant gentle warm air to dry soaked kicks without damaging glue.",
-      "Built-in Dual UV-C Sterilization: Eliminates 99.9% of odor-causing bacteria and fungus inside shoes.",
-      "Intelligent Timer Modes: 3h / 6h / 9h automated auto shut-off settings for overnight care.",
-      "Universal USB-C Powered: Operates via power bank, laptop port, or standard phone adapter."
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Power Input": "5V / 2A USB-C Fast Charge",
-      "Operating Temp": "Constant 55\u00b0C (Glue-Safe)",
-      "UV Wavelength": "254nm Dual Sterilization",
-      "Timer": "3H / 6H / 9H Auto Shutoff",
-      "Warranty": "1 Year Squad Electronics Warranty"
+      "Brand": "Squad Apparel",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "Universal One Size"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Matte Onyx",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/accessories-3.jpg",
+        "name": "Crisp White / Black Stripe",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
         "gallery": [
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-4.jpg"
+          "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "a9": {
-    "id": "a9",
-    "name": "Squad Waterproof Silicone Rain Shoe Booties (Pair)",
-    "brand": "Squad Labs",
-    "category": "Sneaker Care & Protection",
-    "categoryTag": "care",
-    "gender": "accessories",
+  "acc-as-62-arch-support-performance-ankle-socks": {
+    "id": "acc-as-62-arch-support-performance-ankle-socks",
+    "title": "Compression Arch Support Performance Ankle Socks (3-Pack)",
+    "name": "Compression Arch Support Performance Ankle Socks (3-Pack)",
+    "brand": "Squad Apparel",
+    "category": "accessories",
+    "subcategory": "athletic-socks",
+    "categoryTag": "accessories athletic-socks athletic-socks ankle socks performance running compression",
+    "gender": "unisex",
     "price": 599.0,
-    "originalPrice": 599.0,
-    "discount": "",
+    "originalPrice": 899.0,
+    "discount": "-33%",
     "rating": 4.8,
-    "reviewsCount": 145,
-    "badge": "Monsoon Ready",
+    "reviewsCount": 260,
+    "badge": "Arch Compression",
     "badgeClass": "new",
-    "mainImage": "/static/img/accessories-4.jpg",
+    "imageUrl": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
+    "mainImage": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
     "gallery": [
-      "/static/img/accessories-4.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
+      "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg"
     ],
-    "description": "100% elastic waterproof silicone covers that slip over your precious sneakers during rainstorms and muddy terrains.",
+    "description": "Elastic 360-degree midfoot compression band eliminates blister-causing friction during runs.",
     "features": [
-      "100% Seamless Elastic Silicone: High-grade tear-resistant silicone slips effortlessly over sneakers.",
-      "Anti-Slip Diamond Tread: Raised grip grooves on the base prevent skidding on wet roads and marble floors.",
-      "Ultra-Compact Pocket Fold: Roll up neatly to fit into pockets, backpacks, or glove compartments.",
-      "Reusable & Easy to Wash: Rinse with plain tap water and dry instantly in seconds."
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Material": "100% Food-Grade Elastic Silicone",
-      "Water Resistance": "100% Submersion Waterproof",
-      "Sizing": "Medium (UK 4-7) / Large (UK 8-11)",
-      "Weight": "150g per pair",
-      "Warranty": "6 Months Replacement Warranty"
+      "Brand": "Squad Apparel",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "Medium (UK 4-7)",
-      "Large (UK 8-11)"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Translucent Smoke",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/accessories-4.jpg",
+        "name": "Stealth Black / Grey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
         "gallery": [
-          "/static/img/accessories-4.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg"
+          "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "w16": {
-    "id": "w16",
-    "name": "Alexander McQueen Oversized Chunky",
-    "brand": "Alexander McQueen",
-    "category": "Women Luxury Chunky",
-    "categoryTag": "chunky platform",
-    "gender": "women",
-    "price": 1849.0,
-    "originalPrice": 1849.0,
-    "discount": "",
-    "rating": 4.9,
-    "reviewsCount": 115,
-    "badge": "Luxury Platform",
-    "badgeClass": "limited",
-    "mainImage": "/static/img/shoe-1595950653106-6c9ebd614d3a.jpg",
-    "gallery": [
-      "/static/img/shoe-1595950653106-6c9ebd614d3a.jpg",
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-1.jpg",
-      "/static/img/women_shoes-5.jpg"
-    ],
-    "description": "Thick flared rubber platform sole, smooth calfskin leather upper, and shimmering reflective velvet heel counter.",
-    "features": [
-      "100% Smooth Italian Calfskin Leather",
-      "Exaggerated Flared 4.5cm Rubber Platform Sole",
-      "Contrast Shimmer Velvet Suede Heel Tab",
-      "Signature Flat Wide Laces with Perforated Side Vents"
-    ],
-    "specs": {
-      "Upper": "Italian Smooth Calfskin",
-      "Midsole": "Signature Flared Platform Rubber",
-      "Outsole": "Lugged Wave Pattern Rubber",
-      "Heel Height": "4.5 cm",
-      "Weight": "460g per shoe"
-    },
-    "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7"
-    ],
-    "colors": [
-      {
-        "name": "White & Shimmer Velvet",
-        "hex": "#ffffff",
-        "mainImage": "/static/img/shoe-1595950653106-6c9ebd614d3a.jpg",
-        "gallery": [
-          "/static/img/shoe-1595950653106-6c9ebd614d3a.jpg",
-          "/static/img/women_shoes-2.jpg",
-          "/static/img/women_shoes-1.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "w15": {
-    "id": "w15",
-    "name": "Onitsuka Tiger Mexico 66 'Rose Gold'",
-    "brand": "Onitsuka Tiger",
-    "category": "Women Sleek Lifestyle",
-    "categoryTag": "retro",
-    "gender": "women",
-    "price": 1199.0,
-    "originalPrice": 1199.0,
-    "discount": "",
-    "rating": 4.9,
-    "reviewsCount": 320,
-    "badge": "Iconic Chic",
-    "badgeClass": "hot",
-    "mainImage": "/static/img/women_shoes-8.jpg",
-    "gallery": [
-      "/static/img/women_shoes-8.jpg",
-      "/static/img/women_shoes-3.jpg",
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-8.jpg"
-    ],
-    "description": "Ultra-sleek lightweight silhouette with signature cross-stripes in rose gold, heel flap accent, and supple leather build.",
-    "features": [
-      "Supple Full-Grain Cow Leather Upper",
-      "Signature Crossed Side Tiger Stripes",
-      "Iconic Fold-Down Heel Tab Flap",
-      "Low-Profile Slim Chevron Rubber Sole"
-    ],
-    "specs": {
-      "Upper": "Premium Calf Leather & Suede",
-      "Midsole": "Flexible Slim EVA",
-      "Outsole": "Herringbone Grip Rubber",
-      "Heel Height": "1.8 cm",
-      "Weight": "260g per shoe"
-    },
-    "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7"
-    ],
-    "colors": [
-      {
-        "name": "Rose Gold & Birch",
-        "hex": "#b76e79",
-        "mainImage": "/static/img/women_shoes-8.jpg",
-        "gallery": [
-          "/static/img/women_shoes-8.jpg",
-          "/static/img/women_shoes-3.jpg",
-          "/static/img/women_shoes-2.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "w14": {
-    "id": "w14",
-    "name": "Puma Mayze Stack Suede Platform",
-    "brand": "Puma",
-    "category": "Women Chunky Platform",
-    "categoryTag": "platform chunky",
-    "gender": "women",
-    "price": 1099.0,
+  "acc-as-63-deadstock-tie-dye-street-crew-socks": {
+    "id": "acc-as-63-deadstock-tie-dye-street-crew-socks",
+    "title": "Deadstock Tie-Dye Streetwear Crew Socks - Multi Color",
+    "name": "Deadstock Tie-Dye Streetwear Crew Socks - Multi Color",
+    "brand": "Squad Apparel",
+    "category": "accessories",
+    "subcategory": "athletic-socks",
+    "categoryTag": "accessories athletic-socks athletic-socks tie dye crew socks streetwear pastel multi",
+    "gender": "unisex",
+    "price": 799.0,
     "originalPrice": 1099.0,
-    "discount": "",
+    "discount": "-27%",
+    "rating": 4.8,
+    "reviewsCount": 190,
+    "badge": "Street Swag",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
+    "mainImage": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
+    "gallery": [
+      "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg"
+    ],
+    "description": "Hand-dyed combed cotton yarn engineered to style seamlessly with low-top Dunks and chunky platforms.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Squad Apparel",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Pastel Tie-Dye Swirl",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
+        "gallery": [
+          "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-as-64-terry-loop-low-cut-running-socks-3pk": {
+    "id": "acc-as-64-terry-loop-low-cut-running-socks-3pk",
+    "title": "Breathable Terry Loop Low-Cut Running Socks 3-Pack",
+    "name": "Breathable Terry Loop Low-Cut Running Socks 3-Pack",
+    "brand": "Squad Apparel",
+    "category": "accessories",
+    "subcategory": "athletic-socks",
+    "categoryTag": "accessories athletic-socks athletic-socks low cut running socks anti blister terry",
+    "gender": "unisex",
+    "price": 549.0,
+    "originalPrice": 799.0,
+    "discount": "-31%",
     "rating": 4.7,
-    "reviewsCount": 265,
-    "badge": "Stacked Height",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/shoe-1595341888016-a392ef81b7de.jpg",
-    "gallery": [
-      "/static/img/shoe-1595341888016-a392ef81b7de.jpg",
-      "/static/img/women_shoes-1.jpg",
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-5.jpg"
-    ],
-    "description": "Extreme exaggerated platform sole with premium suede overlays, golden Puma foil branding, and high-impact rubber tooling.",
-    "features": [
-      "Stacked 5.5cm Layered Platform Outsole",
-      "Premium Suede Upper with Formstrip Detail",
-      "Gold Metallic Foil Debossed Branding",
-      "Shock-Absorbing Rubber Midsole Core"
-    ],
-    "specs": {
-      "Upper": "Silky Suede Leather",
-      "Midsole": "Multi-Tiered Layered Platform",
-      "Outsole": "High-Grip Textured Rubber",
-      "Heel Height": "5.5 cm",
-      "Weight": "440g per shoe"
-    },
-    "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7"
-    ],
-    "colors": [
-      {
-        "name": "Sand Dune Suede",
-        "hex": "#d8c3a5",
-        "mainImage": "/static/img/shoe-1595341888016-a392ef81b7de.jpg",
-        "gallery": [
-          "/static/img/shoe-1595341888016-a392ef81b7de.jpg",
-          "/static/img/women_shoes-1.jpg",
-          "/static/img/women_shoes-2.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "w13": {
-    "id": "w13",
-    "name": "Nike ZoomX Vaporfly 'Mint Breeze'",
-    "brand": "Nike",
-    "category": "Women Carbon Plate Running",
-    "categoryTag": "running",
-    "gender": "women",
-    "price": 1699.0,
-    "originalPrice": 1699.0,
-    "discount": "",
-    "rating": 5.0,
-    "reviewsCount": 140,
-    "badge": "Marathon Elite",
+    "reviewsCount": 210,
+    "badge": "Anti-Blister Tab",
     "badgeClass": "new",
-    "mainImage": "/static/img/shoe-1525966222134-fcfa99b8ae77.jpg",
+    "imageUrl": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
+    "mainImage": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
     "gallery": [
-      "/static/img/shoe-1525966222134-fcfa99b8ae77.jpg",
-      "/static/img/women_shoes-4.jpg",
-      "/static/img/women_shoes-8.jpg",
-      "/static/img/women_shoes-2.jpg"
+      "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg"
     ],
-    "description": "Full-length carbon fiber Flyplate, ultra-responsive ZoomX foam, and featherlight Flyknit upper for unbeatable marathon pace.",
+    "description": "Padded heel-tab protects Achilles tendons against shoe rubbing during long marathon distance runs.",
     "features": [
-      "Full-Length Carbon Fiber Flyplate Propulsion",
-      "ZoomX Ultra-High Energy Return Midsole",
-      "Featherlight Breathable Engineered Flyknit Upper",
-      "Optimized Waffle Traction Forefoot Pattern"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Upper": "Engineered Flyknit & Monofilament",
-      "Midsole": "100% ZoomX Foam + Carbon Plate",
-      "Outsole": "High-Abrasion Rubber",
-      "Heel Drop": "8 mm",
-      "Weight": "180g per shoe"
+      "Brand": "Squad Apparel",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7",
-      "IND 8 / UK 8"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Mint Breeze & Volt",
-        "hex": "#a8e6cf",
-        "mainImage": "/static/img/shoe-1525966222134-fcfa99b8ae77.jpg",
+        "name": "White / Reflective Tab",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
         "gallery": [
-          "/static/img/shoe-1525966222134-fcfa99b8ae77.jpg",
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/women_shoes-8.jpg"
+          "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "w12": {
-    "id": "w12",
-    "name": "New Balance 550 'Peach Court'",
-    "brand": "New Balance",
-    "category": "Women Retro Court Low",
-    "categoryTag": "retro basketball",
-    "gender": "women",
-    "price": 1299.0,
-    "originalPrice": 1299.0,
-    "discount": "",
-    "rating": 4.8,
-    "reviewsCount": 310,
-    "badge": "Street Classic",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/shoe-1560769629-975ec94e6a86.jpg",
-    "gallery": [
-      "/static/img/shoe-1560769629-975ec94e6a86.jpg",
-      "/static/img/women_shoes-1.jpg",
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-7.jpg"
-    ],
-    "description": "80s hardwood classic with perforated leather upper, soft pastel peach accents, and comfortable everyday cushioned EVA midsole.",
-    "features": [
-      "Perforated Leather Midfoot & Toe Box",
-      "Padded Collar and Tongue for Snug Fit",
-      "Embossed N Logo and 550 Branding",
-      "Non-Marking Two-Tone Rubber Cupsole"
-    ],
-    "specs": {
-      "Upper": "Premium Leather & Suede",
-      "Midsole": "Comfort Foam EVA Wedge",
-      "Outsole": "Durable Hardwood Rubber",
-      "Heel Height": "3.2 cm",
-      "Weight": "385g per shoe"
-    },
-    "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7"
-    ],
-    "colors": [
-      {
-        "name": "Peach Court & White",
-        "hex": "#fed1b0",
-        "mainImage": "/static/img/shoe-1560769629-975ec94e6a86.jpg",
-        "gallery": [
-          "/static/img/shoe-1560769629-975ec94e6a86.jpg",
-          "/static/img/women_shoes-1.jpg",
-          "/static/img/women_shoes-2.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "w11": {
-    "id": "w11",
-    "name": "Adidas Samba OG 'Blush Edition'",
-    "brand": "Adidas",
-    "category": "Women Vintage Terrace",
-    "categoryTag": "retro",
-    "gender": "women",
-    "price": 1249.0,
-    "originalPrice": 1249.0,
-    "discount": "",
+  "acc-ck-41-premium-deep-cleaning-kit-solution": {
+    "id": "acc-ck-41-premium-deep-cleaning-kit-solution",
+    "title": "Premium Sneaker Deep Cleaning Solution & Hog-Bristle Brush",
+    "name": "Premium Sneaker Deep Cleaning Solution & Hog-Bristle Brush",
+    "brand": "Squad Care",
+    "category": "accessories",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits sneaker care solution cleaner brush kit",
+    "gender": "unisex",
+    "price": 1499.0,
+    "originalPrice": 1999.0,
+    "discount": "-25%",
     "rating": 4.9,
-    "reviewsCount": 490,
-    "badge": "Viral Sensation",
-    "badgeClass": "hot",
-    "mainImage": "/static/img/shoe-1549298916-b41d501d3772.jpg",
-    "gallery": [
-      "/static/img/shoe-1549298916-b41d501d3772.jpg",
-      "/static/img/women_shoes-3.jpg",
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-8.jpg"
-    ],
-    "description": "The iconic viral terrace sneaker in supple blush leather, suede T-toe reinforcement bumper, and low-profile dark gum rubber sole.",
-    "features": [
-      "Smooth Full-Grain Leather & Suede T-Toe",
-      "Low-Profile Low-Cut Sleek Profile",
-      "Gold Foil Samba Logo Lettering",
-      "Signature Dark Gum Rubber Gripper Sole"
-    ],
-    "specs": {
-      "Upper": "Soft Leather & Suede",
-      "Midsole": "Lightweight Die-Cut EVA",
-      "Outsole": "Non-Marking Gum Rubber",
-      "Heel Height": "2.2 cm",
-      "Weight": "310g per shoe"
-    },
-    "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7",
-      "IND 8 / UK 8"
-    ],
-    "colors": [
-      {
-        "name": "Blush & White Gum",
-        "hex": "#fcd5ce",
-        "mainImage": "/static/img/shoe-1549298916-b41d501d3772.jpg",
-        "gallery": [
-          "/static/img/shoe-1549298916-b41d501d3772.jpg",
-          "/static/img/women_shoes-3.jpg",
-          "/static/img/women_shoes-2.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "w10": {
-    "id": "w10",
-    "name": "Nike Dunk High 'Pastel Bliss'",
-    "brand": "Nike",
-    "category": "Women High-Top Retro",
-    "categoryTag": "basketball high-top retro",
-    "gender": "women",
-    "price": 1399.0,
-    "originalPrice": 1399.0,
-    "discount": "",
-    "rating": 4.8,
-    "reviewsCount": 225,
-    "badge": "New Drop",
+    "reviewsCount": 310,
+    "badge": "Pro Kit",
     "badgeClass": "new",
-    "mainImage": "/static/img/women_shoes-6.jpg",
+    "imageUrl": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
+    "mainImage": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
     "gallery": [
-      "/static/img/women_shoes-6.jpg",
-      "/static/img/women_shoes-6.jpg",
-      "/static/img/women_shoes-1.jpg",
-      "/static/img/women_shoes-2.jpg"
+      "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg"
     ],
-    "description": "High-top court profile featuring crisp pastel crimson and blush leather overlays, plush padded high collar, and durable rubber traction grip.",
+    "description": "Eco-friendly foaming formula that safely lifts dirt, stains, and scuffs from leather, mesh, canvas, and suede.",
     "features": [
-      "Crisp Full-Grain Stitched Leather Panels",
-      "High-Cut Padded Collar for Ankle Protection",
-      "Perforated Toe Box for Airflow",
-      "Classic Hoop Pivot-Circle Rubber Tread"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Upper": "Full-Grain Leather",
-      "Midsole": "Soft Cushioned Foam",
-      "Outsole": "Stitched Cupsole Rubber",
-      "Heel Height": "3.0 cm",
-      "Weight": "380g per shoe"
+      "Brand": "Squad Care",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Pastel Bliss & White",
-        "hex": "#ffccd5",
-        "mainImage": "/static/img/women_shoes-6.jpg",
+        "name": "Clear / Natural Wood",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
         "gallery": [
-          "/static/img/women_shoes-6.jpg",
-          "/static/img/women_shoes-6.jpg",
-          "/static/img/women_shoes-1.jpg"
+          "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "w9": {
-    "id": "w9",
-    "name": "Air Jordan 1 Mid 'Dutch Pink'",
-    "brand": "Jordan",
-    "category": "Women Basketball & High-Top",
-    "categoryTag": "basketball high-top",
-    "gender": "women",
-    "price": 1599.0,
-    "originalPrice": 1599.0,
-    "discount": "",
+  "acc-ck-42-quick-wipes-dual-textured-30pk": {
+    "id": "acc-ck-42-quick-wipes-dual-textured-30pk",
+    "title": "Quick Wipes Dual-Textured Portable Sneaker Wipes (30-Pack)",
+    "name": "Quick Wipes Dual-Textured Portable Sneaker Wipes (30-Pack)",
+    "brand": "Squad Care",
+    "category": "accessories",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits sneaker wipes quick cleaner on-the-go",
+    "gender": "unisex",
+    "price": 699.0,
+    "originalPrice": 999.0,
+    "discount": "-30%",
+    "rating": 4.8,
+    "reviewsCount": 420,
+    "badge": "Pocket Essential",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
+    "mainImage": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg"
+    ],
+    "description": "Pocket-sized wipes featuring a textured dot side for stubborn mud and a soft smooth side for gentle wiping.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Squad Care",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Individually Foil-Sealed",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-ck-43-hydro-shield-water-stain-repellent": {
+    "id": "acc-ck-43-hydro-shield-water-stain-repellent",
+    "title": "Hydro-Shield Nano Water & Stain Repellent Spray (200ml)",
+    "name": "Hydro-Shield Nano Water & Stain Repellent Spray (200ml)",
+    "brand": "Squad Care",
+    "category": "accessories",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits waterproof stain repellent protection spray",
+    "gender": "unisex",
+    "price": 999.0,
+    "originalPrice": 1399.0,
+    "discount": "-28%",
     "rating": 4.9,
     "reviewsCount": 380,
-    "badge": "Trending Pick",
-    "badgeClass": "hot",
-    "mainImage": "/static/img/shoe-1515955656352-a1fa3ffcd111.jpg",
+    "badge": "Hydrophobic Shield",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
+    "mainImage": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
     "gallery": [
-      "/static/img/shoe-1515955656352-a1fa3ffcd111.jpg",
-      "/static/img/women_shoes-1.jpg",
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-3.jpg"
+      "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg"
     ],
-    "description": "Soft pastel dusty pink suede panels combined with clean sail leather, Air-Sole cushioning unit, and padded mid collar for court and street.",
+    "description": "Advanced invisible hydrophobic barrier that causes liquids to bead up and roll right off without altering breathability.",
     "features": [
-      "Encapsulated Air-Sole Heel Cushioning Unit",
-      "Genuine Nubuck Suede & Tumbled Leather",
-      "Iconic Wings Logo Debossed on Collar",
-      "Solid Rubber Outsole with Deep Pivot Grooves"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Upper": "Nubuck Suede & Tumbled Leather",
-      "Midsole": "Encapsulated Nike Air-Sole",
-      "Outsole": "Court Pivot Rubber",
-      "Heel Height": "3.2 cm",
-      "Weight": "390g per shoe"
+      "Brand": "Squad Care",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Dutch Pink & Quartz",
-        "hex": "#f4c2c2",
-        "mainImage": "/static/img/shoe-1515955656352-a1fa3ffcd111.jpg",
+        "name": "Aerosol Spray Canister",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
         "gallery": [
-          "/static/img/shoe-1515955656352-a1fa3ffcd111.jpg",
-          "/static/img/women_shoes-1.jpg",
-          "/static/img/women_shoes-2.jpg"
+          "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "m16": {
-    "id": "m16",
-    "name": "Balenciaga Triple S Chunky Clear Sole",
-    "brand": "Balenciaga",
-    "category": "Luxury Chunky Streetwear",
-    "categoryTag": "chunky",
-    "gender": "men",
-    "price": 1899.0,
-    "originalPrice": 1899.0,
-    "discount": "",
-    "rating": 4.9,
-    "reviewsCount": 94,
-    "badge": "High Fashion",
-    "badgeClass": "limited",
-    "mainImage": "/static/img/men_shoes-1.jpg",
-    "gallery": [
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
-    ],
-    "description": "3-layered composite outsole with translucent air bubble core, embroidered shoe size on the toe, and hiking rope laces.",
-    "features": [
-      "3-Layered Stacked Sole: Molded composite outsole featuring translucent air bubble core in the midsole.",
-      "Embroidered Size Digit: Signature shoe size embroidered on the tip of the toe box for iconic high-fashion flair.",
-      "Multi-Material Architecture: Premium calfskin nubuck, structured TPU molds, and ballistic mesh underlays.",
-      "Bicolor Hiking Rope Laces: Thick two-tone hiking-inspired laces with athletic eyelet placement."
-    ],
-    "specs": {
-      "Upper Material": "Calfskin Nubuck, Mesh & TPU Cage",
-      "Cushioning": "Translucent Injected Air-Bubble Core",
-      "Sole Material": "Exaggerated Cleated Rubber Compound",
-      "Heel Height": "6.5 cm Exaggerated Stack",
-      "Weight": "520g per shoe",
-      "Closure": "Two-Tone Athletic Rope Laces",
-      "Origin": "Imported Luxury Edition",
-      "Warranty": "6 Months Squad Quality Assurance"
-    },
-    "sizes": [
-      "IND 7 / UK 7",
-      "IND 8 / UK 8",
-      "IND 9 / UK 9",
-      "IND 10 / UK 10"
-    ],
-    "colors": [
-      {
-        "name": "Triple Black Clear Sole",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/men_shoes-1.jpg",
-        "gallery": [
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "m15": {
-    "id": "m15",
-    "name": "ASICS GEL-Kayano 14 'Silver Cream'",
-    "brand": "ASICS",
-    "category": "Performance Marathon Runner",
-    "categoryTag": "running",
-    "gender": "men",
-    "price": 1399.0,
-    "originalPrice": 1399.0,
-    "discount": "",
-    "rating": 4.9,
-    "reviewsCount": 210,
-    "badge": "Staff Pick",
-    "badgeClass": "new",
-    "mainImage": "/static/img/men_shoes-2.jpg",
-    "gallery": [
-      "/static/img/men_shoes-2.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
-    ],
-    "description": "Late 2000s aesthetic reimagined with metallic silver overlays, exposed GEL technology cushioning, and TRUSSTIC support system.",
-    "features": [
-      "Exposed GEL Technology: Strategic visible GEL cushioning in heel and forefoot for maximum impact absorption.",
-      "Late 2000s Running Aesthetic: Layered metallic silver synthetic leather overlays over breathable athletic mesh.",
-      "TRUSSTIC System Support: Molded composite shank stabilizing the midfoot and preventing foot twisting.",
-      "Ortholite Performance Sockliner: High-rebound memory insole with anti-microbial moisture management."
-    ],
-    "specs": {
-      "Upper Material": "Metallic Synthetic Overlays & Athletic Mesh",
-      "Cushioning": "Dual Visible GEL Pods + AmpliFoam",
-      "Sole Material": "AHAR+ High-Abrasion Rubber",
-      "Weight": "330g per shoe",
-      "Closure": "Lace-Up with Padded Tongue",
-      "Origin": "Imported",
-      "Warranty": "6 Months Squad Quality Assurance"
-    },
-    "sizes": [
-      "IND 7 / UK 7",
-      "IND 8 / UK 8",
-      "IND 9 / UK 9",
-      "IND 10 / UK 10"
-    ],
-    "colors": [
-      {
-        "name": "Metallic Silver & Cream",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/men_shoes-2.jpg",
-        "gallery": [
-          "/static/img/men_shoes-2.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "m14": {
-    "id": "m14",
-    "name": "Nike LeBron 20 'Time Machine' Court",
-    "brand": "Nike",
-    "category": "Pro Basketball Edition",
-    "categoryTag": "basketball",
-    "gender": "men",
-    "price": 1599.0,
-    "originalPrice": 1599.0,
-    "discount": "",
-    "rating": 4.8,
-    "reviewsCount": 118,
-    "badge": "Court King",
-    "badgeClass": "hot",
-    "mainImage": "/static/img/men_shoes-3.jpg",
-    "gallery": [
-      "/static/img/men_shoes-3.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
-    ],
-    "description": "Low-profile design with dual Zoom Air units, carbon fiber midfoot shank, and dimensional iridescent Swoosh.",
-    "features": [
-      "Top-Loaded Zoom Air Turbo: Forefoot curved Zoom Turbo bag plus large volume bottom-loaded heel Zoom unit.",
-      "Dimensional Double Swooshes: 3D iridescent stitched Swoosh layering over iridescent chrome accents.",
-      "Carbon Fiber Midfoot Shank: High-tensile carbon plate beneath arch for explosive lateral torque stability.",
-      "Engineered Dimensional Knit: Featherlight woven upper with integrated lock-down forefoot cables."
-    ],
-    "specs": {
-      "Upper Material": "Dimensional Engineered Mesh Knit",
-      "Cushioning": "Dual Zoom Air + Cushlon Foam",
-      "Sole Material": "Multidirectional Decoupled Hardwood Rubber",
-      "Weight": "385g per shoe",
-      "Closure": "Dynamic Flywire Lace Lock",
-      "Origin": "Imported",
-      "Warranty": "6 Months Squad Quality Assurance"
-    },
-    "sizes": [
-      "IND 8 / UK 8",
-      "IND 9 / UK 9",
-      "IND 10 / UK 10",
-      "IND 11 / UK 11"
-    ],
-    "colors": [
-      {
-        "name": "Barely Green & Orange",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/men_shoes-3.jpg",
-        "gallery": [
-          "/static/img/men_shoes-3.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "m13": {
-    "id": "m13",
-    "name": "Travis Scott x Air Jordan 1 Low 'Reverse Mocha'",
-    "brand": "Jordan",
-    "category": "Collector Retro Low",
-    "categoryTag": "retro",
-    "gender": "men",
-    "price": 1799.0,
-    "originalPrice": 1799.0,
-    "discount": "",
-    "rating": 5.0,
-    "reviewsCount": 640,
-    "badge": "VIP Collector",
-    "badgeClass": "limited",
-    "mainImage": "/static/img/men_shoes-4.jpg",
-    "gallery": [
-      "/static/img/men_shoes-4.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
-    ],
-    "description": "Cactus Jack signature reverse oversized Swoosh, mocha nubuck base, sail leather overlays, and red embroidery accents.",
-    "features": [
-      "Inverted Oversized Swoosh: Signature backwards cream leather Swoosh debossed on the lateral side.",
-      "Premium Nubuck & Sail Leather: Buttery mocha durabuck base framed with tumbled sail white leather.",
-      "Cactus Jack Face Embroidery: Red embroidered smiley face and classic Air Jordan wings logos on heel tabs.",
-      "Vintage Yellowed Midsole: Pre-aged off-white midsole finish delivering authentic retro collector vibe."
-    ],
-    "specs": {
-      "Upper Material": "Mocha Nubuck & Tumbled Sail Leather",
-      "Cushioning": "Encapsulated Air-Sole Unit",
-      "Sole Material": "Stitched Rubber Cupsole",
-      "Weight": "390g per shoe",
-      "Closure": "Lace-Up with Extra Laces Included",
-      "Origin": "Imported Collector Edition",
-      "Warranty": "6 Months Squad Quality Assurance"
-    },
-    "sizes": [
-      "IND 8 / UK 8",
-      "IND 9 / UK 9",
-      "IND 10 / UK 10"
-    ],
-    "colors": [
-      {
-        "name": "Reverse Mocha & Sail",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/men_shoes-4.jpg",
-        "gallery": [
-          "/static/img/men_shoes-4.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "m12": {
-    "id": "m12",
-    "name": "New Balance 9060 'Sea Salt & Rain Cloud'",
-    "brand": "New Balance",
-    "category": "Futuristic Chunky Runner",
-    "categoryTag": "chunky",
-    "gender": "men",
-    "price": 1299.0,
-    "originalPrice": 1299.0,
-    "discount": "",
+  "acc-ck-44-suede-nubuck-renewal-eraser-block": {
+    "id": "acc-ck-44-suede-nubuck-renewal-eraser-block",
+    "title": "Suede & Nubuck Renewal Cleaning Eraser Block",
+    "name": "Suede & Nubuck Renewal Cleaning Eraser Block",
+    "brand": "Squad Care",
+    "category": "accessories",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits suede eraser nubuck brush dry cleaner",
+    "gender": "unisex",
+    "price": 599.0,
+    "originalPrice": 799.0,
+    "discount": "-25%",
     "rating": 4.7,
-    "reviewsCount": 165,
-    "badge": "Trending",
+    "reviewsCount": 190,
+    "badge": "Dry Care",
     "badgeClass": "new",
-    "mainImage": "/static/img/men_shoes-5.jpg",
+    "imageUrl": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
+    "mainImage": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
     "gallery": [
-      "/static/img/men_shoes-5.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
+      "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg"
     ],
-    "description": "Sculpted oversized dual-density ABZORB and SBS cushioning pods with breathable mesh and hairy suede overlays.",
+    "description": "Water-free cleaning eraser designed to buff away scuff marks and restore the natural velvety nap of delicate suede.",
     "features": [
-      "Dual-Density ABZORB Pods: Sculpted futuristic midsole featuring ABZORB and SBS heel crash pad cushioning.",
-      "Layered Mesh & Suede Upper: Premium pigskin suede overlays over open-cell diamond mesh underlays.",
-      "Translucent CR Heel Device: Motion control stability clip on heel counter inspired by 990 series.",
-      "Diamond Pattern Outsole: Bold diamond lugged traction pods for all-terrain grip."
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Upper Material": "Hairy Pigskin Suede & Diamond Mesh",
-      "Cushioning": "ABZORB & SBS Dual Midsole",
-      "Sole Material": "Lugged Diamond Rubber Compound",
-      "Weight": "410g per shoe",
-      "Closure": "Traditional Cotton Lace-Up",
-      "Origin": "Imported",
-      "Warranty": "6 Months Squad Quality Assurance"
+      "Brand": "Squad Care",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 7 / UK 7",
-      "IND 8 / UK 8",
-      "IND 9 / UK 9",
-      "IND 10 / UK 10"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Sea Salt Grey",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/men_shoes-5.jpg",
+        "name": "Rubberized Crepe Block",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
         "gallery": [
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
+          "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "m11": {
-    "id": "m11",
-    "name": "Yeezy Boost 350 V2 'Carbon Beluga'",
-    "brand": "Yeezy",
-    "category": "Ultralight Performance Runner",
-    "categoryTag": "running",
-    "gender": "men",
-    "price": 1699.0,
-    "originalPrice": 1699.0,
-    "discount": "",
+  "acc-cp-49-ergonomic-breathable-crease-guards": {
+    "id": "acc-cp-49-ergonomic-breathable-crease-guards",
+    "title": "Ergonomic Breathable Sneaker Crease Guards (1 Pair)",
+    "name": "Ergonomic Breathable Sneaker Crease Guards (1 Pair)",
+    "brand": "Shield Squad",
+    "category": "accessories",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors anti crease shield toe guard protection",
+    "gender": "unisex",
+    "price": 499.0,
+    "originalPrice": 799.0,
+    "discount": "-37%",
     "rating": 4.9,
-    "reviewsCount": 230,
-    "badge": "Exclusive Drop",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/men_shoes-6.jpg",
+    "reviewsCount": 510,
+    "badge": "Anti-Crease",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
+    "mainImage": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
     "gallery": [
-      "/static/img/men_shoes-6.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
+      "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg"
     ],
-    "description": "Re-engineered Primeknit upper featuring solar red SPLY-350 side stripe and full-length responsive Boost encapsulated midsole.",
+    "description": "Ventilated flex-molded shields that slip into the toe box to prevent unsightly leather creasing during movement.",
     "features": [
-      "Re-Engineered Primeknit: Seamless multi-toned Primeknit upper adapts directly to the foot's shape.",
-      "Full-Length Boost Midsole: Industry-leading BASF thermoplastic polyurethane boost pellets for ultimate bounce.",
-      "Solar Red SPLY-350 Stripe: Iconic lateral contrast strike-through graphic with inverted typography.",
-      "Ribbed TPU Midsole Cage: Semi-translucent rubber ribbing encapsulating boost foam for energy return."
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Upper Material": "Breathable Stretch Primeknit Weave",
-      "Cushioning": "Full-Length Encapsulated Boost Foam",
-      "Sole Material": "Ribbed Translucent TPU & Rubber",
-      "Weight": "340g per shoe",
-      "Closure": "Integrated Infinity Rope Laces",
-      "Origin": "Imported",
-      "Warranty": "6 Months Squad Quality Assurance"
+      "Brand": "Shield Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 8 / UK 8",
-      "IND 9 / UK 9",
-      "IND 10 / UK 10",
-      "IND 11 / UK 11"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Carbon Beluga",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/men_shoes-6.jpg",
+        "name": "Matte White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
         "gallery": [
-          "/static/img/men_shoes-6.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
+          "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "m10": {
-    "id": "m10",
-    "name": "Nike Dunk Low 'Panda' Classic",
-    "brand": "Nike",
-    "category": "Retro Street Low",
-    "categoryTag": "retro",
-    "gender": "men",
-    "price": 1199.0,
-    "originalPrice": 1199.0,
-    "discount": "",
+  "acc-cp-50-soft-foam-shock-absorbing-toe-fillers": {
+    "id": "acc-cp-50-soft-foam-shock-absorbing-toe-fillers",
+    "title": "Soft Foam Shock-Absorbing Toe Box Fillers (2 Pairs)",
+    "name": "Soft Foam Shock-Absorbing Toe Box Fillers (2 Pairs)",
+    "brand": "Shield Squad",
+    "category": "accessories",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors foam fillers toe box comfort protection",
+    "gender": "unisex",
+    "price": 599.0,
+    "originalPrice": 899.0,
+    "discount": "-33%",
     "rating": 4.8,
-    "reviewsCount": 512,
-    "badge": "Bestseller",
-    "badgeClass": "hot",
-    "mainImage": "/static/img/men_shoes-7.jpg",
+    "reviewsCount": 230,
+    "badge": "Comfort Fit",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
+    "mainImage": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
     "gallery": [
-      "/static/img/men_shoes-7.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
+      "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg"
     ],
-    "description": "A timeless two-tone monochrome colorway with premium padded collar, foam cushioning midsole, and rubber cupsole traction.",
+    "description": "Memory-foam cushioning inserts that gently fill toe volume to eliminate foot slippage and preserve toe box shape.",
     "features": [
-      "Crisp Monochrome Contrast: Iconic two-tone black and white color blocking that matches every streetwear outfit.",
-      "Full-Grain Leather Panels: Supple smooth leather upper that ages gracefully with regular wear.",
-      "Padded Low-Cut Collar: Plush ankle padding for non-restrictive all-day walking comfort.",
-      "Pivot Circle Rubber Tread: Classic basketball cupsole with forefoot circular pivot point."
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Upper Material": "100% Genuine Stitched Leather",
-      "Cushioning": "Lightweight Foam Midsole",
-      "Sole Material": "Flexible Non-Marking Rubber Cupsole",
-      "Weight": "370g per shoe",
-      "Closure": "Lace-Up with Woven Tongue Label",
-      "Origin": "Imported",
-      "Warranty": "6 Months Squad Quality Assurance"
+      "Brand": "Shield Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 7 / UK 7",
-      "IND 8 / UK 8",
-      "IND 9 / UK 9",
-      "IND 10 / UK 10"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Black & White Panda",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/men_shoes-7.jpg",
+        "name": "Charcoal Grey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
         "gallery": [
-          "/static/img/men_shoes-7.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
+          "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "m9": {
-    "id": "m9",
-    "name": "Air Jordan 4 Retro 'Military Black'",
-    "brand": "Jordan",
-    "category": "High-Top & Court Classic",
-    "categoryTag": "high-top",
-    "gender": "men",
-    "price": 1749.0,
-    "originalPrice": 1749.0,
-    "discount": "",
-    "rating": 4.9,
-    "reviewsCount": 420,
-    "badge": "Hot Drop",
-    "badgeClass": "limited",
-    "mainImage": "/static/img/men_shoes-8.jpg",
-    "gallery": [
-      "/static/img/men_shoes-8.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
-    ],
-    "description": "The iconic AJ4 silhouette engineered with smooth white leather uppers, contrast black eyelets, and classic Jumpman flight tags.",
-    "features": [
-      "Visible Air-Sole Unit: Signature encapsulated pressurized air in heel and forefoot for elite shock dispersion.",
-      "Quarter Panel Mesh Netting: Authentic retro side and tongue mesh windows providing active cooling airflow.",
-      "Support Wings & Eyelets: Molded thermoplastic lace wings for custom fit lockdown on court and street.",
-      "Herringbone Rubber Traction: Multi-directional herringbone tread delivering maximum hardwood grip."
-    ],
-    "specs": {
-      "Upper Material": "Smooth Full-Grain Leather & Suede Mudguard",
-      "Cushioning": "Visible Heel & Forefoot Air-Sole",
-      "Sole Material": "Solid Rubber with Herringbone Traction",
-      "Weight": "440g per shoe (IND 9)",
-      "Closure": "Classic Lace-Up with TPU Wings",
-      "Origin": "Imported",
-      "Warranty": "6 Months Squad Quality Assurance"
-    },
-    "sizes": [
-      "IND 7 / UK 7",
-      "IND 8 / UK 8",
-      "IND 9 / UK 9",
-      "IND 10 / UK 10",
-      "IND 11 / UK 11"
-    ],
-    "colors": [
-      {
-        "name": "Military Black & White",
-        "hex": "#ff5a1f",
-        "mainImage": "/static/img/men_shoes-8.jpg",
-        "gallery": [
-          "/static/img/men_shoes-8.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "a8": {
-    "id": "a8",
-    "name": "Sneakerhead Travel Duffel with 3 Shoe Dividers",
-    "brand": "Squad Gear",
-    "category": "Sneaker Care & Accessories",
-    "categoryTag": "care",
-    "gender": "accessories",
-    "price": 1499.0,
-    "originalPrice": 1499.0,
-    "discount": "",
+  "acc-cp-51-universal-anti-crease-shield-v2-black": {
+    "id": "acc-cp-51-universal-anti-crease-shield-v2-black",
+    "title": "Universal Armor Crease Shield V2 - Matte Black (1 Pair)",
+    "name": "Universal Armor Crease Shield V2 - Matte Black (1 Pair)",
+    "brand": "Shield Squad",
+    "category": "accessories",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors armor shield black crease guard",
+    "gender": "unisex",
+    "price": 549.0,
+    "originalPrice": 849.0,
+    "discount": "-35%",
     "rating": 4.8,
     "reviewsCount": 195,
-    "badge": "Shoe Duffel",
-    "badgeClass": "limited",
-    "mainImage": "/static/img/accessories-5.jpg",
-    "gallery": [
-      "/static/img/accessories-5.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
-    ],
-    "description": "Travel without crushing your grail kicks. Features 3 padded adjustable and removable shoe compartments with breathable mesh windows, a padded 15.6-inch laptop sleeve, and water-resistant 900D ballistic cordura fabric.",
-    "features": [
-      "Holds 3 pairs of high-tops safely with thick velvet-lined padded dividers",
-      "TSA carry-on compliant dimensions for airline overhead bins",
-      "Dedicated padded 15.6-inch laptop and tablet compartment",
-      "Waterproof 900D ballistic nylon exterior with YKK zippers",
-      "Ergonomic padded shoulder strap + trolley luggage sleeve"
-    ],
-    "specs": {
-      "Zippers": "Heavy Duty Weather-Sealed YKK Zippers",
-      "Capacity": "Holds 3 Pairs Sneakers + Weekend Clothes + Laptop",
-      "Material": "900D Ballistic Cordura Nylon & Velvet Lining",
-      "Warranty": "2 Years Gear Warranty",
-      "Dimensions": "52cm x 30cm x 28cm (Carry-On Approved)"
-    },
-    "sizes": [
-      "Standard Duffel (52cm x 30cm x 28cm)"
-    ],
-    "colors": [
-      {
-        "name": "Tactical Stealth Black",
-        "hex": "#111827",
-        "mainImage": "/static/img/accessories-5.jpg",
-        "gallery": [
-          "/static/img/accessories-5.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "Urban Camo / Red Accent",
-        "hex": "#374151",
-        "mainImage": "/static/img/men_shoes-7.jpg",
-        "gallery": [
-          "/static/img/men_shoes-7.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-1.jpg",
-          "/static/img/women_shoes-4.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "a7": {
-    "id": "a7",
-    "name": "Squad Midsole Whitener & Sneaker Touch-Up Pen (2-Pack)",
-    "brand": "Squad Labs",
-    "category": "Midsole Restoration Pen",
-    "categoryTag": "care",
-    "gender": "accessories",
-    "price": 699.0,
-    "originalPrice": 699.0,
-    "discount": "",
-    "rating": 4.9,
-    "reviewsCount": 820,
-    "badge": "Restoration",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/accessories-6.jpg",
-    "gallery": [
-      "/static/img/accessories-6.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
-    ],
-    "description": "Formulated with high-opacity acrylic flexible paint to restore yellowed boosts, scuffed rubber midsoles, and leather edges.",
-    "features": [
-      "Heavyweight 80% Combed Cotton blend with spandex stretch",
-      "Ultra-thick terry cushion sole reduces foot fatigue",
-      "Targeted arch compression band keeps sock firmly locked in place",
-      "Reinforced heel and seamless toe prevents blisters",
-      "Includes 3 pairs (White, Heather Grey, Pitch Black)"
-    ],
-    "specs": {
-      "Care": "Machine Wash Warm",
-      "Fabric": "80% Combed Cotton, 15% Polyester, 5% Spandex",
-      "Sizing": "Free Size (Fits IND 6 - IND 11)",
-      "Cushioning": "Max Density Terry Footbed",
-      "Pack Quantity": "3 Pairs (Tri-Color Bundle)"
-    },
-    "sizes": [
-      "Free Size (Fits IND 6 - IND 11)"
-    ],
-    "colors": [
-      {
-        "name": "Tri-Pack (White, Grey, Black)",
-        "hex": "#475569",
-        "mainImage": "/static/img/accessories-6.jpg",
-        "gallery": [
-          "/static/img/accessories-6.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "a6": {
-    "id": "a6",
-    "name": "Nano-Shield Hydrophobic Stain Repellent (250ml)",
-    "brand": "Squad Tech",
-    "category": "Sneaker Care & Accessories",
-    "categoryTag": "care",
-    "gender": "accessories",
-    "price": 880.0,
-    "originalPrice": 880.0,
-    "discount": "",
-    "rating": 4.9,
-    "reviewsCount": 470,
-    "badge": "Nano Tech",
+    "badge": "Heavy Duty",
     "badgeClass": "new",
-    "mainImage": "/static/img/accessories-7.jpg",
+    "imageUrl": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
+    "mainImage": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
     "gallery": [
-      "/static/img/accessories-7.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
+      "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg"
     ],
-    "description": "Create an invisible molecular barrier against water, coffee, ketchup, mud, and street grime. Liquids bead up and roll off instantly without affecting sneaker breathability or fabric color.",
+    "description": "Reinforced ridged polymer designed for heavy leather silhouettes like Jordan 4s, Dunks, and Air Force 1s.",
     "features": [
-      "Advanced nanotechnology creates invisible liquid-repellent shield",
-      "Single application lasts up to 6 months of daily wear",
-      "100% breathable - does not choke mesh or leather pores",
-      "Dries invisible in under 15 minutes with no discoloration",
-      "250ml aerosol treats up to 12 pairs of shoes"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Canister Volume": "250ml Continuous Spray",
-      "Compatible With": "Suede, Nubuck, Leather, Canvas, Primeknit",
-      "Shield Lifespan": "Up to 180 Days per Application",
-      "Country of Origin": "India"
+      "Brand": "Shield Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "250ml Aerosol Can (12 Pairs)"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
-    "colors": [
-      {
-        "name": "Invisible Shield Formula",
-        "hex": "#38bdf8",
-        "mainImage": "/static/img/accessories-7.jpg",
-        "gallery": [
-          "/static/img/accessories-7.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "a5": {
-    "id": "a5",
-    "name": "3M Reflective Rope Laces & Metal Aglets",
-    "brand": "Squad Laces",
-    "category": "Sneaker Care & Accessories",
-    "categoryTag": "care",
-    "gender": "accessories",
-    "price": 499.0,
-    "originalPrice": 499.0,
-    "discount": "",
-    "rating": 4.7,
-    "reviewsCount": 310,
-    "badge": "Popular",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/accessories-8.jpg",
-    "gallery": [
-      "/static/img/accessories-8.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
-    ],
-    "description": "Custom hype your kicks with 3M Scotchlite reflective rope laces that shine brilliantly under camera flash and street lights. Finished with heavy screw-on gunmetal aglets.",
-    "features": [
-      "High-intensity 3M Scotchlite reflective interwoven weave",
-      "Solid alloy screw-in metal aglets prevents lace fraying",
-      "High tensile polyester core ensures knot stays tied",
-      "Includes mini screwdriver for easy aglet adjustment",
-      "Available in 120cm (low-tops) & 140cm (high-tops)"
-    ],
-    "specs": {
-      "Lengths": "120 cm (Low-Tops) / 140 cm (High-Tops)",
-      "Warranty": "1 Year Durability Guarantee",
-      "Reflectivity": "Authentic 3M Scotchlite\u2122 Material",
-      "Aglet Material": "Gunmetal Solid Brass Alloy"
-    },
-    "sizes": [
-      "120 cm (Low Tops)",
-      "140 cm (High Tops)"
-    ],
-    "colors": [
-      {
-        "name": "Reflective Gunmetal Black",
-        "hex": "#374151",
-        "mainImage": "/static/img/accessories-8.jpg",
-        "gallery": [
-          "/static/img/accessories-8.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "3M Silver White",
-        "hex": "#e5e7eb",
-        "mainImage": "/static/img/women_shoes-5.jpg",
-        "gallery": [
-          "/static/img/women_shoes-5.jpg",
-          "/static/img/women_shoes-2.jpg",
-          "/static/img/men_shoes-6.jpg",
-          "/static/img/women_shoes-1.jpg"
-        ]
-      },
-      {
-        "name": "Neon Volt Glow",
-        "hex": "#84cc16",
-        "mainImage": "/static/img/men_shoes-2.jpg",
-        "gallery": [
-          "/static/img/men_shoes-2.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-7.jpg",
-          "/static/img/shoe-1.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "a4": {
-    "id": "a4",
-    "name": "Rapid Dry Cleaning Foam & Soft Bristle Brush",
-    "brand": "Squad Care",
-    "category": "Sneaker Care & Accessories",
-    "categoryTag": "care",
-    "gender": "accessories",
-    "price": 799.0,
-    "originalPrice": 799.0,
-    "discount": "",
-    "rating": 4.9,
-    "reviewsCount": 290,
-    "badge": "Quick Clean",
-    "badgeClass": "limited",
-    "mainImage": "/static/img/accessories-1.jpg",
-    "gallery": [
-      "/static/img/accessories-1.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
-    ],
-    "description": "No water required. Pump instant foaming formula onto your shoe, scrub gently with the included soft bristle brush, and wipe dry with a towel in under 60 seconds.",
-    "features": [
-      "Ready-to-use self-foaming pump (no water bowl needed)",
-      "Dries completely in 2 minutes",
-      "Safe for delicate suede, canvas, mesh, and nubuck",
-      "Infused with fresh citrus fragrance that neutralizes shoe smell",
-      "Compact 150ml bottle - TSA travel approved"
-    ],
-    "specs": {
-      "Volume": "150ml Ready-Pump Foam",
-      "Included": "Foam Canister + Ergonomic Wood Handle Brush",
-      "Warranty": "100% Quality Guaranteed",
-      "Formulation": "Waterless Quick-Evaporation Tech"
-    },
-    "sizes": [
-      "150ml Quick Clean Pump + Brush"
-    ],
-    "colors": [
-      {
-        "name": "Citrus Fresh",
-        "hex": "#f59e0b",
-        "mainImage": "/static/img/accessories-1.jpg",
-        "gallery": [
-          "/static/img/accessories-1.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "a3": {
-    "id": "a3",
-    "name": "Anti-Crease Sneaker Toe Shields (3 Pairs)",
-    "brand": "Squad Shield",
-    "category": "Sneaker Care & Accessories",
-    "categoryTag": "care",
-    "gender": "accessories",
-    "price": 599.0,
-    "originalPrice": 599.0,
-    "discount": "",
-    "rating": 4.8,
-    "reviewsCount": 530,
-    "badge": "Top Pick",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/accessories-2.jpg",
-    "gallery": [
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
-    ],
-    "description": "Keep your toe boxes crisp and crack-free forever. Ergonomically engineered flexible thermoplastic inserts slip inside your sneakers to completely eliminate walking creases without hurting your toes.",
-    "features": [
-      "3 pairs included (6 individual shields)",
-      "Ventilation holes ensure proper foot airflow",
-      "Pre-scored trim lines allow custom trimming with scissors",
-      "Flexible TPR material feels unnoticeable while walking",
-      "Compatible with Jordans, Dunks, Air Force 1s, and all high-tops"
-    ],
-    "specs": {
-      "Size": "Universal Cut-to-Fit (IND 5 - IND 12)",
-      "Material": "Soft Medical Grade Thermoplastic Elastomer (TPE)",
-      "Quantity": "3 Pairs (6 Shields)",
-      "Warranty": "Lifetime Crack Guarantee"
-    },
-    "sizes": [
-      "Universal Size (Cut-To-Fit IND 5-12)"
-    ],
+    "inStock": true,
     "colors": [
       {
         "name": "Stealth Black",
-        "hex": "#0f172a",
-        "mainImage": "/static/img/accessories-2.jpg",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
         "gallery": [
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "Frost White",
-        "hex": "#f8fafc",
-        "mainImage": "/static/img/women_shoes-5.jpg",
-        "gallery": [
-          "/static/img/women_shoes-5.jpg",
-          "/static/img/women_shoes-2.jpg",
-          "/static/img/men_shoes-6.jpg",
-          "/static/img/women_shoes-1.jpg"
+          "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "a2": {
-    "id": "a2",
-    "name": "Magnetic Drop-Front Sneaker Display (Pack of 6)",
-    "brand": "Squad Storage",
-    "category": "Sneaker Care & Accessories",
-    "categoryTag": "care",
-    "gender": "accessories",
+  "acc-cp-52-ventilated-clear-gel-toe-guards": {
+    "id": "acc-cp-52-ventilated-clear-gel-toe-guards",
+    "title": "Ventilated Gel Armor Toe Guards - Clear Gel Edition",
+    "name": "Ventilated Gel Armor Toe Guards - Clear Gel Edition",
+    "brand": "Shield Squad",
+    "category": "accessories",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors gel guards clear crease shield soft",
+    "gender": "unisex",
+    "price": 649.0,
+    "originalPrice": 949.0,
+    "discount": "-31%",
+    "rating": 4.9,
+    "reviewsCount": 175,
+    "badge": "Zero Pinching",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
+    "mainImage": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
+    "gallery": [
+      "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg"
+    ],
+    "description": "Medical-grade elastomer gel flexes naturally with every stride for 100% pinch-free toe comfort.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Shield Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Crystal Clear Gel",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
+        "gallery": [
+          "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-dc-53-magnetic-drop-front-sneaker-case": {
+    "id": "acc-dc-53-magnetic-drop-front-sneaker-case",
+    "title": "UV-Protection Magnetic Drop-Front Sneaker Display Case",
+    "name": "UV-Protection Magnetic Drop-Front Sneaker Display Case",
+    "brand": "Crate Squad",
+    "category": "accessories",
+    "subcategory": "display-crates",
+    "categoryTag": "accessories display-crates display-crates magnetic drop front shoe case crate display",
+    "gender": "unisex",
     "price": 1699.0,
-    "originalPrice": 1699.0,
-    "discount": "",
+    "originalPrice": 2299.0,
+    "discount": "-26%",
     "rating": 4.9,
-    "reviewsCount": 412,
-    "badge": "Bestseller",
-    "badgeClass": "new",
-    "mainImage": "/static/img/accessories-3.jpg",
+    "reviewsCount": 340,
+    "badge": "Drop-Front",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
+    "mainImage": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
     "gallery": [
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
+      "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg"
     ],
-    "description": "Turn your sneaker collection into an art gallery. Crystal-clear UV-blocking drop-front magnetic doors let you stack up to 20 boxes tall safely with interlocking groove channels.",
+    "description": "Heavy-duty stackable acrylic crate with dual magnetic door locks and 99% UV radiation blocking.",
     "features": [
-      "Fits high-tops up to size IND 13 standing upright",
-      "Heavy-duty magnetic latch door for effortless one-hand access",
-      "UV-protective acrylic prevents shoe yellowing from sunlight",
-      "Interlocking modular stack system (stack safely up to 20 units)",
-      "Rear ventilation micro-holes prevent moisture & odors"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Material": "High-Impact Shatterproof Acrylic & PP",
-      "Warranty": "1 Year Structure Warranty",
-      "Dimensions": "36cm x 28cm x 22cm (Per Box)",
-      "Max Capacity": "Fits up to IND 13 / IND 13 Men's High-Tops",
-      "Package Quantity": "6 Stackable Display Cases"
+      "Brand": "Crate Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "Pack of 6 Boxes",
-      "Pack of 12 Boxes"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Crystal Clear",
-        "hex": "#f8fafc",
-        "mainImage": "/static/img/accessories-3.jpg",
+        "name": "Crystal Clear / Black Frame",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
         "gallery": [
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "Smoked Obsidian Black",
-        "hex": "#1e293b",
-        "mainImage": "/static/img/men_shoes-5.jpg",
-        "gallery": [
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/men_shoes-3.jpg"
+          "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "a1": {
-    "id": "a1",
-    "name": "Squad Hydro-Shield Complete Care Kit",
-    "brand": "Squad Care",
-    "category": "Sneaker Care & Accessories",
-    "categoryTag": "care",
-    "gender": "accessories",
-    "price": 1199.0,
-    "originalPrice": 1199.0,
-    "discount": "",
+  "acc-dc-54-led-sound-activated-stackable-crate": {
+    "id": "acc-dc-54-led-sound-activated-stackable-crate",
+    "title": "LED Sound-Activated Stackable Sneaker Showcase Crate",
+    "name": "LED Sound-Activated Stackable Sneaker Showcase Crate",
+    "brand": "Crate Squad",
+    "category": "accessories",
+    "subcategory": "display-crates",
+    "categoryTag": "accessories display-crates display-crates led sound activated shoe display case",
+    "gender": "unisex",
+    "price": 2799.0,
+    "originalPrice": 3499.0,
+    "discount": "-20%",
     "rating": 5.0,
-    "reviewsCount": 640,
-    "badge": "Essential",
+    "reviewsCount": 220,
+    "badge": "LED Glow",
     "badgeClass": "limited",
-    "mainImage": "/static/img/accessories-4.jpg",
+    "imageUrl": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
+    "mainImage": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
     "gallery": [
-      "/static/img/accessories-4.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
+      "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg"
     ],
-    "description": "The complete all-in-one professional cleaning system for hype kicks. Includes 200ml Eco-Shield Foam Cleaner, Premium Hard Bristle Sole Brush, Soft Horsehair Suede Brush, and ultra-plush Microfiber Cloth.",
+    "description": "Voice and beat-activated smart ambient LED lighting illuminates your grail kicks with wireless stacking power.",
     "features": [
-      "Safe on all materials: Leather, Suede, Nubuck, Canvas, Flyknit & Vinyl",
-      "98% natural biodegradable plant-based formulation",
-      "Includes 2 brushes (Hard Bristle for soles + Horsehair for delicate uppers)",
-      "Premium 400 GSM lint-free microfiber buffing cloth",
-      "Cleans up to 100+ pairs of sneakers"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Formula": "100% Non-Toxic & Biodegradable",
-      "Warranty": "100% Satisfaction Guarantee",
-      "Suitability": "Leather, Knit, Suede, Mesh, Rubber",
-      "Kit Contains": "200ml Foam Cleaner + 2 Brushes + Microfiber Cloth + Travel Pouch",
-      "Country of Origin": "India / Squad Labs Certified"
+      "Brand": "Crate Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "Standard Care Box (100+ Cleans)"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Pro Care Edition",
-        "hex": "#00ff87",
-        "mainImage": "/static/img/accessories-4.jpg",
+        "name": "Black / Multi-RGB LED",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
         "gallery": [
-          "/static/img/accessories-4.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg"
+          "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "w8": {
-    "id": "w8",
-    "name": "Retro Speedster Pastel Runner",
-    "brand": "Speedster",
-    "category": "Women Athletic Footwear / Suede",
-    "categoryTag": "running retro",
-    "gender": "women",
-    "price": 1149.0,
-    "originalPrice": 1149.0,
-    "discount": "",
+  "acc-dc-55-acrylic-360-degree-shoe-showcase": {
+    "id": "acc-dc-55-acrylic-360-degree-shoe-showcase",
+    "title": "Crystal Clear 360-Degree Acrylic Shoe Showcase",
+    "name": "Crystal Clear 360-Degree Acrylic Shoe Showcase",
+    "brand": "Crate Squad",
+    "category": "accessories",
+    "subcategory": "display-crates",
+    "categoryTag": "accessories display-crates display-crates 360 acrylic display box showcase museum",
+    "gender": "unisex",
+    "price": 2199.0,
+    "originalPrice": 2799.0,
+    "discount": "-21%",
     "rating": 4.9,
-    "reviewsCount": 205,
-    "badge": "New",
+    "reviewsCount": 160,
+    "badge": "Museum Grade",
     "badgeClass": "new",
-    "mainImage": "/static/img/women_shoes-8.jpg",
+    "imageUrl": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
+    "mainImage": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
     "gallery": [
-      "/static/img/women_shoes-8.jpg",
-      "/static/img/women_shoes-1.jpg",
-      "/static/img/women_shoes-4.jpg",
-      "/static/img/women_shoes-5.jpg"
+      "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg"
     ],
-    "description": "Speed-inspired 70s heritage runner silhouette crafted with pastel mint and peach suede paneling, tapered wedge foam, and studded traction nubs.",
+    "description": "Frameless optical-grade acrylic allows seamless viewing from every angle while guarding against dust and yellowing.",
     "features": [
-      "Vintage Heritage Tapered Wedge Midsole",
-      "Pastel Suede & Ripstop Nylon Upper",
-      "Extended Wrapped Heel Rubber Bumper",
-      "High-Traction Cleated Rubber Tread"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Upper": "Premium Suede & Ripstop Mesh",
-      "Midsole": "Dual-Layer Vintage EVA Wedge",
-      "Outsole": "Studded Lug Gum Rubber",
-      "Heel Drop": "10 mm",
-      "Weight": "295g per shoe"
+      "Brand": "Crate Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7",
-      "IND 8 / UK 8"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Pastel Mint & Peach",
-        "hex": "#98ff98",
-        "mainImage": "/static/img/women_shoes-8.jpg",
+        "name": "Full Clear Acrylic",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
         "gallery": [
-          "/static/img/women_shoes-8.jpg",
-          "/static/img/women_shoes-1.jpg",
-          "/static/img/women_shoes-4.jpg"
+          "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "w7": {
-    "id": "w7",
-    "name": "Minimalist Slip-on Platform Mules",
-    "brand": "Mule Kicks",
-    "category": "Women Everyday / Slip-On",
-    "categoryTag": "platform",
-    "gender": "women",
-    "price": 799.0,
-    "originalPrice": 799.0,
-    "discount": "",
-    "rating": 4.6,
-    "reviewsCount": 91,
-    "badge": "Essential",
-    "badgeClass": "new",
-    "mainImage": "/static/img/women_shoes-7.jpg",
-    "gallery": [
-      "/static/img/women_shoes-7.jpg",
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-3.jpg",
-      "/static/img/women_shoes-1.jpg"
-    ],
-    "description": "Effortless slip-on sneaker mule with an elevated platform sole. Perfect for on-the-go lifestyle, combining comfort slippers with sleek sneaker styling.",
-    "features": [
-      "Easy Backless Slip-On Architecture",
-      "Thick Elevated Lightweight Platform Base",
-      "Elastic Side Gussets for Perfect Fit",
-      "Padded Microfiber Inner Foot Lining"
-    ],
-    "specs": {
-      "Upper": "Smooth Matte Vegan Leather",
-      "Midsole": "Featherlight Cushion Platform EVA",
-      "Outsole": "Wave-Tread Anti-Skid Rubber",
-      "Heel Height": "4.2 cm",
-      "Weight": "290g per shoe"
-    },
-    "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7"
-    ],
-    "colors": [
-      {
-        "name": "Matte Cream Nude",
-        "hex": "#e0d6c3",
-        "mainImage": "/static/img/women_shoes-7.jpg",
-        "gallery": [
-          "/static/img/women_shoes-7.jpg",
-          "/static/img/women_shoes-2.jpg",
-          "/static/img/women_shoes-3.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "w6": {
-    "id": "w6",
-    "name": "Vintage Lavender High Canvas",
-    "brand": "Urban Canvas",
-    "category": "Women Vintage Canvas / High-Top",
-    "categoryTag": "retro high-top",
-    "gender": "women",
-    "price": 880.0,
-    "originalPrice": 880.0,
-    "discount": "",
+  "acc-dc-56-modular-interlocking-storage-box-6pk": {
+    "id": "acc-dc-56-modular-interlocking-storage-box-6pk",
+    "title": "Modular Heavy-Duty Interlocking Shoe Storage Box (6-Pack)",
+    "name": "Modular Heavy-Duty Interlocking Shoe Storage Box (6-Pack)",
+    "brand": "Crate Squad",
+    "category": "accessories",
+    "subcategory": "display-crates",
+    "categoryTag": "accessories display-crates display-crates modular interlocking storage box stackable pack",
+    "gender": "unisex",
+    "price": 4499.0,
+    "originalPrice": 5999.0,
+    "discount": "-25%",
     "rating": 4.8,
-    "reviewsCount": 112,
-    "badge": "Hot Pick",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/women_shoes-6.jpg",
+    "reviewsCount": 290,
+    "badge": "Value 6-Pack",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
+    "mainImage": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
     "gallery": [
-      "/static/img/women_shoes-6.jpg",
-      "/static/img/women_shoes-3.jpg",
-      "/static/img/women_shoes-1.jpg",
-      "/static/img/women_shoes-7.jpg"
+      "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg"
     ],
-    "description": "High-top canvas sneaker bathed in charming vintage lavender. Features iconic contrast stitching, brass eyelets, and classic vulcanized rubber toe bumper.",
+    "description": "Precision interlocking groove design lets you assemble a complete wall of sneaker boxes with zero wobbling.",
     "features": [
-      "Heavy-Duty 12oz Organic Cotton Canvas",
-      "Classic High-Top Ankle Support Profile",
-      "Dual Side Ventilation Eyelets",
-      "Vulcanized Rubber Toe Cap & Waffle Sole"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Upper": "100% Organic Washed Canvas",
-      "Midsole": "Cushioned Vulcanized Rubber",
-      "Outsole": "Diamond Texture Gum Rubber",
-      "Heel Height": "2.5 cm",
-      "Weight": "330g per shoe"
+      "Brand": "Crate Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7",
-      "IND 8 / UK 8"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Vintage Lavender",
-        "hex": "#b39ddb",
-        "mainImage": "/static/img/women_shoes-6.jpg",
+        "name": "Smoky Translucent Grey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
         "gallery": [
-          "/static/img/women_shoes-6.jpg",
-          "/static/img/women_shoes-3.jpg",
-          "/static/img/women_shoes-1.jpg"
+          "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "w5": {
-    "id": "w5",
-    "name": "Cyber Neon Chunky Sole Walker",
-    "brand": "Cyber Street",
-    "category": "Women Chunky Streetwear Kicks",
-    "categoryTag": "chunky",
-    "gender": "women",
-    "price": 1349.0,
-    "originalPrice": 1349.0,
-    "discount": "",
+  "acc-oe-57-bamboo-charcoal-deodorizer-pouches": {
+    "id": "acc-oe-57-bamboo-charcoal-deodorizer-pouches",
+    "title": "Bamboo Charcoal Sneaker Deodorizer Pouches (2-Pack)",
+    "name": "Bamboo Charcoal Sneaker Deodorizer Pouches (2-Pack)",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "odor-eliminators",
+    "categoryTag": "accessories odor-eliminators odor-eliminators charcoal deodorizer fresh moisture absorber",
+    "gender": "unisex",
+    "price": 499.0,
+    "originalPrice": 699.0,
+    "discount": "-28%",
     "rating": 4.9,
-    "reviewsCount": 280,
-    "badge": "Exclusive",
-    "badgeClass": "limited",
-    "mainImage": "/static/img/women_shoes-5.jpg",
+    "reviewsCount": 390,
+    "badge": "Natural Fresh",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
+    "mainImage": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
     "gallery": [
-      "/static/img/women_shoes-5.jpg",
-      "/static/img/women_shoes-1.jpg",
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-6.jpg"
+      "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg"
     ],
-    "description": "Futuristic chunky aesthetic featuring vibrant neon accents and sculpted wave-like geometric midsoles for a standout fashion statement.",
+    "description": "Activated moso bamboo charcoal traps moisture and neutralizes pungent foot odors naturally without artificial scent.",
     "features": [
-      "Sculpted Chunky Wave Outsole Profile",
-      "Reflective 3M Accent Piping for Night Glow",
-      "Multi-Layer Suede & TPU Cage Architecture",
-      "Memory-Foam Anti-Fatigue Footbed"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Upper": "Technical Mesh, Suede & TPU Overlays",
-      "Midsole": "High-Density Chunky Phylon",
-      "Outsole": "Heavy-Duty Cleated Rubber",
-      "Heel Height": "5.5 cm",
-      "Weight": "420g per shoe"
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Cyber Neon & Grey",
-        "hex": "#39ff14",
-        "mainImage": "/static/img/women_shoes-5.jpg",
+        "name": "Natural Linen Grey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
         "gallery": [
-          "/static/img/women_shoes-5.jpg",
-          "/static/img/women_shoes-1.jpg",
-          "/static/img/women_shoes-2.jpg"
+          "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "w4": {
-    "id": "w4",
-    "name": "Aura Flow Lightweight Gym Sneaker",
-    "brand": "Aura Athletics",
-    "category": "Women Gym & Training / Breathable",
-    "categoryTag": "running",
-    "gender": "women",
+  "acc-oe-58-fresh-citrus-antifungal-shoe-spray": {
+    "id": "acc-oe-58-fresh-citrus-antifungal-shoe-spray",
+    "title": "Fresh Citrus Shoe Antifungal Deodorant Spray (150ml)",
+    "name": "Fresh Citrus Shoe Antifungal Deodorant Spray (150ml)",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "odor-eliminators",
+    "categoryTag": "accessories odor-eliminators odor-eliminators shoe spray deodorant antibacterial citrus",
+    "gender": "unisex",
+    "price": 599.0,
+    "originalPrice": 799.0,
+    "discount": "-25%",
+    "rating": 4.8,
+    "reviewsCount": 270,
+    "badge": "Instant Fresh",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
+    "mainImage": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
+    "gallery": [
+      "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg"
+    ],
+    "description": "Fast-drying formula infused with tea tree oil and lemon zest kills 99.9% of odor-causing bacteria upon contact.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Cool Citrus Blast",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
+        "gallery": [
+          "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-oe-59-cedar-wood-moisture-absorber-inserts": {
+    "id": "acc-oe-59-cedar-wood-moisture-absorber-inserts",
+    "title": "Cedar Wood Moisture & Odor Absorber Tree Inserts",
+    "name": "Cedar Wood Moisture & Odor Absorber Tree Inserts",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "odor-eliminators",
+    "categoryTag": "accessories odor-eliminators odor-eliminators cedar wood shoe tree absorber inserts",
+    "gender": "unisex",
     "price": 899.0,
-    "originalPrice": 899.0,
-    "discount": "",
+    "originalPrice": 1199.0,
+    "discount": "-25%",
+    "rating": 4.9,
+    "reviewsCount": 180,
+    "badge": "Aromatic Wood",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
+    "mainImage": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
+    "gallery": [
+      "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg"
+    ],
+    "description": "100% natural red cedar absorbs sweat residue after long days of wear and imparts a refined forest aroma.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Aromatic Red Cedar",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
+        "gallery": [
+          "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-oe-60-activated-carbon-kinetic-odor-balls": {
+    "id": "acc-oe-60-activated-carbon-kinetic-odor-balls",
+    "title": "Activated Carbon Kinetic Odor Eliminating Balls (6-Pack)",
+    "name": "Activated Carbon Kinetic Odor Eliminating Balls (6-Pack)",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "odor-eliminators",
+    "categoryTag": "accessories odor-eliminators odor-eliminators sneaker balls deodorizer carbon fresh pack",
+    "gender": "unisex",
+    "price": 649.0,
+    "originalPrice": 849.0,
+    "discount": "-23%",
+    "rating": 4.8,
+    "reviewsCount": 320,
+    "badge": "Twist-Lock Fresh",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
+    "mainImage": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
+    "gallery": [
+      "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg"
+    ],
+    "description": "Compact twist-to-activate deodorizing spheres that fit snug into toes, shoe bags, or locker spaces.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Matte Black / Orange Vents",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
+        "gallery": [
+          "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-ps-45-heavyweight-cotton-flat-laces-sail": {
+    "id": "acc-ps-45-heavyweight-cotton-flat-laces-sail",
+    "title": "Heavyweight Vintage Cotton Flat Laces - Sail Cream (140cm)",
+    "name": "Heavyweight Vintage Cotton Flat Laces - Sail Cream (140cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "premium-shoelaces",
+    "categoryTag": "accessories premium-shoelaces premium-shoelaces sail cream laces flat cotton vintage",
+    "gender": "unisex",
+    "price": 399.0,
+    "originalPrice": 599.0,
+    "discount": "-33%",
+    "rating": 4.9,
+    "reviewsCount": 450,
+    "badge": "Vintage Swap",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
+    "mainImage": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg"
+    ],
+    "description": "100% combed cotton weave delivering the coveted vintage aged aesthetic for Jordan 1s, Dunks, and Sambas.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Vintage Sail Cream",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-ps-46-reflective-3m-rope-laces-black-silver": {
+    "id": "acc-ps-46-reflective-3m-rope-laces-black-silver",
+    "title": "Reflective 3M Rope Laces - Core Black / Silver Weave (120cm)",
+    "name": "Reflective 3M Rope Laces - Core Black / Silver Weave (120cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "premium-shoelaces",
+    "categoryTag": "accessories premium-shoelaces premium-shoelaces rope laces 3m reflective yeezy laces",
+    "gender": "unisex",
+    "price": 499.0,
+    "originalPrice": 699.0,
+    "discount": "-28%",
+    "rating": 4.8,
+    "reviewsCount": 280,
+    "badge": "Night Glow",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
+    "mainImage": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg"
+    ],
+    "description": "Dense circular rope laces threaded with high-visibility 3M reflective fibers that light up under camera flash.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / 3M Reflective Silver",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-ps-47-waxed-cotton-dunk-laces-white": {
+    "id": "acc-ps-47-waxed-cotton-dunk-laces-white",
+    "title": "Waxed Vintage Dunk Aglet Shoelaces - Pure White (160cm)",
+    "name": "Waxed Vintage Dunk Aglet Shoelaces - Pure White (160cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "premium-shoelaces",
+    "categoryTag": "accessories premium-shoelaces premium-shoelaces waxed cotton laces metal tips premium",
+    "gender": "unisex",
+    "price": 549.0,
+    "originalPrice": 749.0,
+    "discount": "-26%",
+    "rating": 4.9,
+    "reviewsCount": 220,
+    "badge": "Gunmetal Aglets",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
+    "mainImage": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg"
+    ],
+    "description": "Water-resistant wax coating gives a sleek sheen and prevents fraying, finished with screw-on engraved metal aglets.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Pure White / Metal Tips",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-ps-48-oval-sb-skate-thick-laces-volt": {
+    "id": "acc-ps-48-oval-sb-skate-thick-laces-volt",
+    "title": "Oval SB Skate Chunky Laces - Neon Volt (140cm)",
+    "name": "Oval SB Skate Chunky Laces - Neon Volt (140cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "premium-shoelaces",
+    "categoryTag": "accessories premium-shoelaces premium-shoelaces oval sb laces chunky skate volt neon",
+    "gender": "unisex",
+    "price": 449.0,
+    "originalPrice": 649.0,
+    "discount": "-30%",
+    "rating": 4.7,
+    "reviewsCount": 160,
+    "badge": "Chunky SB",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
+    "mainImage": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg"
+    ],
+    "description": "Padded thick oval laces modeled after authentic 2000s Nike SB Dunk fat tongues for iconic skate presence.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Neon Volt Yellow",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg"
+        ]
+      }
+    ]
+  },
+  "m-cs-17-balenciaga-triple-s-clear-sole": {
+    "id": "m-cs-17-balenciaga-triple-s-clear-sole",
+    "title": "Balenciaga Triple S Clear Sole White",
+    "name": "Balenciaga Triple S Clear Sole White",
+    "brand": "Balenciaga",
+    "category": "men",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "men chunky-streetwear chunky-streetwear platform dad luxury statement sneaker",
+    "gender": "men",
+    "price": 24999.0,
+    "originalPrice": 29999.0,
+    "discount": "-16%",
+    "rating": 4.9,
+    "reviewsCount": 140,
+    "badge": "Runway Drop",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
+    "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
+    "gallery": [
+      "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg"
+    ],
+    "description": "The definitive chunky dad sneaker built with 3-layered complex sole technology and embroidered toe size.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Balenciaga",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Off-White / Translucent",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
+        "gallery": [
+          "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg"
+        ]
+      }
+    ]
+  },
+  "m-cs-18-new-balance-9060-sea-salt": {
+    "id": "m-cs-18-new-balance-9060-sea-salt",
+    "title": "New Balance 9060 Sea Salt White",
+    "name": "New Balance 9060 Sea Salt White",
+    "brand": "New Balance",
+    "category": "men",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "men chunky-streetwear chunky-streetwear platform retro runner 9060 sneaker",
+    "gender": "men",
+    "price": 14999.0,
+    "originalPrice": 18999.0,
+    "discount": "-21%",
+    "rating": 4.9,
+    "reviewsCount": 230,
+    "badge": "Viral Hit",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
+    "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
+    "gallery": [
+      "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg"
+    ],
+    "description": "Futuristic Y2K aesthetic reinterpreting familiar 99X cues with an exaggerated sculpted pod midsole.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "New Balance",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Sea Salt / Rain Cloud",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
+        "gallery": [
+          "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg"
+        ]
+      }
+    ]
+  },
+  "m-cs-19-adidas-ozweego-pure-chalk": {
+    "id": "m-cs-19-adidas-ozweego-pure-chalk",
+    "title": "Adidas Ozweego Pure Cloud Chalk",
+    "name": "Adidas Ozweego Pure Cloud Chalk",
+    "brand": "Adidas",
+    "category": "men",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "men chunky-streetwear chunky-streetwear adiprene futuristic ozweego sneaker",
+    "gender": "men",
+    "price": 9999.0,
+    "originalPrice": 12999.0,
+    "discount": "-23%",
+    "rating": 4.8,
+    "reviewsCount": 150,
+    "badge": "Tech Vibe",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
+    "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
+    "gallery": [
+      "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg"
+    ],
+    "description": "Futuristic runner with distinctive translucent support tubing and sculpted Adiprene+ shock cushioning.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Adidas",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Cloud White / Core Black",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
+        "gallery": [
+          "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg"
+        ]
+      }
+    ]
+  },
+  "m-cs-20-adidas-yeezy-boost-700-waverunner": {
+    "id": "m-cs-20-adidas-yeezy-boost-700-waverunner",
+    "title": "Adidas Yeezy Boost 700 Wave Runner",
+    "name": "Adidas Yeezy Boost 700 Wave Runner",
+    "brand": "Adidas",
+    "category": "men",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "men chunky-streetwear chunky-streetwear retro limited yeezy 700 wave runner boost sneaker",
+    "gender": "men",
+    "price": 21999.0,
+    "originalPrice": 26999.0,
+    "discount": "-18%",
+    "rating": 4.9,
+    "reviewsCount": 425,
+    "badge": "Design Monument",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
+    "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
+    "gallery": [
+      "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg"
+    ],
+    "description": "The shoe that ignited the chunky luxury wave with grey suede, teal mesh, and full-length drop-in BOOST.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Adidas",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Solid Grey / Chalk White / Teal",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
+        "gallery": [
+          "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg"
+        ]
+      }
+    ]
+  },
+  "m-ht-01-air-jordan-1-retro-chicago": {
+    "id": "m-ht-01-air-jordan-1-retro-chicago",
+    "title": "Air Jordan 1 High OG Chicago Lost & Found",
+    "name": "Air Jordan 1 High OG Chicago Lost & Found",
+    "brand": "Jordan",
+    "category": "men",
+    "subcategory": "high-tops",
+    "categoryTag": "men high-tops high-tops jordan retro basketball chicago sneaker",
+    "gender": "men",
+    "price": 16999.0,
+    "originalPrice": 21999.0,
+    "discount": "-22%",
+    "rating": 5.0,
+    "reviewsCount": 420,
+    "badge": "Holy Grail",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
+    "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
+    "gallery": [
+      "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg"
+    ],
+    "description": "The iconic 1985 silhouette in vintage red, white, and black with cracked leather collars.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Varsity Red / Black / Sail",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
+        "gallery": [
+          "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg"
+        ]
+      }
+    ]
+  },
+  "m-ht-02-air-jordan-1-royal-blue": {
+    "id": "m-ht-02-air-jordan-1-royal-blue",
+    "title": "Air Jordan 1 Retro High OG Royal Blue",
+    "name": "Air Jordan 1 Retro High OG Royal Blue",
+    "brand": "Jordan",
+    "category": "men",
+    "subcategory": "high-tops",
+    "categoryTag": "men high-tops high-tops jordan royal blue retro sneaker",
+    "gender": "men",
+    "price": 15999.0,
+    "originalPrice": 19999.0,
+    "discount": "-20%",
+    "rating": 4.9,
+    "reviewsCount": 310,
+    "badge": "Heritage OG",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
+    "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
+    "gallery": [
+      "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg"
+    ],
+    "description": "Opulent royal blue tumbled leather paired with jet-black panels and Air-Sole cushioning.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Royal Blue / Black / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
+        "gallery": [
+          "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg"
+        ]
+      }
+    ]
+  },
+  "m-ht-03-nike-blazer-mid-77-vintage": {
+    "id": "m-ht-03-nike-blazer-mid-77-vintage",
+    "title": "Nike Blazer Mid 77 Vintage White Black",
+    "name": "Nike Blazer Mid 77 Vintage White Black",
+    "brand": "Nike",
+    "category": "men",
+    "subcategory": "high-tops",
+    "categoryTag": "men high-tops high-tops blazer mid 77 vintage court sneaker",
+    "gender": "men",
+    "price": 7999.0,
+    "originalPrice": 9999.0,
+    "discount": "-20%",
+    "rating": 4.8,
+    "reviewsCount": 240,
+    "badge": "Vintage Court",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
+    "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
+    "gallery": [
+      "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg"
+    ],
+    "description": "Old-school basketball styling featuring crisp leather with exposed foam tongue detailing.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "White / Black / Sail",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
+        "gallery": [
+          "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg"
+        ]
+      }
+    ]
+  },
+  "m-ht-04-off-white-air-jordan-1-high": {
+    "id": "m-ht-04-off-white-air-jordan-1-high",
+    "title": "Off-White x Air Jordan 1 High Ghosting",
+    "name": "Off-White x Air Jordan 1 High Ghosting",
+    "brand": "Jordan",
+    "category": "men",
+    "subcategory": "high-tops",
+    "categoryTag": "men high-tops high-tops off-white limited deconstructed sneaker",
+    "gender": "men",
+    "price": 22999.0,
+    "originalPrice": 27999.0,
+    "discount": "-17%",
+    "rating": 5.0,
+    "reviewsCount": 115,
+    "badge": "Grail Collab",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
+    "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
+    "gallery": [
+      "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg"
+    ],
+    "description": "Virgil Abloh deconstructed high-top masterpiece with exposed foam and industrial print.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "White / Sail / Ghosting",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
+        "gallery": [
+          "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg"
+        ]
+      }
+    ]
+  },
+  "m-lt-05-nike-dunk-low-retro-panda": {
+    "id": "m-lt-05-nike-dunk-low-retro-panda",
+    "title": "Nike Dunk Low Retro Panda Edition",
+    "name": "Nike Dunk Low Retro Panda Edition",
+    "brand": "Nike",
+    "category": "men",
+    "subcategory": "low-tops",
+    "categoryTag": "men low-tops low-tops retro court dunk panda sneaker",
+    "gender": "men",
+    "price": 8999.0,
+    "originalPrice": 11999.0,
+    "discount": "-25%",
+    "rating": 4.9,
+    "reviewsCount": 380,
+    "badge": "Bestseller",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
+    "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
+    "gallery": [
+      "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg"
+    ],
+    "description": "The two-tone hoops legend made with crisp black and white leather overlays.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
+        "gallery": [
+          "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg"
+        ]
+      }
+    ]
+  },
+  "m-lt-06-adidas-samba-og-cloud-white": {
+    "id": "m-lt-06-adidas-samba-og-cloud-white",
+    "title": "Adidas Samba OG Cloud White Core Black",
+    "name": "Adidas Samba OG Cloud White Core Black",
+    "brand": "Adidas",
+    "category": "men",
+    "subcategory": "low-tops",
+    "categoryTag": "men low-tops low-tops retro terrace samba gum sneaker",
+    "gender": "men",
+    "price": 7499.0,
+    "originalPrice": 9999.0,
+    "discount": "-25%",
+    "rating": 4.8,
+    "reviewsCount": 295,
+    "badge": "Terrace OG",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
+    "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
+    "gallery": [
+      "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg"
+    ],
+    "description": "Classic terrace shoe crafted with full-grain leather, T-toe suede bumper, and gum cupsole.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Adidas",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Cloud White / Core Black / Gum",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
+        "gallery": [
+          "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg"
+        ]
+      }
+    ]
+  },
+  "m-lt-07-new-balance-550-white-green": {
+    "id": "m-lt-07-new-balance-550-white-green",
+    "title": "New Balance 550 White Forest Green",
+    "name": "New Balance 550 White Forest Green",
+    "brand": "New Balance",
+    "category": "men",
+    "subcategory": "low-tops",
+    "categoryTag": "men low-tops low-tops retro basketball 550 court sneaker",
+    "gender": "men",
+    "price": 10499.0,
+    "originalPrice": 13999.0,
+    "discount": "-25%",
+    "rating": 4.9,
+    "reviewsCount": 210,
+    "badge": "Hot Drop",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
+    "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
+    "gallery": [
+      "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg"
+    ],
+    "description": "Recreated 1989 basketball classic with perforated leather panels and forest green accents.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "New Balance",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Sea Salt / Forest Green",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
+        "gallery": [
+          "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg"
+        ]
+      }
+    ]
+  },
+  "m-lt-08-puma-suede-classic-xxi-black": {
+    "id": "m-lt-08-puma-suede-classic-xxi-black",
+    "title": "Puma Suede Classic XXI Streetwear",
+    "name": "Puma Suede Classic XXI Streetwear",
+    "brand": "Puma",
+    "category": "men",
+    "subcategory": "low-tops",
+    "categoryTag": "men low-tops low-tops suede classic retro sneaker",
+    "gender": "men",
+    "price": 5499.0,
+    "originalPrice": 6999.0,
+    "discount": "-21%",
     "rating": 4.7,
     "reviewsCount": 165,
-    "badge": "New",
+    "badge": "Cult Classic",
     "badgeClass": "new",
-    "mainImage": "/static/img/women_shoes-4.jpg",
+    "imageUrl": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
+    "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
     "gallery": [
-      "/static/img/women_shoes-4.jpg",
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-5.jpg",
-      "/static/img/women_shoes-8.jpg"
+      "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg"
     ],
-    "description": "Engineered for dynamic workouts, daily jogs, and gym sessions. Ultra-breathable knit weave conforms naturally to your foot while absorbing high-impact landing.",
+    "description": "Rich black velvety suede construction with white Formstrip and metallic gold branding.",
     "features": [
-      "Hyper-Breathable Engineered Knit Weave",
-      "High-Response Energy Returning Foam",
-      "Dynamic Lace Lockdown Webbing",
-      "Ergonomic Heel Counter Support"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Upper": "Ventilated Engineered Knit",
-      "Midsole": "Impact-Flex Energy Foam",
-      "Outsole": "Segmented Flex-Groove Rubber",
-      "Heel Drop": "8 mm",
-      "Weight": "240g per shoe"
+      "Brand": "Puma",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Ice Lilac & Slate",
-        "hex": "#b39ddb",
-        "mainImage": "/static/img/women_shoes-4.jpg",
+        "name": "Puma Black / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
         "gallery": [
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/women_shoes-2.jpg",
-          "/static/img/women_shoes-5.jpg"
+          "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "w3": {
-    "id": "w3",
-    "name": "Rose Blush Suede Court Low",
-    "brand": "Court Classics",
-    "category": "Women Retro Classic / Suede",
-    "categoryTag": "retro",
-    "gender": "women",
-    "price": 949.0,
-    "originalPrice": 949.0,
-    "discount": "",
-    "rating": 4.8,
-    "reviewsCount": 194,
-    "badge": "Trending",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/women_shoes-3.jpg",
-    "gallery": [
-      "/static/img/women_shoes-3.jpg",
-      "/static/img/women_shoes-1.jpg",
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-6.jpg"
-    ],
-    "description": "A timeless low-profile court silhouette bathed in soft rose blush velvety suede. Blends nostalgic retro tennis charm with modern cushioned inner comfort.",
-    "features": [
-      "Handcrafted Velveteen Suede Overlays",
-      "Retro Low-Cut Stitched Cupsole Build",
-      "Moisture-Wicking Cotton Insole",
-      "Embossed Metallic Heel Detail"
-    ],
-    "specs": {
-      "Upper": "Soft Velveteen Suede & Smooth Leather",
-      "Midsole": "Lightweight Molded EVA",
-      "Outsole": "Retro Gum Grip Rubber",
-      "Heel Height": "2.8 cm",
-      "Weight": "320g per shoe"
-    },
-    "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7",
-      "IND 8 / UK 8"
-    ],
-    "colors": [
-      {
-        "name": "Rose Blush & Cream",
-        "hex": "#e8a598",
-        "mainImage": "/static/img/women_shoes-3.jpg",
-        "gallery": [
-          "/static/img/women_shoes-3.jpg",
-          "/static/img/women_shoes-1.jpg",
-          "/static/img/women_shoes-2.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "w2": {
-    "id": "w2",
-    "name": "Aero Cloud Triple White Platform",
-    "brand": "Aero Luxe",
-    "category": "Women Platform / High Cushion",
-    "categoryTag": "platform chunky",
-    "gender": "women",
-    "price": 1299.0,
-    "originalPrice": 1299.0,
-    "discount": "",
+  "m-rc-13-air-jordan-4-retro-bred": {
+    "id": "m-rc-13-air-jordan-4-retro-bred",
+    "title": "Air Jordan 4 Retro Bred Reimagined",
+    "name": "Air Jordan 4 Retro Bred Reimagined",
+    "brand": "Jordan",
+    "category": "men",
+    "subcategory": "retro-classic",
+    "categoryTag": "men retro-classic retro-classic limited jordan 4 bred grail sneaker",
+    "gender": "men",
+    "price": 19999.0,
+    "originalPrice": 24999.0,
+    "discount": "-20%",
     "rating": 5.0,
-    "reviewsCount": 370,
-    "badge": "Cloud Edition",
+    "reviewsCount": 560,
+    "badge": "Tier 1 Grail",
     "badgeClass": "limited",
-    "mainImage": "/static/img/women_shoes-2.jpg",
+    "imageUrl": "/media/sneakers/m-rc-13-air-jordan-4-retro-bred.jpg",
+    "mainImage": "/media/sneakers/m-rc-13-air-jordan-4-retro-bred.jpg",
     "gallery": [
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-1.jpg",
-      "/static/img/women_shoes-3.jpg",
-      "/static/img/women_shoes-5.jpg"
+      "/media/sneakers/m-rc-13-air-jordan-4-retro-bred.jpg"
     ],
-    "description": "The ultimate minimalist high-cushion platform kick in pristine triple white. Built for day-long walking comfort with double-density foam and sleek aerodynamic styling.",
+    "description": "Tinker Hatfield 1989 marvel reimagined in premium supple tumbled black leather with Nike Air heel.",
     "features": [
-      "Double-Stacked Shock Absorbing Platform",
-      "Stain-Resistant Coated Full Grain Leather",
-      "Orthopedic Insole with Arch Stability Support",
-      "Reinforced Padded Collar for Zero Heel Slippage"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Upper": "Triple White Coated Leather",
-      "Midsole": "Aero-Bounce EVA Foam",
-      "Outsole": "Full-Coverage Non-Marking Rubber",
-      "Heel Height": "4.8 cm",
-      "Weight": "375g per shoe"
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Triple Cloud White",
-        "hex": "#ffffff",
-        "mainImage": "/static/img/women_shoes-2.jpg",
+        "name": "Black / Fire Red / Cement Grey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rc-13-air-jordan-4-retro-bred.jpg",
         "gallery": [
-          "/static/img/women_shoes-2.jpg",
-          "/static/img/women_shoes-1.jpg",
-          "/static/img/women_shoes-3.jpg"
+          "/media/sneakers/m-rc-13-air-jordan-4-retro-bred.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "w1": {
-    "id": "w1",
-    "name": "Nova Pastel Platform Chunky",
-    "brand": "Nova Kicks",
-    "category": "Women Platform Sneakers",
-    "categoryTag": "platform chunky",
-    "gender": "women",
-    "price": 1099.0,
-    "originalPrice": 1099.0,
-    "discount": "",
-    "rating": 4.9,
-    "reviewsCount": 289,
-    "badge": "Bestseller",
-    "badgeClass": "new",
-    "mainImage": "/static/img/women_shoes-1.jpg",
-    "gallery": [
-      "/static/img/women_shoes-1.jpg",
-      "/static/img/women_shoes-2.jpg",
-      "/static/img/women_shoes-3.jpg",
-      "/static/img/women_shoes-4.jpg"
-    ],
-    "description": "Elevate your daily street style with Nova Pastel Platform Chunky sneakers. Designed with an ultra-plush cloud foam platform sole, premium pastel synthetic leather upper, and non-slip rubber traction.",
-    "features": [
-      "5cm Cloud-Foam Elevated Platform Sole",
-      "Soft Pastel Multi-Panel Synthetic Leather",
-      "Breathable Mesh Inner Lining with Ankle Cushion",
-      "High-Grip Diamond Textured Rubber Tread"
-    ],
-    "specs": {
-      "Upper": "Premium Soft Leather & Mesh",
-      "Midsole": "Cushioned Cloud-Foam Platform",
-      "Outsole": "Durable Vulcanized Rubber",
-      "Heel Height": "5.0 cm",
-      "Weight": "360g per shoe"
-    },
-    "sizes": [
-      "IND 4 / UK 4",
-      "IND 5 / UK 5",
-      "IND 6 / UK 6",
-      "IND 7 / UK 7",
-      "IND 8 / UK 8"
-    ],
-    "colors": [
-      {
-        "name": "Pastel Peach / White",
-        "hex": "#f7c59f",
-        "mainImage": "/static/img/women_shoes-1.jpg",
-        "gallery": [
-          "/static/img/women_shoes-1.jpg",
-          "/static/img/women_shoes-2.jpg",
-          "/static/img/women_shoes-3.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "m8": {
-    "id": "m8",
-    "name": "Vintage Leather Skater Low",
-    "brand": "Vans / Squad",
-    "category": "Skate / Everyday",
-    "categoryTag": "retro",
+  "m-rc-14-travis-scott-jordan-1-reverse-mocha": {
+    "id": "m-rc-14-travis-scott-jordan-1-reverse-mocha",
+    "title": "Travis Scott x Air Jordan 1 Low Reverse Mocha",
+    "name": "Travis Scott x Air Jordan 1 Low Reverse Mocha",
+    "brand": "Jordan",
+    "category": "men",
+    "subcategory": "retro-classic",
+    "categoryTag": "men retro-classic retro-classic limited travis scott reverse mocha sneaker",
     "gender": "men",
-    "price": 880.0,
-    "originalPrice": 880.0,
-    "discount": "",
-    "rating": 4.8,
-    "reviewsCount": 220,
-    "badge": "Essential",
-    "badgeClass": "new",
-    "mainImage": "/static/img/shoe-1552346154-21d32810aba3.jpg",
-    "gallery": [
-      "/static/img/shoe-1552346154-21d32810aba3.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
-    ],
-    "description": "The ultimate skate park and street cruiser. Reinforced with double canvas lining, padded collar, and vulcanized waffle gum sole for maximum board feel and lasting toughness.",
-    "features": [
-      "Durable heavy-duty 10oz canvas and leather trim",
-      "Signature waffle grip vulcanized rubber sole",
-      "UltraCush HD footbed for impact absorption",
-      "Padded collar for comfort and ankle flexibility",
-      "Reinforced rubber foxing tape"
-    ],
-    "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "340 grams (IND 8)",
-      "Closure": "Reinforced Metal Eyelet Laces",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "UltraCush HD Sockliner",
-      "Style Code": "SK8-M-VINT-LOW",
-      "Sole Material": "Vulcanized Waffle Gum Rubber",
-      "Upper Material": "10oz Canvas & Suede Toe Cap"
-    },
-    "sizes": [
-      "IND 6",
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10"
-    ],
-    "colors": [
-      {
-        "name": "Mustard Gold / White",
-        "hex": "#eab308",
-        "mainImage": "/static/img/shoe-1552346154-21d32810aba3.jpg",
-        "gallery": [
-          "/static/img/shoe-1552346154-21d32810aba3.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      },
-      {
-        "name": "Classic Checker Black",
-        "hex": "#1f2937",
-        "mainImage": "/static/img/men_shoes-5.jpg",
-        "gallery": [
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-8.jpg",
-          "/static/img/men_shoes-6.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "m7": {
-    "id": "m7",
-    "name": "Monochrome Boost Runner 2.0",
-    "brand": "Adidas",
-    "category": "Running / Boost Midsole",
-    "categoryTag": "running",
-    "gender": "men",
-    "price": 1099.0,
-    "originalPrice": 1099.0,
-    "discount": "",
-    "rating": 4.7,
-    "reviewsCount": 194,
-    "badge": "Popular",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/shoe-1595341888016-a392ef81b7de.jpg",
-    "gallery": [
-      "/static/img/shoe-1595341888016-a392ef81b7de.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
-    ],
-    "description": "Engineered with a 100% Boost midsole pellet bed that recycles your energy in real-time. The Primeknit 360 wrap adapts dynamically to your foot's expansion throughout the day.",
-    "features": [
-      "Full-length high-rebound Boost midsole",
-      "Primeknit 360 seamless woven upper",
-      "Continental\u2122 tyre rubber outsole for wet and dry grip",
-      "Torsion spring system embedded in the midsole",
-      "Molded heel frame for natural Achilles motion"
-    ],
-    "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "290 grams (IND 8)",
-      "Closure": "Adaptive Sock Fit with Laces",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "100% Boost Energy Capsules",
-      "Style Code": "AD-M-BOOST-2",
-      "Sole Material": "Continental\u2122 Rubber Outsole",
-      "Upper Material": "Primeknit Recycled Textile"
-    },
-    "sizes": [
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11"
-    ],
-    "colors": [
-      {
-        "name": "Monochrome Core Black",
-        "hex": "#111827",
-        "mainImage": "/static/img/shoe-1595341888016-a392ef81b7de.jpg",
-        "gallery": [
-          "/static/img/shoe-1595341888016-a392ef81b7de.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      },
-      {
-        "name": "Cloud White",
-        "hex": "#f3f4f6",
-        "mainImage": "/static/img/women_shoes-5.jpg",
-        "gallery": [
-          "/static/img/women_shoes-5.jpg",
-          "/static/img/women_shoes-2.jpg",
-          "/static/img/men_shoes-6.jpg",
-          "/static/img/men_shoes-7.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "m6": {
-    "id": "m6",
-    "name": "Heritage Low Suede Court Classic",
-    "brand": "Heritage",
-    "category": "Retro / Leather & Suede",
-    "categoryTag": "retro",
-    "gender": "men",
-    "price": 949.0,
-    "originalPrice": 949.0,
-    "discount": "",
-    "rating": 4.9,
-    "reviewsCount": 176,
-    "badge": "New Release",
-    "badgeClass": "new",
-    "mainImage": "/static/img/shoe-1539185441755-769473a23570.jpg",
-    "gallery": [
-      "/static/img/shoe-1539185441755-769473a23570.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
-    ],
-    "description": "Timeless court silhouette rendered in soft brushed olive and tan suede. Pairs seamlessly with tailored trousers, relaxed denim, or summer shorts for a refined yet casual everyday look.",
-    "features": [
-      "Premium brushed velvet-touch suede upper",
-      "Perforated side panels for breathability",
-      "Gum rubber outsole with retro herringbone grip",
-      "Low-profile padded ankle collar",
-      "Debossed retro insignia on tongue"
-    ],
-    "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "320 grams (IND 8)",
-      "Closure": "Tonal Flat Laces",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Comfort PU Foam Insole",
-      "Style Code": "HRT-M-SUEDE-LOW",
-      "Sole Material": "Natural Honey Gum Rubber",
-      "Upper Material": "Genuine Brushed Suede"
-    },
-    "sizes": [
-      "IND 6",
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11"
-    ],
-    "colors": [
-      {
-        "name": "Vintage Olive / Gum",
-        "hex": "#708238",
-        "mainImage": "/static/img/shoe-1539185441755-769473a23570.jpg",
-        "gallery": [
-          "/static/img/shoe-1539185441755-769473a23570.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      },
-      {
-        "name": "Oatmeal Tan",
-        "hex": "#d2b48c",
-        "mainImage": "/static/img/men_shoes-8.jpg",
-        "gallery": [
-          "/static/img/men_shoes-8.jpg",
-          "/static/img/men_shoes-6.jpg",
-          "/static/img/women_shoes-1.jpg",
-          "/static/img/women_shoes-5.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "m5": {
-    "id": "m5",
-    "name": "Squad X Onyx Shadow High",
-    "brand": "Squad Collab",
-    "category": "Limited Edition Kicks",
-    "categoryTag": "high-top",
-    "gender": "men",
-    "price": 1499.0,
-    "originalPrice": 1499.0,
-    "discount": "",
+    "price": 23999.0,
+    "originalPrice": 28999.0,
+    "discount": "-17%",
     "rating": 5.0,
-    "reviewsCount": 520,
-    "badge": "Collab Drop",
+    "reviewsCount": 620,
+    "badge": "Collab Icon",
     "badgeClass": "limited",
-    "mainImage": "/static/img/shoe-5.jpg",
+    "imageUrl": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
+    "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
     "gallery": [
-      "/static/img/shoe-5.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
+      "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg"
     ],
-    "description": "The crown jewel of the men's collection. Hand-finished black suede meets pitch-black oil-waxed leather with dark chrome metal hardware. Designed in limited quantity for streetwear enthusiasts who appreciate understated opulence.",
+    "description": "Reverse oversized Swoosh, rich earth-toned dark mocha nubuck, and aged yellowed sail midsole.",
     "features": [
-      "Handcrafted oil-waxed leather and Italian suede panelling",
-      "Dark chrome metallic aglets and custom lace dubrae",
-      "Memory foam dual-tier insole with arch support",
-      "Embossed limited edition serialization inside collar",
-      "Custom matte-black collector storage box included"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Origin": "Imported / Limited Run",
-      "Weight": "430 grams (IND 8)",
-      "Closure": "Waxed Cotton Laces",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Orthopedic Memory Foam Core",
-      "Style Code": "SQD-M-ONYX-SHDW",
-      "Sole Material": "Vulcanized Stealth Black Rubber",
-      "Upper Material": "Oil-Waxed Calfskin Leather & Suede"
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Onyx Shadow Black",
-        "hex": "#0a0a0a",
-        "mainImage": "/static/img/shoe-5.jpg",
+        "name": "Sail / Dark Mocha / University Red",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
         "gallery": [
-          "/static/img/shoe-5.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      },
-      {
-        "name": "Ash Grey Smoke",
-        "hex": "#404040",
-        "mainImage": "/static/img/women_shoes-4.jpg",
-        "gallery": [
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/men_shoes-3.jpg"
+          "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "m4": {
-    "id": "m4",
-    "name": "Urban Street Chunky Trail Runner",
-    "brand": "Squad Kicks",
-    "category": "Streetwear / Chunky",
-    "categoryTag": "chunky",
-    "gender": "men",
-    "price": 999.0,
-    "originalPrice": 999.0,
-    "discount": "",
-    "rating": 4.6,
-    "reviewsCount": 104,
-    "badge": "Trending",
-    "badgeClass": "new",
-    "mainImage": "/static/img/men_shoes-1.jpg",
-    "gallery": [
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
-    ],
-    "description": "Exaggerated proportions meet rugged outdoors versatility. The Urban Street Chunky Trail Runner features a multi-layered silhouette with heavy lug traction, tactical rope laces, and aggressive geometric midsole sculpting.",
-    "features": [
-      "Sculpted oversized chunky midsole",
-      "Deep-groove trail lug rubber outsole",
-      "Layered suede, nubuck, and breathable mesh upper",
-      "Tactical rope lacing with metallic hiking eyelets",
-      "Heel and tongue pull loops for swift entry"
-    ],
-    "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "460 grams (IND 8)",
-      "Closure": "Hiking Eyelet Rope Laces",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Max Density High-Stack Cushioning",
-      "Style Code": "URB-M-TRAIL-04",
-      "Sole Material": "EVA Sculpted Midsole & Lug Rubber",
-      "Upper Material": "Suede, Nubuck Leather & Heavy Mesh"
-    },
-    "sizes": [
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11"
-    ],
-    "colors": [
-      {
-        "name": "Earthy Olive / Sand",
-        "hex": "#556b2f",
-        "mainImage": "/static/img/men_shoes-1.jpg",
-        "gallery": [
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      },
-      {
-        "name": "Triple Carbon Grey",
-        "hex": "#4b5563",
-        "mainImage": "/static/img/men_shoes-5.jpg",
-        "gallery": [
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-4.jpg",
-          "/static/img/men_shoes-1.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "m3": {
-    "id": "m3",
-    "name": "Court Legacy High Royal Blue",
+  "m-rc-15-nike-air-max-90-infrared-vintage": {
+    "id": "m-rc-15-nike-air-max-90-infrared-vintage",
+    "title": "Nike Air Max 90 Infrared OG Vintage",
+    "name": "Nike Air Max 90 Infrared OG Vintage",
     "brand": "Nike",
-    "category": "Basketball / Court",
-    "categoryTag": "basketball",
+    "category": "men",
+    "subcategory": "retro-classic",
+    "categoryTag": "men retro-classic retro-classic 90s infrared air max visible air sneaker",
     "gender": "men",
-    "price": 1249.0,
-    "originalPrice": 1249.0,
-    "discount": "",
-    "rating": 4.7,
-    "reviewsCount": 156,
-    "badge": "Sale 18%",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/shoe-6.jpg",
+    "price": 11499.0,
+    "originalPrice": 13999.0,
+    "discount": "-17%",
+    "rating": 4.9,
+    "reviewsCount": 335,
+    "badge": "90s Legend",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/m-rc-15-nike-air-max-90-infrared-vintage.jpg",
+    "mainImage": "/media/sneakers/m-rc-15-nike-air-max-90-infrared-vintage.jpg",
     "gallery": [
-      "/static/img/shoe-6.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
+      "/media/sneakers/m-rc-15-nike-air-max-90-infrared-vintage.jpg"
     ],
-    "description": "Command the court and the streets with the Court Legacy High. Featuring royal blue leather panelling with white accent sidewalls and reinforced ankle padding, this sneaker delivers timeless hoops fashion.",
+    "description": "Tinker Hatfield 1990 masterpiece featuring radiant infrared TPU frames and visible heel Air-Sole.",
     "features": [
-      "Heavyweight supple leather upper",
-      "Thick cushioned collar for superior ankle bracing",
-      "Non-marking rubber tread with pivot circle",
-      "Ventilated toe perforations for all-day comfort",
-      "Reinforced heel cap"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "410 grams (IND 8)",
-      "Closure": "High-Top Lace Up",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Encapsulated Air Heel Core",
-      "Style Code": "CRT-M-LEG-ROYAL",
-      "Sole Material": "Solid Rubber",
-      "Upper Material": "Genuine Leather & Synthetic Overlays"
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11",
-      "IND 12"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Royal Blue / White",
-        "hex": "#2563eb",
-        "mainImage": "/static/img/shoe-6.jpg",
+        "name": "White / Black / Cool Grey / Radiant Red",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rc-15-nike-air-max-90-infrared-vintage.jpg",
         "gallery": [
-          "/static/img/shoe-6.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      },
-      {
-        "name": "Black / Grey",
-        "hex": "#374151",
-        "mainImage": "/static/img/women_shoes-4.jpg",
-        "gallery": [
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/men_shoes-3.jpg"
+          "/media/sneakers/m-rc-15-nike-air-max-90-infrared-vintage.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "m2": {
-    "id": "m2",
-    "name": "Ghost Velocity Ultra Lime Runner",
-    "brand": "Squad Sport",
-    "category": "Performance Runner",
-    "categoryTag": "running",
+  "m-rc-16-new-balance-990v6-castlerock": {
+    "id": "m-rc-16-new-balance-990v6-castlerock",
+    "title": "New Balance 990v6 Made in USA Castlerock",
+    "name": "New Balance 990v6 Made in USA Castlerock",
+    "brand": "New Balance",
+    "category": "men",
+    "subcategory": "retro-classic",
+    "categoryTag": "men retro-classic retro-classic handcrafted made in usa 990v6 sneaker",
     "gender": "men",
-    "price": 1149.0,
-    "originalPrice": 1149.0,
-    "discount": "",
-    "rating": 4.8,
-    "reviewsCount": 88,
-    "badge": "New Arrival",
-    "badgeClass": "new",
-    "mainImage": "/static/img/shoe-1560769629-975ec94e6a86.jpg",
+    "price": 21499.0,
+    "originalPrice": 25999.0,
+    "discount": "-17%",
+    "rating": 4.9,
+    "reviewsCount": 215,
+    "badge": "Handcrafted USA",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
+    "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
     "gallery": [
-      "/static/img/shoe-1560769629-975ec94e6a86.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
+      "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg"
     ],
-    "description": "Built for marathon pacing and track workouts, the Ghost Velocity Ultra features a neon lime gradient body with an embedded composite carbon plate that drives forward propulsion with every stride.",
+    "description": "Handcrafted pinnacle lifestyle runner engineered in Massachusetts with FuelCell foam and pigskin suede.",
     "features": [
-      "Propulsion carbon-composite rocker plate",
-      "Super-critical dual-foam midsole stack",
-      "Featherlight monomesh upper with laser perforations",
-      "Grip-lock heel counter prevents slipping during high pace sprints",
-      "Water-repellent coating on toe shield"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "210 grams (IND 8)",
-      "Closure": "Ribbed Speed Lacing",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Ultra Carbon Spring Plate",
-      "Style Code": "GHO-M-VEL-LIME",
-      "Sole Material": "Carbon Infused Rubber & Superfoam",
-      "Upper Material": "Laser-Perforated Monomesh"
+      "Brand": "New Balance",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 6",
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Neon Lime / Black",
-        "hex": "#84cc16",
-        "mainImage": "/static/img/shoe-1560769629-975ec94e6a86.jpg",
+        "name": "Castlerock Grey / Marblehead",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
         "gallery": [
-          "/static/img/shoe-1560769629-975ec94e6a86.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      },
-      {
-        "name": "Electric Blue",
-        "hex": "#0284c7",
-        "mainImage": "/static/img/men_shoes-7.jpg",
-        "gallery": [
-          "/static/img/men_shoes-7.jpg",
-          "/static/img/men_shoes-3.jpg",
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-1.jpg"
+          "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg"
         ]
       }
+    ]
+  },
+  "m-rp-09-nike-air-zoom-pegasus-40": {
+    "id": "m-rp-09-nike-air-zoom-pegasus-40",
+    "title": "Nike Air Zoom Pegasus 40 Crimson",
+    "name": "Nike Air Zoom Pegasus 40 Crimson",
+    "brand": "Nike",
+    "category": "men",
+    "subcategory": "running-performance",
+    "categoryTag": "men running-performance running-performance athletic sports zoom pegasus sneaker",
+    "gender": "men",
+    "price": 9499.0,
+    "originalPrice": 11999.0,
+    "discount": "-20%",
+    "rating": 4.9,
+    "reviewsCount": 320,
+    "badge": "Speed Daily",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
+    "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
+    "gallery": [
+      "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg"
     ],
-    "inStock": true
+    "description": "Resilient daily road running shoe combining Nike React foam with dual Zoom Air units.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Bright Crimson / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
+        "gallery": [
+          "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg"
+        ]
+      }
+    ]
+  },
+  "m-rp-10-adidas-ultraboost-light-carbon": {
+    "id": "m-rp-10-adidas-ultraboost-light-carbon",
+    "title": "Adidas Ultraboost Light Carbon Black",
+    "name": "Adidas Ultraboost Light Carbon Black",
+    "brand": "Adidas",
+    "category": "men",
+    "subcategory": "running-performance",
+    "categoryTag": "men running-performance running-performance athletic boost ultraboost sneaker",
+    "gender": "men",
+    "price": 13999.0,
+    "originalPrice": 17999.0,
+    "discount": "-22%",
+    "rating": 4.9,
+    "reviewsCount": 270,
+    "badge": "Ultralight BOOST",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
+    "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
+    "gallery": [
+      "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg"
+    ],
+    "description": "Experience epic kinetic energy with the lightest BOOST ever and an adaptive Primeknit+ upper.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Adidas",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Core Black / Carbon / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
+        "gallery": [
+          "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg"
+        ]
+      }
+    ]
+  },
+  "m-rp-11-nike-vaporfly-3-electric-mint": {
+    "id": "m-rp-11-nike-vaporfly-3-electric-mint",
+    "title": "Nike Vaporfly 3 Electric Mint Racer",
+    "name": "Nike Vaporfly 3 Electric Mint Racer",
+    "brand": "Nike",
+    "category": "men",
+    "subcategory": "running-performance",
+    "categoryTag": "men running-performance running-performance racing carbon plate vaporfly sneaker",
+    "gender": "men",
+    "price": 18999.0,
+    "originalPrice": 22999.0,
+    "discount": "-17%",
+    "rating": 5.0,
+    "reviewsCount": 145,
+    "badge": "Marathon Elite",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
+    "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
+    "gallery": [
+      "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg"
+    ],
+    "description": "Podium-dominating marathon super shoe with full-length carbon Flyplate and ZoomX foam.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Electric Green / Screaming Mint",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
+        "gallery": [
+          "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg"
+        ]
+      }
+    ]
+  },
+  "m-rp-12-nike-tempo-next-flyknit": {
+    "id": "m-rp-12-nike-tempo-next-flyknit",
+    "title": "Nike Air Zoom Tempo Next% Flyknit",
+    "name": "Nike Air Zoom Tempo Next% Flyknit",
+    "brand": "Nike",
+    "category": "men",
+    "subcategory": "running-performance",
+    "categoryTag": "men running-performance running-performance tempo zoom next flyknit sneaker",
+    "gender": "men",
+    "price": 15499.0,
+    "originalPrice": 18999.0,
+    "discount": "-18%",
+    "rating": 4.8,
+    "reviewsCount": 140,
+    "badge": "High Cadence",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/m-rp-12-nike-tempo-next-flyknit.jpg",
+    "mainImage": "/media/sneakers/m-rp-12-nike-tempo-next-flyknit.jpg",
+    "gallery": [
+      "/media/sneakers/m-rp-12-nike-tempo-next-flyknit.jpg"
+    ],
+    "description": "Dual visible Zoom Air pods offer ultra-snappy propulsion during high-speed tempo training.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Volt / White / Black",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rp-12-nike-tempo-next-flyknit.jpg",
+        "gallery": [
+          "/media/sneakers/m-rp-12-nike-tempo-next-flyknit.jpg"
+        ]
+      }
+    ]
+  },
+  "w-cs-37-air-jordan-1-retro-shadow-2": {
+    "id": "w-cs-37-air-jordan-1-retro-shadow-2",
+    "title": "Air Jordan 1 Retro High Shadow 2.0",
+    "name": "Air Jordan 1 Retro High Shadow 2.0",
+    "brand": "Jordan",
+    "category": "women",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "women chunky-streetwear chunky-streetwear limited jordan shadow high sneaker",
+    "gender": "women",
+    "price": 16499.0,
+    "originalPrice": 19999.0,
+    "discount": "-17%",
+    "rating": 4.9,
+    "reviewsCount": 275,
+    "badge": "Shadow OG",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/w-cs-37-air-jordan-1-retro-shadow-2.jpg",
+    "mainImage": "/media/sneakers/w-cs-37-air-jordan-1-retro-shadow-2.jpg",
+    "gallery": [
+      "/media/sneakers/w-cs-37-air-jordan-1-retro-shadow-2.jpg"
+    ],
+    "description": "Understated brilliance pairing plush smoke grey nubuck overlays over a rich matte black leather base.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / Medium Grey / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-cs-37-air-jordan-1-retro-shadow-2.jpg",
+        "gallery": [
+          "/media/sneakers/w-cs-37-air-jordan-1-retro-shadow-2.jpg"
+        ]
+      }
+    ]
+  },
+  "w-cs-38-nike-react-phantom-run-street": {
+    "id": "w-cs-38-nike-react-phantom-run-street",
+    "title": "Nike React Phantom Run Street Edition",
+    "name": "Nike React Phantom Run Street Edition",
+    "brand": "Nike",
+    "category": "women",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "women chunky-streetwear chunky-streetwear laceless flyknit react running sneaker",
+    "gender": "women",
+    "price": 11999.0,
+    "originalPrice": 14999.0,
+    "discount": "-20%",
+    "rating": 4.8,
+    "reviewsCount": 160,
+    "badge": "Laceless React",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-cs-38-nike-react-phantom-run-street.jpg",
+    "mainImage": "/media/sneakers/w-cs-38-nike-react-phantom-run-street.jpg",
+    "gallery": [
+      "/media/sneakers/w-cs-38-nike-react-phantom-run-street.jpg"
+    ],
+    "description": "Laceless Flyknit Loft upper with chunky React sole unit cradling the foot with futuristic bounce.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / White / Volt",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-cs-38-nike-react-phantom-run-street.jpg",
+        "gallery": [
+          "/media/sneakers/w-cs-38-nike-react-phantom-run-street.jpg"
+        ]
+      }
+    ]
+  },
+  "w-cs-39-onitsuka-tiger-mexico-66-street": {
+    "id": "w-cs-39-onitsuka-tiger-mexico-66-street",
+    "title": "Onitsuka Tiger Mexico 66 Street Edition",
+    "name": "Onitsuka Tiger Mexico 66 Street Edition",
+    "brand": "Onitsuka Tiger",
+    "category": "women",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "women chunky-streetwear chunky-streetwear retro canvas onitsuka mexico 66 sneaker",
+    "gender": "women",
+    "price": 8499.0,
+    "originalPrice": 10499.0,
+    "discount": "-19%",
+    "rating": 4.8,
+    "reviewsCount": 195,
+    "badge": "Retro Street",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-cs-39-onitsuka-tiger-mexico-66-street.jpg",
+    "mainImage": "/media/sneakers/w-cs-39-onitsuka-tiger-mexico-66-street.jpg",
+    "gallery": [
+      "/media/sneakers/w-cs-39-onitsuka-tiger-mexico-66-street.jpg"
+    ],
+    "description": "Vintage track heritage reimagined with distinctive cross-stripe leather side accents.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Onitsuka Tiger",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Birch / India Ink / Latte",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-cs-39-onitsuka-tiger-mexico-66-street.jpg",
+        "gallery": [
+          "/media/sneakers/w-cs-39-onitsuka-tiger-mexico-66-street.jpg"
+        ]
+      }
+    ]
+  },
+  "w-cs-40-fila-disruptor-ii-premium-white": {
+    "id": "w-cs-40-fila-disruptor-ii-premium-white",
+    "title": "Fila Disruptor II Premium White Chunky",
+    "name": "Fila Disruptor II Premium White Chunky",
+    "brand": "Fila",
+    "category": "women",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "women chunky-streetwear chunky-streetwear chunky dad disruptor platform sneaker",
+    "gender": "women",
+    "price": 6999.0,
+    "originalPrice": 8999.0,
+    "discount": "-22%",
+    "rating": 4.7,
+    "reviewsCount": 240,
+    "badge": "Chunky Kingpin",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-cs-40-fila-disruptor-ii-premium-white.jpg",
+    "mainImage": "/media/sneakers/w-cs-40-fila-disruptor-ii-premium-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-cs-40-fila-disruptor-ii-premium-white.jpg"
+    ],
+    "description": "The unmistakable 90s chunky silhouette with serrated sawtooth rubber outsole and molded EVA midsole.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fila",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Triple White / Navy Trim",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-cs-40-fila-disruptor-ii-premium-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-cs-40-fila-disruptor-ii-premium-white.jpg"
+        ]
+      }
+    ]
+  },
+  "w-mw-33-nike-air-force-1-triple-white": {
+    "id": "w-mw-33-nike-air-force-1-triple-white",
+    "title": "Nike Air Force 1 07 Triple White",
+    "name": "Nike Air Force 1 07 Triple White",
+    "brand": "Nike",
+    "category": "women",
+    "subcategory": "minimalist-white",
+    "categoryTag": "women minimalist-white minimalist-white triple white air force court sneaker",
+    "gender": "women",
+    "price": 8195.0,
+    "originalPrice": 9999.0,
+    "discount": "-18%",
+    "rating": 4.9,
+    "reviewsCount": 520,
+    "badge": "Wardrobe Essential",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-mw-33-nike-air-force-1-triple-white.jpg",
+    "mainImage": "/media/sneakers/w-mw-33-nike-air-force-1-triple-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-mw-33-nike-air-force-1-triple-white.jpg"
+    ],
+    "description": "Pristine triple-white low silhouette with stitched leather overlays and encapsulated Air-Sole cushioning.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Triple White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-mw-33-nike-air-force-1-triple-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-mw-33-nike-air-force-1-triple-white.jpg"
+        ]
+      }
+    ]
+  },
+  "w-mw-34-vans-old-skool-true-white": {
+    "id": "w-mw-34-vans-old-skool-true-white",
+    "title": "Vans Old Skool True White Canvas Suede",
+    "name": "Vans Old Skool True White Canvas Suede",
+    "brand": "Vans",
+    "category": "women",
+    "subcategory": "minimalist-white",
+    "categoryTag": "women minimalist-white minimalist-white skate canvas old skool white sneaker",
+    "gender": "women",
+    "price": 4999.0,
+    "originalPrice": 5999.0,
+    "discount": "-16%",
+    "rating": 4.8,
+    "reviewsCount": 230,
+    "badge": "Pure White",
+    "badgeClass": "sale",
+    "imageUrl": "/media/sneakers/w-mw-34-vans-old-skool-true-white.jpg",
+    "mainImage": "/media/sneakers/w-mw-34-vans-old-skool-true-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-mw-34-vans-old-skool-true-white.jpg"
+    ],
+    "description": "Monochrome clean white canvas and suede construction with signature waffle rubber outsoles.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Vans",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "True White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-mw-34-vans-old-skool-true-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-mw-34-vans-old-skool-true-white.jpg"
+        ]
+      }
+    ]
+  },
+  "w-mw-35-nike-dunk-low-barely-green": {
+    "id": "w-mw-35-nike-dunk-low-barely-green",
+    "title": "Nike Dunk Low White Barely Green Pastel",
+    "name": "Nike Dunk Low White Barely Green Pastel",
+    "brand": "Nike",
+    "category": "women",
+    "subcategory": "minimalist-white",
+    "categoryTag": "women minimalist-white minimalist-white dunk pastel clean court sneaker",
+    "gender": "women",
+    "price": 9999.0,
+    "originalPrice": 12499.0,
+    "discount": "-20%",
+    "rating": 4.9,
+    "reviewsCount": 185,
+    "badge": "Pastel Minimalist",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-mw-35-nike-dunk-low-barely-green.jpg",
+    "mainImage": "/media/sneakers/w-mw-35-nike-dunk-low-barely-green.jpg",
+    "gallery": [
+      "/media/sneakers/w-mw-35-nike-dunk-low-barely-green.jpg"
+    ],
+    "description": "Subtle pastel hue overlays over crisp white leather delivering a calm, minimalist court profile.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Sail / Barely Green / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-mw-35-nike-dunk-low-barely-green.jpg",
+        "gallery": [
+          "/media/sneakers/w-mw-35-nike-dunk-low-barely-green.jpg"
+        ]
+      }
+    ]
+  },
+  "w-mw-36-veja-campo-extra-white-natural": {
+    "id": "w-mw-36-veja-campo-extra-white-natural",
+    "title": "Veja Campo Extra White Natural Leather",
+    "name": "Veja Campo Extra White Natural Leather",
+    "brand": "Veja",
+    "category": "women",
+    "subcategory": "minimalist-white",
+    "categoryTag": "women minimalist-white minimalist-white veja sustainable chrome-free leather sneaker",
+    "gender": "women",
+    "price": 13999.0,
+    "originalPrice": 16999.0,
+    "discount": "-17%",
+    "rating": 4.8,
+    "reviewsCount": 195,
+    "badge": "Sustainable Luxury",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-mw-36-veja-campo-extra-white-natural.jpg",
+    "mainImage": "/media/sneakers/w-mw-36-veja-campo-extra-white-natural.jpg",
+    "gallery": [
+      "/media/sneakers/w-mw-36-veja-campo-extra-white-natural.jpg"
+    ],
+    "description": "Sustainably crafted with ChromeFree leather, Amazonian rubber soles, and iconic V-logo side panels.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Veja",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Extra White / Natural Suede",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-mw-36-veja-campo-extra-white-natural.jpg",
+        "gallery": [
+          "/media/sneakers/w-mw-36-veja-campo-extra-white-natural.jpg"
+        ]
+      }
+    ]
+  },
+  "w-ps-21-puma-mayze-stack-platform-white": {
+    "id": "w-ps-21-puma-mayze-stack-platform-white",
+    "title": "Puma Mayze Stack Platform White",
+    "name": "Puma Mayze Stack Platform White",
+    "brand": "Puma",
+    "category": "women",
+    "subcategory": "platform-sneakers",
+    "categoryTag": "women platform-sneakers platform-sneakers chunky stacked sole mayze sneaker",
+    "gender": "women",
+    "price": 7999.0,
+    "originalPrice": 9999.0,
+    "discount": "-20%",
+    "rating": 4.8,
+    "reviewsCount": 215,
+    "badge": "Stacked Sole",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-ps-21-puma-mayze-stack-platform-white.jpg",
+    "mainImage": "/media/sneakers/w-ps-21-puma-mayze-stack-platform-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-ps-21-puma-mayze-stack-platform-white.jpg"
+    ],
+    "description": "Multi-layered elevated platform sole with jagged tooling and clean white leather upper.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Puma",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Puma White / Pristine",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-ps-21-puma-mayze-stack-platform-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-ps-21-puma-mayze-stack-platform-white.jpg"
+        ]
+      }
+    ]
+  },
+  "w-ps-22-nike-m2k-tekno-phantom-summit": {
+    "id": "w-ps-22-nike-m2k-tekno-phantom-summit",
+    "title": "Nike M2K Tekno Phantom Summit",
+    "name": "Nike M2K Tekno Phantom Summit",
+    "brand": "Nike",
+    "category": "women",
+    "subcategory": "platform-sneakers",
+    "categoryTag": "women platform-sneakers platform-sneakers chunky dad platform m2k tekno sneaker",
+    "gender": "women",
+    "price": 8499.0,
+    "originalPrice": 10999.0,
+    "discount": "-22%",
+    "rating": 4.7,
+    "reviewsCount": 180,
+    "badge": "Chunky Platform",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-ps-22-nike-m2k-tekno-phantom-summit.jpg",
+    "mainImage": "/media/sneakers/w-ps-22-nike-m2k-tekno-phantom-summit.jpg",
+    "gallery": [
+      "/media/sneakers/w-ps-22-nike-m2k-tekno-phantom-summit.jpg"
+    ],
+    "description": "Sculpted foam midsole with TPU heel clip providing futuristic lift and all-day comfort.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Phantom / Summit White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-ps-22-nike-m2k-tekno-phantom-summit.jpg",
+        "gallery": [
+          "/media/sneakers/w-ps-22-nike-m2k-tekno-phantom-summit.jpg"
+        ]
+      }
+    ]
+  },
+  "w-ps-23-salomon-xt6-mindful-trail": {
+    "id": "w-ps-23-salomon-xt6-mindful-trail",
+    "title": "Salomon XT-6 Mindful Trail Platform",
+    "name": "Salomon XT-6 Mindful Trail Platform",
+    "brand": "Salomon",
+    "category": "women",
+    "subcategory": "platform-sneakers",
+    "categoryTag": "women platform-sneakers platform-sneakers gorpcore trail platform xt6 sneaker",
+    "gender": "women",
+    "price": 16999.0,
+    "originalPrice": 19999.0,
+    "discount": "-15%",
+    "rating": 4.9,
+    "reviewsCount": 190,
+    "badge": "Gorpcore Platform",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-ps-23-salomon-xt6-mindful-trail.jpg",
+    "mainImage": "/media/sneakers/w-ps-23-salomon-xt6-mindful-trail.jpg",
+    "gallery": [
+      "/media/sneakers/w-ps-23-salomon-xt6-mindful-trail.jpg"
+    ],
+    "description": "High-fashion gorpcore platform sneaker with Quicklace closure and Mud Contagrip lugged outsole.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Salomon",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Vanilla Ice / Almond Milk",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-ps-23-salomon-xt6-mindful-trail.jpg",
+        "gallery": [
+          "/media/sneakers/w-ps-23-salomon-xt6-mindful-trail.jpg"
+        ]
+      }
+    ]
+  },
+  "w-ps-24-converse-run-star-motion-platform": {
+    "id": "w-ps-24-converse-run-star-motion-platform",
+    "title": "Converse Run Star Motion Canvas Platform",
+    "name": "Converse Run Star Motion Canvas Platform",
+    "brand": "Converse",
+    "category": "women",
+    "subcategory": "platform-sneakers",
+    "categoryTag": "women platform-sneakers platform-sneakers chunky motion lug platform converse sneaker",
+    "gender": "women",
+    "price": 9499.0,
+    "originalPrice": 11999.0,
+    "discount": "-20%",
+    "rating": 4.8,
+    "reviewsCount": 175,
+    "badge": "Exaggerated Lug",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-ps-24-converse-run-star-motion-platform.jpg",
+    "mainImage": "/media/sneakers/w-ps-24-converse-run-star-motion-platform.jpg",
+    "gallery": [
+      "/media/sneakers/w-ps-24-converse-run-star-motion-platform.jpg"
+    ],
+    "description": "Playful and distorted lines pair ultra-comfortable CX foam with an exaggerated wavy lug platform.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Converse",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / White / Gum Honey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-ps-24-converse-run-star-motion-platform.jpg",
+        "gallery": [
+          "/media/sneakers/w-ps-24-converse-run-star-motion-platform.jpg"
+        ]
+      }
+    ]
+  },
+  "w-rt-25-asics-gel-nimbus-25-sunrise": {
+    "id": "w-rt-25-asics-gel-nimbus-25-sunrise",
+    "title": "Asics Gel-Nimbus 25 Sunrise Coral",
+    "name": "Asics Gel-Nimbus 25 Sunrise Coral",
+    "brand": "Asics",
+    "category": "women",
+    "subcategory": "running-trainers",
+    "categoryTag": "women running-trainers running-trainers sports cushion gel nimbus sneaker",
+    "gender": "women",
+    "price": 12499.0,
+    "originalPrice": 14999.0,
+    "discount": "-16%",
+    "rating": 4.8,
+    "reviewsCount": 195,
+    "badge": "Max Cushion",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-rt-25-asics-gel-nimbus-25-sunrise.jpg",
+    "mainImage": "/media/sneakers/w-rt-25-asics-gel-nimbus-25-sunrise.jpg",
+    "gallery": [
+      "/media/sneakers/w-rt-25-asics-gel-nimbus-25-sunrise.jpg"
+    ],
+    "description": "Ultra-soft PureGEL technology embedded beneath plush FF BLAST PLUS ECO cushioning foam.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Asics",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Sunrise Coral / Pure Silver",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-rt-25-asics-gel-nimbus-25-sunrise.jpg",
+        "gallery": [
+          "/media/sneakers/w-rt-25-asics-gel-nimbus-25-sunrise.jpg"
+        ]
+      }
+    ]
+  },
+  "w-rt-26-new-balance-fresh-foam-1080v13": {
+    "id": "w-rt-26-new-balance-fresh-foam-1080v13",
+    "title": "New Balance Fresh Foam X 1080v13",
+    "name": "New Balance Fresh Foam X 1080v13",
+    "brand": "New Balance",
+    "category": "women",
+    "subcategory": "running-trainers",
+    "categoryTag": "women running-trainers running-trainers fresh foam sports athletic trainer sneaker",
+    "gender": "women",
+    "price": 13499.0,
+    "originalPrice": 15999.0,
+    "discount": "-15%",
+    "rating": 4.9,
+    "reviewsCount": 170,
+    "badge": "Smooth Glide",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-rt-26-new-balance-fresh-foam-1080v13.jpg",
+    "mainImage": "/media/sneakers/w-rt-26-new-balance-fresh-foam-1080v13.jpg",
+    "gallery": [
+      "/media/sneakers/w-rt-26-new-balance-fresh-foam-1080v13.jpg"
+    ],
+    "description": "Pinnacle road daily trainer with Fresh Foam X rocker geometry and an engineered breathable mesh chassis.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "New Balance",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Starlight / Sea Salt",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-rt-26-new-balance-fresh-foam-1080v13.jpg",
+        "gallery": [
+          "/media/sneakers/w-rt-26-new-balance-fresh-foam-1080v13.jpg"
+        ]
+      }
+    ]
+  },
+  "w-rt-27-hoka-clifton-9-rose-mist": {
+    "id": "w-rt-27-hoka-clifton-9-rose-mist",
+    "title": "Hoka Clifton 9 Rose Mist Daily Runner",
+    "name": "Hoka Clifton 9 Rose Mist Daily Runner",
+    "brand": "Hoka",
+    "category": "women",
+    "subcategory": "running-trainers",
+    "categoryTag": "women running-trainers running-trainers hoka clifton plush road trainer sneaker",
+    "gender": "women",
+    "price": 14499.0,
+    "originalPrice": 16999.0,
+    "discount": "-14%",
+    "rating": 4.9,
+    "reviewsCount": 230,
+    "badge": "Cloud Stride",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-rt-27-hoka-clifton-9-rose-mist.jpg",
+    "mainImage": "/media/sneakers/w-rt-27-hoka-clifton-9-rose-mist.jpg",
+    "gallery": [
+      "/media/sneakers/w-rt-27-hoka-clifton-9-rose-mist.jpg"
+    ],
+    "description": "Revitalized underfoot experience with responsive new compression-molded EVA foam and sleek collar.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Hoka",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Rose Mist / Peach Cream",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-rt-27-hoka-clifton-9-rose-mist.jpg",
+        "gallery": [
+          "/media/sneakers/w-rt-27-hoka-clifton-9-rose-mist.jpg"
+        ]
+      }
+    ]
+  },
+  "w-rt-28-nike-air-max-270-coral-white": {
+    "id": "w-rt-28-nike-air-max-270-coral-white",
+    "title": "Nike Air Max 270 Coral White Edition",
+    "name": "Nike Air Max 270 Coral White Edition",
+    "brand": "Nike",
+    "category": "women",
+    "subcategory": "running-trainers",
+    "categoryTag": "women running-trainers running-trainers air max 270 visible bubble trainer sneaker",
+    "gender": "women",
+    "price": 11999.0,
+    "originalPrice": 14999.0,
+    "discount": "-20%",
+    "rating": 4.8,
+    "reviewsCount": 260,
+    "badge": "Air 270",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-rt-28-nike-air-max-270-coral-white.jpg",
+    "mainImage": "/media/sneakers/w-rt-28-nike-air-max-270-coral-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-rt-28-nike-air-max-270-coral-white.jpg"
+    ],
+    "description": "Boasting Nike largest heel Air unit yet for a super-soft ride that feels as impossible as it looks.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "White / Barely Rose / Coral",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-rt-28-nike-air-max-270-coral-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-rt-28-nike-air-max-270-coral-white.jpg"
+        ]
+      }
+    ]
+  },
+  "w-so-29-vans-classic-slip-on-checkerboard": {
+    "id": "w-so-29-vans-classic-slip-on-checkerboard",
+    "title": "Vans Classic Slip-On Checkerboard",
+    "name": "Vans Classic Slip-On Checkerboard",
+    "brand": "Vans",
+    "category": "women",
+    "subcategory": "slip-on-sneakers",
+    "categoryTag": "women slip-on-sneakers slip-on-sneakers laceless skate checkerboard sneaker",
+    "gender": "women",
+    "price": 4299.0,
+    "originalPrice": 5499.0,
+    "discount": "-21%",
+    "rating": 4.9,
+    "reviewsCount": 410,
+    "badge": "Skate Icon",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-so-29-vans-classic-slip-on-checkerboard.jpg",
+    "mainImage": "/media/sneakers/w-so-29-vans-classic-slip-on-checkerboard.jpg",
+    "gallery": [
+      "/media/sneakers/w-so-29-vans-classic-slip-on-checkerboard.jpg"
+    ],
+    "description": "The unmistakable southern California icon with elastic side accents and signature waffle outsoles.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Vans",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / Off-White Checkerboard",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-so-29-vans-classic-slip-on-checkerboard.jpg",
+        "gallery": [
+          "/media/sneakers/w-so-29-vans-classic-slip-on-checkerboard.jpg"
+        ]
+      }
+    ]
+  },
+  "w-so-30-balenciaga-speed-2-knit-slip-on": {
+    "id": "w-so-30-balenciaga-speed-2-knit-slip-on",
+    "title": "Balenciaga Speed 2.0 Knit Sock Slip-On",
+    "name": "Balenciaga Speed 2.0 Knit Sock Slip-On",
+    "brand": "Balenciaga",
+    "category": "women",
+    "subcategory": "slip-on-sneakers",
+    "categoryTag": "women slip-on-sneakers slip-on-sneakers sock knit luxury speed trainer sneaker",
+    "gender": "women",
+    "price": 19999.0,
+    "originalPrice": 24999.0,
+    "discount": "-20%",
+    "rating": 4.9,
+    "reviewsCount": 160,
+    "badge": "Sock Runner",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/w-so-30-balenciaga-speed-2-knit-slip-on.jpg",
+    "mainImage": "/media/sneakers/w-so-30-balenciaga-speed-2-knit-slip-on.jpg",
+    "gallery": [
+      "/media/sneakers/w-so-30-balenciaga-speed-2-knit-slip-on.jpg"
+    ],
+    "description": "Technical 3D knit sock runner featuring ultra-flexible molded ergonomic sole with shock absorption.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Balenciaga",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / White Ergonomic Sole",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-so-30-balenciaga-speed-2-knit-slip-on.jpg",
+        "gallery": [
+          "/media/sneakers/w-so-30-balenciaga-speed-2-knit-slip-on.jpg"
+        ]
+      }
+    ]
+  },
+  "w-so-31-puma-adelina-comfort-slipon": {
+    "id": "w-so-31-puma-adelina-comfort-slipon",
+    "title": "Puma Adelina Comfort Slip-On Blossom",
+    "name": "Puma Adelina Comfort Slip-On Blossom",
+    "brand": "Puma",
+    "category": "women",
+    "subcategory": "slip-on-sneakers",
+    "categoryTag": "women slip-on-sneakers slip-on-sneakers ballerina softfoam comfort sneaker",
+    "gender": "women",
+    "price": 3999.0,
+    "originalPrice": 4999.0,
+    "discount": "-20%",
+    "rating": 4.7,
+    "reviewsCount": 185,
+    "badge": "Everyday Ease",
+    "badgeClass": "sale",
+    "imageUrl": "/media/sneakers/w-so-31-puma-adelina-comfort-slipon.jpg",
+    "mainImage": "/media/sneakers/w-so-31-puma-adelina-comfort-slipon.jpg",
+    "gallery": [
+      "/media/sneakers/w-so-31-puma-adelina-comfort-slipon.jpg"
+    ],
+    "description": "Chic ballet-sneaker crossover built for light travel and recovery with plush SoftFoam+ footbeds.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Puma",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Rose Dust / Marshmallow",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-so-31-puma-adelina-comfort-slipon.jpg",
+        "gallery": [
+          "/media/sneakers/w-so-31-puma-adelina-comfort-slipon.jpg"
+        ]
+      }
+    ]
+  },
+  "w-so-32-adidas-puremotion-adapt-white": {
+    "id": "w-so-32-adidas-puremotion-adapt-white",
+    "title": "Adidas Puremotion Adapt Slip-On White",
+    "name": "Adidas Puremotion Adapt Slip-On White",
+    "brand": "Adidas",
+    "category": "women",
+    "subcategory": "slip-on-sneakers",
+    "categoryTag": "women slip-on-sneakers slip-on-sneakers laceless puremotion cloudfoam sneaker",
+    "gender": "women",
+    "price": 5299.0,
+    "originalPrice": 6499.0,
+    "discount": "-18%",
+    "rating": 4.8,
+    "reviewsCount": 210,
+    "badge": "Cloud Comfort",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-so-32-adidas-puremotion-adapt-white.jpg",
+    "mainImage": "/media/sneakers/w-so-32-adidas-puremotion-adapt-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-so-32-adidas-puremotion-adapt-white.jpg"
+    ],
+    "description": "Laceless slip-on featuring supportive crossover elastic bandage straps and plush Cloudfoam cushioning.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Adidas",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Cloud White / Core Black",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-so-32-adidas-puremotion-adapt-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-so-32-adidas-puremotion-adapt-white.jpg"
+        ]
+      }
+    ]
   },
   "m1": {
     "id": "m1",
-    "name": "Apex Retro High 1 'Chicago'",
-    "brand": "Squad Apex",
-    "category": "High-Top / Basketball",
-    "categoryTag": "high-top",
+    "title": "Balenciaga Triple S Clear Sole White",
+    "name": "Balenciaga Triple S Clear Sole White",
+    "brand": "Balenciaga",
+    "category": "men",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "men chunky-streetwear chunky-streetwear platform dad luxury statement sneaker",
     "gender": "men",
-    "price": 1399.0,
-    "originalPrice": 1399.0,
-    "discount": "",
+    "price": 24999.0,
+    "originalPrice": 29999.0,
+    "discount": "-16%",
     "rating": 4.9,
-    "reviewsCount": 312,
-    "badge": "Hot Drop",
+    "reviewsCount": 140,
+    "badge": "Runway Drop",
     "badgeClass": "limited",
-    "mainImage": "/static/img/shoe-1600185365926-3a2ce3cdb9eb.jpg",
+    "imageUrl": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
+    "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
     "gallery": [
-      "/static/img/shoe-1600185365926-3a2ce3cdb9eb.jpg",
-      "/static/img/shoe-2.jpg",
-      "/static/img/men_shoes-1.jpg",
-      "/static/img/shoe-3.jpg"
+      "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg"
     ],
-    "description": "The Chicago colourway is etched into streetwear history. Combining fiery varsity red, clean crisp white, and jet-black accent panels, the Apex Retro High 1 is structured for both on-court dominance and weekend street fits.",
+    "description": "The definitive chunky dad sneaker built with 3-layered complex sole technology and embroidered toe size.",
     "features": [
-      "100% full-grain leather construction",
-      "Stitched vintage sail-tone rubber midsole",
-      "Thick padded tongue with woven heritage label",
-      "Multi-directional traction cupsole",
-      "Anti-crease toe box internal support"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "415 grams (IND 8)",
-      "Closure": "High-Top Lace Up",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Air Cushion Heel Core",
-      "Style Code": "APX-M-CHI-01",
-      "Sole Material": "Solid Stitched Rubber Cupsole",
-      "Upper Material": "Full Grain Genuine Leather"
+      "Brand": "Balenciaga",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Varsity Chicago Red",
-        "hex": "#dc2626",
-        "mainImage": "/static/img/shoe-1600185365926-3a2ce3cdb9eb.jpg",
+        "name": "Off-White / Translucent",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
         "gallery": [
-          "/static/img/shoe-1600185365926-3a2ce3cdb9eb.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-3.jpg"
-        ]
-      },
-      {
-        "name": "Bred Toe",
-        "hex": "#111827",
-        "mainImage": "/static/img/women_shoes-4.jpg",
-        "gallery": [
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/men_shoes-3.jpg"
+          "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "p8": {
-    "id": "p8",
-    "name": "Air Jordan Retro Eclipse Red",
-    "brand": "Jordan",
-    "category": "Premium Street Kicks",
-    "categoryTag": "limited",
-    "gender": "unisex",
-    "price": 1599.0,
-    "originalPrice": 1599.0,
-    "discount": "",
-    "rating": 5.0,
-    "reviewsCount": 410,
-    "badge": "Exclusive",
-    "badgeClass": "limited",
-    "mainImage": "/static/img/shoe-1.jpg",
+  "m2": {
+    "id": "m2",
+    "title": "New Balance 9060 Sea Salt White",
+    "name": "New Balance 9060 Sea Salt White",
+    "brand": "New Balance",
+    "category": "men",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "men chunky-streetwear chunky-streetwear platform retro runner 9060 sneaker",
+    "gender": "men",
+    "price": 14999.0,
+    "originalPrice": 18999.0,
+    "discount": "-21%",
+    "rating": 4.9,
+    "reviewsCount": 230,
+    "badge": "Viral Hit",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
+    "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
     "gallery": [
-      "/static/img/shoe-1.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
+      "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg"
     ],
-    "description": "A grail among sneaker collectors worldwide. The Retro Eclipse Red is meticulously crafted using premium full-grain patent leather overlays, red velvet trim linings, and an ice-clear translucent outsole with custom artwork underlay.",
+    "description": "Futuristic Y2K aesthetic reinterpreting familiar 99X cues with an exaggerated sculpted pod midsole.",
     "features": [
-      "Mirror-finish patent leather with ballistic nylon mesh",
-      "Full-length carbon fiber shank plate under midfoot",
-      "Iconic translucent icy outsole with herringbone traction pods",
-      "Padded quick-tie round rope laces",
-      "Custom collector drop-box with golden foil packaging"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Origin": "Imported / Limited Collector Tier",
-      "Weight": "440 grams (IND 8)",
-      "Closure": "Fast-Lock Round Rope Lacing",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Encapsulated Full-Length Air Cushion",
-      "Style Code": "JD-ECLIPSE-RED-GRAIL",
-      "Sole Material": "Clear Ice Rubber & Carbon Fiber Plate",
-      "Upper Material": "Patent Leather & Ballistic Nylon"
+      "Brand": "New Balance",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11",
-      "IND 12"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Eclipse Cherry Red / White",
-        "hex": "#991b1b",
-        "mainImage": "/static/img/shoe-1.jpg",
+        "name": "Sea Salt / Rain Cloud",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
         "gallery": [
-          "/static/img/shoe-1.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "Space Black Patent",
-        "hex": "#000000",
-        "mainImage": "/static/img/men_shoes-5.jpg",
-        "gallery": [
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-8.jpg"
+          "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "p7": {
-    "id": "p7",
-    "name": "Puma Nitro Velocity Stealth",
-    "brand": "Puma",
-    "category": "Daily Runner",
-    "categoryTag": "running",
-    "gender": "unisex",
-    "price": 880.0,
-    "originalPrice": 880.0,
-    "discount": "",
-    "rating": 4.6,
-    "reviewsCount": 72,
-    "badge": "Deal",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/shoe-2.jpg",
-    "gallery": [
-      "/static/img/shoe-2.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
-    ],
-    "description": "The ideal daily trainer for everyday runners. Infused with Puma's cutting-edge nitrogen-injected NITRO FOAM, the Velocity Stealth offers featherweight cushioning without sacrificing longevity or energy rebound.",
-    "features": [
-      "Nitrogen-infused NITRO FOAM for ultralight, bouncy strides",
-      "PUMAGRIP high-durability all-surface rubber compound",
-      "Engineered mesh upper with targeted breathability zones",
-      "TPU heel piece provides stability and guides foot transition",
-      "Anti-odor antimicrobial insole"
-    ],
-    "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "250 grams (IND 8)",
-      "Closure": "Standard Athletic Lace-Up",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "NITRO Foam Nitrogen-Injected",
-      "Style Code": "PM-NITRO-STEALTH-01",
-      "Sole Material": "PUMAGRIP Rubber Compound",
-      "Upper Material": "Engineered Jacquard Mesh"
-    },
-    "sizes": [
-      "IND 6",
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10"
-    ],
-    "colors": [
-      {
-        "name": "Matte Stealth Black",
-        "hex": "#171717",
-        "mainImage": "/static/img/shoe-2.jpg",
-        "gallery": [
-          "/static/img/shoe-2.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "Glacier Grey",
-        "hex": "#94a3b8",
-        "mainImage": "/static/img/women_shoes-5.jpg",
-        "gallery": [
-          "/static/img/women_shoes-5.jpg",
-          "/static/img/women_shoes-2.jpg",
-          "/static/img/shoe-7.jpg",
-          "/static/img/men_shoes-6.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "p6": {
-    "id": "p6",
-    "name": "Adidas Simore Flight 72",
+  "m3": {
+    "id": "m3",
+    "title": "Adidas Ozweego Pure Cloud Chalk",
+    "name": "Adidas Ozweego Pure Cloud Chalk",
     "brand": "Adidas",
-    "category": "Court Performance",
-    "categoryTag": "basketball",
-    "gender": "unisex",
-    "price": 1299.0,
-    "originalPrice": 1299.0,
-    "discount": "",
-    "rating": 4.9,
-    "reviewsCount": 164,
-    "badge": "New Edition",
+    "category": "men",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "men chunky-streetwear chunky-streetwear adiprene futuristic ozweego sneaker",
+    "gender": "men",
+    "price": 9999.0,
+    "originalPrice": 12999.0,
+    "discount": "-23%",
+    "rating": 4.8,
+    "reviewsCount": 150,
+    "badge": "Tech Vibe",
     "badgeClass": "new",
-    "mainImage": "/static/img/shoe-3.jpg",
+    "imageUrl": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
+    "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
     "gallery": [
-      "/static/img/shoe-3.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
+      "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg"
     ],
-    "description": "Built for explosive guards and high-flying forwards, the Simore Flight 72 features responsive Lightstrike Pro foam coupled with a torsional propulsion plate that launches your jump game to higher altitudes.",
+    "description": "Futuristic runner with distinctive translucent support tubing and sculpted Adiprene+ shock cushioning.",
     "features": [
-      "Lightstrike Pro dual-density midsole foam",
-      "Carbon-infused torsion shank for energy efficiency",
-      "Herringbone multi-zone grip pattern on outer sole",
-      "Seamless engineered jacquard knit upper",
-      "Molded external heel counter locks down backfoot"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "360 grams (IND 8)",
-      "Closure": "Midfoot Webbing Lace System",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Lightstrike Pro Technology",
-      "Style Code": "AD-FLIGHT-72-PRO",
-      "Sole Material": "Non-Marking Court Rubber",
-      "Upper Material": "Jacquard Woven Textile"
+      "Brand": "Adidas",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11",
-      "IND 12"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Cyan Mist / Neon Yellow",
-        "hex": "#06b6d4",
-        "mainImage": "/static/img/shoe-3.jpg",
+        "name": "Cloud White / Core Black",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
         "gallery": [
-          "/static/img/shoe-3.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "Stealth Carbon",
-        "hex": "#18181b",
-        "mainImage": "/static/img/men_shoes-5.jpg",
-        "gallery": [
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/men_shoes-3.jpg"
+          "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "p5": {
-    "id": "p5",
-    "name": "Nike Air Vapor Glow White",
+  "m4": {
+    "id": "m4",
+    "title": "Adidas Yeezy Boost 700 Wave Runner",
+    "name": "Adidas Yeezy Boost 700 Wave Runner",
+    "brand": "Adidas",
+    "category": "men",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "men chunky-streetwear chunky-streetwear retro limited yeezy 700 wave runner boost sneaker",
+    "gender": "men",
+    "price": 21999.0,
+    "originalPrice": 26999.0,
+    "discount": "-18%",
+    "rating": 4.9,
+    "reviewsCount": 425,
+    "badge": "Design Monument",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
+    "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
+    "gallery": [
+      "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg"
+    ],
+    "description": "The shoe that ignited the chunky luxury wave with grey suede, teal mesh, and full-length drop-in BOOST.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Adidas",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Solid Grey / Chalk White / Teal",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
+        "gallery": [
+          "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg"
+        ]
+      }
+    ]
+  },
+  "m5": {
+    "id": "m5",
+    "title": "Air Jordan 1 High OG Chicago Lost & Found",
+    "name": "Air Jordan 1 High OG Chicago Lost & Found",
+    "brand": "Jordan",
+    "category": "men",
+    "subcategory": "high-tops",
+    "categoryTag": "men high-tops high-tops jordan retro basketball chicago sneaker",
+    "gender": "men",
+    "price": 16999.0,
+    "originalPrice": 21999.0,
+    "discount": "-22%",
+    "rating": 5.0,
+    "reviewsCount": 420,
+    "badge": "Holy Grail",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
+    "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
+    "gallery": [
+      "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg"
+    ],
+    "description": "The iconic 1985 silhouette in vintage red, white, and black with cracked leather collars.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Varsity Red / Black / Sail",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
+        "gallery": [
+          "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg"
+        ]
+      }
+    ]
+  },
+  "m6": {
+    "id": "m6",
+    "title": "Air Jordan 1 Retro High OG Royal Blue",
+    "name": "Air Jordan 1 Retro High OG Royal Blue",
+    "brand": "Jordan",
+    "category": "men",
+    "subcategory": "high-tops",
+    "categoryTag": "men high-tops high-tops jordan royal blue retro sneaker",
+    "gender": "men",
+    "price": 15999.0,
+    "originalPrice": 19999.0,
+    "discount": "-20%",
+    "rating": 4.9,
+    "reviewsCount": 310,
+    "badge": "Heritage OG",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
+    "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
+    "gallery": [
+      "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg"
+    ],
+    "description": "Opulent royal blue tumbled leather paired with jet-black panels and Air-Sole cushioning.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Royal Blue / Black / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
+        "gallery": [
+          "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg"
+        ]
+      }
+    ]
+  },
+  "m7": {
+    "id": "m7",
+    "title": "Nike Blazer Mid 77 Vintage White Black",
+    "name": "Nike Blazer Mid 77 Vintage White Black",
     "brand": "Nike",
-    "category": "Urban Lifestyle",
-    "categoryTag": "lifestyle",
-    "gender": "unisex",
-    "price": 999.0,
-    "originalPrice": 999.0,
-    "discount": "",
-    "rating": 4.7,
-    "reviewsCount": 89,
-    "badge": "Best Seller",
+    "category": "men",
+    "subcategory": "high-tops",
+    "categoryTag": "men high-tops high-tops blazer mid 77 vintage court sneaker",
+    "gender": "men",
+    "price": 7999.0,
+    "originalPrice": 9999.0,
+    "discount": "-20%",
+    "rating": 4.8,
+    "reviewsCount": 240,
+    "badge": "Vintage Court",
     "badgeClass": "new",
-    "mainImage": "/static/img/shoe-4.jpg",
+    "imageUrl": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
+    "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
     "gallery": [
-      "/static/img/shoe-4.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
+      "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg"
     ],
-    "description": "Crisp, futuristic, and effortlessly stylish. The Nike Air Vapor Glow White merges translucent upper paneling with pearlescent pastel highlights for an ultramodern, cloud-like aesthetic suited for everyday city exploration.",
+    "description": "Old-school basketball styling featuring crisp leather with exposed foam tongue detailing.",
     "features": [
-      "Translucent synthetic mesh with iridescent underlays",
-      "Segmented VaporMax bubble pods for bouncy suspension",
-      "Ultra-minimalist heel pull tab for rapid slip-on",
-      "Integrated sock-like knit collar that hugs the ankle",
-      "Breathable moisture-wicking internal lining"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "260 grams (IND 8)",
-      "Closure": "Elastic Lace Pull",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Targeted Vapor Cushioning System",
-      "Style Code": "NK-VAPOR-GLOW-WHT",
-      "Sole Material": "Thermoplastic Polyurethane Pods",
-      "Upper Material": "Translucent TPU Mesh & Synthetic Knit"
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 6",
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Pure Pearl White",
-        "hex": "#f8fafc",
-        "mainImage": "/static/img/shoe-4.jpg",
+        "name": "White / Black / Sail",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
         "gallery": [
-          "/static/img/shoe-4.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "Pastel Lavender Glow",
-        "hex": "#e0e7ff",
-        "mainImage": "/static/img/men_shoes-6.jpg",
-        "gallery": [
-          "/static/img/men_shoes-6.jpg",
-          "/static/img/women_shoes-1.jpg",
-          "/static/img/women_shoes-5.jpg",
-          "/static/img/men_shoes-8.jpg"
+          "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg"
         ]
       }
-    ],
-    "inStock": true
+    ]
   },
-  "p4": {
-    "id": "p4",
-    "name": "Adidas Addes Soo1t Banned",
-    "brand": "Adidas",
-    "category": "Heritage High-Tops",
-    "categoryTag": "limited",
-    "gender": "unisex",
-    "price": 1399.0,
-    "originalPrice": 1399.0,
-    "discount": "",
-    "rating": 5.0,
-    "reviewsCount": 340,
-    "badge": "Collector",
-    "badgeClass": "limited",
-    "mainImage": "/static/img/shoe-5.jpg",
-    "gallery": [
-      "/static/img/shoe-5.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
-    ],
-    "description": "The rare collector edition high-top that defied convention. The Soo1t Banned edition features luxurious matte black leather with contrasting scarlet accents, stitched sidewalls, and an individually numbered woven tongue tag.",
-    "features": [
-      "Limited edition collector packaging with commemorative dust bag",
-      "Buttery-soft nappa leather combined with suede trims",
-      "OrthoLite\u00ae antibacterial comfort sockliner",
-      "Reinforced double-stitched toe box against wear and creasing",
-      "Signature metallic gold debossed brand detailing"
-    ],
-    "specs": {
-      "Origin": "Imported / Limited Production Run",
-      "Weight": "395 grams (IND 8)",
-      "Closure": "Flat Waxed Laces",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "OrthoLite\u00ae Cloud Insole",
-      "Style Code": "AD-SOO1T-BANNED",
-      "Sole Material": "Vintage Tinted Vulcanized Rubber",
-      "Upper Material": "Nappa Leather & Suede Trims"
-    },
-    "sizes": [
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11"
-    ],
-    "colors": [
-      {
-        "name": "Banned Scarlet / Onyx",
-        "hex": "#dc2626",
-        "mainImage": "/static/img/shoe-5.jpg",
-        "gallery": [
-          "/static/img/shoe-5.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "Triple Obsidian",
-        "hex": "#0f172a",
-        "mainImage": "/static/img/men_shoes-5.jpg",
-        "gallery": [
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/men_shoes-3.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "p3": {
-    "id": "p3",
-    "name": "Classic Basketball Retro High Blue",
+  "m8": {
+    "id": "m8",
+    "title": "Off-White x Air Jordan 1 High Ghosting",
+    "name": "Off-White x Air Jordan 1 High Ghosting",
     "brand": "Jordan",
-    "category": "High-Top Court",
-    "categoryTag": "basketball",
-    "gender": "unisex",
-    "price": 1249.0,
-    "originalPrice": 1249.0,
-    "discount": "",
+    "category": "men",
+    "subcategory": "high-tops",
+    "categoryTag": "men high-tops high-tops off-white limited deconstructed sneaker",
+    "gender": "men",
+    "price": 22999.0,
+    "originalPrice": 27999.0,
+    "discount": "-17%",
+    "rating": 5.0,
+    "reviewsCount": 115,
+    "badge": "Grail Collab",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
+    "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
+    "gallery": [
+      "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg"
+    ],
+    "description": "Virgil Abloh deconstructed high-top masterpiece with exposed foam and industrial print.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "White / Sail / Ghosting",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
+        "gallery": [
+          "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg"
+        ]
+      }
+    ]
+  },
+  "m9": {
+    "id": "m9",
+    "title": "Nike Dunk Low Retro Panda Edition",
+    "name": "Nike Dunk Low Retro Panda Edition",
+    "brand": "Nike",
+    "category": "men",
+    "subcategory": "low-tops",
+    "categoryTag": "men low-tops low-tops retro court dunk panda sneaker",
+    "gender": "men",
+    "price": 8999.0,
+    "originalPrice": 11999.0,
+    "discount": "-25%",
+    "rating": 4.9,
+    "reviewsCount": 380,
+    "badge": "Bestseller",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
+    "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
+    "gallery": [
+      "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg"
+    ],
+    "description": "The two-tone hoops legend made with crisp black and white leather overlays.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
+        "gallery": [
+          "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg"
+        ]
+      }
+    ]
+  },
+  "m10": {
+    "id": "m10",
+    "title": "Adidas Samba OG Cloud White Core Black",
+    "name": "Adidas Samba OG Cloud White Core Black",
+    "brand": "Adidas",
+    "category": "men",
+    "subcategory": "low-tops",
+    "categoryTag": "men low-tops low-tops retro terrace samba gum sneaker",
+    "gender": "men",
+    "price": 7499.0,
+    "originalPrice": 9999.0,
+    "discount": "-25%",
+    "rating": 4.8,
+    "reviewsCount": 295,
+    "badge": "Terrace OG",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
+    "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
+    "gallery": [
+      "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg"
+    ],
+    "description": "Classic terrace shoe crafted with full-grain leather, T-toe suede bumper, and gum cupsole.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Adidas",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Cloud White / Core Black / Gum",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
+        "gallery": [
+          "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg"
+        ]
+      }
+    ]
+  },
+  "m11": {
+    "id": "m11",
+    "title": "New Balance 550 White Forest Green",
+    "name": "New Balance 550 White Forest Green",
+    "brand": "New Balance",
+    "category": "men",
+    "subcategory": "low-tops",
+    "categoryTag": "men low-tops low-tops retro basketball 550 court sneaker",
+    "gender": "men",
+    "price": 10499.0,
+    "originalPrice": 13999.0,
+    "discount": "-25%",
+    "rating": 4.9,
+    "reviewsCount": 210,
+    "badge": "Hot Drop",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
+    "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
+    "gallery": [
+      "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg"
+    ],
+    "description": "Recreated 1989 basketball classic with perforated leather panels and forest green accents.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "New Balance",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Sea Salt / Forest Green",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
+        "gallery": [
+          "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg"
+        ]
+      }
+    ]
+  },
+  "m12": {
+    "id": "m12",
+    "title": "Puma Suede Classic XXI Streetwear",
+    "name": "Puma Suede Classic XXI Streetwear",
+    "brand": "Puma",
+    "category": "men",
+    "subcategory": "low-tops",
+    "categoryTag": "men low-tops low-tops suede classic retro sneaker",
+    "gender": "men",
+    "price": 5499.0,
+    "originalPrice": 6999.0,
+    "discount": "-21%",
+    "rating": 4.7,
+    "reviewsCount": 165,
+    "badge": "Cult Classic",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
+    "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
+    "gallery": [
+      "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg"
+    ],
+    "description": "Rich black velvety suede construction with white Formstrip and metallic gold branding.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Puma",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Puma Black / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
+        "gallery": [
+          "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg"
+        ]
+      }
+    ]
+  },
+  "m13": {
+    "id": "m13",
+    "title": "Air Jordan 4 Retro Bred Reimagined",
+    "name": "Air Jordan 4 Retro Bred Reimagined",
+    "brand": "Jordan",
+    "category": "men",
+    "subcategory": "retro-classic",
+    "categoryTag": "men retro-classic retro-classic limited jordan 4 bred grail sneaker",
+    "gender": "men",
+    "price": 19999.0,
+    "originalPrice": 24999.0,
+    "discount": "-20%",
+    "rating": 5.0,
+    "reviewsCount": 560,
+    "badge": "Tier 1 Grail",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-rc-13-air-jordan-4-retro-bred.jpg",
+    "mainImage": "/media/sneakers/m-rc-13-air-jordan-4-retro-bred.jpg",
+    "gallery": [
+      "/media/sneakers/m-rc-13-air-jordan-4-retro-bred.jpg"
+    ],
+    "description": "Tinker Hatfield 1989 marvel reimagined in premium supple tumbled black leather with Nike Air heel.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / Fire Red / Cement Grey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rc-13-air-jordan-4-retro-bred.jpg",
+        "gallery": [
+          "/media/sneakers/m-rc-13-air-jordan-4-retro-bred.jpg"
+        ]
+      }
+    ]
+  },
+  "m14": {
+    "id": "m14",
+    "title": "Travis Scott x Air Jordan 1 Low Reverse Mocha",
+    "name": "Travis Scott x Air Jordan 1 Low Reverse Mocha",
+    "brand": "Jordan",
+    "category": "men",
+    "subcategory": "retro-classic",
+    "categoryTag": "men retro-classic retro-classic limited travis scott reverse mocha sneaker",
+    "gender": "men",
+    "price": 23999.0,
+    "originalPrice": 28999.0,
+    "discount": "-17%",
+    "rating": 5.0,
+    "reviewsCount": 620,
+    "badge": "Collab Icon",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
+    "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
+    "gallery": [
+      "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg"
+    ],
+    "description": "Reverse oversized Swoosh, rich earth-toned dark mocha nubuck, and aged yellowed sail midsole.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Sail / Dark Mocha / University Red",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
+        "gallery": [
+          "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg"
+        ]
+      }
+    ]
+  },
+  "m15": {
+    "id": "m15",
+    "title": "Nike Air Max 90 Infrared OG Vintage",
+    "name": "Nike Air Max 90 Infrared OG Vintage",
+    "brand": "Nike",
+    "category": "men",
+    "subcategory": "retro-classic",
+    "categoryTag": "men retro-classic retro-classic 90s infrared air max visible air sneaker",
+    "gender": "men",
+    "price": 11499.0,
+    "originalPrice": 13999.0,
+    "discount": "-17%",
+    "rating": 4.9,
+    "reviewsCount": 335,
+    "badge": "90s Legend",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/m-rc-15-nike-air-max-90-infrared-vintage.jpg",
+    "mainImage": "/media/sneakers/m-rc-15-nike-air-max-90-infrared-vintage.jpg",
+    "gallery": [
+      "/media/sneakers/m-rc-15-nike-air-max-90-infrared-vintage.jpg"
+    ],
+    "description": "Tinker Hatfield 1990 masterpiece featuring radiant infrared TPU frames and visible heel Air-Sole.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "White / Black / Cool Grey / Radiant Red",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rc-15-nike-air-max-90-infrared-vintage.jpg",
+        "gallery": [
+          "/media/sneakers/m-rc-15-nike-air-max-90-infrared-vintage.jpg"
+        ]
+      }
+    ]
+  },
+  "m16": {
+    "id": "m16",
+    "title": "New Balance 990v6 Made in USA Castlerock",
+    "name": "New Balance 990v6 Made in USA Castlerock",
+    "brand": "New Balance",
+    "category": "men",
+    "subcategory": "retro-classic",
+    "categoryTag": "men retro-classic retro-classic handcrafted made in usa 990v6 sneaker",
+    "gender": "men",
+    "price": 21499.0,
+    "originalPrice": 25999.0,
+    "discount": "-17%",
     "rating": 4.9,
     "reviewsCount": 215,
-    "badge": "Hot Drop",
+    "badge": "Handcrafted USA",
     "badgeClass": "limited",
-    "mainImage": "/static/img/shoe-6.jpg",
+    "imageUrl": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
+    "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
     "gallery": [
-      "/static/img/shoe-6.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
+      "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg"
     ],
-    "description": "An iconic high-top basketball legend reborn. Featuring rich premium tumbled leather in Royal Blue and Obsidian Black color-blocking, this sneaker pays tribute to golden era hardwood battles while bringing modern day cupsole cushioning to your daily fit.",
+    "description": "Handcrafted pinnacle lifestyle runner engineered in Massachusetts with FuelCell foam and pigskin suede.",
     "features": [
-      "Full-grain premium tumbled genuine leather upper",
-      "Encapsulated Air-Sole unit in the heel for lightweight cushioning",
-      "Classic padded high-cut collar for vintage look and ankle support",
-      "Iconic pivot circle outsole pattern for authentic grip and turning ease",
-      "Includes two pairs of custom laces (Royal Blue & Off-White)"
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "420 grams (IND 8)",
-      "Closure": "High-Top Lace-Up (8 Eyelets)",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Encapsulated Air Heel Unit",
-      "Style Code": "JD-RETRO-HI-BLU",
-      "Sole Material": "Stitched Sturdy Rubber Cupsole",
-      "Upper Material": "100% Genuine Tumbled Leather"
+      "Brand": "New Balance",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
     },
     "sizes": [
-      "IND 6",
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11",
-      "IND 12"
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
     ],
+    "inStock": true,
     "colors": [
       {
-        "name": "Royal Blue / Obsidian",
-        "hex": "#1d4ed8",
-        "mainImage": "/static/img/shoe-6.jpg",
-        "gallery": [
-          "/static/img/shoe-6.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "Bred Red / Black",
-        "hex": "#b91c1c",
-        "mainImage": "/static/img/men_shoes-1.jpg",
-        "gallery": [
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-1.jpg",
-          "/static/img/men_shoes-3.jpg",
-          "/static/img/men_shoes-5.jpg"
-        ]
-      },
-      {
-        "name": "Shadow Grey",
-        "hex": "#6b7280",
-        "mainImage": "/static/img/women_shoes-4.jpg",
-        "gallery": [
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/men_shoes-3.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "p2": {
-    "id": "p2",
-    "name": "Nike Nicattaz Neo Green",
-    "brand": "Nike",
-    "category": "Training / Energy",
-    "categoryTag": "running",
-    "gender": "unisex",
-    "price": 1099.0,
-    "originalPrice": 1099.0,
-    "discount": "",
-    "rating": 4.8,
-    "reviewsCount": 98,
-    "badge": "New Release",
-    "badgeClass": "new",
-    "mainImage": "/static/img/shoe-7.jpg",
-    "gallery": [
-      "/static/img/shoe-7.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
-    ],
-    "description": "Designed for intense cross-training and agility drills, the Nike Nicattaz Neo Green combines high-tension lockdown straps with high-rebound foam. Its striking electric green accents and reinforced toe bumper offer unmatched durability and street presence.",
-    "features": [
-      "High-impact foam midsole absorbs intense jump landings",
-      "Reinforced lateral sidewall TPU plates for multidirectional stability",
-      "Abrasion-resistant ripstop woven upper",
-      "Flex-groove tread pattern allows natural foot articulation",
-      "Padded collar and tongue for zero ankle chafing"
-    ],
-    "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "310 grams (IND 8)",
-      "Closure": "Speed Lacing System",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Max Impact Cushion Tech",
-      "Style Code": "NK-NICAT-NEO-GRN",
-      "Sole Material": "Non-Marking Solid Rubber",
-      "Upper Material": "Ripstop Textile & Molded Synthetic"
-    },
-    "sizes": [
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11"
-    ],
-    "colors": [
-      {
-        "name": "Neo Green / Pitch Black",
-        "hex": "#00ff87",
-        "mainImage": "/static/img/shoe-7.jpg",
-        "gallery": [
-          "/static/img/shoe-7.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "Pure White / Neon",
-        "hex": "#f0f0f0",
-        "mainImage": "/static/img/women_shoes-5.jpg",
-        "gallery": [
-          "/static/img/women_shoes-5.jpg",
-          "/static/img/women_shoes-2.jpg",
-          "/static/img/men_shoes-6.jpg",
-          "/static/img/women_shoes-1.jpg"
-        ]
-      }
-    ],
-    "inStock": true
-  },
-  "p1": {
-    "id": "p1",
-    "name": "Nike Air Smart 72 Crimson",
-    "brand": "Nike",
-    "category": "Running / Performance",
-    "categoryTag": "running",
-    "gender": "unisex",
-    "price": 1049.0,
-    "originalPrice": 1049.0,
-    "discount": "",
-    "rating": 5.0,
-    "reviewsCount": 142,
-    "badge": "Sale 20%",
-    "badgeClass": "sale",
-    "mainImage": "/static/img/shoe-8.jpg",
-    "gallery": [
-      "/static/img/shoe-8.jpg",
-      "/static/img/accessories-2.jpg",
-      "/static/img/accessories-3.jpg",
-      "/static/img/accessories-4.jpg"
-    ],
-    "description": "The Nike Air Smart 72 Crimson brings peak energetic responsiveness to road running. Crafted with lightweight breathable Flymesh and anchored by a full-length pressurized Zoom Air unit, this shoe delivers explosive rebound on every stride. Signature crimson red styling gives an aggressive silhouette that commands attention on streets and tracks alike.",
-    "features": [
-      "Full-length visible Zoom Air unit provides supreme energy return",
-      "Ultralight engineered Flymesh upper with aerodynamic airflow channels",
-      "Dynamic Flywire cable integration for customized midfoot lockdown",
-      "Durable waffle-traction rubber outsole for all-weather grip",
-      "Anatomical heel cradle reduces Achilles tendon pressure",
-      "Reflective 3M accents for low-light road safety"
-    ],
-    "specs": {
-      "Origin": "Imported / Certified Authentic",
-      "Weight": "285 grams (IND 8)",
-      "Closure": "Traditional Lace-up with Flywire Anchors",
-      "Warranty": "6 Months Manufacturer Warranty",
-      "Cushioning": "Full-Length Nike Air Zoom Unit",
-      "Style Code": "NK-AIR-72-CRIMSON",
-      "Sole Material": "Dual-Density Phylon Foam & Carbon Rubber",
-      "Upper Material": "Engineered Breathable Mesh & Thermoplastic Overlays"
-    },
-    "sizes": [
-      "IND 6",
-      "IND 7",
-      "IND 8",
-      "IND 9",
-      "IND 10",
-      "IND 11"
-    ],
-    "colors": [
-      {
-        "name": "Crimson Red / Black",
-        "hex": "#e63946",
-        "mainImage": "/static/img/shoe-8.jpg",
-        "gallery": [
-          "/static/img/shoe-8.jpg",
-          "/static/img/accessories-2.jpg",
-          "/static/img/accessories-3.jpg",
-          "/static/img/accessories-4.jpg"
-        ]
-      },
-      {
-        "name": "Stealth Black / White",
+        "name": "Castlerock Grey / Marblehead",
         "hex": "#111111",
-        "mainImage": "/static/img/men_shoes-5.jpg",
+        "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
         "gallery": [
-          "/static/img/men_shoes-5.jpg",
-          "/static/img/women_shoes-4.jpg",
-          "/static/img/men_shoes-1.jpg",
-          "/static/img/shoe-1.jpg"
-        ]
-      },
-      {
-        "name": "Cyber Volt",
-        "hex": "#a7f432",
-        "mainImage": "/static/img/men_shoes-2.jpg",
-        "gallery": [
-          "/static/img/men_shoes-2.jpg",
-          "/static/img/shoe-2.jpg",
-          "/static/img/men_shoes-7.jpg",
-          "/static/img/shoe-1.jpg"
+          "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg"
         ]
       }
+    ]
+  },
+  "m17": {
+    "id": "m17",
+    "title": "Nike Air Zoom Pegasus 40 Crimson",
+    "name": "Nike Air Zoom Pegasus 40 Crimson",
+    "brand": "Nike",
+    "category": "men",
+    "subcategory": "running-performance",
+    "categoryTag": "men running-performance running-performance athletic sports zoom pegasus sneaker",
+    "gender": "men",
+    "price": 9499.0,
+    "originalPrice": 11999.0,
+    "discount": "-20%",
+    "rating": 4.9,
+    "reviewsCount": 320,
+    "badge": "Speed Daily",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
+    "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
+    "gallery": [
+      "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg"
     ],
-    "inStock": true
+    "description": "Resilient daily road running shoe combining Nike React foam with dual Zoom Air units.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Bright Crimson / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
+        "gallery": [
+          "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg"
+        ]
+      }
+    ]
+  },
+  "m18": {
+    "id": "m18",
+    "title": "Adidas Ultraboost Light Carbon Black",
+    "name": "Adidas Ultraboost Light Carbon Black",
+    "brand": "Adidas",
+    "category": "men",
+    "subcategory": "running-performance",
+    "categoryTag": "men running-performance running-performance athletic boost ultraboost sneaker",
+    "gender": "men",
+    "price": 13999.0,
+    "originalPrice": 17999.0,
+    "discount": "-22%",
+    "rating": 4.9,
+    "reviewsCount": 270,
+    "badge": "Ultralight BOOST",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
+    "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
+    "gallery": [
+      "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg"
+    ],
+    "description": "Experience epic kinetic energy with the lightest BOOST ever and an adaptive Primeknit+ upper.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Adidas",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Core Black / Carbon / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
+        "gallery": [
+          "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg"
+        ]
+      }
+    ]
+  },
+  "m19": {
+    "id": "m19",
+    "title": "Nike Vaporfly 3 Electric Mint Racer",
+    "name": "Nike Vaporfly 3 Electric Mint Racer",
+    "brand": "Nike",
+    "category": "men",
+    "subcategory": "running-performance",
+    "categoryTag": "men running-performance running-performance racing carbon plate vaporfly sneaker",
+    "gender": "men",
+    "price": 18999.0,
+    "originalPrice": 22999.0,
+    "discount": "-17%",
+    "rating": 5.0,
+    "reviewsCount": 145,
+    "badge": "Marathon Elite",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
+    "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
+    "gallery": [
+      "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg"
+    ],
+    "description": "Podium-dominating marathon super shoe with full-length carbon Flyplate and ZoomX foam.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Electric Green / Screaming Mint",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
+        "gallery": [
+          "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg"
+        ]
+      }
+    ]
+  },
+  "m20": {
+    "id": "m20",
+    "title": "Nike Air Zoom Tempo Next% Flyknit",
+    "name": "Nike Air Zoom Tempo Next% Flyknit",
+    "brand": "Nike",
+    "category": "men",
+    "subcategory": "running-performance",
+    "categoryTag": "men running-performance running-performance tempo zoom next flyknit sneaker",
+    "gender": "men",
+    "price": 15499.0,
+    "originalPrice": 18999.0,
+    "discount": "-18%",
+    "rating": 4.8,
+    "reviewsCount": 140,
+    "badge": "High Cadence",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/m-rp-12-nike-tempo-next-flyknit.jpg",
+    "mainImage": "/media/sneakers/m-rp-12-nike-tempo-next-flyknit.jpg",
+    "gallery": [
+      "/media/sneakers/m-rp-12-nike-tempo-next-flyknit.jpg"
+    ],
+    "description": "Dual visible Zoom Air pods offer ultra-snappy propulsion during high-speed tempo training.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Volt / White / Black",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/m-rp-12-nike-tempo-next-flyknit.jpg",
+        "gallery": [
+          "/media/sneakers/m-rp-12-nike-tempo-next-flyknit.jpg"
+        ]
+      }
+    ]
+  },
+  "w1": {
+    "id": "w1",
+    "title": "Air Jordan 1 Retro High Shadow 2.0",
+    "name": "Air Jordan 1 Retro High Shadow 2.0",
+    "brand": "Jordan",
+    "category": "women",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "women chunky-streetwear chunky-streetwear limited jordan shadow high sneaker",
+    "gender": "women",
+    "price": 16499.0,
+    "originalPrice": 19999.0,
+    "discount": "-17%",
+    "rating": 4.9,
+    "reviewsCount": 275,
+    "badge": "Shadow OG",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/w-cs-37-air-jordan-1-retro-shadow-2.jpg",
+    "mainImage": "/media/sneakers/w-cs-37-air-jordan-1-retro-shadow-2.jpg",
+    "gallery": [
+      "/media/sneakers/w-cs-37-air-jordan-1-retro-shadow-2.jpg"
+    ],
+    "description": "Understated brilliance pairing plush smoke grey nubuck overlays over a rich matte black leather base.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Jordan",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / Medium Grey / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-cs-37-air-jordan-1-retro-shadow-2.jpg",
+        "gallery": [
+          "/media/sneakers/w-cs-37-air-jordan-1-retro-shadow-2.jpg"
+        ]
+      }
+    ]
+  },
+  "w2": {
+    "id": "w2",
+    "title": "Nike React Phantom Run Street Edition",
+    "name": "Nike React Phantom Run Street Edition",
+    "brand": "Nike",
+    "category": "women",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "women chunky-streetwear chunky-streetwear laceless flyknit react running sneaker",
+    "gender": "women",
+    "price": 11999.0,
+    "originalPrice": 14999.0,
+    "discount": "-20%",
+    "rating": 4.8,
+    "reviewsCount": 160,
+    "badge": "Laceless React",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-cs-38-nike-react-phantom-run-street.jpg",
+    "mainImage": "/media/sneakers/w-cs-38-nike-react-phantom-run-street.jpg",
+    "gallery": [
+      "/media/sneakers/w-cs-38-nike-react-phantom-run-street.jpg"
+    ],
+    "description": "Laceless Flyknit Loft upper with chunky React sole unit cradling the foot with futuristic bounce.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / White / Volt",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-cs-38-nike-react-phantom-run-street.jpg",
+        "gallery": [
+          "/media/sneakers/w-cs-38-nike-react-phantom-run-street.jpg"
+        ]
+      }
+    ]
+  },
+  "w3": {
+    "id": "w3",
+    "title": "Onitsuka Tiger Mexico 66 Street Edition",
+    "name": "Onitsuka Tiger Mexico 66 Street Edition",
+    "brand": "Onitsuka Tiger",
+    "category": "women",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "women chunky-streetwear chunky-streetwear retro canvas onitsuka mexico 66 sneaker",
+    "gender": "women",
+    "price": 8499.0,
+    "originalPrice": 10499.0,
+    "discount": "-19%",
+    "rating": 4.8,
+    "reviewsCount": 195,
+    "badge": "Retro Street",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-cs-39-onitsuka-tiger-mexico-66-street.jpg",
+    "mainImage": "/media/sneakers/w-cs-39-onitsuka-tiger-mexico-66-street.jpg",
+    "gallery": [
+      "/media/sneakers/w-cs-39-onitsuka-tiger-mexico-66-street.jpg"
+    ],
+    "description": "Vintage track heritage reimagined with distinctive cross-stripe leather side accents.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Onitsuka Tiger",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Birch / India Ink / Latte",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-cs-39-onitsuka-tiger-mexico-66-street.jpg",
+        "gallery": [
+          "/media/sneakers/w-cs-39-onitsuka-tiger-mexico-66-street.jpg"
+        ]
+      }
+    ]
+  },
+  "w4": {
+    "id": "w4",
+    "title": "Fila Disruptor II Premium White Chunky",
+    "name": "Fila Disruptor II Premium White Chunky",
+    "brand": "Fila",
+    "category": "women",
+    "subcategory": "chunky-streetwear",
+    "categoryTag": "women chunky-streetwear chunky-streetwear chunky dad disruptor platform sneaker",
+    "gender": "women",
+    "price": 6999.0,
+    "originalPrice": 8999.0,
+    "discount": "-22%",
+    "rating": 4.7,
+    "reviewsCount": 240,
+    "badge": "Chunky Kingpin",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-cs-40-fila-disruptor-ii-premium-white.jpg",
+    "mainImage": "/media/sneakers/w-cs-40-fila-disruptor-ii-premium-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-cs-40-fila-disruptor-ii-premium-white.jpg"
+    ],
+    "description": "The unmistakable 90s chunky silhouette with serrated sawtooth rubber outsole and molded EVA midsole.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fila",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Triple White / Navy Trim",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-cs-40-fila-disruptor-ii-premium-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-cs-40-fila-disruptor-ii-premium-white.jpg"
+        ]
+      }
+    ]
+  },
+  "w5": {
+    "id": "w5",
+    "title": "Nike Air Force 1 07 Triple White",
+    "name": "Nike Air Force 1 07 Triple White",
+    "brand": "Nike",
+    "category": "women",
+    "subcategory": "minimalist-white",
+    "categoryTag": "women minimalist-white minimalist-white triple white air force court sneaker",
+    "gender": "women",
+    "price": 8195.0,
+    "originalPrice": 9999.0,
+    "discount": "-18%",
+    "rating": 4.9,
+    "reviewsCount": 520,
+    "badge": "Wardrobe Essential",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-mw-33-nike-air-force-1-triple-white.jpg",
+    "mainImage": "/media/sneakers/w-mw-33-nike-air-force-1-triple-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-mw-33-nike-air-force-1-triple-white.jpg"
+    ],
+    "description": "Pristine triple-white low silhouette with stitched leather overlays and encapsulated Air-Sole cushioning.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Triple White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-mw-33-nike-air-force-1-triple-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-mw-33-nike-air-force-1-triple-white.jpg"
+        ]
+      }
+    ]
+  },
+  "w6": {
+    "id": "w6",
+    "title": "Vans Old Skool True White Canvas Suede",
+    "name": "Vans Old Skool True White Canvas Suede",
+    "brand": "Vans",
+    "category": "women",
+    "subcategory": "minimalist-white",
+    "categoryTag": "women minimalist-white minimalist-white skate canvas old skool white sneaker",
+    "gender": "women",
+    "price": 4999.0,
+    "originalPrice": 5999.0,
+    "discount": "-16%",
+    "rating": 4.8,
+    "reviewsCount": 230,
+    "badge": "Pure White",
+    "badgeClass": "sale",
+    "imageUrl": "/media/sneakers/w-mw-34-vans-old-skool-true-white.jpg",
+    "mainImage": "/media/sneakers/w-mw-34-vans-old-skool-true-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-mw-34-vans-old-skool-true-white.jpg"
+    ],
+    "description": "Monochrome clean white canvas and suede construction with signature waffle rubber outsoles.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Vans",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "True White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-mw-34-vans-old-skool-true-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-mw-34-vans-old-skool-true-white.jpg"
+        ]
+      }
+    ]
+  },
+  "w7": {
+    "id": "w7",
+    "title": "Nike Dunk Low White Barely Green Pastel",
+    "name": "Nike Dunk Low White Barely Green Pastel",
+    "brand": "Nike",
+    "category": "women",
+    "subcategory": "minimalist-white",
+    "categoryTag": "women minimalist-white minimalist-white dunk pastel clean court sneaker",
+    "gender": "women",
+    "price": 9999.0,
+    "originalPrice": 12499.0,
+    "discount": "-20%",
+    "rating": 4.9,
+    "reviewsCount": 185,
+    "badge": "Pastel Minimalist",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-mw-35-nike-dunk-low-barely-green.jpg",
+    "mainImage": "/media/sneakers/w-mw-35-nike-dunk-low-barely-green.jpg",
+    "gallery": [
+      "/media/sneakers/w-mw-35-nike-dunk-low-barely-green.jpg"
+    ],
+    "description": "Subtle pastel hue overlays over crisp white leather delivering a calm, minimalist court profile.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Sail / Barely Green / White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-mw-35-nike-dunk-low-barely-green.jpg",
+        "gallery": [
+          "/media/sneakers/w-mw-35-nike-dunk-low-barely-green.jpg"
+        ]
+      }
+    ]
+  },
+  "w8": {
+    "id": "w8",
+    "title": "Veja Campo Extra White Natural Leather",
+    "name": "Veja Campo Extra White Natural Leather",
+    "brand": "Veja",
+    "category": "women",
+    "subcategory": "minimalist-white",
+    "categoryTag": "women minimalist-white minimalist-white veja sustainable chrome-free leather sneaker",
+    "gender": "women",
+    "price": 13999.0,
+    "originalPrice": 16999.0,
+    "discount": "-17%",
+    "rating": 4.8,
+    "reviewsCount": 195,
+    "badge": "Sustainable Luxury",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-mw-36-veja-campo-extra-white-natural.jpg",
+    "mainImage": "/media/sneakers/w-mw-36-veja-campo-extra-white-natural.jpg",
+    "gallery": [
+      "/media/sneakers/w-mw-36-veja-campo-extra-white-natural.jpg"
+    ],
+    "description": "Sustainably crafted with ChromeFree leather, Amazonian rubber soles, and iconic V-logo side panels.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Veja",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Extra White / Natural Suede",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-mw-36-veja-campo-extra-white-natural.jpg",
+        "gallery": [
+          "/media/sneakers/w-mw-36-veja-campo-extra-white-natural.jpg"
+        ]
+      }
+    ]
+  },
+  "w9": {
+    "id": "w9",
+    "title": "Puma Mayze Stack Platform White",
+    "name": "Puma Mayze Stack Platform White",
+    "brand": "Puma",
+    "category": "women",
+    "subcategory": "platform-sneakers",
+    "categoryTag": "women platform-sneakers platform-sneakers chunky stacked sole mayze sneaker",
+    "gender": "women",
+    "price": 7999.0,
+    "originalPrice": 9999.0,
+    "discount": "-20%",
+    "rating": 4.8,
+    "reviewsCount": 215,
+    "badge": "Stacked Sole",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-ps-21-puma-mayze-stack-platform-white.jpg",
+    "mainImage": "/media/sneakers/w-ps-21-puma-mayze-stack-platform-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-ps-21-puma-mayze-stack-platform-white.jpg"
+    ],
+    "description": "Multi-layered elevated platform sole with jagged tooling and clean white leather upper.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Puma",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Puma White / Pristine",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-ps-21-puma-mayze-stack-platform-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-ps-21-puma-mayze-stack-platform-white.jpg"
+        ]
+      }
+    ]
+  },
+  "w10": {
+    "id": "w10",
+    "title": "Nike M2K Tekno Phantom Summit",
+    "name": "Nike M2K Tekno Phantom Summit",
+    "brand": "Nike",
+    "category": "women",
+    "subcategory": "platform-sneakers",
+    "categoryTag": "women platform-sneakers platform-sneakers chunky dad platform m2k tekno sneaker",
+    "gender": "women",
+    "price": 8499.0,
+    "originalPrice": 10999.0,
+    "discount": "-22%",
+    "rating": 4.7,
+    "reviewsCount": 180,
+    "badge": "Chunky Platform",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-ps-22-nike-m2k-tekno-phantom-summit.jpg",
+    "mainImage": "/media/sneakers/w-ps-22-nike-m2k-tekno-phantom-summit.jpg",
+    "gallery": [
+      "/media/sneakers/w-ps-22-nike-m2k-tekno-phantom-summit.jpg"
+    ],
+    "description": "Sculpted foam midsole with TPU heel clip providing futuristic lift and all-day comfort.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Phantom / Summit White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-ps-22-nike-m2k-tekno-phantom-summit.jpg",
+        "gallery": [
+          "/media/sneakers/w-ps-22-nike-m2k-tekno-phantom-summit.jpg"
+        ]
+      }
+    ]
+  },
+  "w11": {
+    "id": "w11",
+    "title": "Salomon XT-6 Mindful Trail Platform",
+    "name": "Salomon XT-6 Mindful Trail Platform",
+    "brand": "Salomon",
+    "category": "women",
+    "subcategory": "platform-sneakers",
+    "categoryTag": "women platform-sneakers platform-sneakers gorpcore trail platform xt6 sneaker",
+    "gender": "women",
+    "price": 16999.0,
+    "originalPrice": 19999.0,
+    "discount": "-15%",
+    "rating": 4.9,
+    "reviewsCount": 190,
+    "badge": "Gorpcore Platform",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-ps-23-salomon-xt6-mindful-trail.jpg",
+    "mainImage": "/media/sneakers/w-ps-23-salomon-xt6-mindful-trail.jpg",
+    "gallery": [
+      "/media/sneakers/w-ps-23-salomon-xt6-mindful-trail.jpg"
+    ],
+    "description": "High-fashion gorpcore platform sneaker with Quicklace closure and Mud Contagrip lugged outsole.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Salomon",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Vanilla Ice / Almond Milk",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-ps-23-salomon-xt6-mindful-trail.jpg",
+        "gallery": [
+          "/media/sneakers/w-ps-23-salomon-xt6-mindful-trail.jpg"
+        ]
+      }
+    ]
+  },
+  "w12": {
+    "id": "w12",
+    "title": "Converse Run Star Motion Canvas Platform",
+    "name": "Converse Run Star Motion Canvas Platform",
+    "brand": "Converse",
+    "category": "women",
+    "subcategory": "platform-sneakers",
+    "categoryTag": "women platform-sneakers platform-sneakers chunky motion lug platform converse sneaker",
+    "gender": "women",
+    "price": 9499.0,
+    "originalPrice": 11999.0,
+    "discount": "-20%",
+    "rating": 4.8,
+    "reviewsCount": 175,
+    "badge": "Exaggerated Lug",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-ps-24-converse-run-star-motion-platform.jpg",
+    "mainImage": "/media/sneakers/w-ps-24-converse-run-star-motion-platform.jpg",
+    "gallery": [
+      "/media/sneakers/w-ps-24-converse-run-star-motion-platform.jpg"
+    ],
+    "description": "Playful and distorted lines pair ultra-comfortable CX foam with an exaggerated wavy lug platform.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Converse",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / White / Gum Honey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-ps-24-converse-run-star-motion-platform.jpg",
+        "gallery": [
+          "/media/sneakers/w-ps-24-converse-run-star-motion-platform.jpg"
+        ]
+      }
+    ]
+  },
+  "w13": {
+    "id": "w13",
+    "title": "Asics Gel-Nimbus 25 Sunrise Coral",
+    "name": "Asics Gel-Nimbus 25 Sunrise Coral",
+    "brand": "Asics",
+    "category": "women",
+    "subcategory": "running-trainers",
+    "categoryTag": "women running-trainers running-trainers sports cushion gel nimbus sneaker",
+    "gender": "women",
+    "price": 12499.0,
+    "originalPrice": 14999.0,
+    "discount": "-16%",
+    "rating": 4.8,
+    "reviewsCount": 195,
+    "badge": "Max Cushion",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-rt-25-asics-gel-nimbus-25-sunrise.jpg",
+    "mainImage": "/media/sneakers/w-rt-25-asics-gel-nimbus-25-sunrise.jpg",
+    "gallery": [
+      "/media/sneakers/w-rt-25-asics-gel-nimbus-25-sunrise.jpg"
+    ],
+    "description": "Ultra-soft PureGEL technology embedded beneath plush FF BLAST PLUS ECO cushioning foam.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Asics",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Sunrise Coral / Pure Silver",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-rt-25-asics-gel-nimbus-25-sunrise.jpg",
+        "gallery": [
+          "/media/sneakers/w-rt-25-asics-gel-nimbus-25-sunrise.jpg"
+        ]
+      }
+    ]
+  },
+  "w14": {
+    "id": "w14",
+    "title": "New Balance Fresh Foam X 1080v13",
+    "name": "New Balance Fresh Foam X 1080v13",
+    "brand": "New Balance",
+    "category": "women",
+    "subcategory": "running-trainers",
+    "categoryTag": "women running-trainers running-trainers fresh foam sports athletic trainer sneaker",
+    "gender": "women",
+    "price": 13499.0,
+    "originalPrice": 15999.0,
+    "discount": "-15%",
+    "rating": 4.9,
+    "reviewsCount": 170,
+    "badge": "Smooth Glide",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-rt-26-new-balance-fresh-foam-1080v13.jpg",
+    "mainImage": "/media/sneakers/w-rt-26-new-balance-fresh-foam-1080v13.jpg",
+    "gallery": [
+      "/media/sneakers/w-rt-26-new-balance-fresh-foam-1080v13.jpg"
+    ],
+    "description": "Pinnacle road daily trainer with Fresh Foam X rocker geometry and an engineered breathable mesh chassis.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "New Balance",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Starlight / Sea Salt",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-rt-26-new-balance-fresh-foam-1080v13.jpg",
+        "gallery": [
+          "/media/sneakers/w-rt-26-new-balance-fresh-foam-1080v13.jpg"
+        ]
+      }
+    ]
+  },
+  "w15": {
+    "id": "w15",
+    "title": "Hoka Clifton 9 Rose Mist Daily Runner",
+    "name": "Hoka Clifton 9 Rose Mist Daily Runner",
+    "brand": "Hoka",
+    "category": "women",
+    "subcategory": "running-trainers",
+    "categoryTag": "women running-trainers running-trainers hoka clifton plush road trainer sneaker",
+    "gender": "women",
+    "price": 14499.0,
+    "originalPrice": 16999.0,
+    "discount": "-14%",
+    "rating": 4.9,
+    "reviewsCount": 230,
+    "badge": "Cloud Stride",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-rt-27-hoka-clifton-9-rose-mist.jpg",
+    "mainImage": "/media/sneakers/w-rt-27-hoka-clifton-9-rose-mist.jpg",
+    "gallery": [
+      "/media/sneakers/w-rt-27-hoka-clifton-9-rose-mist.jpg"
+    ],
+    "description": "Revitalized underfoot experience with responsive new compression-molded EVA foam and sleek collar.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Hoka",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Rose Mist / Peach Cream",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-rt-27-hoka-clifton-9-rose-mist.jpg",
+        "gallery": [
+          "/media/sneakers/w-rt-27-hoka-clifton-9-rose-mist.jpg"
+        ]
+      }
+    ]
+  },
+  "w16": {
+    "id": "w16",
+    "title": "Nike Air Max 270 Coral White Edition",
+    "name": "Nike Air Max 270 Coral White Edition",
+    "brand": "Nike",
+    "category": "women",
+    "subcategory": "running-trainers",
+    "categoryTag": "women running-trainers running-trainers air max 270 visible bubble trainer sneaker",
+    "gender": "women",
+    "price": 11999.0,
+    "originalPrice": 14999.0,
+    "discount": "-20%",
+    "rating": 4.8,
+    "reviewsCount": 260,
+    "badge": "Air 270",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-rt-28-nike-air-max-270-coral-white.jpg",
+    "mainImage": "/media/sneakers/w-rt-28-nike-air-max-270-coral-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-rt-28-nike-air-max-270-coral-white.jpg"
+    ],
+    "description": "Boasting Nike largest heel Air unit yet for a super-soft ride that feels as impossible as it looks.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Nike",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "White / Barely Rose / Coral",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-rt-28-nike-air-max-270-coral-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-rt-28-nike-air-max-270-coral-white.jpg"
+        ]
+      }
+    ]
+  },
+  "w17": {
+    "id": "w17",
+    "title": "Vans Classic Slip-On Checkerboard",
+    "name": "Vans Classic Slip-On Checkerboard",
+    "brand": "Vans",
+    "category": "women",
+    "subcategory": "slip-on-sneakers",
+    "categoryTag": "women slip-on-sneakers slip-on-sneakers laceless skate checkerboard sneaker",
+    "gender": "women",
+    "price": 4299.0,
+    "originalPrice": 5499.0,
+    "discount": "-21%",
+    "rating": 4.9,
+    "reviewsCount": 410,
+    "badge": "Skate Icon",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/w-so-29-vans-classic-slip-on-checkerboard.jpg",
+    "mainImage": "/media/sneakers/w-so-29-vans-classic-slip-on-checkerboard.jpg",
+    "gallery": [
+      "/media/sneakers/w-so-29-vans-classic-slip-on-checkerboard.jpg"
+    ],
+    "description": "The unmistakable southern California icon with elastic side accents and signature waffle outsoles.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Vans",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / Off-White Checkerboard",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-so-29-vans-classic-slip-on-checkerboard.jpg",
+        "gallery": [
+          "/media/sneakers/w-so-29-vans-classic-slip-on-checkerboard.jpg"
+        ]
+      }
+    ]
+  },
+  "w18": {
+    "id": "w18",
+    "title": "Balenciaga Speed 2.0 Knit Sock Slip-On",
+    "name": "Balenciaga Speed 2.0 Knit Sock Slip-On",
+    "brand": "Balenciaga",
+    "category": "women",
+    "subcategory": "slip-on-sneakers",
+    "categoryTag": "women slip-on-sneakers slip-on-sneakers sock knit luxury speed trainer sneaker",
+    "gender": "women",
+    "price": 19999.0,
+    "originalPrice": 24999.0,
+    "discount": "-20%",
+    "rating": 4.9,
+    "reviewsCount": 160,
+    "badge": "Sock Runner",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/w-so-30-balenciaga-speed-2-knit-slip-on.jpg",
+    "mainImage": "/media/sneakers/w-so-30-balenciaga-speed-2-knit-slip-on.jpg",
+    "gallery": [
+      "/media/sneakers/w-so-30-balenciaga-speed-2-knit-slip-on.jpg"
+    ],
+    "description": "Technical 3D knit sock runner featuring ultra-flexible molded ergonomic sole with shock absorption.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Balenciaga",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / White Ergonomic Sole",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-so-30-balenciaga-speed-2-knit-slip-on.jpg",
+        "gallery": [
+          "/media/sneakers/w-so-30-balenciaga-speed-2-knit-slip-on.jpg"
+        ]
+      }
+    ]
+  },
+  "w19": {
+    "id": "w19",
+    "title": "Puma Adelina Comfort Slip-On Blossom",
+    "name": "Puma Adelina Comfort Slip-On Blossom",
+    "brand": "Puma",
+    "category": "women",
+    "subcategory": "slip-on-sneakers",
+    "categoryTag": "women slip-on-sneakers slip-on-sneakers ballerina softfoam comfort sneaker",
+    "gender": "women",
+    "price": 3999.0,
+    "originalPrice": 4999.0,
+    "discount": "-20%",
+    "rating": 4.7,
+    "reviewsCount": 185,
+    "badge": "Everyday Ease",
+    "badgeClass": "sale",
+    "imageUrl": "/media/sneakers/w-so-31-puma-adelina-comfort-slipon.jpg",
+    "mainImage": "/media/sneakers/w-so-31-puma-adelina-comfort-slipon.jpg",
+    "gallery": [
+      "/media/sneakers/w-so-31-puma-adelina-comfort-slipon.jpg"
+    ],
+    "description": "Chic ballet-sneaker crossover built for light travel and recovery with plush SoftFoam+ footbeds.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Puma",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Rose Dust / Marshmallow",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-so-31-puma-adelina-comfort-slipon.jpg",
+        "gallery": [
+          "/media/sneakers/w-so-31-puma-adelina-comfort-slipon.jpg"
+        ]
+      }
+    ]
+  },
+  "w20": {
+    "id": "w20",
+    "title": "Adidas Puremotion Adapt Slip-On White",
+    "name": "Adidas Puremotion Adapt Slip-On White",
+    "brand": "Adidas",
+    "category": "women",
+    "subcategory": "slip-on-sneakers",
+    "categoryTag": "women slip-on-sneakers slip-on-sneakers laceless puremotion cloudfoam sneaker",
+    "gender": "women",
+    "price": 5299.0,
+    "originalPrice": 6499.0,
+    "discount": "-18%",
+    "rating": 4.8,
+    "reviewsCount": 210,
+    "badge": "Cloud Comfort",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/w-so-32-adidas-puremotion-adapt-white.jpg",
+    "mainImage": "/media/sneakers/w-so-32-adidas-puremotion-adapt-white.jpg",
+    "gallery": [
+      "/media/sneakers/w-so-32-adidas-puremotion-adapt-white.jpg"
+    ],
+    "description": "Laceless slip-on featuring supportive crossover elastic bandage straps and plush Cloudfoam cushioning.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Adidas",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Cloud White / Core Black",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/w-so-32-adidas-puremotion-adapt-white.jpg",
+        "gallery": [
+          "/media/sneakers/w-so-32-adidas-puremotion-adapt-white.jpg"
+        ]
+      }
+    ]
+  },
+  "a1": {
+    "id": "a1",
+    "title": "Heavy-Cushion Retro Ribbed Crew Socks 3-Pack - White",
+    "name": "Heavy-Cushion Retro Ribbed Crew Socks 3-Pack - White",
+    "brand": "Squad Apparel",
+    "category": "accessories",
+    "subcategory": "athletic-socks",
+    "categoryTag": "accessories athletic-socks athletic-socks crew socks heavy cushion white retro socks",
+    "gender": "unisex",
+    "price": 699.0,
+    "originalPrice": 999.0,
+    "discount": "-30%",
+    "rating": 4.9,
+    "reviewsCount": 480,
+    "badge": "Terry Cushion",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
+    "mainImage": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
+    "gallery": [
+      "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg"
+    ],
+    "description": "Thick french terry bottom padding provides pillow-like impact buffering under high-abrasion basketball shoes.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Squad Apparel",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Crisp White / Black Stripe",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
+        "gallery": [
+          "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg"
+        ]
+      }
+    ]
+  },
+  "a2": {
+    "id": "a2",
+    "title": "Compression Arch Support Performance Ankle Socks (3-Pack)",
+    "name": "Compression Arch Support Performance Ankle Socks (3-Pack)",
+    "brand": "Squad Apparel",
+    "category": "accessories",
+    "subcategory": "athletic-socks",
+    "categoryTag": "accessories athletic-socks athletic-socks ankle socks performance running compression",
+    "gender": "unisex",
+    "price": 599.0,
+    "originalPrice": 899.0,
+    "discount": "-33%",
+    "rating": 4.8,
+    "reviewsCount": 260,
+    "badge": "Arch Compression",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
+    "mainImage": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
+    "gallery": [
+      "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg"
+    ],
+    "description": "Elastic 360-degree midfoot compression band eliminates blister-causing friction during runs.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Squad Apparel",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Stealth Black / Grey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
+        "gallery": [
+          "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg"
+        ]
+      }
+    ]
+  },
+  "a3": {
+    "id": "a3",
+    "title": "Deadstock Tie-Dye Streetwear Crew Socks - Multi Color",
+    "name": "Deadstock Tie-Dye Streetwear Crew Socks - Multi Color",
+    "brand": "Squad Apparel",
+    "category": "accessories",
+    "subcategory": "athletic-socks",
+    "categoryTag": "accessories athletic-socks athletic-socks tie dye crew socks streetwear pastel multi",
+    "gender": "unisex",
+    "price": 799.0,
+    "originalPrice": 1099.0,
+    "discount": "-27%",
+    "rating": 4.8,
+    "reviewsCount": 190,
+    "badge": "Street Swag",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
+    "mainImage": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
+    "gallery": [
+      "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg"
+    ],
+    "description": "Hand-dyed combed cotton yarn engineered to style seamlessly with low-top Dunks and chunky platforms.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Squad Apparel",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Pastel Tie-Dye Swirl",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
+        "gallery": [
+          "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg"
+        ]
+      }
+    ]
+  },
+  "a4": {
+    "id": "a4",
+    "title": "Breathable Terry Loop Low-Cut Running Socks 3-Pack",
+    "name": "Breathable Terry Loop Low-Cut Running Socks 3-Pack",
+    "brand": "Squad Apparel",
+    "category": "accessories",
+    "subcategory": "athletic-socks",
+    "categoryTag": "accessories athletic-socks athletic-socks low cut running socks anti blister terry",
+    "gender": "unisex",
+    "price": 549.0,
+    "originalPrice": 799.0,
+    "discount": "-31%",
+    "rating": 4.7,
+    "reviewsCount": 210,
+    "badge": "Anti-Blister Tab",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
+    "mainImage": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
+    "gallery": [
+      "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg"
+    ],
+    "description": "Padded heel-tab protects Achilles tendons against shoe rubbing during long marathon distance runs.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Squad Apparel",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "White / Reflective Tab",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
+        "gallery": [
+          "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg"
+        ]
+      }
+    ]
+  },
+  "a5": {
+    "id": "a5",
+    "title": "Premium Sneaker Deep Cleaning Solution & Hog-Bristle Brush",
+    "name": "Premium Sneaker Deep Cleaning Solution & Hog-Bristle Brush",
+    "brand": "Squad Care",
+    "category": "accessories",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits sneaker care solution cleaner brush kit",
+    "gender": "unisex",
+    "price": 1499.0,
+    "originalPrice": 1999.0,
+    "discount": "-25%",
+    "rating": 4.9,
+    "reviewsCount": 310,
+    "badge": "Pro Kit",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
+    "mainImage": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg"
+    ],
+    "description": "Eco-friendly foaming formula that safely lifts dirt, stains, and scuffs from leather, mesh, canvas, and suede.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Squad Care",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Clear / Natural Wood",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg"
+        ]
+      }
+    ]
+  },
+  "a6": {
+    "id": "a6",
+    "title": "Quick Wipes Dual-Textured Portable Sneaker Wipes (30-Pack)",
+    "name": "Quick Wipes Dual-Textured Portable Sneaker Wipes (30-Pack)",
+    "brand": "Squad Care",
+    "category": "accessories",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits sneaker wipes quick cleaner on-the-go",
+    "gender": "unisex",
+    "price": 699.0,
+    "originalPrice": 999.0,
+    "discount": "-30%",
+    "rating": 4.8,
+    "reviewsCount": 420,
+    "badge": "Pocket Essential",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
+    "mainImage": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg"
+    ],
+    "description": "Pocket-sized wipes featuring a textured dot side for stubborn mud and a soft smooth side for gentle wiping.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Squad Care",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Individually Foil-Sealed",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg"
+        ]
+      }
+    ]
+  },
+  "a7": {
+    "id": "a7",
+    "title": "Hydro-Shield Nano Water & Stain Repellent Spray (200ml)",
+    "name": "Hydro-Shield Nano Water & Stain Repellent Spray (200ml)",
+    "brand": "Squad Care",
+    "category": "accessories",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits waterproof stain repellent protection spray",
+    "gender": "unisex",
+    "price": 999.0,
+    "originalPrice": 1399.0,
+    "discount": "-28%",
+    "rating": 4.9,
+    "reviewsCount": 380,
+    "badge": "Hydrophobic Shield",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
+    "mainImage": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg"
+    ],
+    "description": "Advanced invisible hydrophobic barrier that causes liquids to bead up and roll right off without altering breathability.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Squad Care",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Aerosol Spray Canister",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg"
+        ]
+      }
+    ]
+  },
+  "a8": {
+    "id": "a8",
+    "title": "Suede & Nubuck Renewal Cleaning Eraser Block",
+    "name": "Suede & Nubuck Renewal Cleaning Eraser Block",
+    "brand": "Squad Care",
+    "category": "accessories",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits suede eraser nubuck brush dry cleaner",
+    "gender": "unisex",
+    "price": 599.0,
+    "originalPrice": 799.0,
+    "discount": "-25%",
+    "rating": 4.7,
+    "reviewsCount": 190,
+    "badge": "Dry Care",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
+    "mainImage": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg"
+    ],
+    "description": "Water-free cleaning eraser designed to buff away scuff marks and restore the natural velvety nap of delicate suede.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Squad Care",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Rubberized Crepe Block",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg"
+        ]
+      }
+    ]
+  },
+  "a9": {
+    "id": "a9",
+    "title": "Ergonomic Breathable Sneaker Crease Guards (1 Pair)",
+    "name": "Ergonomic Breathable Sneaker Crease Guards (1 Pair)",
+    "brand": "Shield Squad",
+    "category": "accessories",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors anti crease shield toe guard protection",
+    "gender": "unisex",
+    "price": 499.0,
+    "originalPrice": 799.0,
+    "discount": "-37%",
+    "rating": 4.9,
+    "reviewsCount": 510,
+    "badge": "Anti-Crease",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
+    "mainImage": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
+    "gallery": [
+      "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg"
+    ],
+    "description": "Ventilated flex-molded shields that slip into the toe box to prevent unsightly leather creasing during movement.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Shield Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Matte White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
+        "gallery": [
+          "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg"
+        ]
+      }
+    ]
+  },
+  "a10": {
+    "id": "a10",
+    "title": "Soft Foam Shock-Absorbing Toe Box Fillers (2 Pairs)",
+    "name": "Soft Foam Shock-Absorbing Toe Box Fillers (2 Pairs)",
+    "brand": "Shield Squad",
+    "category": "accessories",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors foam fillers toe box comfort protection",
+    "gender": "unisex",
+    "price": 599.0,
+    "originalPrice": 899.0,
+    "discount": "-33%",
+    "rating": 4.8,
+    "reviewsCount": 230,
+    "badge": "Comfort Fit",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
+    "mainImage": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
+    "gallery": [
+      "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg"
+    ],
+    "description": "Memory-foam cushioning inserts that gently fill toe volume to eliminate foot slippage and preserve toe box shape.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Shield Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Charcoal Grey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
+        "gallery": [
+          "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg"
+        ]
+      }
+    ]
+  },
+  "a11": {
+    "id": "a11",
+    "title": "Universal Armor Crease Shield V2 - Matte Black (1 Pair)",
+    "name": "Universal Armor Crease Shield V2 - Matte Black (1 Pair)",
+    "brand": "Shield Squad",
+    "category": "accessories",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors armor shield black crease guard",
+    "gender": "unisex",
+    "price": 549.0,
+    "originalPrice": 849.0,
+    "discount": "-35%",
+    "rating": 4.8,
+    "reviewsCount": 195,
+    "badge": "Heavy Duty",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
+    "mainImage": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
+    "gallery": [
+      "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg"
+    ],
+    "description": "Reinforced ridged polymer designed for heavy leather silhouettes like Jordan 4s, Dunks, and Air Force 1s.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Shield Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Stealth Black",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
+        "gallery": [
+          "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg"
+        ]
+      }
+    ]
+  },
+  "a12": {
+    "id": "a12",
+    "title": "Ventilated Gel Armor Toe Guards - Clear Gel Edition",
+    "name": "Ventilated Gel Armor Toe Guards - Clear Gel Edition",
+    "brand": "Shield Squad",
+    "category": "accessories",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors gel guards clear crease shield soft",
+    "gender": "unisex",
+    "price": 649.0,
+    "originalPrice": 949.0,
+    "discount": "-31%",
+    "rating": 4.9,
+    "reviewsCount": 175,
+    "badge": "Zero Pinching",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
+    "mainImage": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
+    "gallery": [
+      "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg"
+    ],
+    "description": "Medical-grade elastomer gel flexes naturally with every stride for 100% pinch-free toe comfort.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Shield Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Crystal Clear Gel",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
+        "gallery": [
+          "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg"
+        ]
+      }
+    ]
+  },
+  "a13": {
+    "id": "a13",
+    "title": "UV-Protection Magnetic Drop-Front Sneaker Display Case",
+    "name": "UV-Protection Magnetic Drop-Front Sneaker Display Case",
+    "brand": "Crate Squad",
+    "category": "accessories",
+    "subcategory": "display-crates",
+    "categoryTag": "accessories display-crates display-crates magnetic drop front shoe case crate display",
+    "gender": "unisex",
+    "price": 1699.0,
+    "originalPrice": 2299.0,
+    "discount": "-26%",
+    "rating": 4.9,
+    "reviewsCount": 340,
+    "badge": "Drop-Front",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
+    "mainImage": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
+    "gallery": [
+      "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg"
+    ],
+    "description": "Heavy-duty stackable acrylic crate with dual magnetic door locks and 99% UV radiation blocking.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Crate Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Crystal Clear / Black Frame",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
+        "gallery": [
+          "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg"
+        ]
+      }
+    ]
+  },
+  "a14": {
+    "id": "a14",
+    "title": "LED Sound-Activated Stackable Sneaker Showcase Crate",
+    "name": "LED Sound-Activated Stackable Sneaker Showcase Crate",
+    "brand": "Crate Squad",
+    "category": "accessories",
+    "subcategory": "display-crates",
+    "categoryTag": "accessories display-crates display-crates led sound activated shoe display case",
+    "gender": "unisex",
+    "price": 2799.0,
+    "originalPrice": 3499.0,
+    "discount": "-20%",
+    "rating": 5.0,
+    "reviewsCount": 220,
+    "badge": "LED Glow",
+    "badgeClass": "limited",
+    "imageUrl": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
+    "mainImage": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
+    "gallery": [
+      "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg"
+    ],
+    "description": "Voice and beat-activated smart ambient LED lighting illuminates your grail kicks with wireless stacking power.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Crate Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / Multi-RGB LED",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
+        "gallery": [
+          "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg"
+        ]
+      }
+    ]
+  },
+  "a15": {
+    "id": "a15",
+    "title": "Crystal Clear 360-Degree Acrylic Shoe Showcase",
+    "name": "Crystal Clear 360-Degree Acrylic Shoe Showcase",
+    "brand": "Crate Squad",
+    "category": "accessories",
+    "subcategory": "display-crates",
+    "categoryTag": "accessories display-crates display-crates 360 acrylic display box showcase museum",
+    "gender": "unisex",
+    "price": 2199.0,
+    "originalPrice": 2799.0,
+    "discount": "-21%",
+    "rating": 4.9,
+    "reviewsCount": 160,
+    "badge": "Museum Grade",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
+    "mainImage": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
+    "gallery": [
+      "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg"
+    ],
+    "description": "Frameless optical-grade acrylic allows seamless viewing from every angle while guarding against dust and yellowing.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Crate Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Full Clear Acrylic",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
+        "gallery": [
+          "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg"
+        ]
+      }
+    ]
+  },
+  "a16": {
+    "id": "a16",
+    "title": "Modular Heavy-Duty Interlocking Shoe Storage Box (6-Pack)",
+    "name": "Modular Heavy-Duty Interlocking Shoe Storage Box (6-Pack)",
+    "brand": "Crate Squad",
+    "category": "accessories",
+    "subcategory": "display-crates",
+    "categoryTag": "accessories display-crates display-crates modular interlocking storage box stackable pack",
+    "gender": "unisex",
+    "price": 4499.0,
+    "originalPrice": 5999.0,
+    "discount": "-25%",
+    "rating": 4.8,
+    "reviewsCount": 290,
+    "badge": "Value 6-Pack",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
+    "mainImage": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
+    "gallery": [
+      "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg"
+    ],
+    "description": "Precision interlocking groove design lets you assemble a complete wall of sneaker boxes with zero wobbling.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Crate Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Smoky Translucent Grey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
+        "gallery": [
+          "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg"
+        ]
+      }
+    ]
+  },
+  "a17": {
+    "id": "a17",
+    "title": "Bamboo Charcoal Sneaker Deodorizer Pouches (2-Pack)",
+    "name": "Bamboo Charcoal Sneaker Deodorizer Pouches (2-Pack)",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "odor-eliminators",
+    "categoryTag": "accessories odor-eliminators odor-eliminators charcoal deodorizer fresh moisture absorber",
+    "gender": "unisex",
+    "price": 499.0,
+    "originalPrice": 699.0,
+    "discount": "-28%",
+    "rating": 4.9,
+    "reviewsCount": 390,
+    "badge": "Natural Fresh",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
+    "mainImage": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
+    "gallery": [
+      "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg"
+    ],
+    "description": "Activated moso bamboo charcoal traps moisture and neutralizes pungent foot odors naturally without artificial scent.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Natural Linen Grey",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
+        "gallery": [
+          "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg"
+        ]
+      }
+    ]
+  },
+  "a18": {
+    "id": "a18",
+    "title": "Fresh Citrus Shoe Antifungal Deodorant Spray (150ml)",
+    "name": "Fresh Citrus Shoe Antifungal Deodorant Spray (150ml)",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "odor-eliminators",
+    "categoryTag": "accessories odor-eliminators odor-eliminators shoe spray deodorant antibacterial citrus",
+    "gender": "unisex",
+    "price": 599.0,
+    "originalPrice": 799.0,
+    "discount": "-25%",
+    "rating": 4.8,
+    "reviewsCount": 270,
+    "badge": "Instant Fresh",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
+    "mainImage": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
+    "gallery": [
+      "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg"
+    ],
+    "description": "Fast-drying formula infused with tea tree oil and lemon zest kills 99.9% of odor-causing bacteria upon contact.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Cool Citrus Blast",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
+        "gallery": [
+          "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg"
+        ]
+      }
+    ]
+  },
+  "a19": {
+    "id": "a19",
+    "title": "Cedar Wood Moisture & Odor Absorber Tree Inserts",
+    "name": "Cedar Wood Moisture & Odor Absorber Tree Inserts",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "odor-eliminators",
+    "categoryTag": "accessories odor-eliminators odor-eliminators cedar wood shoe tree absorber inserts",
+    "gender": "unisex",
+    "price": 899.0,
+    "originalPrice": 1199.0,
+    "discount": "-25%",
+    "rating": 4.9,
+    "reviewsCount": 180,
+    "badge": "Aromatic Wood",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
+    "mainImage": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
+    "gallery": [
+      "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg"
+    ],
+    "description": "100% natural red cedar absorbs sweat residue after long days of wear and imparts a refined forest aroma.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Aromatic Red Cedar",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
+        "gallery": [
+          "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg"
+        ]
+      }
+    ]
+  },
+  "a20": {
+    "id": "a20",
+    "title": "Activated Carbon Kinetic Odor Eliminating Balls (6-Pack)",
+    "name": "Activated Carbon Kinetic Odor Eliminating Balls (6-Pack)",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "odor-eliminators",
+    "categoryTag": "accessories odor-eliminators odor-eliminators sneaker balls deodorizer carbon fresh pack",
+    "gender": "unisex",
+    "price": 649.0,
+    "originalPrice": 849.0,
+    "discount": "-23%",
+    "rating": 4.8,
+    "reviewsCount": 320,
+    "badge": "Twist-Lock Fresh",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
+    "mainImage": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
+    "gallery": [
+      "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg"
+    ],
+    "description": "Compact twist-to-activate deodorizing spheres that fit snug into toes, shoe bags, or locker spaces.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Matte Black / Orange Vents",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
+        "gallery": [
+          "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg"
+        ]
+      }
+    ]
+  },
+  "a21": {
+    "id": "a21",
+    "title": "Heavyweight Vintage Cotton Flat Laces - Sail Cream (140cm)",
+    "name": "Heavyweight Vintage Cotton Flat Laces - Sail Cream (140cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "premium-shoelaces",
+    "categoryTag": "accessories premium-shoelaces premium-shoelaces sail cream laces flat cotton vintage",
+    "gender": "unisex",
+    "price": 399.0,
+    "originalPrice": 599.0,
+    "discount": "-33%",
+    "rating": 4.9,
+    "reviewsCount": 450,
+    "badge": "Vintage Swap",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
+    "mainImage": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg"
+    ],
+    "description": "100% combed cotton weave delivering the coveted vintage aged aesthetic for Jordan 1s, Dunks, and Sambas.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Vintage Sail Cream",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg"
+        ]
+      }
+    ]
+  },
+  "a22": {
+    "id": "a22",
+    "title": "Reflective 3M Rope Laces - Core Black / Silver Weave (120cm)",
+    "name": "Reflective 3M Rope Laces - Core Black / Silver Weave (120cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "premium-shoelaces",
+    "categoryTag": "accessories premium-shoelaces premium-shoelaces rope laces 3m reflective yeezy laces",
+    "gender": "unisex",
+    "price": 499.0,
+    "originalPrice": 699.0,
+    "discount": "-28%",
+    "rating": 4.8,
+    "reviewsCount": 280,
+    "badge": "Night Glow",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
+    "mainImage": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg"
+    ],
+    "description": "Dense circular rope laces threaded with high-visibility 3M reflective fibers that light up under camera flash.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Black / 3M Reflective Silver",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg"
+        ]
+      }
+    ]
+  },
+  "a23": {
+    "id": "a23",
+    "title": "Waxed Vintage Dunk Aglet Shoelaces - Pure White (160cm)",
+    "name": "Waxed Vintage Dunk Aglet Shoelaces - Pure White (160cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "premium-shoelaces",
+    "categoryTag": "accessories premium-shoelaces premium-shoelaces waxed cotton laces metal tips premium",
+    "gender": "unisex",
+    "price": 549.0,
+    "originalPrice": 749.0,
+    "discount": "-26%",
+    "rating": 4.9,
+    "reviewsCount": 220,
+    "badge": "Gunmetal Aglets",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
+    "mainImage": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg"
+    ],
+    "description": "Water-resistant wax coating gives a sleek sheen and prevents fraying, finished with screw-on engraved metal aglets.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Pure White / Metal Tips",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg"
+        ]
+      }
+    ]
+  },
+  "a24": {
+    "id": "a24",
+    "title": "Oval SB Skate Chunky Laces - Neon Volt (140cm)",
+    "name": "Oval SB Skate Chunky Laces - Neon Volt (140cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "premium-shoelaces",
+    "categoryTag": "accessories premium-shoelaces premium-shoelaces oval sb laces chunky skate volt neon",
+    "gender": "unisex",
+    "price": 449.0,
+    "originalPrice": 649.0,
+    "discount": "-30%",
+    "rating": 4.7,
+    "reviewsCount": 160,
+    "badge": "Chunky SB",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
+    "mainImage": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg"
+    ],
+    "description": "Padded thick oval laces modeled after authentic 2000s Nike SB Dunk fat tongues for iconic skate presence.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Neon Volt Yellow",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg"
+        ]
+      }
+    ]
   }
 };
 
