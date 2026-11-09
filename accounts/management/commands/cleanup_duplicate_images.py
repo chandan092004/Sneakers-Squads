@@ -83,3 +83,4 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS(f"  • Duplicate Products Safely Purged: {purged_count}"))
             self.stdout.write(self.style.SUCCESS(f"  • Remaining Catalog Volume: {Product.objects.count()} products"))
         self.stdout.write(self.style.MIGRATE_HEADING("=" * 70 + "\n"))
+

@@ -992,6 +992,20 @@ function initCategoryFilters() {
   const filterButtons = document.querySelectorAll('.filter-btn');
   if (filterButtons.length === 0) return;
 
+  // Auto-sync initial active button if URL parameter ?type= or ?filter= exists
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialFilter = (urlParams.get('type') || urlParams.get('filter') || '').toLowerCase().trim();
+    if (initialFilter && initialFilter !== 'all') {
+      const matchingBtn = Array.from(filterButtons).find(b => (b.getAttribute('data-filter') || '').toLowerCase() === initialFilter);
+      if (matchingBtn) {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        matchingBtn.classList.add('active');
+        window.currentCategoryFilter = initialFilter;
+      }
+    }
+  } catch (err) {}
+
   filterButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();

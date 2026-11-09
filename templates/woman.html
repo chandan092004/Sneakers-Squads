@@ -77,16 +77,19 @@
         <h2 class="section-title">Women's Sneaker Collection</h2>
       </div>
 
-      <!-- Filter & Sort Toolbar -->
+      <!-- Filter & Sort Toolbar (Purana Filter Style) -->
       <div class="filter-toolbar">
-        <div class="filter-pills" id="subcat-filter-pills">
-          <a href="?type=all" class="filter-btn {% if active_filter == 'all' or not active_filter %}active{% endif %}" data-filter="all">All Women</a>
-          <a href="?type=sneakers" class="filter-btn {% if active_filter == 'sneakers' %}active{% endif %}" data-filter="sneakers">Sneakers Only</a>
-          <a href="?type=heels" class="filter-btn {% if active_filter == 'heels' %}active{% endif %}" data-filter="heels">Heels & Flats</a>
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all">All Kicks</button>
+          <button class="filter-btn" data-filter="platform">Platforms</button>
+          <button class="filter-btn" data-filter="running">Running</button>
+          <button class="filter-btn" data-filter="retro">Retro Classics</button>
+          <button class="filter-btn" data-filter="chunky">Chunky Sole</button>
+          <button class="filter-btn" data-filter="heels">Heels & Flats</button>
         </div>
 
         <div class="filter-controls-right">
-          <span class="products-count" id="products-count-text">Showing {{ products_count|default:products.count }} items</span>
+          <span class="products-count" id="products-count-text">Showing {{ products_count|default:products.count }} sneakers</span>
           <div class="sort-select-wrapper">
             <select class="sort-select" id="sort-select" aria-label="Sort products">
               <option value="featured">Sort by: Featured</option>
@@ -102,7 +105,7 @@
       <!-- Product Cards Grid (Dynamic Django ORM Queryset - Strictly 4-col desktop / 2-col mobile) -->
       <div class="product-grid">
         {% for product in products %}
-        <article class="product-card" data-id="{{ product.code }}" data-tag="{{ product.tag|lower }}" data-subcat="{{ product.subcategory.slug|default:'' }}" data-price="{{ product.price }}" data-rating="{{ product.rating }}">
+        <article class="product-card" data-id="{{ product.code }}" data-tag="{{ product.tag|lower }} {{ product.subcategory.slug|default:'' }}" data-category="{{ product.category.slug|default:'' }}" data-subcat="{{ product.subcategory.slug|default:'' }}" data-price="{{ product.price }}" data-rating="{{ product.rating }}">
           <div class="product-image-box">
             {% if product.badge_text %}
               <span class="product-badge {{ product.badge_style }}">{{ product.badge_text }}</span>
