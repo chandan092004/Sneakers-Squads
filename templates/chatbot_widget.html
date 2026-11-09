@@ -1,0 +1,62 @@
+{% load static %}
+<!-- SNEAKER SQUAD - PANDAS AI CHATBOT WIDGET -->
+<link rel="stylesheet" href="{% static 'css/chatbot.css' %}?v=1.0">
+
+<!-- Floating Launcher Button -->
+<div class="squad-chat-launcher" id="squad-chat-launcher" title="Chat with Sneaker Squad AI" aria-label="Open AI Assistant">
+  <i class="fa-solid fa-bolt"></i>
+  <span class="chat-badge-pulse"></span>
+</div>
+
+<!-- Chat Window -->
+<aside class="squad-chat-window" id="squad-chat-window" aria-label="Sneaker Squad AI Chat Assistant">
+  <!-- Header -->
+  <div class="squad-chat-header">
+    <div class="chat-header-profile">
+      <div class="chat-avatar-wrap">
+        <i class="fa-solid fa-shoe-prints"></i>
+      </div>
+      <div class="chat-header-info">
+        <h4>Squad AI Assistant 👟</h4>
+        <span>Online & Ready</span>
+      </div>
+    </div>
+    <button type="button" class="chat-close-btn" id="squad-chat-close" aria-label="Close Chat">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <!-- Messages Scrollable Body -->
+  <div class="squad-chat-body" id="squad-chat-body">
+    <!-- Initial Bot Welcome Message -->
+    <div class="chat-msg bot">
+      <div class="msg-bubble">
+        Hello! 👋 Main <strong>Sneaker Squad AI Assistant</strong> hoon.<br><br>
+        Aap mujhse sneakers dhoondhne, trending kicks dekhne, order track karne ya discount offers pooch sakte hain!
+      </div>
+      <span class="msg-time">Just now</span>
+    </div>
+  </div>
+
+  <!-- Quick Suggestion Buttons -->
+  <div class="chat-suggestions-bar">
+    <button type="button" class="chat-chip" data-query="Nike shoes under 5000">🔥 Nike under 5000</button>
+    <button type="button" class="chat-chip" data-query="Sabse saste sneakers dikhao">💰 Cheapest kicks</button>
+    <button type="button" class="chat-chip" data-query="Trending sneakers recommend karo">⭐ Trending</button>
+    <button type="button" class="chat-chip" data-query="Mera order kahan hai?">📦 Mera order</button>
+    <button type="button" class="chat-chip" data-query="Return policy kya hai?">🔄 Return policy</button>
+  </div>
+
+  <!-- Input Form Footer -->
+  <div class="squad-chat-footer">
+    <form class="chat-input-form" id="squad-chat-form">
+      <input type="text" class="chat-input-field" id="squad-chat-input" placeholder="Ask anything about kicks, size or orders..." autocomplete="off">
+      <button type="submit" class="chat-send-btn" id="squad-chat-send" aria-label="Send Message">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+</aside>
+
+<script src="{% static 'js/chatbot.js' %}?v=1.0"></script>
+

@@ -58,6 +58,9 @@ urlpatterns = [
     path('api/reviews/submit/', account_views.api_submit_review, name='root_api_submit_review'),
     path('api/reviews/<str:product_code>/', account_views.api_get_reviews, name='root_api_get_reviews'),
     
+    # Pandas Rule-Based Chatbot API
+    path('chatbot/', include('chatbot.urls')),
+    
     # Dynamic Products Database APIs & JS Sync
     path('api/products/', views.api_products_json, name='api_products_json'),
     path('api/products/data.js', views.dynamic_products_js, name='dynamic_products_js'),
