@@ -337,6 +337,7 @@ class Product(models.Model):
     color = models.CharField(max_length=100, default='Multi-Color', blank=True, help_text="Primary color (e.g. White, Black, Red)")
     size = models.CharField(max_length=255, default='UK 6, UK 7, UK 8, UK 9, UK 10', blank=True, help_text="Available sizes")
     
+    image_file = models.ImageField(upload_to='sneakers/', blank=True, null=True, help_text="Local sneaker image file saved in MEDIA_ROOT")
     image_url = models.CharField(max_length=500, unique=True, null=True, blank=True, help_text="Unique high-res product image URL")
     image = models.CharField(max_length=500, default='/static/img/shoe-1.jpg', blank=True, help_text="Product image URL (synced)")
     main_image = models.CharField(max_length=500, default='/static/img/shoe-1.jpg', blank=True, help_text="Primary shoe image URL or /static path (synced)")
@@ -387,7 +388,23 @@ class Product(models.Model):
             self.title = "Sneaker Product"
             self.name = "Sneaker Product"
 
-        # 2. Sync image_url, image & main_image
+        # 2. Prevent unique constraint errors on empty strings for image_url
+        if self.image_url == '':
+            self.image_url = None
+
+        # 3. Sync image_file, image_url, image & main_image
+        if self.image_file:
+            try:
+                local_url = self.image_file.url
+                if not self.main_image or self.main_image == '/static/img/shoe-1.jpg':
+                    self.main_image = local_url
+                if not self.image or self.image == '/static/img/shoe-1.jpg':
+                    self.image = local_url
+                if not self.image_url:
+                    self.image_url = local_url
+            except Exception:
+                pass
+
         if self.image_url:
             if not self.image:
                 self.image = self.image_url

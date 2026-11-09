@@ -23,11 +23,7 @@ def men_view(request):
     - Enforces .distinct() to guarantee zero duplicate product cards
     """
     cat_obj = Category.objects.filter(slug='men').first()
-    queryset = Product.objects.filter(is_active=True)
-    if cat_obj:
-        queryset = queryset.filter(Q(category=cat_obj) | Q(gender__in=['men', 'unisex'], category__isnull=True))
-    else:
-        queryset = queryset.filter(gender__in=['men', 'unisex'])
+    queryset = Product.objects.filter(is_active=True, gender__in=['men', 'unisex'])
 
     # Subcategory Filter via URL param ?type=
     subcat_filter = request.GET.get('type', '').strip().lower()
@@ -62,11 +58,7 @@ def women_view(request):
     - Enforces .distinct() to guarantee zero duplicate product cards
     """
     cat_obj = Category.objects.filter(slug='women').first()
-    queryset = Product.objects.filter(is_active=True)
-    if cat_obj:
-        queryset = queryset.filter(Q(category=cat_obj) | Q(gender__in=['women', 'unisex'], category__isnull=True))
-    else:
-        queryset = queryset.filter(gender__in=['women', 'unisex'])
+    queryset = Product.objects.filter(is_active=True, gender__in=['women', 'unisex'])
 
     # Subcategory Filter via URL param ?type=
     subcat_filter = request.GET.get('type', '').strip().lower()

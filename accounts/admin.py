@@ -49,7 +49,7 @@ class ProductAdmin(admin.ModelAdmin):
                 ('title', 'name'),
                 ('brand', 'price', 'original_price'),
                 ('category', 'subcategory', 'gender'),
-                ('image_url', 'main_image', 'stock_quantity'),
+                ('image_file', 'image_url', 'main_image', 'stock_quantity'),
             )
         }),
         ('⚙️ Advanced & Optional Options (Click to Expand)', {
@@ -71,7 +71,7 @@ class ProductAdmin(admin.ModelAdmin):
     )
 
     def image_thumbnail(self, obj):
-        img_src = obj.image_url or obj.main_image or obj.image
+        img_src = (obj.image_file.url if obj.image_file else None) or obj.image_url or obj.main_image or obj.image
         if img_src:
             return format_html(
                 '<img src="{}" style="width: 44px; height: 44px; object-fit: cover; border-radius: 6px; border: 1.5px solid #ff5a1f; background: #0b0d13;" />',
