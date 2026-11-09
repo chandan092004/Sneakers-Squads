@@ -202,6 +202,12 @@
 
       try {
         const csrftoken = getCookie('csrftoken') || '';
+        const path = window.location.pathname.toLowerCase();
+        let pageCtx = null;
+        if (path.includes('man') || path.includes('men')) pageCtx = 'man';
+        else if (path.includes('woman') || path.includes('women')) pageCtx = 'woman';
+        else if (path.includes('accessor')) pageCtx = 'accessory';
+
         const res = await fetch('/chatbot/api/', {
           method: 'POST',
           credentials: 'include',
@@ -209,7 +215,7 @@
             'Content-Type': 'application/json',
             'X-CSRFToken': csrftoken
           },
-          body: JSON.stringify({ message: text.trim() })
+          body: JSON.stringify({ message: text.trim(), page_context: pageCtx })
         });
 
         const data = await res.json();

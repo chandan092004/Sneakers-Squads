@@ -31,7 +31,7 @@ def get_df():
     """
     columns = [
         'id', 'name', 'brand', 'price', 'color', 'size',
-        'category', 'stock', 'sales', 'rating', 'main_image', 'description'
+        'category', 'gender', 'stock', 'sales', 'rating', 'main_image', 'description'
     ]
     try:
         products = Product.objects.filter(is_active=True, is_in_stock=True)
@@ -40,7 +40,7 @@ def get_df():
             # Extract color hints from name, tag, or description
             full_text = f"{p.name} {p.tag} {p.description or ''}".lower()
             detected_colors = []
-            for c in ['black', 'white', 'red', 'blue', 'green', 'pink', 'silver', 'cream', 'orange', 'purple', 'grey', 'yellow']:
+            for c in ['black', 'white', 'red', 'blue', 'green', 'pink', 'silver', 'cream', 'orange', 'purple', 'grey', 'yellow', 'brown']:
                 if c in full_text:
                     detected_colors.append(c)
             color_str = ", ".join(detected_colors) if detected_colors else (p.tag or '')
@@ -51,12 +51,13 @@ def get_df():
                 'brand': p.brand or 'Sneaker Squad',
                 'price': float(p.price),
                 'color': color_str,
-                'size': p.sizes_list or 'UK 6, UK 7, UK 8, UK 9, UK 10, UK 11',
-                'category': p.category.name if p.category else p.gender,
+                'size': p.size or p.sizes_list or 'UK 6, UK 7, UK 8, UK 9, UK 10, UK 11',
+                'category': str(p.category or 'sneaker').lower(),
+                'gender': str(p.gender or 'men').lower(),
                 'stock': p.stock_quantity,
                 'sales': p.reviews_count or 0,  # Proxy for popularity/sales
                 'rating': float(p.rating or 4.5),
-                'main_image': p.main_image or '/static/img/shoe-1.jpg',
+                'main_image': p.image or p.main_image or '/static/img/shoe-1.jpg',
                 'description': p.description or ''
             })
 
@@ -69,6 +70,7 @@ def get_df():
         df['name_lower'] = df['name'].str.lower()
         df['brand_lower'] = df['brand'].str.lower()
         df['category_lower'] = df['category'].astype(str).str.lower()
+        df['gender_lower'] = df['gender'].astype(str).str.lower()
         df['color_lower'] = df['color'].str.lower()
         df['size_lower'] = df['size'].str.lower()
         return df
@@ -530,10 +532,10 @@ DEFAULT_QUICK_REPLIES = [
 ]
 
 
-def get_reply(message, user=None):
+def get_reply(message, user=None, page_context=None):
     """
     Main entry point for Chatbot:
-    Takes message string & Django request.user
+    Takes message string, Django request.user, and page_context ('man', 'woman', 'accessory')
     Returns dictionary: {"text": str, "products": list}
     """
     clean_msg = message.strip()
@@ -545,6 +547,20 @@ def get_reply(message, user=None):
 
     intent = detect_intent(clean_msg)
     df = get_df()
+
+    # Apply strict Page Context & Category Rules:
+    # 1. man/men context: ONLY category='sneaker' AND gender in ['men', 'unisex']
+    # 2. woman/women context: ONLY category='sneaker' AND gender in ['women', 'unisex']
+    # 3. accessory context: ONLY category='accessory'
+    ctx = (page_context or '').lower().strip()
+    msg_l = clean_msg.lower()
+
+    if ctx in ['man', 'men'] or re.search(r'\b(men|man|mens|gents|male)\b', msg_l):
+        df = df[(df['category_lower'] == 'sneaker') & (df['gender_lower'].isin(['men', 'unisex']))]
+    elif ctx in ['woman', 'women'] or re.search(r'\b(women|woman|womens|ladies|female)\b', msg_l):
+        df = df[(df['category_lower'] == 'sneaker') & (df['gender_lower'].isin(['women', 'unisex']))]
+    elif ctx in ['accessory', 'accessories'] or re.search(r'\b(accessory|accessories|care|cleaner|lace|laces|insole|brush|spray|shoe bag)\b', msg_l):
+        df = df[df['category_lower'] == 'accessory']
 
     # --------------------------------------------------------------------------
     # INTENT 1: RECOMMENDATION

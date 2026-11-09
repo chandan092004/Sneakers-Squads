@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Sneakers & Kicks | SNEAKER SQUAD</title>
+  <meta name="description" content="Explore authentic men's sneakers, retro classics, basketball high-tops, and athletic runners.">
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/men.css' %}">
+</head>
+
+<body>
+
+  {% include 'header.html' %}
+
+  <!-- Men's Hero Banner Section -->
+  <section class="hero-section">
+    <div class="container hero-content-wrapper">
+      <div class="hero-text">
+        <span class="hero-badge">🛹 Men's Street Rotation</span>
+        <h1 class="hero-title">
+          MEN'S PERFORMANCE & <br>
+          <span class="highlight">COURT SNEAKERS.</span>
+        </h1>
+        <p class="hero-desc">
+          Engineered for high-friction street grip and court dominance. Discover premium leather uppers, reactive cushioning, and iconic silhouettes.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#mens-products" class="btn btn-primary">
+            <i class="fa-solid fa-fire"></i> Shop Collection
+          </a>
+          <a href="#mens-products" class="btn btn-secondary">
+            View Bestsellers <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-card">
+          <img src="{% static 'img/men_shoes-1.jpg' %}" onerror="this.onerror=null;this.src='/static/img/shoe-1.jpg'" alt="Men's Sneaker Hero">
+          <div class="hero-floating-tag">
+            <i class="fa-solid fa-bolt" style="color: var(--primary);"></i> 100% Deadstock Verified
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Technologies Bar -->
+  <div class="brand-tech-bar">
+    <div class="container">
+      <div class="brand-tech-header">Engineered For Men's Performance</div>
+      <div class="brand-tech-list">
+        <div class="brand-pill"><i class="fa-solid fa-cube"></i> Carbon Plate Tech</div>
+        <div class="brand-pill"><i class="fa-solid fa-feather"></i> Ultralight Breathable Upper</div>
+        <div class="brand-pill"><i class="fa-solid fa-shield-halved"></i> Non-Slip Rubber Sole</div>
+        <div class="brand-pill"><i class="fa-solid fa-droplet-slash"></i> Hydro-Shield Guard</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Product Listing Section -->
+  <main class="main-content" id="mens-products">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tagline">Men's Footwear</span>
+        <h2 class="section-title">Men's Sneaker Collection</h2>
+      </div>
+
+      <!-- Filter & Sort Toolbar -->
+      <div class="filter-toolbar">
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all">All Kicks</button>
+          <button class="filter-btn" data-filter="high-top">High-Tops</button>
+          <button class="filter-btn" data-filter="running">Running</button>
+          <button class="filter-btn" data-filter="basketball">Basketball</button>
+          <button class="filter-btn" data-filter="chunky">Chunky Sole</button>
+          <button class="filter-btn" data-filter="retro">Retro Classics</button>
+        </div>
+
+        <div class="filter-controls-right">
+          <span class="products-count" id="products-count-text">Showing {{ products_count|default:products.count }} sneakers</span>
+          <div class="sort-select-wrapper">
+            <select class="sort-select" id="sort-select" aria-label="Sort products">
+              <option value="featured">Sort by: Featured</option>
+              <option value="price-low-high">Price: Low to High</option>
+              <option value="price-high-low">Price: High to Low</option>
+              <option value="rating-high">Highest Rated</option>
+              <option value="name-az">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid (Dynamic Django ORM Queryset) -->
+      <div class="product-grid">
+        {% if products %}
+          {% for product in products %}
+          <article class="product-card" data-id="{{ product.code }}" data-tag="{{ product.tag|lower }}" data-price="{{ product.price }}" data-rating="{{ product.rating }}">
+            <div class="product-image-box">
+              {% if product.badge_text %}
+                <span class="product-badge {{ product.badge_style }}">{{ product.badge_text }}</span>
+              {% elif product.is_trending %}
+                <span class="product-badge hot">Trending</span>
+              {% elif product.gender == 'unisex' %}
+                <span class="product-badge" style="background:#8b5cf6;">Unisex</span>
+              {% endif %}
+              <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <a href="/product-detail?id={{ product.code }}" class="product-img-link" title="{{ product.name }}">
+                <img src="{{ product.image|default:product.main_image }}" alt="{{ product.name }}" onerror="this.onerror=null; this.src='/static/img/shoe-1.jpg';" loading="lazy">
+              </a>
+            </div>
+            <div class="product-info">
+              <span class="product-category-meta">{{ product.brand }} • {% if product.gender == 'unisex' %}Unisex Kicks{% else %}Men's Sneakers{% endif %}</span>
+              <h3 class="product-title"><a href="/product-detail?id={{ product.code }}">{{ product.name }}</a></h3>
+              <div class="product-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-value">{{ product.rating }}</span>
+                <span class="rating-count">({{ product.reviews_count }})</span>
+              </div>
+              <div class="product-price-row">
+                <span class="current-price">₹{{ product.price|floatformat:0 }}</span>
+                {% if product.original_price and product.original_price > product.price %}
+                  <span class="original-price">₹{{ product.original_price|floatformat:0 }}</span>
+                  <span class="discount-badge">-{{ product.get_discount_percentage }}%</span>
+                {% endif %}
+              </div>
+              <div class="product-action-row">
+                <a href="/product-detail?id={{ product.code }}" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+                <button class="btn-add-cart" onclick="addToCart('{{ product.code }}')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        {% else %}
+          <div class="empty-products-box" style="grid-column: 1 / -1; text-align: center; padding: 70px 20px;">
+            <i class="fa-solid fa-box-open" style="font-size: 3.2rem; color: #ff5a1f; margin-bottom: 16px;"></i>
+            <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 8px;">Abhi koi product available nahi hai.</h3>
+            <p style="color: #94a3b8; font-size: 0.95rem;">Jald hi naye kicks add honge! Thodi der me check karein.</p>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if recommended %}
+      <!-- You May Also Like Section (Strictly Sneaker Category & Men/Unisex) -->
+      <section class="recommended-section" style="margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 40px;">
+        <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+          <span class="section-tagline" style="color: #ff5a1f; font-size: 0.85rem; font-weight: 700;">Handpicked for You</span>
+          <h2 class="section-title" style="font-size: 1.6rem; color: #fff;">You May Also Like</h2>
+        </div>
+        <div class="product-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+          {% for rec in recommended %}
+          <article class="product-card" data-id="{{ rec.code }}">
+            <div class="product-image-box">
+              <a href="/product-detail?id={{ rec.code }}" class="product-img-link" title="{{ rec.name }}">
+                <img src="{{ rec.image|default:rec.main_image }}" alt="{{ rec.name }}" onerror="this.onerror=null; this.src='/static/img/shoe-1.jpg';" loading="lazy">
+              </a>
+            </div>
+            <div class="product-info">
+              <span class="product-category-meta">{{ rec.brand }}</span>
+              <h3 class="product-title"><a href="/product-detail?id={{ rec.code }}">{{ rec.name }}</a></h3>
+              <div class="product-price-row">
+                <span class="current-price">₹{{ rec.price|floatformat:0 }}</span>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+    </div>
+  </main>
+
+  {% include 'footer.html' %}
+  <!-- Page Specific JavaScript -->
+  <script src="{% static 'js/men.js' %}"></script>
+</body>
+</html>

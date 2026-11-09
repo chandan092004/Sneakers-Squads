@@ -13,11 +13,24 @@ def chatbot_api(request):
     Returns JSON: {"text": "bot response", "products": [...]}
     """
     try:
+        page_context = None
         if request.content_type == 'application/json':
             body = json.loads(request.body.decode('utf-8'))
             message = body.get('message', '').strip()
+            page_context = body.get('page_context')
         else:
             message = request.POST.get('message', '').strip()
+            page_context = request.POST.get('page_context')
+
+        # Fallback to HTTP Referer to detect current page
+        if not page_context:
+            referer = request.META.get('HTTP_REFERER', '').lower()
+            if '/man' in referer or '/men' in referer:
+                page_context = 'man'
+            elif '/woman' in referer or '/women' in referer:
+                page_context = 'woman'
+            elif '/accessor' in referer:
+                page_context = 'accessory'
     except Exception as e:
         return JsonResponse({
             'text': "Invalid request format. Kripya JSON payload bhejein.",
@@ -30,6 +43,6 @@ def chatbot_api(request):
             'products': []
         })
 
-    # Pass authenticated user (or AnonymousUser) to engine
-    response_data = get_reply(message, user=request.user)
+    # Pass authenticated user and page_context to engine
+    response_data = get_reply(message, user=request.user, page_context=page_context)
     return JsonResponse(response_data)

@@ -577,16 +577,17 @@ img {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(255, 90, 31, 0.18);
 }
 
-/* Product Image Box with radial studio lighting */
+/* Product Image Box with clean studio light grey background & fixed aspect ratio */
 .product-image-box {
   width: 100%;
-  height: 230px;
-  background: radial-gradient(circle at 50% 45%, #1f2535 0%, #0c0f16 100%);
+  height: 240px;
+  background: #f8f9fa;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 12px 12px 0 0;
 }
 
 .product-img-link {
@@ -595,19 +596,19 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 12px;
 }
 
 .product-image-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  object-fit: contain; /* Rule: Never stretch or crop sneaker product images */
+  border-radius: 8px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .product-card:hover .product-image-box img {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 /* Attractive Floating Badge */

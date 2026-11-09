@@ -285,9 +285,11 @@ class Product(models.Model):
     GENDER_CHOICES = (
         ('men', 'Men'),
         ('women', 'Women'),
-        ('accessories', 'Accessories & Shoe Care'),
-        ('kids', 'Kids & Juniors'),
         ('unisex', 'Unisex'),
+    )
+    CATEGORY_CHOICES = (
+        ('sneaker', 'Sneaker'),
+        ('accessory', 'Accessory'),
     )
     BADGE_STYLE_CHOICES = (
         ('new', 'New Drop (Neon Orange)'),
@@ -299,17 +301,21 @@ class Product(models.Model):
     code = models.CharField(max_length=80, unique=True, blank=True, help_text="Unique Product Code (Auto-generated if left blank)")
     name = models.CharField(max_length=200, help_text="Product Title (e.g. Nike Air Jordan 1)")
     brand = models.CharField(max_length=100, default='Nike / Jordan', help_text="Brand Name")
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, related_name='products')
-    gender = models.CharField(max_length=20, choices=GENDER_CHOICES, default='men')
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='sneaker', db_index=True, help_text="Category: sneaker or accessory")
+    gender = models.CharField(max_length=20, choices=GENDER_CHOICES, default='men', db_index=True, help_text="Target gender: men, women, or unisex")
     
     price = models.DecimalField(max_digits=10, decimal_places=2, help_text="Selling Price in INR (₹)")
     original_price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, help_text="Original MRP before discount")
+    
+    color = models.CharField(max_length=100, default='Multi-Color', blank=True, help_text="Primary color (e.g. White, Black, Red)")
+    size = models.CharField(max_length=255, default='UK 6, UK 7, UK 8, UK 9, UK 10', blank=True, help_text="Available sizes")
+    image = models.CharField(max_length=500, default='/static/img/shoe-1.jpg', blank=True, help_text="Product image URL")
     
     tag = models.CharField(max_length=100, default='high-top', blank=True, help_text="Category tags for filters")
     badge_text = models.CharField(max_length=50, blank=True, null=True, help_text="Badge label on card")
     badge_style = models.CharField(max_length=20, choices=BADGE_STYLE_CHOICES, default='new', blank=True)
     
-    main_image = models.CharField(max_length=500, default='/static/img/shoe-1.jpg', help_text="Primary shoe image URL or /static path")
+    main_image = models.CharField(max_length=500, default='/static/img/shoe-1.jpg', blank=True, help_text="Primary shoe image URL or /static path")
     gallery_images = models.TextField(blank=True, null=True, help_text="Optional gallery image URLs (comma or newline separated)")
     
     description = models.TextField(blank=True, null=True, help_text="Shoe description")
@@ -337,7 +343,39 @@ class Product(models.Model):
     def __str__(self):
         return f"{self.name} ({self.brand}) - ₹{self.price}"
 
+    def clean(self):
+        super().clean()
+        from django.core.exceptions import ValidationError
+        if self.category not in ['sneaker', 'accessory']:
+            raise ValidationError({'category': "Category must be strictly 'sneaker' or 'accessory'."})
+        if self.gender not in ['men', 'women', 'unisex']:
+            raise ValidationError({'gender': "Gender must be 'men', 'women', or 'unisex'."})
+
     def save(self, *args, **kwargs):
+        # Sync image & size compatibility fields
+        if not self.image and self.main_image:
+            self.image = self.main_image
+        elif not self.main_image and self.image:
+            self.main_image = self.image
+
+        if not self.size and self.sizes_list:
+            self.size = self.sizes_list
+        elif not self.sizes_list and self.size:
+            self.sizes_list = self.size
+
+        # Normalization
+        if self.category:
+            cat_l = str(self.category).lower().strip()
+            self.category = 'accessory' if 'accessor' in cat_l else 'sneaker'
+        if self.gender:
+            gen_l = str(self.gender).lower().strip()
+            if gen_l in ['men', 'man', 'male']:
+                self.gender = 'men'
+            elif gen_l in ['women', 'woman', 'female', 'ladies']:
+                self.gender = 'women'
+            else:
+                self.gender = 'unisex'
+
         if not self.code:
             from django.utils.text import slugify
             base_slug = slugify(self.name) or "sneaker"
@@ -396,7 +434,7 @@ class Product(models.Model):
             'id': self.code,
             'name': self.name,
             'brand': self.brand,
-            'category': self.category.name if self.category else (self.gender.capitalize() + " Footwear"),
+            'category': self.get_category_display() if hasattr(self, 'get_category_display') else str(self.category),
             'categoryTag': self.tag,
             'gender': self.gender,
             'price': float(self.price),

@@ -26,6 +26,7 @@ class ProductAdmin(admin.ModelAdmin):
         'image_thumbnail',
         'name',
         'brand',
+        'category',
         'gender',
         'price',
         'stock_quantity',
@@ -34,9 +35,9 @@ class ProductAdmin(admin.ModelAdmin):
         'is_active'
     )
     list_display_links = ('image_thumbnail', 'name')
-    list_editable = ('price', 'stock_quantity', 'is_in_stock', 'is_featured', 'is_active')
+    list_editable = ('category', 'gender', 'price', 'stock_quantity', 'is_in_stock', 'is_featured', 'is_active')
     search_fields = ('name', 'brand', 'code', 'description', 'tag')
-    list_filter = ('gender', 'brand', 'category', 'is_in_stock', 'is_featured', 'is_active')
+    list_filter = ('category', 'gender', 'brand', 'is_in_stock', 'is_featured', 'is_active')
     list_per_page = 20
 
     fieldsets = (
