@@ -1,7 +1,8 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.static import serve
 from sneakerweb import views
 from accounts import views as account_views
 
@@ -81,6 +82,8 @@ urlpatterns = [
     # PWA Manifest & Service Worker Root Routes
     path('manifest.json', views.pwa_manifest, name='pwa_manifest'),
     path('sw.js', views.pwa_service_worker, name='pwa_service_worker'),
+    # Direct Media & Static Serving (Guaranteed in both dev and production / Vercel)
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
 
 # Serve static & media files in development
