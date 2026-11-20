@@ -6,31 +6,47 @@
 /* --------------------------------------------------------------------------
    1. HERO SPLIT SECTION (MEN vs WOMEN DUAL SHOWCASE)
    -------------------------------------------------------------------------- */
+.split-hero-container,
 .home-split-hero {
   display: flex;
-  min-height: 480px;
-  max-height: 540px;
+  flex-direction: row;
+  width: 100%;
+  height: 75vh;
+  min-height: 520px;
+  padding: 0;
+  margin: 0;
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
   background: #0b0d13;
 }
 
+.split-hero-card,
 .split-side {
   flex: 1;
+  width: 50%;
+  height: 100%;
   position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: var(--text-white);
-  overflow: hidden;
   transition: flex 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-  min-height: 100%;
 }
 
-.split-side:hover {
-  flex: 1.18;
+.split-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.split-hero-card:hover .split-hero-img {
+  transform: scale(1.06);
 }
 
 .split-bg {
@@ -45,28 +61,39 @@
   transform: scale(1.06);
 }
 
+.split-hero-overlay,
 .split-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(11, 13, 19, 0.55) 0%, rgba(11, 13, 19, 0.75) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2));
   transition: background 0.4s ease;
+  z-index: 1;
 }
 
+.split-hero-card:hover .split-hero-overlay,
 .split-side:hover .split-overlay {
-  background: linear-gradient(180deg, rgba(11, 13, 19, 0.4) 0%, rgba(11, 13, 19, 0.6) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.15));
 }
 
+.split-hero-content,
 .split-box {
   position: relative;
   z-index: 2;
   text-align: center;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.split-hero-badge,
 .split-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 6px 16px;
-  background: rgba(20, 23, 31, 0.8);
+  background: rgba(20, 23, 31, 0.85);
   backdrop-filter: blur(8px);
   border: 1px solid var(--border);
   border-radius: 20px;
@@ -76,8 +103,9 @@
   letter-spacing: 0.3px;
 }
 
+.split-hero-title,
 .split-title {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   font-weight: 900;
   letter-spacing: 2px;
   margin-bottom: 16px;
@@ -85,6 +113,7 @@
   text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
 }
 
+.split-hero-btn,
 .split-btn {
   display: inline-flex;
   align-items: center;
@@ -99,6 +128,7 @@
   transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
 
+.split-hero-card:hover .split-hero-btn,
 .split-side:hover .split-btn {
   transform: translateY(-3px);
   background: var(--primary-hover);
@@ -106,10 +136,7 @@
 }
 
 .divider-line {
-  width: 2px;
-  background: var(--border);
-  position: relative;
-  z-index: 5;
+  display: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -380,43 +407,52 @@
 }
 
 @media (max-width: 768px) {
+  .split-hero-container,
   .home-split-hero {
     flex-direction: column;
-    min-height: auto;
-    max-height: none;
-    padding: 12px 14px;
-    gap: 14px;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    gap: 0;
   }
 
   .divider-line {
     display: none;
   }
 
+  .split-hero-card,
   .split-side {
-    height: 230px;
+    width: 100%;
     flex: none;
-    border-radius: 16px;
+    height: 45vh;
+    min-height: 300px;
+    border-radius: 0;
     overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border: none;
+    box-shadow: none;
   }
 
+  .split-hero-content,
   .split-box {
     padding: 20px;
   }
 
+  .split-hero-badge,
   .split-tag {
-    font-size: 0.78rem;
-    padding: 4px 12px;
-    margin-bottom: 8px;
+    font-size: 0.8rem;
+    padding: 5px 14px;
+    margin-bottom: 10px;
   }
 
+  .split-hero-title,
   .split-title {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     letter-spacing: 1px;
     margin-bottom: 12px;
   }
 
+  .split-hero-btn,
   .split-btn {
     padding: 9px 22px;
     font-size: 0.88rem;
@@ -466,12 +502,9 @@
     gap: 12px;
   }
 
-  .split-side {
-    height: 200px;
-  }
-
+  .split-hero-title,
   .split-title {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 

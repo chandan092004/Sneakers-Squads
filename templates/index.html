@@ -41,33 +41,30 @@
   <!-- ====================================================================
        1. HERO SPLIT SHOWCASE (MEN vs WOMEN)
        ==================================================================== -->
-  <section class="home-split-hero" aria-label="Hero Split Showcase">
+  <section class="split-hero-container" aria-label="Hero Split Showcase">
 
     <!-- MEN SECTION (Left on Laptop, Top on Mobile) -->
-    <a href="/men" class="split-side" aria-label="Shop Men's Sneaker Collection">
-      <div class="split-bg" style="background-image: url('{% static 'img/men_shoes-banner.jpg' %}');"></div>
-      <div class="split-overlay"></div>
-      <div class="split-box">
-        <span class="split-tag"><i class="fa-solid fa-fire" style="color: #ff5a1f;"></i> Men's Kicks</span>
-        <h2 class="split-title">MEN</h2>
-        <span class="split-btn">
-          Shop Men's Drop <i class="fa-solid fa-arrow-right"></i>
+    <a href="/men" class="split-hero-card" aria-label="Shop Men's Sneaker Collection">
+      <img src="{% static 'img/men_shoes-banner.jpg' %}" alt="Men's Sneaker Collection" class="split-hero-img" loading="eager">
+      <div class="split-hero-overlay"></div>
+      <div class="split-hero-content">
+        <span class="split-hero-badge"><i class="fa-solid fa-fire" style="color: #ff5a1f;"></i> Men's Kicks</span>
+        <h2 class="split-hero-title">MEN</h2>
+        <span class="split-hero-btn">
+          Shop Men <i class="fa-solid fa-arrow-right"></i>
         </span>
       </div>
     </a>
 
-    <!-- Center Line -->
-    <div class="divider-line"></div>
-
     <!-- WOMEN SECTION (Right on Laptop, Bottom on Mobile) -->
-    <a href="/women" class="split-side" aria-label="Shop Women's Sneaker Collection">
-      <div class="split-bg" style="background-image: url('{% static 'img/women_shoes-banner.jpg' %}');"></div>
-      <div class="split-overlay"></div>
-      <div class="split-box">
-        <span class="split-tag"><i class="fa-solid fa-wand-magic-sparkles" style="color: #ec4899;"></i> Women's Kicks</span>
-        <h2 class="split-title">WOMEN</h2>
-        <span class="split-btn">
-          Shop Women's Drop <i class="fa-solid fa-arrow-right"></i>
+    <a href="/women" class="split-hero-card" aria-label="Shop Women's Sneaker Collection">
+      <img src="{% static 'img/women_shoes-banner.jpg' %}" alt="Women's Sneaker Collection" class="split-hero-img" loading="eager">
+      <div class="split-hero-overlay"></div>
+      <div class="split-hero-content">
+        <span class="split-hero-badge"><i class="fa-solid fa-wand-magic-sparkles" style="color: #ec4899;"></i> Women's Kicks</span>
+        <h2 class="split-hero-title">WOMEN</h2>
+        <span class="split-hero-btn">
+          Shop Women <i class="fa-solid fa-arrow-right"></i>
         </span>
       </div>
     </a>
