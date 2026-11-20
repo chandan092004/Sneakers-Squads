@@ -4,28 +4,28 @@
  * Total Products: 64 (+ legacy alias keys)
  */
 const PRODUCTS_DATA = {
-  "acc-as-61-retro-ribbed-crew-socks-3pk-white": {
-    "id": "acc-as-61-retro-ribbed-crew-socks-3pk-white",
-    "title": "Heavy-Cushion Retro Ribbed Crew Socks 3-Pack - White",
-    "name": "Heavy-Cushion Retro Ribbed Crew Socks 3-Pack - White",
-    "brand": "Squad Apparel",
+  "acc-ck-09-pro-clean-ultimate-sneaker-kit": {
+    "id": "acc-ck-09-pro-clean-ultimate-sneaker-kit",
+    "title": "Pro Clean Ultimate Sneaker Care Box Kit",
+    "name": "Pro Clean Ultimate Sneaker Care Box Kit",
+    "brand": "Squad Care",
     "category": "accessories",
-    "subcategory": "athletic-socks",
-    "categoryTag": "accessories athletic-socks athletic-socks crew socks heavy cushion white retro socks",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits pro clean ultimate care kit solution hog bristle brush microfiber",
     "gender": "unisex",
-    "price": 699.0,
-    "originalPrice": 999.0,
-    "discount": "-30%",
-    "rating": 4.9,
-    "reviewsCount": 480,
-    "badge": "Terry Cushion",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
-    "mainImage": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
+    "price": 1299.0,
+    "originalPrice": 1999.0,
+    "discount": "-35%",
+    "rating": 5.0,
+    "reviewsCount": 680,
+    "badge": "ESSENTIAL",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-ck-09-pro-clean-ultimate-sneaker-kit.jpg",
+    "mainImage": "/media/sneakers/acc-ck-09-pro-clean-ultimate-sneaker-kit.jpg",
     "gallery": [
-      "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg"
+      "/media/sneakers/acc-ck-09-pro-clean-ultimate-sneaker-kit.jpg"
     ],
-    "description": "Thick french terry bottom padding provides pillow-like impact buffering under high-abrasion basketball shoes.",
+    "description": "Comprehensive sneaker care setup: 200ml eco-friendly natural foaming solution, natural hog-bristle medium brush, brass sole brush, and ultra-plush microfiber cloth.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -33,7 +33,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Squad Apparel",
+      "Brand": "Squad Care",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -50,257 +50,92 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Crisp White / Black Stripe",
+        "name": "Squad Signature Orange/Black",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
+        "mainImage": "/media/sneakers/acc-ck-09-pro-clean-ultimate-sneaker-kit.jpg",
         "gallery": [
-          "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg"
+          "/media/sneakers/acc-ck-09-pro-clean-ultimate-sneaker-kit.jpg"
         ]
       }
     ]
   },
-  "acc-as-62-arch-support-performance-ankle-socks": {
-    "id": "acc-as-62-arch-support-performance-ankle-socks",
-    "title": "Compression Arch Support Performance Ankle Socks (3-Pack)",
-    "name": "Compression Arch Support Performance Ankle Socks (3-Pack)",
-    "brand": "Squad Apparel",
+  "acc-ck-10-quick-cleansing-foam-ready-pump": {
+    "id": "acc-ck-10-quick-cleansing-foam-ready-pump",
+    "title": "Ready-Foam Instant Sneaker Cleanser 250ml Pump",
+    "name": "Ready-Foam Instant Sneaker Cleanser 250ml Pump",
+    "brand": "Squad Care",
     "category": "accessories",
-    "subcategory": "athletic-socks",
-    "categoryTag": "accessories athletic-socks athletic-socks ankle socks performance running compression",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits ready foam instant sneaker cleanser waterless pump cleaner",
+    "gender": "unisex",
+    "price": 649.0,
+    "originalPrice": 999.0,
+    "discount": "-35%",
+    "rating": 4.8,
+    "reviewsCount": 320,
+    "badge": "NO WATER NEEDED",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-ck-10-quick-cleansing-foam-ready-pump.jpg",
+    "mainImage": "/media/sneakers/acc-ck-10-quick-cleansing-foam-ready-pump.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ck-10-quick-cleansing-foam-ready-pump.jpg"
+    ],
+    "description": "Direct pump-to-shoe foaming cleanser that lifts stubborn road grime, dirt, and scuffs on contact without requiring water. Completely safe on knit, canvas, mesh, and leather.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Squad Care",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Clean White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ck-10-quick-cleansing-foam-ready-pump.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ck-10-quick-cleansing-foam-ready-pump.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-ck-11-suede-nubuck-renewal-eraser-kit": {
+    "id": "acc-ck-11-suede-nubuck-renewal-eraser-kit",
+    "title": "Suede & Nubuck Gentle Eraser & Crepe Brush Set",
+    "name": "Suede & Nubuck Gentle Eraser & Crepe Brush Set",
+    "brand": "Squad Care",
+    "category": "accessories",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits suede nubuck eraser crepe brush dry cleaner nap restorer",
     "gender": "unisex",
     "price": 599.0,
     "originalPrice": 899.0,
     "discount": "-33%",
-    "rating": 4.8,
-    "reviewsCount": 260,
-    "badge": "Arch Compression",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
-    "mainImage": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
-    "gallery": [
-      "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg"
-    ],
-    "description": "Elastic 360-degree midfoot compression band eliminates blister-causing friction during runs.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Squad Apparel",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Stealth Black / Grey",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
-        "gallery": [
-          "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-as-63-deadstock-tie-dye-street-crew-socks": {
-    "id": "acc-as-63-deadstock-tie-dye-street-crew-socks",
-    "title": "Deadstock Tie-Dye Streetwear Crew Socks - Multi Color",
-    "name": "Deadstock Tie-Dye Streetwear Crew Socks - Multi Color",
-    "brand": "Squad Apparel",
-    "category": "accessories",
-    "subcategory": "athletic-socks",
-    "categoryTag": "accessories athletic-socks athletic-socks tie dye crew socks streetwear pastel multi",
-    "gender": "unisex",
-    "price": 799.0,
-    "originalPrice": 1099.0,
-    "discount": "-27%",
-    "rating": 4.8,
-    "reviewsCount": 190,
-    "badge": "Street Swag",
-    "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
-    "mainImage": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
-    "gallery": [
-      "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg"
-    ],
-    "description": "Hand-dyed combed cotton yarn engineered to style seamlessly with low-top Dunks and chunky platforms.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Squad Apparel",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Pastel Tie-Dye Swirl",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
-        "gallery": [
-          "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-as-64-terry-loop-low-cut-running-socks-3pk": {
-    "id": "acc-as-64-terry-loop-low-cut-running-socks-3pk",
-    "title": "Breathable Terry Loop Low-Cut Running Socks 3-Pack",
-    "name": "Breathable Terry Loop Low-Cut Running Socks 3-Pack",
-    "brand": "Squad Apparel",
-    "category": "accessories",
-    "subcategory": "athletic-socks",
-    "categoryTag": "accessories athletic-socks athletic-socks low cut running socks anti blister terry",
-    "gender": "unisex",
-    "price": 549.0,
-    "originalPrice": 799.0,
-    "discount": "-31%",
-    "rating": 4.7,
-    "reviewsCount": 210,
-    "badge": "Anti-Blister Tab",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
-    "mainImage": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
-    "gallery": [
-      "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg"
-    ],
-    "description": "Padded heel-tab protects Achilles tendons against shoe rubbing during long marathon distance runs.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Squad Apparel",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "White / Reflective Tab",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
-        "gallery": [
-          "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-ck-41-premium-deep-cleaning-kit-solution": {
-    "id": "acc-ck-41-premium-deep-cleaning-kit-solution",
-    "title": "Premium Sneaker Deep Cleaning Solution & Hog-Bristle Brush",
-    "name": "Premium Sneaker Deep Cleaning Solution & Hog-Bristle Brush",
-    "brand": "Squad Care",
-    "category": "accessories",
-    "subcategory": "cleaning-kits",
-    "categoryTag": "accessories cleaning-kits cleaning-kits sneaker care solution cleaner brush kit",
-    "gender": "unisex",
-    "price": 1499.0,
-    "originalPrice": 1999.0,
-    "discount": "-25%",
     "rating": 4.9,
-    "reviewsCount": 310,
-    "badge": "Pro Kit",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
-    "mainImage": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
-    "gallery": [
-      "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg"
-    ],
-    "description": "Eco-friendly foaming formula that safely lifts dirt, stains, and scuffs from leather, mesh, canvas, and suede.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Squad Care",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Clear / Natural Wood",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
-        "gallery": [
-          "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-ck-42-quick-wipes-dual-textured-30pk": {
-    "id": "acc-ck-42-quick-wipes-dual-textured-30pk",
-    "title": "Quick Wipes Dual-Textured Portable Sneaker Wipes (30-Pack)",
-    "name": "Quick Wipes Dual-Textured Portable Sneaker Wipes (30-Pack)",
-    "brand": "Squad Care",
-    "category": "accessories",
-    "subcategory": "cleaning-kits",
-    "categoryTag": "accessories cleaning-kits cleaning-kits sneaker wipes quick cleaner on-the-go",
-    "gender": "unisex",
-    "price": 699.0,
-    "originalPrice": 999.0,
-    "discount": "-30%",
-    "rating": 4.8,
-    "reviewsCount": 420,
-    "badge": "Pocket Essential",
+    "reviewsCount": 230,
+    "badge": "SPECIALTY",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
-    "mainImage": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
+    "imageUrl": "/media/sneakers/acc-ck-11-suede-nubuck-renewal-eraser-kit.jpg",
+    "mainImage": "/media/sneakers/acc-ck-11-suede-nubuck-renewal-eraser-kit.jpg",
     "gallery": [
-      "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg"
+      "/media/sneakers/acc-ck-11-suede-nubuck-renewal-eraser-kit.jpg"
     ],
-    "description": "Pocket-sized wipes featuring a textured dot side for stubborn mud and a soft smooth side for gentle wiping.",
+    "description": "Dry-cleaning crumb rubber eraser block and natural crepe brass wire brush to revive delicate suede nap and lift scuffs from Travis Scott Jordans & Dunks.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -325,147 +160,37 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Individually Foil-Sealed",
+        "name": "Raw Wood / Sand Rubber",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
+        "mainImage": "/media/sneakers/acc-ck-11-suede-nubuck-renewal-eraser-kit.jpg",
         "gallery": [
-          "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg"
+          "/media/sneakers/acc-ck-11-suede-nubuck-renewal-eraser-kit.jpg"
         ]
       }
     ]
   },
-  "acc-ck-43-hydro-shield-water-stain-repellent": {
-    "id": "acc-ck-43-hydro-shield-water-stain-repellent",
-    "title": "Hydro-Shield Nano Water & Stain Repellent Spray (200ml)",
-    "name": "Hydro-Shield Nano Water & Stain Repellent Spray (200ml)",
+  "acc-ck-12-dual-sided-textured-sneaker-wipes-40pk": {
+    "id": "acc-ck-12-dual-sided-textured-sneaker-wipes-40pk",
+    "title": "Dual-Textured Quick Sneaker Cleaning Wipes (40-Pack)",
+    "name": "Dual-Textured Quick Sneaker Cleaning Wipes (40-Pack)",
     "brand": "Squad Care",
     "category": "accessories",
     "subcategory": "cleaning-kits",
-    "categoryTag": "accessories cleaning-kits cleaning-kits waterproof stain repellent protection spray",
-    "gender": "unisex",
-    "price": 999.0,
-    "originalPrice": 1399.0,
-    "discount": "-28%",
-    "rating": 4.9,
-    "reviewsCount": 380,
-    "badge": "Hydrophobic Shield",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
-    "mainImage": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
-    "gallery": [
-      "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg"
-    ],
-    "description": "Advanced invisible hydrophobic barrier that causes liquids to bead up and roll right off without altering breathability.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Squad Care",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Aerosol Spray Canister",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
-        "gallery": [
-          "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-ck-44-suede-nubuck-renewal-eraser-block": {
-    "id": "acc-ck-44-suede-nubuck-renewal-eraser-block",
-    "title": "Suede & Nubuck Renewal Cleaning Eraser Block",
-    "name": "Suede & Nubuck Renewal Cleaning Eraser Block",
-    "brand": "Squad Care",
-    "category": "accessories",
-    "subcategory": "cleaning-kits",
-    "categoryTag": "accessories cleaning-kits cleaning-kits suede eraser nubuck brush dry cleaner",
-    "gender": "unisex",
-    "price": 599.0,
-    "originalPrice": 799.0,
-    "discount": "-25%",
-    "rating": 4.7,
-    "reviewsCount": 190,
-    "badge": "Dry Care",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
-    "mainImage": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
-    "gallery": [
-      "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg"
-    ],
-    "description": "Water-free cleaning eraser designed to buff away scuff marks and restore the natural velvety nap of delicate suede.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Squad Care",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Rubberized Crepe Block",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
-        "gallery": [
-          "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-cp-49-ergonomic-breathable-crease-guards": {
-    "id": "acc-cp-49-ergonomic-breathable-crease-guards",
-    "title": "Ergonomic Breathable Sneaker Crease Guards (1 Pair)",
-    "name": "Ergonomic Breathable Sneaker Crease Guards (1 Pair)",
-    "brand": "Shield Squad",
-    "category": "accessories",
-    "subcategory": "crease-protectors",
-    "categoryTag": "accessories crease-protectors crease-protectors anti crease shield toe guard protection",
+    "categoryTag": "accessories cleaning-kits cleaning-kits dual textured quick sneaker wipes portable wipes 40 pack",
     "gender": "unisex",
     "price": 499.0,
     "originalPrice": 799.0,
     "discount": "-37%",
-    "rating": 4.9,
+    "rating": 4.8,
     "reviewsCount": 510,
-    "badge": "Anti-Crease",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
-    "mainImage": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
+    "badge": "TRAVEL READY",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-ck-12-dual-sided-textured-sneaker-wipes-40pk.jpg",
+    "mainImage": "/media/sneakers/acc-ck-12-dual-sided-textured-sneaker-wipes-40pk.jpg",
     "gallery": [
-      "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg"
+      "/media/sneakers/acc-ck-12-dual-sided-textured-sneaker-wipes-40pk.jpg"
     ],
-    "description": "Ventilated flex-molded shields that slip into the toe box to prevent unsightly leather creasing during movement.",
+    "description": "Individually foil-wrapped wipes. Raised textured rubber dots on one side for midsole scrubbing and smooth soft weave on the other for delicate leather uppers.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -473,7 +198,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Shield Squad",
+      "Brand": "Squad Care",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -490,422 +215,37 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Matte White",
+        "name": "Foil Wrapped White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
+        "mainImage": "/media/sneakers/acc-ck-12-dual-sided-textured-sneaker-wipes-40pk.jpg",
         "gallery": [
-          "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg"
+          "/media/sneakers/acc-ck-12-dual-sided-textured-sneaker-wipes-40pk.jpg"
         ]
       }
     ]
   },
-  "acc-cp-50-soft-foam-shock-absorbing-toe-fillers": {
-    "id": "acc-cp-50-soft-foam-shock-absorbing-toe-fillers",
-    "title": "Soft Foam Shock-Absorbing Toe Box Fillers (2 Pairs)",
-    "name": "Soft Foam Shock-Absorbing Toe Box Fillers (2 Pairs)",
+  "acc-cp-05-ergonomic-breathable-crease-guards": {
+    "id": "acc-cp-05-ergonomic-breathable-crease-guards",
+    "title": "Ergonomic Breathable Sneaker Crease Protectors (2-Pairs)",
+    "name": "Ergonomic Breathable Sneaker Crease Protectors (2-Pairs)",
     "brand": "Shield Squad",
     "category": "accessories",
     "subcategory": "crease-protectors",
-    "categoryTag": "accessories crease-protectors crease-protectors foam fillers toe box comfort protection",
-    "gender": "unisex",
-    "price": 599.0,
-    "originalPrice": 899.0,
-    "discount": "-33%",
-    "rating": 4.8,
-    "reviewsCount": 230,
-    "badge": "Comfort Fit",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
-    "mainImage": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
-    "gallery": [
-      "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg"
-    ],
-    "description": "Memory-foam cushioning inserts that gently fill toe volume to eliminate foot slippage and preserve toe box shape.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Shield Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Charcoal Grey",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
-        "gallery": [
-          "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-cp-51-universal-anti-crease-shield-v2-black": {
-    "id": "acc-cp-51-universal-anti-crease-shield-v2-black",
-    "title": "Universal Armor Crease Shield V2 - Matte Black (1 Pair)",
-    "name": "Universal Armor Crease Shield V2 - Matte Black (1 Pair)",
-    "brand": "Shield Squad",
-    "category": "accessories",
-    "subcategory": "crease-protectors",
-    "categoryTag": "accessories crease-protectors crease-protectors armor shield black crease guard",
-    "gender": "unisex",
-    "price": 549.0,
-    "originalPrice": 849.0,
-    "discount": "-35%",
-    "rating": 4.8,
-    "reviewsCount": 195,
-    "badge": "Heavy Duty",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
-    "mainImage": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
-    "gallery": [
-      "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg"
-    ],
-    "description": "Reinforced ridged polymer designed for heavy leather silhouettes like Jordan 4s, Dunks, and Air Force 1s.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Shield Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Stealth Black",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
-        "gallery": [
-          "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-cp-52-ventilated-clear-gel-toe-guards": {
-    "id": "acc-cp-52-ventilated-clear-gel-toe-guards",
-    "title": "Ventilated Gel Armor Toe Guards - Clear Gel Edition",
-    "name": "Ventilated Gel Armor Toe Guards - Clear Gel Edition",
-    "brand": "Shield Squad",
-    "category": "accessories",
-    "subcategory": "crease-protectors",
-    "categoryTag": "accessories crease-protectors crease-protectors gel guards clear crease shield soft",
-    "gender": "unisex",
-    "price": 649.0,
-    "originalPrice": 949.0,
-    "discount": "-31%",
-    "rating": 4.9,
-    "reviewsCount": 175,
-    "badge": "Zero Pinching",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
-    "mainImage": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
-    "gallery": [
-      "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg"
-    ],
-    "description": "Medical-grade elastomer gel flexes naturally with every stride for 100% pinch-free toe comfort.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Shield Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Crystal Clear Gel",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
-        "gallery": [
-          "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-dc-53-magnetic-drop-front-sneaker-case": {
-    "id": "acc-dc-53-magnetic-drop-front-sneaker-case",
-    "title": "UV-Protection Magnetic Drop-Front Sneaker Display Case",
-    "name": "UV-Protection Magnetic Drop-Front Sneaker Display Case",
-    "brand": "Crate Squad",
-    "category": "accessories",
-    "subcategory": "display-crates",
-    "categoryTag": "accessories display-crates display-crates magnetic drop front shoe case crate display",
-    "gender": "unisex",
-    "price": 1699.0,
-    "originalPrice": 2299.0,
-    "discount": "-26%",
-    "rating": 4.9,
-    "reviewsCount": 340,
-    "badge": "Drop-Front",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
-    "mainImage": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
-    "gallery": [
-      "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg"
-    ],
-    "description": "Heavy-duty stackable acrylic crate with dual magnetic door locks and 99% UV radiation blocking.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Crate Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Crystal Clear / Black Frame",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
-        "gallery": [
-          "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-dc-54-led-sound-activated-stackable-crate": {
-    "id": "acc-dc-54-led-sound-activated-stackable-crate",
-    "title": "LED Sound-Activated Stackable Sneaker Showcase Crate",
-    "name": "LED Sound-Activated Stackable Sneaker Showcase Crate",
-    "brand": "Crate Squad",
-    "category": "accessories",
-    "subcategory": "display-crates",
-    "categoryTag": "accessories display-crates display-crates led sound activated shoe display case",
-    "gender": "unisex",
-    "price": 2799.0,
-    "originalPrice": 3499.0,
-    "discount": "-20%",
-    "rating": 5.0,
-    "reviewsCount": 220,
-    "badge": "LED Glow",
-    "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
-    "mainImage": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
-    "gallery": [
-      "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg"
-    ],
-    "description": "Voice and beat-activated smart ambient LED lighting illuminates your grail kicks with wireless stacking power.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Crate Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Black / Multi-RGB LED",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
-        "gallery": [
-          "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-dc-55-acrylic-360-degree-shoe-showcase": {
-    "id": "acc-dc-55-acrylic-360-degree-shoe-showcase",
-    "title": "Crystal Clear 360-Degree Acrylic Shoe Showcase",
-    "name": "Crystal Clear 360-Degree Acrylic Shoe Showcase",
-    "brand": "Crate Squad",
-    "category": "accessories",
-    "subcategory": "display-crates",
-    "categoryTag": "accessories display-crates display-crates 360 acrylic display box showcase museum",
-    "gender": "unisex",
-    "price": 2199.0,
-    "originalPrice": 2799.0,
-    "discount": "-21%",
-    "rating": 4.9,
-    "reviewsCount": 160,
-    "badge": "Museum Grade",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
-    "mainImage": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
-    "gallery": [
-      "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg"
-    ],
-    "description": "Frameless optical-grade acrylic allows seamless viewing from every angle while guarding against dust and yellowing.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Crate Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Full Clear Acrylic",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
-        "gallery": [
-          "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-dc-56-modular-interlocking-storage-box-6pk": {
-    "id": "acc-dc-56-modular-interlocking-storage-box-6pk",
-    "title": "Modular Heavy-Duty Interlocking Shoe Storage Box (6-Pack)",
-    "name": "Modular Heavy-Duty Interlocking Shoe Storage Box (6-Pack)",
-    "brand": "Crate Squad",
-    "category": "accessories",
-    "subcategory": "display-crates",
-    "categoryTag": "accessories display-crates display-crates modular interlocking storage box stackable pack",
-    "gender": "unisex",
-    "price": 4499.0,
-    "originalPrice": 5999.0,
-    "discount": "-25%",
-    "rating": 4.8,
-    "reviewsCount": 290,
-    "badge": "Value 6-Pack",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
-    "mainImage": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
-    "gallery": [
-      "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg"
-    ],
-    "description": "Precision interlocking groove design lets you assemble a complete wall of sneaker boxes with zero wobbling.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Crate Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Smoky Translucent Grey",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
-        "gallery": [
-          "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-oe-57-bamboo-charcoal-deodorizer-pouches": {
-    "id": "acc-oe-57-bamboo-charcoal-deodorizer-pouches",
-    "title": "Bamboo Charcoal Sneaker Deodorizer Pouches (2-Pack)",
-    "name": "Bamboo Charcoal Sneaker Deodorizer Pouches (2-Pack)",
-    "brand": "Fresh Squad",
-    "category": "accessories",
-    "subcategory": "odor-eliminators",
-    "categoryTag": "accessories odor-eliminators odor-eliminators charcoal deodorizer fresh moisture absorber",
+    "categoryTag": "accessories crease-protectors crease-protectors ergonomic breathable crease guards toe box wrinkle shield",
     "gender": "unisex",
     "price": 499.0,
-    "originalPrice": 699.0,
-    "discount": "-28%",
+    "originalPrice": 899.0,
+    "discount": "-44%",
     "rating": 4.9,
-    "reviewsCount": 390,
-    "badge": "Natural Fresh",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
-    "mainImage": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
+    "reviewsCount": 560,
+    "badge": "BESTSELLER",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-cp-05-ergonomic-breathable-crease-guards.jpg",
+    "mainImage": "/media/sneakers/acc-cp-05-ergonomic-breathable-crease-guards.jpg",
     "gallery": [
-      "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg"
+      "/media/sneakers/acc-cp-05-ergonomic-breathable-crease-guards.jpg"
     ],
-    "description": "Activated moso bamboo charcoal traps moisture and neutralizes pungent foot odors naturally without artificial scent.",
+    "description": "Ultra-thin pre-curved TPR polymer shields with 24 ventilation holes to keep your Jordan 1 & Air Force 1 toe boxes 100% wrinkle-free without pinching toes.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -913,7 +253,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Fresh Squad",
+      "Brand": "Shield Squad",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -930,92 +270,37 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Natural Linen Grey",
+        "name": "Carbon Black / Clear",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
+        "mainImage": "/media/sneakers/acc-cp-05-ergonomic-breathable-crease-guards.jpg",
         "gallery": [
-          "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg"
+          "/media/sneakers/acc-cp-05-ergonomic-breathable-crease-guards.jpg"
         ]
       }
     ]
   },
-  "acc-oe-58-fresh-citrus-antifungal-shoe-spray": {
-    "id": "acc-oe-58-fresh-citrus-antifungal-shoe-spray",
-    "title": "Fresh Citrus Shoe Antifungal Deodorant Spray (150ml)",
-    "name": "Fresh Citrus Shoe Antifungal Deodorant Spray (150ml)",
-    "brand": "Fresh Squad",
+  "acc-cp-06-ultra-flex-memory-foam-crease-armor": {
+    "id": "acc-cp-06-ultra-flex-memory-foam-crease-armor",
+    "title": "Ultra-Flex Memory Foam Sneaker Toe Armor (2-Pairs)",
+    "name": "Ultra-Flex Memory Foam Sneaker Toe Armor (2-Pairs)",
+    "brand": "Shield Squad",
     "category": "accessories",
-    "subcategory": "odor-eliminators",
-    "categoryTag": "accessories odor-eliminators odor-eliminators shoe spray deodorant antibacterial citrus",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors ultra-flex memory foam toe armor cushion crease shield",
     "gender": "unisex",
     "price": 599.0,
-    "originalPrice": 799.0,
-    "discount": "-25%",
+    "originalPrice": 999.0,
+    "discount": "-40%",
     "rating": 4.8,
-    "reviewsCount": 270,
-    "badge": "Instant Fresh",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
-    "mainImage": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
-    "gallery": [
-      "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg"
-    ],
-    "description": "Fast-drying formula infused with tea tree oil and lemon zest kills 99.9% of odor-causing bacteria upon contact.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Fresh Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Cool Citrus Blast",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
-        "gallery": [
-          "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-oe-59-cedar-wood-moisture-absorber-inserts": {
-    "id": "acc-oe-59-cedar-wood-moisture-absorber-inserts",
-    "title": "Cedar Wood Moisture & Odor Absorber Tree Inserts",
-    "name": "Cedar Wood Moisture & Odor Absorber Tree Inserts",
-    "brand": "Fresh Squad",
-    "category": "accessories",
-    "subcategory": "odor-eliminators",
-    "categoryTag": "accessories odor-eliminators odor-eliminators cedar wood shoe tree absorber inserts",
-    "gender": "unisex",
-    "price": 899.0,
-    "originalPrice": 1199.0,
-    "discount": "-25%",
-    "rating": 4.9,
-    "reviewsCount": 180,
-    "badge": "Aromatic Wood",
+    "reviewsCount": 310,
+    "badge": "MAX COMFORT",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
-    "mainImage": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
+    "imageUrl": "/media/sneakers/acc-cp-06-ultra-flex-memory-foam-crease-armor.jpg",
+    "mainImage": "/media/sneakers/acc-cp-06-ultra-flex-memory-foam-crease-armor.jpg",
     "gallery": [
-      "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg"
+      "/media/sneakers/acc-cp-06-ultra-flex-memory-foam-crease-armor.jpg"
     ],
-    "description": "100% natural red cedar absorbs sweat residue after long days of wear and imparts a refined forest aroma.",
+    "description": "Dual-layer shock-absorbing memory foam and high-resilience polymer composite for all-day comfort while walking, running, or standing at sneaker conventions.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -1023,7 +308,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Fresh Squad",
+      "Brand": "Shield Squad",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -1040,37 +325,147 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Aromatic Red Cedar",
+        "name": "Stealth Grey",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
+        "mainImage": "/media/sneakers/acc-cp-06-ultra-flex-memory-foam-crease-armor.jpg",
         "gallery": [
-          "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg"
+          "/media/sneakers/acc-cp-06-ultra-flex-memory-foam-crease-armor.jpg"
         ]
       }
     ]
   },
-  "acc-oe-60-activated-carbon-kinetic-odor-balls": {
-    "id": "acc-oe-60-activated-carbon-kinetic-odor-balls",
-    "title": "Activated Carbon Kinetic Odor Eliminating Balls (6-Pack)",
-    "name": "Activated Carbon Kinetic Odor Eliminating Balls (6-Pack)",
+  "acc-cp-07-carbon-fiber-reinforced-shields": {
+    "id": "acc-cp-07-carbon-fiber-reinforced-shields",
+    "title": "Carbon Shield V2 Rigid Toe Box Deflectors",
+    "name": "Carbon Shield V2 Rigid Toe Box Deflectors",
+    "brand": "Shield Squad",
+    "category": "accessories",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors carbon shield v2 rigid toe box deflector high top crease guard",
+    "gender": "unisex",
+    "price": 699.0,
+    "originalPrice": 1199.0,
+    "discount": "-41%",
+    "rating": 4.9,
+    "reviewsCount": 240,
+    "badge": "HEAVY DUTY",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-cp-07-carbon-fiber-reinforced-shields.jpg",
+    "mainImage": "/media/sneakers/acc-cp-07-carbon-fiber-reinforced-shields.jpg",
+    "gallery": [
+      "/media/sneakers/acc-cp-07-carbon-fiber-reinforced-shields.jpg"
+    ],
+    "description": "Engineered carbon-reinforced toe structure designed specifically for premium high-top leather sneakers. Guided cut lines for custom edge-to-edge trimming.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Shield Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Matte Carbon",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-cp-07-carbon-fiber-reinforced-shields.jpg",
+        "gallery": [
+          "/media/sneakers/acc-cp-07-carbon-fiber-reinforced-shields.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-cp-08-invisible-gel-cushioned-toe-guards": {
+    "id": "acc-cp-08-invisible-gel-cushioned-toe-guards",
+    "title": "Invisible Clear Gel Crease Protectors (3-Pairs Combo)",
+    "name": "Invisible Clear Gel Crease Protectors (3-Pairs Combo)",
+    "brand": "Shield Squad",
+    "category": "accessories",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors invisible clear gel crease protectors toe guards multi pack",
+    "gender": "unisex",
+    "price": 799.0,
+    "originalPrice": 1499.0,
+    "discount": "-46%",
+    "rating": 4.8,
+    "reviewsCount": 415,
+    "badge": "COMBO PACK",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-cp-08-invisible-gel-cushioned-toe-guards.jpg",
+    "mainImage": "/media/sneakers/acc-cp-08-invisible-gel-cushioned-toe-guards.jpg",
+    "gallery": [
+      "/media/sneakers/acc-cp-08-invisible-gel-cushioned-toe-guards.jpg"
+    ],
+    "description": "Medical-grade hypoallergenic transparent silicone gel toe inserts. Zero visual imprint, anti-slip internal ribbing, and fully washable for endless reusability.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Shield Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Crystal Clear",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-cp-08-invisible-gel-cushioned-toe-guards.jpg",
+        "gallery": [
+          "/media/sneakers/acc-cp-08-invisible-gel-cushioned-toe-guards.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk": {
+    "id": "acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk",
+    "title": "Activated Carbon Kinetic Sneaker Deodorizer Balls (6-Pack)",
+    "name": "Activated Carbon Kinetic Sneaker Deodorizer Balls (6-Pack)",
     "brand": "Fresh Squad",
     "category": "accessories",
-    "subcategory": "odor-eliminators",
-    "categoryTag": "accessories odor-eliminators odor-eliminators sneaker balls deodorizer carbon fresh pack",
+    "subcategory": "deodorizer-balls",
+    "categoryTag": "accessories deodorizer-balls deodorizer-balls activated carbon kinetic sneaker deodorizer balls shoe freshener",
     "gender": "unisex",
-    "price": 649.0,
-    "originalPrice": 849.0,
-    "discount": "-23%",
-    "rating": 4.8,
-    "reviewsCount": 320,
-    "badge": "Twist-Lock Fresh",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
-    "mainImage": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
+    "price": 599.0,
+    "originalPrice": 999.0,
+    "discount": "-40%",
+    "rating": 5.0,
+    "reviewsCount": 640,
+    "badge": "BESTSELLER",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk.jpg",
+    "mainImage": "/media/sneakers/acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk.jpg",
     "gallery": [
-      "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg"
+      "/media/sneakers/acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk.jpg"
     ],
-    "description": "Compact twist-to-activate deodorizing spheres that fit snug into toes, shoe bags, or locker spaces.",
+    "description": "Twist-to-activate spherical air fresheners packed with natural microporous activated carbon and tea tree extract to neutralize sneaker odor at the bacterial source.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -1097,35 +492,695 @@ const PRODUCTS_DATA = {
       {
         "name": "Matte Black / Orange Vents",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
+        "mainImage": "/media/sneakers/acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk.jpg",
         "gallery": [
-          "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg"
+          "/media/sneakers/acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk.jpg"
         ]
       }
     ]
   },
-  "acc-ps-45-heavyweight-cotton-flat-laces-sail": {
-    "id": "acc-ps-45-heavyweight-cotton-flat-laces-sail",
-    "title": "Heavyweight Vintage Cotton Flat Laces - Sail Cream (140cm)",
-    "name": "Heavyweight Vintage Cotton Flat Laces - Sail Cream (140cm)",
-    "brand": "Lace Squad",
+  "acc-db-22-aroma-lock-capsule-freshener-pills-4pk": {
+    "id": "acc-db-22-aroma-lock-capsule-freshener-pills-4pk",
+    "title": "Aroma-Lock Zeolite Capsule Deodorizer Pills (4-Pack)",
+    "name": "Aroma-Lock Zeolite Capsule Deodorizer Pills (4-Pack)",
+    "brand": "Fresh Squad",
     "category": "accessories",
-    "subcategory": "premium-shoelaces",
-    "categoryTag": "accessories premium-shoelaces premium-shoelaces sail cream laces flat cotton vintage",
+    "subcategory": "deodorizer-balls",
+    "categoryTag": "accessories deodorizer-balls deodorizer-balls aroma lock zeolite capsule deodorizer pills moisture absorber",
     "gender": "unisex",
-    "price": 399.0,
-    "originalPrice": 599.0,
+    "price": 649.0,
+    "originalPrice": 1099.0,
+    "discount": "-40%",
+    "rating": 4.9,
+    "reviewsCount": 275,
+    "badge": "ZEOLITE TECH",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-db-22-aroma-lock-capsule-freshener-pills-4pk.jpg",
+    "mainImage": "/media/sneakers/acc-db-22-aroma-lock-capsule-freshener-pills-4pk.jpg",
+    "gallery": [
+      "/media/sneakers/acc-db-22-aroma-lock-capsule-freshener-pills-4pk.jpg"
+    ],
+    "description": "Medical pill design featuring natural volcanic zeolite minerals and moisture-absorbing silica beads that keep shoe insoles dry, fresh, and bacteria-free.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Cool Mint / Ice Blue",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-db-22-aroma-lock-capsule-freshener-pills-4pk.jpg",
+        "gallery": [
+          "/media/sneakers/acc-db-22-aroma-lock-capsule-freshener-pills-4pk.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-db-23-citrus-burst-antibacterial-freshener-spheres": {
+    "id": "acc-db-23-citrus-burst-antibacterial-freshener-spheres",
+    "title": "Citrus Burst Antibacterial Sneaker Spheres (6-Pack)",
+    "name": "Citrus Burst Antibacterial Sneaker Spheres (6-Pack)",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "deodorizer-balls",
+    "categoryTag": "accessories deodorizer-balls deodorizer-balls citrus burst antibacterial sneaker spheres shoe freshener balls",
+    "gender": "unisex",
+    "price": 549.0,
+    "originalPrice": 899.0,
+    "discount": "-38%",
+    "rating": 4.8,
+    "reviewsCount": 310,
+    "badge": "CITRUS FRESH",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-db-23-citrus-burst-antibacterial-freshener-spheres.jpg",
+    "mainImage": "/media/sneakers/acc-db-23-citrus-burst-antibacterial-freshener-spheres.jpg",
+    "gallery": [
+      "/media/sneakers/acc-db-23-citrus-burst-antibacterial-freshener-spheres.jpg"
+    ],
+    "description": "Quick-twist lock mechanism releases a fresh natural bergamot and cedarwood aroma. Perfect for post-gym runners, high-top kicks, and closet storage boxes.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Vibrant Orange",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-db-23-citrus-burst-antibacterial-freshener-spheres.jpg",
+        "gallery": [
+          "/media/sneakers/acc-db-23-citrus-burst-antibacterial-freshener-spheres.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk": {
+    "id": "acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk",
+    "title": "Moso Bamboo Charcoal Sneaker Deodorizing Pods (4-Pack)",
+    "name": "Moso Bamboo Charcoal Sneaker Deodorizing Pods (4-Pack)",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "deodorizer-balls",
+    "categoryTag": "accessories deodorizer-balls deodorizer-balls moso bamboo charcoal deodorizing pods reusable odor absorber",
+    "gender": "unisex",
+    "price": 699.0,
+    "originalPrice": 1199.0,
+    "discount": "-41%",
+    "rating": 4.9,
+    "reviewsCount": 410,
+    "badge": "NATURAL 100%",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk.jpg",
+    "mainImage": "/media/sneakers/acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk.jpg",
+    "gallery": [
+      "/media/sneakers/acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk.jpg"
+    ],
+    "description": "100% organic activated Moso bamboo charcoal in breathable linen pouches. Reusable for up to 2 years by simply recharging under direct sunlight once a month.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Natural Heather Charcoal",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk.jpg",
+        "gallery": [
+          "/media/sneakers/acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-hs-13-hydro-shield-nano-waterproof-spray": {
+    "id": "acc-hs-13-hydro-shield-nano-waterproof-spray",
+    "title": "Hydro-Shield Ultra Nano Waterproof & Stain Repellent 250ml",
+    "name": "Hydro-Shield Ultra Nano Waterproof & Stain Repellent 250ml",
+    "brand": "Hydro Guard",
+    "category": "accessories",
+    "subcategory": "hydrophobic-sprays",
+    "categoryTag": "accessories hydrophobic-sprays hydrophobic-sprays hydro shield nano waterproof stain repellent aerosol spray",
+    "gender": "unisex",
+    "price": 899.0,
+    "originalPrice": 1399.0,
+    "discount": "-35%",
+    "rating": 5.0,
+    "reviewsCount": 490,
+    "badge": "TOP RATED",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-hs-13-hydro-shield-nano-waterproof-spray.jpg",
+    "mainImage": "/media/sneakers/acc-hs-13-hydro-shield-nano-waterproof-spray.jpg",
+    "gallery": [
+      "/media/sneakers/acc-hs-13-hydro-shield-nano-waterproof-spray.jpg"
+    ],
+    "description": "Revolutionary nanotechnology aerosol barrier creates an invisible lotus-leaf hydrophobic seal. Repels water, mud, coffee, and sauce for up to 6 months per coat.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Hydro Guard",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Matte Black Canister",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-hs-13-hydro-shield-nano-waterproof-spray.jpg",
+        "gallery": [
+          "/media/sneakers/acc-hs-13-hydro-shield-nano-waterproof-spray.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-hs-14-invisible-armor-heavy-rain-barrier": {
+    "id": "acc-hs-14-invisible-armor-heavy-rain-barrier",
+    "title": "Invisible Armor Extreme Weather Proofing Spray 300ml",
+    "name": "Invisible Armor Extreme Weather Proofing Spray 300ml",
+    "brand": "Hydro Guard",
+    "category": "accessories",
+    "subcategory": "hydrophobic-sprays",
+    "categoryTag": "accessories hydrophobic-sprays hydrophobic-sprays invisible armor extreme weather proofing heavy rain barrier spray",
+    "gender": "unisex",
+    "price": 1099.0,
+    "originalPrice": 1699.0,
+    "discount": "-35%",
+    "rating": 4.9,
+    "reviewsCount": 260,
+    "badge": "MAX DEFENSE",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-hs-14-invisible-armor-heavy-rain-barrier.jpg",
+    "mainImage": "/media/sneakers/acc-hs-14-invisible-armor-heavy-rain-barrier.jpg",
+    "gallery": [
+      "/media/sneakers/acc-hs-14-invisible-armor-heavy-rain-barrier.jpg"
+    ],
+    "description": "Industrial-grade UV and water protective coating tailored for primeknit and mesh uppers. 100% breathable with zero discoloration or shoe stiffening.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Hydro Guard",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Gunmetal Steel",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-hs-14-invisible-armor-heavy-rain-barrier.jpg",
+        "gallery": [
+          "/media/sneakers/acc-hs-14-invisible-armor-heavy-rain-barrier.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-hs-15-eco-pump-non-aerosol-water-repellent": {
+    "id": "acc-hs-15-eco-pump-non-aerosol-water-repellent",
+    "title": "Eco-Shield Odorless Non-Aerosol Repellent 200ml",
+    "name": "Eco-Shield Odorless Non-Aerosol Repellent 200ml",
+    "brand": "Hydro Guard",
+    "category": "accessories",
+    "subcategory": "hydrophobic-sprays",
+    "categoryTag": "accessories hydrophobic-sprays hydrophobic-sprays eco shield odorless non aerosol pump spray water repellent",
+    "gender": "unisex",
+    "price": 749.0,
+    "originalPrice": 1149.0,
+    "discount": "-34%",
+    "rating": 4.8,
+    "reviewsCount": 185,
+    "badge": "ECO FRIENDLY",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-hs-15-eco-pump-non-aerosol-water-repellent.jpg",
+    "mainImage": "/media/sneakers/acc-hs-15-eco-pump-non-aerosol-water-repellent.jpg",
+    "gallery": [
+      "/media/sneakers/acc-hs-15-eco-pump-non-aerosol-water-repellent.jpg"
+    ],
+    "description": "Water-based, non-flammable pump spray formula safe for indoor home application. Exceptional stain barrier on nubuck, canvas, and vintage Jordan leather.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Hydro Guard",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Forest Green / Clear",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-hs-15-eco-pump-non-aerosol-water-repellent.jpg",
+        "gallery": [
+          "/media/sneakers/acc-hs-15-eco-pump-non-aerosol-water-repellent.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-hs-16-rapid-cure-quick-dry-repel-mist": {
+    "id": "acc-hs-16-rapid-cure-quick-dry-repel-mist",
+    "title": "Rapid-Cure 15-Minute Quick-Dry Hydrophobic Mist 250ml",
+    "name": "Rapid-Cure 15-Minute Quick-Dry Hydrophobic Mist 250ml",
+    "brand": "Hydro Guard",
+    "category": "accessories",
+    "subcategory": "hydrophobic-sprays",
+    "categoryTag": "accessories hydrophobic-sprays hydrophobic-sprays rapid cure quick dry hydrophobic mist fast acting repellent",
+    "gender": "unisex",
+    "price": 949.0,
+    "originalPrice": 1499.0,
+    "discount": "-36%",
+    "rating": 4.9,
+    "reviewsCount": 310,
+    "badge": "RAPID DRY",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-hs-16-rapid-cure-quick-dry-repel-mist.jpg",
+    "mainImage": "/media/sneakers/acc-hs-16-rapid-cure-quick-dry-repel-mist.jpg",
+    "gallery": [
+      "/media/sneakers/acc-hs-16-rapid-cure-quick-dry-repel-mist.jpg"
+    ],
+    "description": "Flash-drying nano-polymer dries fully in just 15 minutes. Instant weatherproofing protection when stepping out during sudden monsoon showers.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Hydro Guard",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Electric Blue Can",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-hs-16-rapid-cure-quick-dry-repel-mist.jpg",
+        "gallery": [
+          "/media/sneakers/acc-hs-16-rapid-cure-quick-dry-repel-mist.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-ml-01-anti-gravity-floating-sneaker-display": {
+    "id": "acc-ml-01-anti-gravity-floating-sneaker-display",
+    "title": "Anti-Gravity Magnetic Levitating Sneaker Display Stand",
+    "name": "Anti-Gravity Magnetic Levitating Sneaker Display Stand",
+    "brand": "Gravity Kicks",
+    "category": "accessories",
+    "subcategory": "levitating-displays",
+    "categoryTag": "accessories levitating-displays levitating-displays magnetic levitating floating display sneaker stand 360 rotation",
+    "gender": "unisex",
+    "price": 4499.0,
+    "originalPrice": 6999.0,
+    "discount": "-35%",
+    "rating": 4.9,
+    "reviewsCount": 342,
+    "badge": "HOT DROP",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-ml-01-anti-gravity-floating-sneaker-display.jpg",
+    "mainImage": "/media/sneakers/acc-ml-01-anti-gravity-floating-sneaker-display.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ml-01-anti-gravity-floating-sneaker-display.jpg"
+    ],
+    "description": "Futuristic electromagnetic suspension dock with 360-degree continuous silent rotation and white LED halo illumination. Effortlessly suspends kicks up to 550g in mid-air.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Gravity Kicks",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Matte Black / Cyber Glow",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ml-01-anti-gravity-floating-sneaker-display.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ml-01-anti-gravity-floating-sneaker-display.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-ml-02-aura-rgb-levitating-platform": {
+    "id": "acc-ml-02-aura-rgb-levitating-platform",
+    "title": "Aura RGB 360\u00b0 Rotating Floating Sneaker Platform",
+    "name": "Aura RGB 360\u00b0 Rotating Floating Sneaker Platform",
+    "brand": "Gravity Kicks",
+    "category": "accessories",
+    "subcategory": "levitating-displays",
+    "categoryTag": "accessories levitating-displays levitating-displays aura rgb floating sneaker platform 360 ambient led magnetic dock",
+    "gender": "unisex",
+    "price": 4999.0,
+    "originalPrice": 7499.0,
     "discount": "-33%",
     "rating": 4.9,
-    "reviewsCount": 450,
-    "badge": "Vintage Swap",
+    "reviewsCount": 285,
+    "badge": "PREMIUM",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
-    "mainImage": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
+    "imageUrl": "/media/sneakers/acc-ml-02-aura-rgb-levitating-platform.jpg",
+    "mainImage": "/media/sneakers/acc-ml-02-aura-rgb-levitating-platform.jpg",
     "gallery": [
-      "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg"
+      "/media/sneakers/acc-ml-02-aura-rgb-levitating-platform.jpg"
     ],
-    "description": "100% combed cotton weave delivering the coveted vintage aged aesthetic for Jordan 1s, Dunks, and Sambas.",
+    "description": "Dynamic 16-color ambient RGB LED system with touch-sensitive mode toggle, auto-stabilizing dual magnet core, and ultra-quiet motor for showcasegrails.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Gravity Kicks",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Obsidian Black / Chroma RGB",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ml-02-aura-rgb-levitating-platform.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ml-02-aura-rgb-levitating-platform.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-ml-03-starlight-magnetic-levitation-showcase": {
+    "id": "acc-ml-03-starlight-magnetic-levitation-showcase",
+    "title": "Starlight Pro Levitating Sneaker Showcase Dock",
+    "name": "Starlight Pro Levitating Sneaker Showcase Dock",
+    "brand": "Gravity Kicks",
+    "category": "accessories",
+    "subcategory": "levitating-displays",
+    "categoryTag": "accessories levitating-displays levitating-displays starlight pro magnetic levitation dock aluminum spotlight showcase",
+    "gender": "unisex",
+    "price": 5499.0,
+    "originalPrice": 7999.0,
+    "discount": "-31%",
+    "rating": 5.0,
+    "reviewsCount": 198,
+    "badge": "GRAIL",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-ml-03-starlight-magnetic-levitation-showcase.jpg",
+    "mainImage": "/media/sneakers/acc-ml-03-starlight-magnetic-levitation-showcase.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ml-03-starlight-magnetic-levitation-showcase.jpg"
+    ],
+    "description": "Anodized aerospace aluminum finish with intelligent auto-pickup power memory, micro-weight balance calibration, and an integrated exhibition-grade downward spotlight.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Gravity Kicks",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Space Grey / Pure White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ml-03-starlight-magnetic-levitation-showcase.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ml-03-starlight-magnetic-levitation-showcase.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-ml-04-minimalist-float-pedestal-white": {
+    "id": "acc-ml-04-minimalist-float-pedestal-white",
+    "title": "Minimalist Apex Magnetic Floating Sneaker Pedestal",
+    "name": "Minimalist Apex Magnetic Floating Sneaker Pedestal",
+    "brand": "Gravity Kicks",
+    "category": "accessories",
+    "subcategory": "levitating-displays",
+    "categoryTag": "accessories levitating-displays levitating-displays minimalist apex floating pedestal white magnetic underglow dock",
+    "gender": "unisex",
+    "price": 3999.0,
+    "originalPrice": 5999.0,
+    "discount": "-33%",
+    "rating": 4.8,
+    "reviewsCount": 175,
+    "badge": "BEST VALUE",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-ml-04-minimalist-float-pedestal-white.jpg",
+    "mainImage": "/media/sneakers/acc-ml-04-minimalist-float-pedestal-white.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ml-04-minimalist-float-pedestal-white.jpg"
+    ],
+    "description": "Ultra-clean matte white architectural floating dock with soft ambient underglow, silent neodymium levitation ring, and instant power-loss anti-drop protection.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Gravity Kicks",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Triple White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ml-04-minimalist-float-pedestal-white.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ml-04-minimalist-float-pedestal-white.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-sl-17-3m-high-vis-reflective-rope-laces-silver": {
+    "id": "acc-sl-17-3m-high-vis-reflective-rope-laces-silver",
+    "title": "3M High-Vis Reflective Rope Laces - Silver / Black (130cm)",
+    "name": "3M High-Vis Reflective Rope Laces - Silver / Black (130cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "custom-shoelaces",
+    "categoryTag": "accessories custom-shoelaces custom-shoelaces 3m high vis reflective rope laces silver black sneaker laces",
+    "gender": "unisex",
+    "price": 449.0,
+    "originalPrice": 699.0,
+    "discount": "-35%",
+    "rating": 5.0,
+    "reviewsCount": 420,
+    "badge": "3M REFLECTIVE",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-sl-17-3m-high-vis-reflective-rope-laces-silver.jpg",
+    "mainImage": "/media/sneakers/acc-sl-17-3m-high-vis-reflective-rope-laces-silver.jpg",
+    "gallery": [
+      "/media/sneakers/acc-sl-17-3m-high-vis-reflective-rope-laces-silver.jpg"
+    ],
+    "description": "Premium braided tubular polyester woven with authentic 3M scotchlite reflective thread. Blazes brilliantly under flash and headlights with gunmetal metal aglets.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Silver / Black 3M",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-sl-17-3m-high-vis-reflective-rope-laces-silver.jpg",
+        "gallery": [
+          "/media/sneakers/acc-sl-17-3m-high-vis-reflective-rope-laces-silver.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail": {
+    "id": "acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail",
+    "title": "Heavyweight Waxed Cotton Flat Laces - Vintage Sail (140cm)",
+    "name": "Heavyweight Waxed Cotton Flat Laces - Vintage Sail (140cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "custom-shoelaces",
+    "categoryTag": "accessories custom-shoelaces custom-shoelaces heavyweight waxed cotton flat laces vintage sail cream dunk laces",
+    "gender": "unisex",
+    "price": 399.0,
+    "originalPrice": 649.0,
+    "discount": "-38%",
+    "rating": 4.9,
+    "reviewsCount": 380,
+    "badge": "VINTAGE VIBE",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail.jpg",
+    "mainImage": "/media/sneakers/acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail.jpg",
+    "gallery": [
+      "/media/sneakers/acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail.jpg"
+    ],
+    "description": "Subtly waxed double-weave Japanese cotton with water resistance and stay-tied grip. The definitive custom lace swap for retro Jordan 1s and Nike SB Dunks.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -1152,145 +1207,35 @@ const PRODUCTS_DATA = {
       {
         "name": "Vintage Sail Cream",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
+        "mainImage": "/media/sneakers/acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail.jpg",
         "gallery": [
-          "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg"
+          "/media/sneakers/acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail.jpg"
         ]
       }
     ]
   },
-  "acc-ps-46-reflective-3m-rope-laces-black-silver": {
-    "id": "acc-ps-46-reflective-3m-rope-laces-black-silver",
-    "title": "Reflective 3M Rope Laces - Core Black / Silver Weave (120cm)",
-    "name": "Reflective 3M Rope Laces - Core Black / Silver Weave (120cm)",
+  "acc-sl-19-neon-volt-oval-sb-skate-laces": {
+    "id": "acc-sl-19-neon-volt-oval-sb-skate-laces",
+    "title": "Chunky Oval SB Skate Laces - Cyber Neon Volt (140cm)",
+    "name": "Chunky Oval SB Skate Laces - Cyber Neon Volt (140cm)",
     "brand": "Lace Squad",
     "category": "accessories",
-    "subcategory": "premium-shoelaces",
-    "categoryTag": "accessories premium-shoelaces premium-shoelaces rope laces 3m reflective yeezy laces",
+    "subcategory": "custom-shoelaces",
+    "categoryTag": "accessories custom-shoelaces custom-shoelaces chunky oval sb skate laces neon volt yellow puffy tongue",
     "gender": "unisex",
-    "price": 499.0,
-    "originalPrice": 699.0,
-    "discount": "-28%",
+    "price": 399.0,
+    "originalPrice": 599.0,
+    "discount": "-33%",
     "rating": 4.8,
-    "reviewsCount": 280,
-    "badge": "Night Glow",
+    "reviewsCount": 210,
+    "badge": "STREETWEAR",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
-    "mainImage": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
+    "imageUrl": "/media/sneakers/acc-sl-19-neon-volt-oval-sb-skate-laces.jpg",
+    "mainImage": "/media/sneakers/acc-sl-19-neon-volt-oval-sb-skate-laces.jpg",
     "gallery": [
-      "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg"
+      "/media/sneakers/acc-sl-19-neon-volt-oval-sb-skate-laces.jpg"
     ],
-    "description": "Dense circular rope laces threaded with high-visibility 3M reflective fibers that light up under camera flash.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Lace Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Black / 3M Reflective Silver",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
-        "gallery": [
-          "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-ps-47-waxed-cotton-dunk-laces-white": {
-    "id": "acc-ps-47-waxed-cotton-dunk-laces-white",
-    "title": "Waxed Vintage Dunk Aglet Shoelaces - Pure White (160cm)",
-    "name": "Waxed Vintage Dunk Aglet Shoelaces - Pure White (160cm)",
-    "brand": "Lace Squad",
-    "category": "accessories",
-    "subcategory": "premium-shoelaces",
-    "categoryTag": "accessories premium-shoelaces premium-shoelaces waxed cotton laces metal tips premium",
-    "gender": "unisex",
-    "price": 549.0,
-    "originalPrice": 749.0,
-    "discount": "-26%",
-    "rating": 4.9,
-    "reviewsCount": 220,
-    "badge": "Gunmetal Aglets",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
-    "mainImage": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
-    "gallery": [
-      "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg"
-    ],
-    "description": "Water-resistant wax coating gives a sleek sheen and prevents fraying, finished with screw-on engraved metal aglets.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Lace Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Pure White / Metal Tips",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
-        "gallery": [
-          "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg"
-        ]
-      }
-    ]
-  },
-  "acc-ps-48-oval-sb-skate-thick-laces-volt": {
-    "id": "acc-ps-48-oval-sb-skate-thick-laces-volt",
-    "title": "Oval SB Skate Chunky Laces - Neon Volt (140cm)",
-    "name": "Oval SB Skate Chunky Laces - Neon Volt (140cm)",
-    "brand": "Lace Squad",
-    "category": "accessories",
-    "subcategory": "premium-shoelaces",
-    "categoryTag": "accessories premium-shoelaces premium-shoelaces oval sb laces chunky skate volt neon",
-    "gender": "unisex",
-    "price": 449.0,
-    "originalPrice": 649.0,
-    "discount": "-30%",
-    "rating": 4.7,
-    "reviewsCount": 160,
-    "badge": "Chunky SB",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
-    "mainImage": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
-    "gallery": [
-      "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg"
-    ],
-    "description": "Padded thick oval laces modeled after authentic 2000s Nike SB Dunk fat tongues for iconic skate presence.",
+    "description": "9mm thick padded chunky oval skate laces engineered with dense core stuffing to deliver the iconic puffy tongue aesthetic for Nike SB Dunks and skate kicks.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -1317,9 +1262,64 @@ const PRODUCTS_DATA = {
       {
         "name": "Neon Volt Yellow",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
+        "mainImage": "/media/sneakers/acc-sl-19-neon-volt-oval-sb-skate-laces.jpg",
         "gallery": [
-          "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg"
+          "/media/sneakers/acc-sl-19-neon-volt-oval-sb-skate-laces.jpg"
+        ]
+      }
+    ]
+  },
+  "acc-sl-20-glow-in-the-dark-tubular-laces-cyber": {
+    "id": "acc-sl-20-glow-in-the-dark-tubular-laces-cyber",
+    "title": "Glow-in-the-Dark Phosphor Laces - Aurora Green (125cm)",
+    "name": "Glow-in-the-Dark Phosphor Laces - Aurora Green (125cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "custom-shoelaces",
+    "categoryTag": "accessories custom-shoelaces custom-shoelaces glow in the dark phosphor laces aurora green night kicks",
+    "gender": "unisex",
+    "price": 499.0,
+    "originalPrice": 799.0,
+    "discount": "-37%",
+    "rating": 4.9,
+    "reviewsCount": 340,
+    "badge": "GLOW EFFECT",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-sl-20-glow-in-the-dark-tubular-laces-cyber.jpg",
+    "mainImage": "/media/sneakers/acc-sl-20-glow-in-the-dark-tubular-laces-cyber.jpg",
+    "gallery": [
+      "/media/sneakers/acc-sl-20-glow-in-the-dark-tubular-laces-cyber.jpg"
+    ],
+    "description": "Sunlight and UV-reactive phosphor yarn charges in 10 minutes and glows a vibrant electric emerald green in dark rooms, clubs, and night city streets.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Aurora Green Glow",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-sl-20-glow-in-the-dark-tubular-laces-cyber.jpg",
+        "gallery": [
+          "/media/sneakers/acc-sl-20-glow-in-the-dark-tubular-laces-cyber.jpg"
         ]
       }
     ]
@@ -5726,26 +5726,26 @@ const PRODUCTS_DATA = {
   },
   "a1": {
     "id": "a1",
-    "title": "Heavy-Cushion Retro Ribbed Crew Socks 3-Pack - White",
-    "name": "Heavy-Cushion Retro Ribbed Crew Socks 3-Pack - White",
-    "brand": "Squad Apparel",
+    "title": "Pro Clean Ultimate Sneaker Care Box Kit",
+    "name": "Pro Clean Ultimate Sneaker Care Box Kit",
+    "brand": "Squad Care",
     "category": "accessories",
-    "subcategory": "athletic-socks",
-    "categoryTag": "accessories athletic-socks athletic-socks crew socks heavy cushion white retro socks",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits pro clean ultimate care kit solution hog bristle brush microfiber",
     "gender": "unisex",
-    "price": 699.0,
-    "originalPrice": 999.0,
-    "discount": "-30%",
-    "rating": 4.9,
-    "reviewsCount": 480,
-    "badge": "Terry Cushion",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
-    "mainImage": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
+    "price": 1299.0,
+    "originalPrice": 1999.0,
+    "discount": "-35%",
+    "rating": 5.0,
+    "reviewsCount": 680,
+    "badge": "ESSENTIAL",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-ck-09-pro-clean-ultimate-sneaker-kit.jpg",
+    "mainImage": "/media/sneakers/acc-ck-09-pro-clean-ultimate-sneaker-kit.jpg",
     "gallery": [
-      "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg"
+      "/media/sneakers/acc-ck-09-pro-clean-ultimate-sneaker-kit.jpg"
     ],
-    "description": "Thick french terry bottom padding provides pillow-like impact buffering under high-abrasion basketball shoes.",
+    "description": "Comprehensive sneaker care setup: 200ml eco-friendly natural foaming solution, natural hog-bristle medium brush, brass sole brush, and ultra-plush microfiber cloth.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -5753,7 +5753,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Squad Apparel",
+      "Brand": "Squad Care",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -5770,37 +5770,37 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Crisp White / Black Stripe",
+        "name": "Squad Signature Orange/Black",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg",
+        "mainImage": "/media/sneakers/acc-ck-09-pro-clean-ultimate-sneaker-kit.jpg",
         "gallery": [
-          "/media/sneakers/acc-as-61-retro-ribbed-crew-socks-3pk-white_FrZKfWb.jpg"
+          "/media/sneakers/acc-ck-09-pro-clean-ultimate-sneaker-kit.jpg"
         ]
       }
     ]
   },
   "a2": {
     "id": "a2",
-    "title": "Compression Arch Support Performance Ankle Socks (3-Pack)",
-    "name": "Compression Arch Support Performance Ankle Socks (3-Pack)",
-    "brand": "Squad Apparel",
+    "title": "Ready-Foam Instant Sneaker Cleanser 250ml Pump",
+    "name": "Ready-Foam Instant Sneaker Cleanser 250ml Pump",
+    "brand": "Squad Care",
     "category": "accessories",
-    "subcategory": "athletic-socks",
-    "categoryTag": "accessories athletic-socks athletic-socks ankle socks performance running compression",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits ready foam instant sneaker cleanser waterless pump cleaner",
     "gender": "unisex",
-    "price": 599.0,
-    "originalPrice": 899.0,
-    "discount": "-33%",
+    "price": 649.0,
+    "originalPrice": 999.0,
+    "discount": "-35%",
     "rating": 4.8,
-    "reviewsCount": 260,
-    "badge": "Arch Compression",
+    "reviewsCount": 320,
+    "badge": "NO WATER NEEDED",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
-    "mainImage": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
+    "imageUrl": "/media/sneakers/acc-ck-10-quick-cleansing-foam-ready-pump.jpg",
+    "mainImage": "/media/sneakers/acc-ck-10-quick-cleansing-foam-ready-pump.jpg",
     "gallery": [
-      "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg"
+      "/media/sneakers/acc-ck-10-quick-cleansing-foam-ready-pump.jpg"
     ],
-    "description": "Elastic 360-degree midfoot compression band eliminates blister-causing friction during runs.",
+    "description": "Direct pump-to-shoe foaming cleanser that lifts stubborn road grime, dirt, and scuffs on contact without requiring water. Completely safe on knit, canvas, mesh, and leather.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -5808,7 +5808,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Squad Apparel",
+      "Brand": "Squad Care",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -5825,37 +5825,37 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Stealth Black / Grey",
+        "name": "Clean White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg",
+        "mainImage": "/media/sneakers/acc-ck-10-quick-cleansing-foam-ready-pump.jpg",
         "gallery": [
-          "/media/sneakers/acc-as-62-arch-support-performance-ankle-socks.jpg"
+          "/media/sneakers/acc-ck-10-quick-cleansing-foam-ready-pump.jpg"
         ]
       }
     ]
   },
   "a3": {
     "id": "a3",
-    "title": "Deadstock Tie-Dye Streetwear Crew Socks - Multi Color",
-    "name": "Deadstock Tie-Dye Streetwear Crew Socks - Multi Color",
-    "brand": "Squad Apparel",
+    "title": "Suede & Nubuck Gentle Eraser & Crepe Brush Set",
+    "name": "Suede & Nubuck Gentle Eraser & Crepe Brush Set",
+    "brand": "Squad Care",
     "category": "accessories",
-    "subcategory": "athletic-socks",
-    "categoryTag": "accessories athletic-socks athletic-socks tie dye crew socks streetwear pastel multi",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits suede nubuck eraser crepe brush dry cleaner nap restorer",
     "gender": "unisex",
-    "price": 799.0,
-    "originalPrice": 1099.0,
-    "discount": "-27%",
-    "rating": 4.8,
-    "reviewsCount": 190,
-    "badge": "Street Swag",
-    "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
-    "mainImage": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
+    "price": 599.0,
+    "originalPrice": 899.0,
+    "discount": "-33%",
+    "rating": 4.9,
+    "reviewsCount": 230,
+    "badge": "SPECIALTY",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-ck-11-suede-nubuck-renewal-eraser-kit.jpg",
+    "mainImage": "/media/sneakers/acc-ck-11-suede-nubuck-renewal-eraser-kit.jpg",
     "gallery": [
-      "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg"
+      "/media/sneakers/acc-ck-11-suede-nubuck-renewal-eraser-kit.jpg"
     ],
-    "description": "Hand-dyed combed cotton yarn engineered to style seamlessly with low-top Dunks and chunky platforms.",
+    "description": "Dry-cleaning crumb rubber eraser block and natural crepe brass wire brush to revive delicate suede nap and lift scuffs from Travis Scott Jordans & Dunks.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -5863,7 +5863,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Squad Apparel",
+      "Brand": "Squad Care",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -5880,37 +5880,37 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Pastel Tie-Dye Swirl",
+        "name": "Raw Wood / Sand Rubber",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg",
+        "mainImage": "/media/sneakers/acc-ck-11-suede-nubuck-renewal-eraser-kit.jpg",
         "gallery": [
-          "/media/sneakers/acc-as-63-deadstock-tie-dye-street-crew-socks_IMi1WN6.jpg"
+          "/media/sneakers/acc-ck-11-suede-nubuck-renewal-eraser-kit.jpg"
         ]
       }
     ]
   },
   "a4": {
     "id": "a4",
-    "title": "Breathable Terry Loop Low-Cut Running Socks 3-Pack",
-    "name": "Breathable Terry Loop Low-Cut Running Socks 3-Pack",
-    "brand": "Squad Apparel",
+    "title": "Dual-Textured Quick Sneaker Cleaning Wipes (40-Pack)",
+    "name": "Dual-Textured Quick Sneaker Cleaning Wipes (40-Pack)",
+    "brand": "Squad Care",
     "category": "accessories",
-    "subcategory": "athletic-socks",
-    "categoryTag": "accessories athletic-socks athletic-socks low cut running socks anti blister terry",
+    "subcategory": "cleaning-kits",
+    "categoryTag": "accessories cleaning-kits cleaning-kits dual textured quick sneaker wipes portable wipes 40 pack",
     "gender": "unisex",
-    "price": 549.0,
+    "price": 499.0,
     "originalPrice": 799.0,
-    "discount": "-31%",
-    "rating": 4.7,
-    "reviewsCount": 210,
-    "badge": "Anti-Blister Tab",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
-    "mainImage": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
+    "discount": "-37%",
+    "rating": 4.8,
+    "reviewsCount": 510,
+    "badge": "TRAVEL READY",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-ck-12-dual-sided-textured-sneaker-wipes-40pk.jpg",
+    "mainImage": "/media/sneakers/acc-ck-12-dual-sided-textured-sneaker-wipes-40pk.jpg",
     "gallery": [
-      "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg"
+      "/media/sneakers/acc-ck-12-dual-sided-textured-sneaker-wipes-40pk.jpg"
     ],
-    "description": "Padded heel-tab protects Achilles tendons against shoe rubbing during long marathon distance runs.",
+    "description": "Individually foil-wrapped wipes. Raised textured rubber dots on one side for midsole scrubbing and smooth soft weave on the other for delicate leather uppers.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -5918,7 +5918,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Squad Apparel",
+      "Brand": "Squad Care",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -5935,37 +5935,37 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "White / Reflective Tab",
+        "name": "Foil Wrapped White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg",
+        "mainImage": "/media/sneakers/acc-ck-12-dual-sided-textured-sneaker-wipes-40pk.jpg",
         "gallery": [
-          "/media/sneakers/acc-as-64-terry-loop-low-cut-running-socks-3pk.jpg"
+          "/media/sneakers/acc-ck-12-dual-sided-textured-sneaker-wipes-40pk.jpg"
         ]
       }
     ]
   },
   "a5": {
     "id": "a5",
-    "title": "Premium Sneaker Deep Cleaning Solution & Hog-Bristle Brush",
-    "name": "Premium Sneaker Deep Cleaning Solution & Hog-Bristle Brush",
-    "brand": "Squad Care",
+    "title": "Ergonomic Breathable Sneaker Crease Protectors (2-Pairs)",
+    "name": "Ergonomic Breathable Sneaker Crease Protectors (2-Pairs)",
+    "brand": "Shield Squad",
     "category": "accessories",
-    "subcategory": "cleaning-kits",
-    "categoryTag": "accessories cleaning-kits cleaning-kits sneaker care solution cleaner brush kit",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors ergonomic breathable crease guards toe box wrinkle shield",
     "gender": "unisex",
-    "price": 1499.0,
-    "originalPrice": 1999.0,
-    "discount": "-25%",
+    "price": 499.0,
+    "originalPrice": 899.0,
+    "discount": "-44%",
     "rating": 4.9,
-    "reviewsCount": 310,
-    "badge": "Pro Kit",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
-    "mainImage": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
+    "reviewsCount": 560,
+    "badge": "BESTSELLER",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-cp-05-ergonomic-breathable-crease-guards.jpg",
+    "mainImage": "/media/sneakers/acc-cp-05-ergonomic-breathable-crease-guards.jpg",
     "gallery": [
-      "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg"
+      "/media/sneakers/acc-cp-05-ergonomic-breathable-crease-guards.jpg"
     ],
-    "description": "Eco-friendly foaming formula that safely lifts dirt, stains, and scuffs from leather, mesh, canvas, and suede.",
+    "description": "Ultra-thin pre-curved TPR polymer shields with 24 ventilation holes to keep your Jordan 1 & Air Force 1 toe boxes 100% wrinkle-free without pinching toes.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -5973,7 +5973,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Squad Care",
+      "Brand": "Shield Squad",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -5990,37 +5990,37 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Clear / Natural Wood",
+        "name": "Carbon Black / Clear",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg",
+        "mainImage": "/media/sneakers/acc-cp-05-ergonomic-breathable-crease-guards.jpg",
         "gallery": [
-          "/media/sneakers/acc-ck-41-premium-deep-cleaning-kit-solution_uzErgs9.jpg"
+          "/media/sneakers/acc-cp-05-ergonomic-breathable-crease-guards.jpg"
         ]
       }
     ]
   },
   "a6": {
     "id": "a6",
-    "title": "Quick Wipes Dual-Textured Portable Sneaker Wipes (30-Pack)",
-    "name": "Quick Wipes Dual-Textured Portable Sneaker Wipes (30-Pack)",
-    "brand": "Squad Care",
+    "title": "Ultra-Flex Memory Foam Sneaker Toe Armor (2-Pairs)",
+    "name": "Ultra-Flex Memory Foam Sneaker Toe Armor (2-Pairs)",
+    "brand": "Shield Squad",
     "category": "accessories",
-    "subcategory": "cleaning-kits",
-    "categoryTag": "accessories cleaning-kits cleaning-kits sneaker wipes quick cleaner on-the-go",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors ultra-flex memory foam toe armor cushion crease shield",
     "gender": "unisex",
-    "price": 699.0,
+    "price": 599.0,
     "originalPrice": 999.0,
-    "discount": "-30%",
+    "discount": "-40%",
     "rating": 4.8,
-    "reviewsCount": 420,
-    "badge": "Pocket Essential",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
-    "mainImage": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
+    "reviewsCount": 310,
+    "badge": "MAX COMFORT",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-cp-06-ultra-flex-memory-foam-crease-armor.jpg",
+    "mainImage": "/media/sneakers/acc-cp-06-ultra-flex-memory-foam-crease-armor.jpg",
     "gallery": [
-      "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg"
+      "/media/sneakers/acc-cp-06-ultra-flex-memory-foam-crease-armor.jpg"
     ],
-    "description": "Pocket-sized wipes featuring a textured dot side for stubborn mud and a soft smooth side for gentle wiping.",
+    "description": "Dual-layer shock-absorbing memory foam and high-resilience polymer composite for all-day comfort while walking, running, or standing at sneaker conventions.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -6028,7 +6028,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Squad Care",
+      "Brand": "Shield Squad",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -6045,37 +6045,37 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Individually Foil-Sealed",
+        "name": "Stealth Grey",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg",
+        "mainImage": "/media/sneakers/acc-cp-06-ultra-flex-memory-foam-crease-armor.jpg",
         "gallery": [
-          "/media/sneakers/acc-ck-42-quick-wipes-dual-textured-30pk.jpg"
+          "/media/sneakers/acc-cp-06-ultra-flex-memory-foam-crease-armor.jpg"
         ]
       }
     ]
   },
   "a7": {
     "id": "a7",
-    "title": "Hydro-Shield Nano Water & Stain Repellent Spray (200ml)",
-    "name": "Hydro-Shield Nano Water & Stain Repellent Spray (200ml)",
-    "brand": "Squad Care",
+    "title": "Carbon Shield V2 Rigid Toe Box Deflectors",
+    "name": "Carbon Shield V2 Rigid Toe Box Deflectors",
+    "brand": "Shield Squad",
     "category": "accessories",
-    "subcategory": "cleaning-kits",
-    "categoryTag": "accessories cleaning-kits cleaning-kits waterproof stain repellent protection spray",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors carbon shield v2 rigid toe box deflector high top crease guard",
     "gender": "unisex",
-    "price": 999.0,
-    "originalPrice": 1399.0,
-    "discount": "-28%",
+    "price": 699.0,
+    "originalPrice": 1199.0,
+    "discount": "-41%",
     "rating": 4.9,
-    "reviewsCount": 380,
-    "badge": "Hydrophobic Shield",
+    "reviewsCount": 240,
+    "badge": "HEAVY DUTY",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
-    "mainImage": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
+    "imageUrl": "/media/sneakers/acc-cp-07-carbon-fiber-reinforced-shields.jpg",
+    "mainImage": "/media/sneakers/acc-cp-07-carbon-fiber-reinforced-shields.jpg",
     "gallery": [
-      "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg"
+      "/media/sneakers/acc-cp-07-carbon-fiber-reinforced-shields.jpg"
     ],
-    "description": "Advanced invisible hydrophobic barrier that causes liquids to bead up and roll right off without altering breathability.",
+    "description": "Engineered carbon-reinforced toe structure designed specifically for premium high-top leather sneakers. Guided cut lines for custom edge-to-edge trimming.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -6083,7 +6083,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Squad Care",
+      "Brand": "Shield Squad",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -6100,37 +6100,37 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Aerosol Spray Canister",
+        "name": "Matte Carbon",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg",
+        "mainImage": "/media/sneakers/acc-cp-07-carbon-fiber-reinforced-shields.jpg",
         "gallery": [
-          "/media/sneakers/acc-ck-43-hydro-shield-water-stain-repellent_r3yGlGl.jpg"
+          "/media/sneakers/acc-cp-07-carbon-fiber-reinforced-shields.jpg"
         ]
       }
     ]
   },
   "a8": {
     "id": "a8",
-    "title": "Suede & Nubuck Renewal Cleaning Eraser Block",
-    "name": "Suede & Nubuck Renewal Cleaning Eraser Block",
-    "brand": "Squad Care",
+    "title": "Invisible Clear Gel Crease Protectors (3-Pairs Combo)",
+    "name": "Invisible Clear Gel Crease Protectors (3-Pairs Combo)",
+    "brand": "Shield Squad",
     "category": "accessories",
-    "subcategory": "cleaning-kits",
-    "categoryTag": "accessories cleaning-kits cleaning-kits suede eraser nubuck brush dry cleaner",
+    "subcategory": "crease-protectors",
+    "categoryTag": "accessories crease-protectors crease-protectors invisible clear gel crease protectors toe guards multi pack",
     "gender": "unisex",
-    "price": 599.0,
-    "originalPrice": 799.0,
-    "discount": "-25%",
-    "rating": 4.7,
-    "reviewsCount": 190,
-    "badge": "Dry Care",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
-    "mainImage": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
+    "price": 799.0,
+    "originalPrice": 1499.0,
+    "discount": "-46%",
+    "rating": 4.8,
+    "reviewsCount": 415,
+    "badge": "COMBO PACK",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-cp-08-invisible-gel-cushioned-toe-guards.jpg",
+    "mainImage": "/media/sneakers/acc-cp-08-invisible-gel-cushioned-toe-guards.jpg",
     "gallery": [
-      "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg"
+      "/media/sneakers/acc-cp-08-invisible-gel-cushioned-toe-guards.jpg"
     ],
-    "description": "Water-free cleaning eraser designed to buff away scuff marks and restore the natural velvety nap of delicate suede.",
+    "description": "Medical-grade hypoallergenic transparent silicone gel toe inserts. Zero visual imprint, anti-slip internal ribbing, and fully washable for endless reusability.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -6138,7 +6138,7 @@ const PRODUCTS_DATA = {
       "Breathable Premium Upper: Multi-panel durable construction."
     ],
     "specs": {
-      "Brand": "Squad Care",
+      "Brand": "Shield Squad",
       "Closure": "Lace-Up",
       "Upper Material": "Premium Leather & Mesh",
       "Sole": "High-Abrasion Rubber",
@@ -6155,642 +6155,37 @@ const PRODUCTS_DATA = {
     "inStock": true,
     "colors": [
       {
-        "name": "Rubberized Crepe Block",
+        "name": "Crystal Clear",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg",
+        "mainImage": "/media/sneakers/acc-cp-08-invisible-gel-cushioned-toe-guards.jpg",
         "gallery": [
-          "/media/sneakers/acc-ck-44-suede-nubuck-renewal-eraser-block_MQh3ETF.jpg"
+          "/media/sneakers/acc-cp-08-invisible-gel-cushioned-toe-guards.jpg"
         ]
       }
     ]
   },
   "a9": {
     "id": "a9",
-    "title": "Ergonomic Breathable Sneaker Crease Guards (1 Pair)",
-    "name": "Ergonomic Breathable Sneaker Crease Guards (1 Pair)",
-    "brand": "Shield Squad",
+    "title": "Activated Carbon Kinetic Sneaker Deodorizer Balls (6-Pack)",
+    "name": "Activated Carbon Kinetic Sneaker Deodorizer Balls (6-Pack)",
+    "brand": "Fresh Squad",
     "category": "accessories",
-    "subcategory": "crease-protectors",
-    "categoryTag": "accessories crease-protectors crease-protectors anti crease shield toe guard protection",
-    "gender": "unisex",
-    "price": 499.0,
-    "originalPrice": 799.0,
-    "discount": "-37%",
-    "rating": 4.9,
-    "reviewsCount": 510,
-    "badge": "Anti-Crease",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
-    "mainImage": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
-    "gallery": [
-      "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg"
-    ],
-    "description": "Ventilated flex-molded shields that slip into the toe box to prevent unsightly leather creasing during movement.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Shield Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Matte White",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg",
-        "gallery": [
-          "/media/sneakers/acc-cp-49-ergonomic-breathable-crease-guards_mLG374c.jpg"
-        ]
-      }
-    ]
-  },
-  "a10": {
-    "id": "a10",
-    "title": "Soft Foam Shock-Absorbing Toe Box Fillers (2 Pairs)",
-    "name": "Soft Foam Shock-Absorbing Toe Box Fillers (2 Pairs)",
-    "brand": "Shield Squad",
-    "category": "accessories",
-    "subcategory": "crease-protectors",
-    "categoryTag": "accessories crease-protectors crease-protectors foam fillers toe box comfort protection",
+    "subcategory": "deodorizer-balls",
+    "categoryTag": "accessories deodorizer-balls deodorizer-balls activated carbon kinetic sneaker deodorizer balls shoe freshener",
     "gender": "unisex",
     "price": 599.0,
-    "originalPrice": 899.0,
-    "discount": "-33%",
-    "rating": 4.8,
-    "reviewsCount": 230,
-    "badge": "Comfort Fit",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
-    "mainImage": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
-    "gallery": [
-      "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg"
-    ],
-    "description": "Memory-foam cushioning inserts that gently fill toe volume to eliminate foot slippage and preserve toe box shape.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Shield Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Charcoal Grey",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg",
-        "gallery": [
-          "/media/sneakers/acc-cp-50-soft-foam-shock-absorbing-toe-fillers_XKkJBRe.jpg"
-        ]
-      }
-    ]
-  },
-  "a11": {
-    "id": "a11",
-    "title": "Universal Armor Crease Shield V2 - Matte Black (1 Pair)",
-    "name": "Universal Armor Crease Shield V2 - Matte Black (1 Pair)",
-    "brand": "Shield Squad",
-    "category": "accessories",
-    "subcategory": "crease-protectors",
-    "categoryTag": "accessories crease-protectors crease-protectors armor shield black crease guard",
-    "gender": "unisex",
-    "price": 549.0,
-    "originalPrice": 849.0,
-    "discount": "-35%",
-    "rating": 4.8,
-    "reviewsCount": 195,
-    "badge": "Heavy Duty",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
-    "mainImage": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
-    "gallery": [
-      "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg"
-    ],
-    "description": "Reinforced ridged polymer designed for heavy leather silhouettes like Jordan 4s, Dunks, and Air Force 1s.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Shield Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Stealth Black",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg",
-        "gallery": [
-          "/media/sneakers/acc-cp-51-universal-anti-crease-shield-v2-black_6xOuQzc.jpg"
-        ]
-      }
-    ]
-  },
-  "a12": {
-    "id": "a12",
-    "title": "Ventilated Gel Armor Toe Guards - Clear Gel Edition",
-    "name": "Ventilated Gel Armor Toe Guards - Clear Gel Edition",
-    "brand": "Shield Squad",
-    "category": "accessories",
-    "subcategory": "crease-protectors",
-    "categoryTag": "accessories crease-protectors crease-protectors gel guards clear crease shield soft",
-    "gender": "unisex",
-    "price": 649.0,
-    "originalPrice": 949.0,
-    "discount": "-31%",
-    "rating": 4.9,
-    "reviewsCount": 175,
-    "badge": "Zero Pinching",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
-    "mainImage": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
-    "gallery": [
-      "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg"
-    ],
-    "description": "Medical-grade elastomer gel flexes naturally with every stride for 100% pinch-free toe comfort.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Shield Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Crystal Clear Gel",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg",
-        "gallery": [
-          "/media/sneakers/acc-cp-52-ventilated-clear-gel-toe-guards_bkWLoLm.jpg"
-        ]
-      }
-    ]
-  },
-  "a13": {
-    "id": "a13",
-    "title": "UV-Protection Magnetic Drop-Front Sneaker Display Case",
-    "name": "UV-Protection Magnetic Drop-Front Sneaker Display Case",
-    "brand": "Crate Squad",
-    "category": "accessories",
-    "subcategory": "display-crates",
-    "categoryTag": "accessories display-crates display-crates magnetic drop front shoe case crate display",
-    "gender": "unisex",
-    "price": 1699.0,
-    "originalPrice": 2299.0,
-    "discount": "-26%",
-    "rating": 4.9,
-    "reviewsCount": 340,
-    "badge": "Drop-Front",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
-    "mainImage": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
-    "gallery": [
-      "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg"
-    ],
-    "description": "Heavy-duty stackable acrylic crate with dual magnetic door locks and 99% UV radiation blocking.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Crate Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Crystal Clear / Black Frame",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg",
-        "gallery": [
-          "/media/sneakers/acc-dc-53-magnetic-drop-front-sneaker-case.jpg"
-        ]
-      }
-    ]
-  },
-  "a14": {
-    "id": "a14",
-    "title": "LED Sound-Activated Stackable Sneaker Showcase Crate",
-    "name": "LED Sound-Activated Stackable Sneaker Showcase Crate",
-    "brand": "Crate Squad",
-    "category": "accessories",
-    "subcategory": "display-crates",
-    "categoryTag": "accessories display-crates display-crates led sound activated shoe display case",
-    "gender": "unisex",
-    "price": 2799.0,
-    "originalPrice": 3499.0,
-    "discount": "-20%",
+    "originalPrice": 999.0,
+    "discount": "-40%",
     "rating": 5.0,
-    "reviewsCount": 220,
-    "badge": "LED Glow",
-    "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
-    "mainImage": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
+    "reviewsCount": 640,
+    "badge": "BESTSELLER",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk.jpg",
+    "mainImage": "/media/sneakers/acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk.jpg",
     "gallery": [
-      "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg"
+      "/media/sneakers/acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk.jpg"
     ],
-    "description": "Voice and beat-activated smart ambient LED lighting illuminates your grail kicks with wireless stacking power.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Crate Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Black / Multi-RGB LED",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg",
-        "gallery": [
-          "/media/sneakers/acc-dc-54-led-sound-activated-stackable-crate_2nNTqKS.jpg"
-        ]
-      }
-    ]
-  },
-  "a15": {
-    "id": "a15",
-    "title": "Crystal Clear 360-Degree Acrylic Shoe Showcase",
-    "name": "Crystal Clear 360-Degree Acrylic Shoe Showcase",
-    "brand": "Crate Squad",
-    "category": "accessories",
-    "subcategory": "display-crates",
-    "categoryTag": "accessories display-crates display-crates 360 acrylic display box showcase museum",
-    "gender": "unisex",
-    "price": 2199.0,
-    "originalPrice": 2799.0,
-    "discount": "-21%",
-    "rating": 4.9,
-    "reviewsCount": 160,
-    "badge": "Museum Grade",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
-    "mainImage": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
-    "gallery": [
-      "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg"
-    ],
-    "description": "Frameless optical-grade acrylic allows seamless viewing from every angle while guarding against dust and yellowing.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Crate Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Full Clear Acrylic",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg",
-        "gallery": [
-          "/media/sneakers/acc-dc-55-acrylic-360-degree-shoe-showcase_WmodThv.jpg"
-        ]
-      }
-    ]
-  },
-  "a16": {
-    "id": "a16",
-    "title": "Modular Heavy-Duty Interlocking Shoe Storage Box (6-Pack)",
-    "name": "Modular Heavy-Duty Interlocking Shoe Storage Box (6-Pack)",
-    "brand": "Crate Squad",
-    "category": "accessories",
-    "subcategory": "display-crates",
-    "categoryTag": "accessories display-crates display-crates modular interlocking storage box stackable pack",
-    "gender": "unisex",
-    "price": 4499.0,
-    "originalPrice": 5999.0,
-    "discount": "-25%",
-    "rating": 4.8,
-    "reviewsCount": 290,
-    "badge": "Value 6-Pack",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
-    "mainImage": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
-    "gallery": [
-      "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg"
-    ],
-    "description": "Precision interlocking groove design lets you assemble a complete wall of sneaker boxes with zero wobbling.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Crate Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Smoky Translucent Grey",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg",
-        "gallery": [
-          "/media/sneakers/acc-dc-56-modular-interlocking-storage-box-6pk_33D0mf1.jpg"
-        ]
-      }
-    ]
-  },
-  "a17": {
-    "id": "a17",
-    "title": "Bamboo Charcoal Sneaker Deodorizer Pouches (2-Pack)",
-    "name": "Bamboo Charcoal Sneaker Deodorizer Pouches (2-Pack)",
-    "brand": "Fresh Squad",
-    "category": "accessories",
-    "subcategory": "odor-eliminators",
-    "categoryTag": "accessories odor-eliminators odor-eliminators charcoal deodorizer fresh moisture absorber",
-    "gender": "unisex",
-    "price": 499.0,
-    "originalPrice": 699.0,
-    "discount": "-28%",
-    "rating": 4.9,
-    "reviewsCount": 390,
-    "badge": "Natural Fresh",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
-    "mainImage": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
-    "gallery": [
-      "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg"
-    ],
-    "description": "Activated moso bamboo charcoal traps moisture and neutralizes pungent foot odors naturally without artificial scent.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Fresh Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Natural Linen Grey",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg",
-        "gallery": [
-          "/media/sneakers/acc-oe-57-bamboo-charcoal-deodorizer-pouches_YYjOQKz.jpg"
-        ]
-      }
-    ]
-  },
-  "a18": {
-    "id": "a18",
-    "title": "Fresh Citrus Shoe Antifungal Deodorant Spray (150ml)",
-    "name": "Fresh Citrus Shoe Antifungal Deodorant Spray (150ml)",
-    "brand": "Fresh Squad",
-    "category": "accessories",
-    "subcategory": "odor-eliminators",
-    "categoryTag": "accessories odor-eliminators odor-eliminators shoe spray deodorant antibacterial citrus",
-    "gender": "unisex",
-    "price": 599.0,
-    "originalPrice": 799.0,
-    "discount": "-25%",
-    "rating": 4.8,
-    "reviewsCount": 270,
-    "badge": "Instant Fresh",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
-    "mainImage": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
-    "gallery": [
-      "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg"
-    ],
-    "description": "Fast-drying formula infused with tea tree oil and lemon zest kills 99.9% of odor-causing bacteria upon contact.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Fresh Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Cool Citrus Blast",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg",
-        "gallery": [
-          "/media/sneakers/acc-oe-58-fresh-citrus-antifungal-shoe-spray_y8eGVnm.jpg"
-        ]
-      }
-    ]
-  },
-  "a19": {
-    "id": "a19",
-    "title": "Cedar Wood Moisture & Odor Absorber Tree Inserts",
-    "name": "Cedar Wood Moisture & Odor Absorber Tree Inserts",
-    "brand": "Fresh Squad",
-    "category": "accessories",
-    "subcategory": "odor-eliminators",
-    "categoryTag": "accessories odor-eliminators odor-eliminators cedar wood shoe tree absorber inserts",
-    "gender": "unisex",
-    "price": 899.0,
-    "originalPrice": 1199.0,
-    "discount": "-25%",
-    "rating": 4.9,
-    "reviewsCount": 180,
-    "badge": "Aromatic Wood",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
-    "mainImage": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
-    "gallery": [
-      "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg"
-    ],
-    "description": "100% natural red cedar absorbs sweat residue after long days of wear and imparts a refined forest aroma.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Fresh Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Aromatic Red Cedar",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg",
-        "gallery": [
-          "/media/sneakers/acc-oe-59-cedar-wood-moisture-absorber-inserts_4659Nkq.jpg"
-        ]
-      }
-    ]
-  },
-  "a20": {
-    "id": "a20",
-    "title": "Activated Carbon Kinetic Odor Eliminating Balls (6-Pack)",
-    "name": "Activated Carbon Kinetic Odor Eliminating Balls (6-Pack)",
-    "brand": "Fresh Squad",
-    "category": "accessories",
-    "subcategory": "odor-eliminators",
-    "categoryTag": "accessories odor-eliminators odor-eliminators sneaker balls deodorizer carbon fresh pack",
-    "gender": "unisex",
-    "price": 649.0,
-    "originalPrice": 849.0,
-    "discount": "-23%",
-    "rating": 4.8,
-    "reviewsCount": 320,
-    "badge": "Twist-Lock Fresh",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
-    "mainImage": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
-    "gallery": [
-      "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg"
-    ],
-    "description": "Compact twist-to-activate deodorizing spheres that fit snug into toes, shoe bags, or locker spaces.",
+    "description": "Twist-to-activate spherical air fresheners packed with natural microporous activated carbon and tea tree extract to neutralize sneaker odor at the bacterial source.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -6817,35 +6212,695 @@ const PRODUCTS_DATA = {
       {
         "name": "Matte Black / Orange Vents",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg",
+        "mainImage": "/media/sneakers/acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk.jpg",
         "gallery": [
-          "/media/sneakers/acc-oe-60-activated-carbon-kinetic-odor-balls_OmACh5U.jpg"
+          "/media/sneakers/acc-db-21-activated-carbon-kinetic-deodorizer-balls-6pk.jpg"
+        ]
+      }
+    ]
+  },
+  "a10": {
+    "id": "a10",
+    "title": "Aroma-Lock Zeolite Capsule Deodorizer Pills (4-Pack)",
+    "name": "Aroma-Lock Zeolite Capsule Deodorizer Pills (4-Pack)",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "deodorizer-balls",
+    "categoryTag": "accessories deodorizer-balls deodorizer-balls aroma lock zeolite capsule deodorizer pills moisture absorber",
+    "gender": "unisex",
+    "price": 649.0,
+    "originalPrice": 1099.0,
+    "discount": "-40%",
+    "rating": 4.9,
+    "reviewsCount": 275,
+    "badge": "ZEOLITE TECH",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-db-22-aroma-lock-capsule-freshener-pills-4pk.jpg",
+    "mainImage": "/media/sneakers/acc-db-22-aroma-lock-capsule-freshener-pills-4pk.jpg",
+    "gallery": [
+      "/media/sneakers/acc-db-22-aroma-lock-capsule-freshener-pills-4pk.jpg"
+    ],
+    "description": "Medical pill design featuring natural volcanic zeolite minerals and moisture-absorbing silica beads that keep shoe insoles dry, fresh, and bacteria-free.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Cool Mint / Ice Blue",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-db-22-aroma-lock-capsule-freshener-pills-4pk.jpg",
+        "gallery": [
+          "/media/sneakers/acc-db-22-aroma-lock-capsule-freshener-pills-4pk.jpg"
+        ]
+      }
+    ]
+  },
+  "a11": {
+    "id": "a11",
+    "title": "Citrus Burst Antibacterial Sneaker Spheres (6-Pack)",
+    "name": "Citrus Burst Antibacterial Sneaker Spheres (6-Pack)",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "deodorizer-balls",
+    "categoryTag": "accessories deodorizer-balls deodorizer-balls citrus burst antibacterial sneaker spheres shoe freshener balls",
+    "gender": "unisex",
+    "price": 549.0,
+    "originalPrice": 899.0,
+    "discount": "-38%",
+    "rating": 4.8,
+    "reviewsCount": 310,
+    "badge": "CITRUS FRESH",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-db-23-citrus-burst-antibacterial-freshener-spheres.jpg",
+    "mainImage": "/media/sneakers/acc-db-23-citrus-burst-antibacterial-freshener-spheres.jpg",
+    "gallery": [
+      "/media/sneakers/acc-db-23-citrus-burst-antibacterial-freshener-spheres.jpg"
+    ],
+    "description": "Quick-twist lock mechanism releases a fresh natural bergamot and cedarwood aroma. Perfect for post-gym runners, high-top kicks, and closet storage boxes.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Vibrant Orange",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-db-23-citrus-burst-antibacterial-freshener-spheres.jpg",
+        "gallery": [
+          "/media/sneakers/acc-db-23-citrus-burst-antibacterial-freshener-spheres.jpg"
+        ]
+      }
+    ]
+  },
+  "a12": {
+    "id": "a12",
+    "title": "Moso Bamboo Charcoal Sneaker Deodorizing Pods (4-Pack)",
+    "name": "Moso Bamboo Charcoal Sneaker Deodorizing Pods (4-Pack)",
+    "brand": "Fresh Squad",
+    "category": "accessories",
+    "subcategory": "deodorizer-balls",
+    "categoryTag": "accessories deodorizer-balls deodorizer-balls moso bamboo charcoal deodorizing pods reusable odor absorber",
+    "gender": "unisex",
+    "price": 699.0,
+    "originalPrice": 1199.0,
+    "discount": "-41%",
+    "rating": 4.9,
+    "reviewsCount": 410,
+    "badge": "NATURAL 100%",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk.jpg",
+    "mainImage": "/media/sneakers/acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk.jpg",
+    "gallery": [
+      "/media/sneakers/acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk.jpg"
+    ],
+    "description": "100% organic activated Moso bamboo charcoal in breathable linen pouches. Reusable for up to 2 years by simply recharging under direct sunlight once a month.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Fresh Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Natural Heather Charcoal",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk.jpg",
+        "gallery": [
+          "/media/sneakers/acc-db-24-bamboo-charcoal-deodorizing-sachets-4pk.jpg"
+        ]
+      }
+    ]
+  },
+  "a13": {
+    "id": "a13",
+    "title": "Hydro-Shield Ultra Nano Waterproof & Stain Repellent 250ml",
+    "name": "Hydro-Shield Ultra Nano Waterproof & Stain Repellent 250ml",
+    "brand": "Hydro Guard",
+    "category": "accessories",
+    "subcategory": "hydrophobic-sprays",
+    "categoryTag": "accessories hydrophobic-sprays hydrophobic-sprays hydro shield nano waterproof stain repellent aerosol spray",
+    "gender": "unisex",
+    "price": 899.0,
+    "originalPrice": 1399.0,
+    "discount": "-35%",
+    "rating": 5.0,
+    "reviewsCount": 490,
+    "badge": "TOP RATED",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-hs-13-hydro-shield-nano-waterproof-spray.jpg",
+    "mainImage": "/media/sneakers/acc-hs-13-hydro-shield-nano-waterproof-spray.jpg",
+    "gallery": [
+      "/media/sneakers/acc-hs-13-hydro-shield-nano-waterproof-spray.jpg"
+    ],
+    "description": "Revolutionary nanotechnology aerosol barrier creates an invisible lotus-leaf hydrophobic seal. Repels water, mud, coffee, and sauce for up to 6 months per coat.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Hydro Guard",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Matte Black Canister",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-hs-13-hydro-shield-nano-waterproof-spray.jpg",
+        "gallery": [
+          "/media/sneakers/acc-hs-13-hydro-shield-nano-waterproof-spray.jpg"
+        ]
+      }
+    ]
+  },
+  "a14": {
+    "id": "a14",
+    "title": "Invisible Armor Extreme Weather Proofing Spray 300ml",
+    "name": "Invisible Armor Extreme Weather Proofing Spray 300ml",
+    "brand": "Hydro Guard",
+    "category": "accessories",
+    "subcategory": "hydrophobic-sprays",
+    "categoryTag": "accessories hydrophobic-sprays hydrophobic-sprays invisible armor extreme weather proofing heavy rain barrier spray",
+    "gender": "unisex",
+    "price": 1099.0,
+    "originalPrice": 1699.0,
+    "discount": "-35%",
+    "rating": 4.9,
+    "reviewsCount": 260,
+    "badge": "MAX DEFENSE",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-hs-14-invisible-armor-heavy-rain-barrier.jpg",
+    "mainImage": "/media/sneakers/acc-hs-14-invisible-armor-heavy-rain-barrier.jpg",
+    "gallery": [
+      "/media/sneakers/acc-hs-14-invisible-armor-heavy-rain-barrier.jpg"
+    ],
+    "description": "Industrial-grade UV and water protective coating tailored for primeknit and mesh uppers. 100% breathable with zero discoloration or shoe stiffening.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Hydro Guard",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Gunmetal Steel",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-hs-14-invisible-armor-heavy-rain-barrier.jpg",
+        "gallery": [
+          "/media/sneakers/acc-hs-14-invisible-armor-heavy-rain-barrier.jpg"
+        ]
+      }
+    ]
+  },
+  "a15": {
+    "id": "a15",
+    "title": "Eco-Shield Odorless Non-Aerosol Repellent 200ml",
+    "name": "Eco-Shield Odorless Non-Aerosol Repellent 200ml",
+    "brand": "Hydro Guard",
+    "category": "accessories",
+    "subcategory": "hydrophobic-sprays",
+    "categoryTag": "accessories hydrophobic-sprays hydrophobic-sprays eco shield odorless non aerosol pump spray water repellent",
+    "gender": "unisex",
+    "price": 749.0,
+    "originalPrice": 1149.0,
+    "discount": "-34%",
+    "rating": 4.8,
+    "reviewsCount": 185,
+    "badge": "ECO FRIENDLY",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-hs-15-eco-pump-non-aerosol-water-repellent.jpg",
+    "mainImage": "/media/sneakers/acc-hs-15-eco-pump-non-aerosol-water-repellent.jpg",
+    "gallery": [
+      "/media/sneakers/acc-hs-15-eco-pump-non-aerosol-water-repellent.jpg"
+    ],
+    "description": "Water-based, non-flammable pump spray formula safe for indoor home application. Exceptional stain barrier on nubuck, canvas, and vintage Jordan leather.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Hydro Guard",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Forest Green / Clear",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-hs-15-eco-pump-non-aerosol-water-repellent.jpg",
+        "gallery": [
+          "/media/sneakers/acc-hs-15-eco-pump-non-aerosol-water-repellent.jpg"
+        ]
+      }
+    ]
+  },
+  "a16": {
+    "id": "a16",
+    "title": "Rapid-Cure 15-Minute Quick-Dry Hydrophobic Mist 250ml",
+    "name": "Rapid-Cure 15-Minute Quick-Dry Hydrophobic Mist 250ml",
+    "brand": "Hydro Guard",
+    "category": "accessories",
+    "subcategory": "hydrophobic-sprays",
+    "categoryTag": "accessories hydrophobic-sprays hydrophobic-sprays rapid cure quick dry hydrophobic mist fast acting repellent",
+    "gender": "unisex",
+    "price": 949.0,
+    "originalPrice": 1499.0,
+    "discount": "-36%",
+    "rating": 4.9,
+    "reviewsCount": 310,
+    "badge": "RAPID DRY",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-hs-16-rapid-cure-quick-dry-repel-mist.jpg",
+    "mainImage": "/media/sneakers/acc-hs-16-rapid-cure-quick-dry-repel-mist.jpg",
+    "gallery": [
+      "/media/sneakers/acc-hs-16-rapid-cure-quick-dry-repel-mist.jpg"
+    ],
+    "description": "Flash-drying nano-polymer dries fully in just 15 minutes. Instant weatherproofing protection when stepping out during sudden monsoon showers.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Hydro Guard",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Electric Blue Can",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-hs-16-rapid-cure-quick-dry-repel-mist.jpg",
+        "gallery": [
+          "/media/sneakers/acc-hs-16-rapid-cure-quick-dry-repel-mist.jpg"
+        ]
+      }
+    ]
+  },
+  "a17": {
+    "id": "a17",
+    "title": "Anti-Gravity Magnetic Levitating Sneaker Display Stand",
+    "name": "Anti-Gravity Magnetic Levitating Sneaker Display Stand",
+    "brand": "Gravity Kicks",
+    "category": "accessories",
+    "subcategory": "levitating-displays",
+    "categoryTag": "accessories levitating-displays levitating-displays magnetic levitating floating display sneaker stand 360 rotation",
+    "gender": "unisex",
+    "price": 4499.0,
+    "originalPrice": 6999.0,
+    "discount": "-35%",
+    "rating": 4.9,
+    "reviewsCount": 342,
+    "badge": "HOT DROP",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-ml-01-anti-gravity-floating-sneaker-display.jpg",
+    "mainImage": "/media/sneakers/acc-ml-01-anti-gravity-floating-sneaker-display.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ml-01-anti-gravity-floating-sneaker-display.jpg"
+    ],
+    "description": "Futuristic electromagnetic suspension dock with 360-degree continuous silent rotation and white LED halo illumination. Effortlessly suspends kicks up to 550g in mid-air.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Gravity Kicks",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Matte Black / Cyber Glow",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ml-01-anti-gravity-floating-sneaker-display.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ml-01-anti-gravity-floating-sneaker-display.jpg"
+        ]
+      }
+    ]
+  },
+  "a18": {
+    "id": "a18",
+    "title": "Aura RGB 360\u00b0 Rotating Floating Sneaker Platform",
+    "name": "Aura RGB 360\u00b0 Rotating Floating Sneaker Platform",
+    "brand": "Gravity Kicks",
+    "category": "accessories",
+    "subcategory": "levitating-displays",
+    "categoryTag": "accessories levitating-displays levitating-displays aura rgb floating sneaker platform 360 ambient led magnetic dock",
+    "gender": "unisex",
+    "price": 4999.0,
+    "originalPrice": 7499.0,
+    "discount": "-33%",
+    "rating": 4.9,
+    "reviewsCount": 285,
+    "badge": "PREMIUM",
+    "badgeClass": "trending",
+    "imageUrl": "/media/sneakers/acc-ml-02-aura-rgb-levitating-platform.jpg",
+    "mainImage": "/media/sneakers/acc-ml-02-aura-rgb-levitating-platform.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ml-02-aura-rgb-levitating-platform.jpg"
+    ],
+    "description": "Dynamic 16-color ambient RGB LED system with touch-sensitive mode toggle, auto-stabilizing dual magnet core, and ultra-quiet motor for showcasegrails.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Gravity Kicks",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Obsidian Black / Chroma RGB",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ml-02-aura-rgb-levitating-platform.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ml-02-aura-rgb-levitating-platform.jpg"
+        ]
+      }
+    ]
+  },
+  "a19": {
+    "id": "a19",
+    "title": "Starlight Pro Levitating Sneaker Showcase Dock",
+    "name": "Starlight Pro Levitating Sneaker Showcase Dock",
+    "brand": "Gravity Kicks",
+    "category": "accessories",
+    "subcategory": "levitating-displays",
+    "categoryTag": "accessories levitating-displays levitating-displays starlight pro magnetic levitation dock aluminum spotlight showcase",
+    "gender": "unisex",
+    "price": 5499.0,
+    "originalPrice": 7999.0,
+    "discount": "-31%",
+    "rating": 5.0,
+    "reviewsCount": 198,
+    "badge": "GRAIL",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-ml-03-starlight-magnetic-levitation-showcase.jpg",
+    "mainImage": "/media/sneakers/acc-ml-03-starlight-magnetic-levitation-showcase.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ml-03-starlight-magnetic-levitation-showcase.jpg"
+    ],
+    "description": "Anodized aerospace aluminum finish with intelligent auto-pickup power memory, micro-weight balance calibration, and an integrated exhibition-grade downward spotlight.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Gravity Kicks",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Space Grey / Pure White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ml-03-starlight-magnetic-levitation-showcase.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ml-03-starlight-magnetic-levitation-showcase.jpg"
+        ]
+      }
+    ]
+  },
+  "a20": {
+    "id": "a20",
+    "title": "Minimalist Apex Magnetic Floating Sneaker Pedestal",
+    "name": "Minimalist Apex Magnetic Floating Sneaker Pedestal",
+    "brand": "Gravity Kicks",
+    "category": "accessories",
+    "subcategory": "levitating-displays",
+    "categoryTag": "accessories levitating-displays levitating-displays minimalist apex floating pedestal white magnetic underglow dock",
+    "gender": "unisex",
+    "price": 3999.0,
+    "originalPrice": 5999.0,
+    "discount": "-33%",
+    "rating": 4.8,
+    "reviewsCount": 175,
+    "badge": "BEST VALUE",
+    "badgeClass": "new",
+    "imageUrl": "/media/sneakers/acc-ml-04-minimalist-float-pedestal-white.jpg",
+    "mainImage": "/media/sneakers/acc-ml-04-minimalist-float-pedestal-white.jpg",
+    "gallery": [
+      "/media/sneakers/acc-ml-04-minimalist-float-pedestal-white.jpg"
+    ],
+    "description": "Ultra-clean matte white architectural floating dock with soft ambient underglow, silent neodymium levitation ring, and instant power-loss anti-drop protection.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Gravity Kicks",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Triple White",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-ml-04-minimalist-float-pedestal-white.jpg",
+        "gallery": [
+          "/media/sneakers/acc-ml-04-minimalist-float-pedestal-white.jpg"
         ]
       }
     ]
   },
   "a21": {
     "id": "a21",
-    "title": "Heavyweight Vintage Cotton Flat Laces - Sail Cream (140cm)",
-    "name": "Heavyweight Vintage Cotton Flat Laces - Sail Cream (140cm)",
+    "title": "3M High-Vis Reflective Rope Laces - Silver / Black (130cm)",
+    "name": "3M High-Vis Reflective Rope Laces - Silver / Black (130cm)",
     "brand": "Lace Squad",
     "category": "accessories",
-    "subcategory": "premium-shoelaces",
-    "categoryTag": "accessories premium-shoelaces premium-shoelaces sail cream laces flat cotton vintage",
+    "subcategory": "custom-shoelaces",
+    "categoryTag": "accessories custom-shoelaces custom-shoelaces 3m high vis reflective rope laces silver black sneaker laces",
+    "gender": "unisex",
+    "price": 449.0,
+    "originalPrice": 699.0,
+    "discount": "-35%",
+    "rating": 5.0,
+    "reviewsCount": 420,
+    "badge": "3M REFLECTIVE",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-sl-17-3m-high-vis-reflective-rope-laces-silver.jpg",
+    "mainImage": "/media/sneakers/acc-sl-17-3m-high-vis-reflective-rope-laces-silver.jpg",
+    "gallery": [
+      "/media/sneakers/acc-sl-17-3m-high-vis-reflective-rope-laces-silver.jpg"
+    ],
+    "description": "Premium braided tubular polyester woven with authentic 3M scotchlite reflective thread. Blazes brilliantly under flash and headlights with gunmetal metal aglets.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Silver / Black 3M",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-sl-17-3m-high-vis-reflective-rope-laces-silver.jpg",
+        "gallery": [
+          "/media/sneakers/acc-sl-17-3m-high-vis-reflective-rope-laces-silver.jpg"
+        ]
+      }
+    ]
+  },
+  "a22": {
+    "id": "a22",
+    "title": "Heavyweight Waxed Cotton Flat Laces - Vintage Sail (140cm)",
+    "name": "Heavyweight Waxed Cotton Flat Laces - Vintage Sail (140cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "custom-shoelaces",
+    "categoryTag": "accessories custom-shoelaces custom-shoelaces heavyweight waxed cotton flat laces vintage sail cream dunk laces",
     "gender": "unisex",
     "price": 399.0,
-    "originalPrice": 599.0,
-    "discount": "-33%",
+    "originalPrice": 649.0,
+    "discount": "-38%",
     "rating": 4.9,
-    "reviewsCount": 450,
-    "badge": "Vintage Swap",
+    "reviewsCount": 380,
+    "badge": "VINTAGE VIBE",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
-    "mainImage": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
+    "imageUrl": "/media/sneakers/acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail.jpg",
+    "mainImage": "/media/sneakers/acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail.jpg",
     "gallery": [
-      "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg"
+      "/media/sneakers/acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail.jpg"
     ],
-    "description": "100% combed cotton weave delivering the coveted vintage aged aesthetic for Jordan 1s, Dunks, and Sambas.",
+    "description": "Subtly waxed double-weave Japanese cotton with water resistance and stay-tied grip. The definitive custom lace swap for retro Jordan 1s and Nike SB Dunks.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -6872,145 +6927,35 @@ const PRODUCTS_DATA = {
       {
         "name": "Vintage Sail Cream",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg",
+        "mainImage": "/media/sneakers/acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail.jpg",
         "gallery": [
-          "/media/sneakers/acc-ps-45-heavyweight-cotton-flat-laces-sail.jpg"
-        ]
-      }
-    ]
-  },
-  "a22": {
-    "id": "a22",
-    "title": "Reflective 3M Rope Laces - Core Black / Silver Weave (120cm)",
-    "name": "Reflective 3M Rope Laces - Core Black / Silver Weave (120cm)",
-    "brand": "Lace Squad",
-    "category": "accessories",
-    "subcategory": "premium-shoelaces",
-    "categoryTag": "accessories premium-shoelaces premium-shoelaces rope laces 3m reflective yeezy laces",
-    "gender": "unisex",
-    "price": 499.0,
-    "originalPrice": 699.0,
-    "discount": "-28%",
-    "rating": 4.8,
-    "reviewsCount": 280,
-    "badge": "Night Glow",
-    "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
-    "mainImage": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
-    "gallery": [
-      "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg"
-    ],
-    "description": "Dense circular rope laces threaded with high-visibility 3M reflective fibers that light up under camera flash.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Lace Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Black / 3M Reflective Silver",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg",
-        "gallery": [
-          "/media/sneakers/acc-ps-46-reflective-3m-rope-laces-black-silver.jpg"
+          "/media/sneakers/acc-sl-18-heavyweight-waxed-cotton-dunk-laces-sail.jpg"
         ]
       }
     ]
   },
   "a23": {
     "id": "a23",
-    "title": "Waxed Vintage Dunk Aglet Shoelaces - Pure White (160cm)",
-    "name": "Waxed Vintage Dunk Aglet Shoelaces - Pure White (160cm)",
+    "title": "Chunky Oval SB Skate Laces - Cyber Neon Volt (140cm)",
+    "name": "Chunky Oval SB Skate Laces - Cyber Neon Volt (140cm)",
     "brand": "Lace Squad",
     "category": "accessories",
-    "subcategory": "premium-shoelaces",
-    "categoryTag": "accessories premium-shoelaces premium-shoelaces waxed cotton laces metal tips premium",
+    "subcategory": "custom-shoelaces",
+    "categoryTag": "accessories custom-shoelaces custom-shoelaces chunky oval sb skate laces neon volt yellow puffy tongue",
     "gender": "unisex",
-    "price": 549.0,
-    "originalPrice": 749.0,
-    "discount": "-26%",
-    "rating": 4.9,
-    "reviewsCount": 220,
-    "badge": "Gunmetal Aglets",
+    "price": 399.0,
+    "originalPrice": 599.0,
+    "discount": "-33%",
+    "rating": 4.8,
+    "reviewsCount": 210,
+    "badge": "STREETWEAR",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
-    "mainImage": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
+    "imageUrl": "/media/sneakers/acc-sl-19-neon-volt-oval-sb-skate-laces.jpg",
+    "mainImage": "/media/sneakers/acc-sl-19-neon-volt-oval-sb-skate-laces.jpg",
     "gallery": [
-      "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg"
+      "/media/sneakers/acc-sl-19-neon-volt-oval-sb-skate-laces.jpg"
     ],
-    "description": "Water-resistant wax coating gives a sleek sheen and prevents fraying, finished with screw-on engraved metal aglets.",
-    "features": [
-      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
-      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
-      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
-      "Breathable Premium Upper: Multi-panel durable construction."
-    ],
-    "specs": {
-      "Brand": "Lace Squad",
-      "Closure": "Lace-Up",
-      "Upper Material": "Premium Leather & Mesh",
-      "Sole": "High-Abrasion Rubber",
-      "Authenticity": "100% Deadstock Verified"
-    },
-    "sizes": [
-      "UK 6",
-      "UK 7",
-      "UK 8",
-      "UK 9",
-      "UK 10",
-      "UK 11"
-    ],
-    "inStock": true,
-    "colors": [
-      {
-        "name": "Pure White / Metal Tips",
-        "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg",
-        "gallery": [
-          "/media/sneakers/acc-ps-47-waxed-cotton-dunk-laces-white_0e9LQ8K.jpg"
-        ]
-      }
-    ]
-  },
-  "a24": {
-    "id": "a24",
-    "title": "Oval SB Skate Chunky Laces - Neon Volt (140cm)",
-    "name": "Oval SB Skate Chunky Laces - Neon Volt (140cm)",
-    "brand": "Lace Squad",
-    "category": "accessories",
-    "subcategory": "premium-shoelaces",
-    "categoryTag": "accessories premium-shoelaces premium-shoelaces oval sb laces chunky skate volt neon",
-    "gender": "unisex",
-    "price": 449.0,
-    "originalPrice": 649.0,
-    "discount": "-30%",
-    "rating": 4.7,
-    "reviewsCount": 160,
-    "badge": "Chunky SB",
-    "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
-    "mainImage": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
-    "gallery": [
-      "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg"
-    ],
-    "description": "Padded thick oval laces modeled after authentic 2000s Nike SB Dunk fat tongues for iconic skate presence.",
+    "description": "9mm thick padded chunky oval skate laces engineered with dense core stuffing to deliver the iconic puffy tongue aesthetic for Nike SB Dunks and skate kicks.",
     "features": [
       "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
       "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
@@ -7037,9 +6982,64 @@ const PRODUCTS_DATA = {
       {
         "name": "Neon Volt Yellow",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg",
+        "mainImage": "/media/sneakers/acc-sl-19-neon-volt-oval-sb-skate-laces.jpg",
         "gallery": [
-          "/media/sneakers/acc-ps-48-oval-sb-skate-thick-laces-volt_ibxOxj6.jpg"
+          "/media/sneakers/acc-sl-19-neon-volt-oval-sb-skate-laces.jpg"
+        ]
+      }
+    ]
+  },
+  "a24": {
+    "id": "a24",
+    "title": "Glow-in-the-Dark Phosphor Laces - Aurora Green (125cm)",
+    "name": "Glow-in-the-Dark Phosphor Laces - Aurora Green (125cm)",
+    "brand": "Lace Squad",
+    "category": "accessories",
+    "subcategory": "custom-shoelaces",
+    "categoryTag": "accessories custom-shoelaces custom-shoelaces glow in the dark phosphor laces aurora green night kicks",
+    "gender": "unisex",
+    "price": 499.0,
+    "originalPrice": 799.0,
+    "discount": "-37%",
+    "rating": 4.9,
+    "reviewsCount": 340,
+    "badge": "GLOW EFFECT",
+    "badgeClass": "hot",
+    "imageUrl": "/media/sneakers/acc-sl-20-glow-in-the-dark-tubular-laces-cyber.jpg",
+    "mainImage": "/media/sneakers/acc-sl-20-glow-in-the-dark-tubular-laces-cyber.jpg",
+    "gallery": [
+      "/media/sneakers/acc-sl-20-glow-in-the-dark-tubular-laces-cyber.jpg"
+    ],
+    "description": "Sunlight and UV-reactive phosphor yarn charges in 10 minutes and glows a vibrant electric emerald green in dark rooms, clubs, and night city streets.",
+    "features": [
+      "Deadstock Certified Authentic: Inspected and authenticated by our squad specialists.",
+      "High-Traction Outsole: Precision multi-directional rubber pattern for street grip.",
+      "Adaptive Cushioning Core: High-energy return compound absorbs impact.",
+      "Breathable Premium Upper: Multi-panel durable construction."
+    ],
+    "specs": {
+      "Brand": "Lace Squad",
+      "Closure": "Lace-Up",
+      "Upper Material": "Premium Leather & Mesh",
+      "Sole": "High-Abrasion Rubber",
+      "Authenticity": "100% Deadstock Verified"
+    },
+    "sizes": [
+      "UK 6",
+      "UK 7",
+      "UK 8",
+      "UK 9",
+      "UK 10",
+      "UK 11"
+    ],
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Aurora Green Glow",
+        "hex": "#111111",
+        "mainImage": "/media/sneakers/acc-sl-20-glow-in-the-dark-tubular-laces-cyber.jpg",
+        "gallery": [
+          "/media/sneakers/acc-sl-20-glow-in-the-dark-tubular-laces-cyber.jpg"
         ]
       }
     ]
