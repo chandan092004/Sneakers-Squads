@@ -1340,10 +1340,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 140,
     "badge": "Runway Drop",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
-    "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
+    "imageUrl": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole.jpg",
+    "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole.jpg",
     "gallery": [
-      "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg"
+      "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole.jpg"
     ],
     "description": "The definitive chunky dad sneaker built with 3-layered complex sole technology and embroidered toe size.",
     "features": [
@@ -1372,9 +1372,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Off-White / Translucent",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
+        "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole.jpg",
         "gallery": [
-          "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg"
+          "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole.jpg"
         ]
       }
     ]
@@ -1395,10 +1395,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 230,
     "badge": "Viral Hit",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
-    "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
+    "imageUrl": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt.jpg",
+    "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt.jpg",
     "gallery": [
-      "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg"
+      "/media/sneakers/m-cs-18-new-balance-9060-sea-salt.jpg"
     ],
     "description": "Futuristic Y2K aesthetic reinterpreting familiar 99X cues with an exaggerated sculpted pod midsole.",
     "features": [
@@ -1427,9 +1427,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Sea Salt / Rain Cloud",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
+        "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt.jpg",
         "gallery": [
-          "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg"
+          "/media/sneakers/m-cs-18-new-balance-9060-sea-salt.jpg"
         ]
       }
     ]
@@ -1450,10 +1450,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 150,
     "badge": "Tech Vibe",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
-    "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
+    "imageUrl": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk.jpg",
+    "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk.jpg",
     "gallery": [
-      "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg"
+      "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk.jpg"
     ],
     "description": "Futuristic runner with distinctive translucent support tubing and sculpted Adiprene+ shock cushioning.",
     "features": [
@@ -1482,9 +1482,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Cloud White / Core Black",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
+        "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk.jpg",
         "gallery": [
-          "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg"
+          "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk.jpg"
         ]
       }
     ]
@@ -1505,10 +1505,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 425,
     "badge": "Design Monument",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
-    "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
+    "imageUrl": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner.jpg",
+    "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner.jpg",
     "gallery": [
-      "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg"
+      "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner.jpg"
     ],
     "description": "The shoe that ignited the chunky luxury wave with grey suede, teal mesh, and full-length drop-in BOOST.",
     "features": [
@@ -1537,9 +1537,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Solid Grey / Chalk White / Teal",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
+        "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner.jpg",
         "gallery": [
-          "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg"
+          "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner.jpg"
         ]
       }
     ]
@@ -1560,10 +1560,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 420,
     "badge": "Holy Grail",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
-    "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
+    "imageUrl": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago.jpg",
+    "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago.jpg",
     "gallery": [
-      "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg"
+      "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago.jpg"
     ],
     "description": "The iconic 1985 silhouette in vintage red, white, and black with cracked leather collars.",
     "features": [
@@ -1592,9 +1592,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Varsity Red / Black / Sail",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
+        "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago.jpg",
         "gallery": [
-          "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg"
+          "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago.jpg"
         ]
       }
     ]
@@ -1615,10 +1615,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 310,
     "badge": "Heritage OG",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
-    "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
+    "imageUrl": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue.jpg",
+    "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue.jpg",
     "gallery": [
-      "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg"
+      "/media/sneakers/m-ht-02-air-jordan-1-royal-blue.jpg"
     ],
     "description": "Opulent royal blue tumbled leather paired with jet-black panels and Air-Sole cushioning.",
     "features": [
@@ -1647,9 +1647,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Royal Blue / Black / White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
+        "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue.jpg",
         "gallery": [
-          "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg"
+          "/media/sneakers/m-ht-02-air-jordan-1-royal-blue.jpg"
         ]
       }
     ]
@@ -1670,10 +1670,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 240,
     "badge": "Vintage Court",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
-    "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
+    "imageUrl": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage.jpg",
+    "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage.jpg",
     "gallery": [
-      "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg"
+      "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage.jpg"
     ],
     "description": "Old-school basketball styling featuring crisp leather with exposed foam tongue detailing.",
     "features": [
@@ -1702,9 +1702,9 @@ const PRODUCTS_DATA = {
       {
         "name": "White / Black / Sail",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
+        "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage.jpg",
         "gallery": [
-          "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg"
+          "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage.jpg"
         ]
       }
     ]
@@ -1725,10 +1725,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 115,
     "badge": "Grail Collab",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
-    "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
+    "imageUrl": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high.jpg",
+    "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high.jpg",
     "gallery": [
-      "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg"
+      "/media/sneakers/m-ht-04-off-white-air-jordan-1-high.jpg"
     ],
     "description": "Virgil Abloh deconstructed high-top masterpiece with exposed foam and industrial print.",
     "features": [
@@ -1757,9 +1757,9 @@ const PRODUCTS_DATA = {
       {
         "name": "White / Sail / Ghosting",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
+        "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high.jpg",
         "gallery": [
-          "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg"
+          "/media/sneakers/m-ht-04-off-white-air-jordan-1-high.jpg"
         ]
       }
     ]
@@ -1780,10 +1780,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 380,
     "badge": "Bestseller",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
-    "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
+    "imageUrl": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda.jpg",
+    "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda.jpg",
     "gallery": [
-      "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg"
+      "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda.jpg"
     ],
     "description": "The two-tone hoops legend made with crisp black and white leather overlays.",
     "features": [
@@ -1812,9 +1812,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Black / White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
+        "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda.jpg",
         "gallery": [
-          "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg"
+          "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda.jpg"
         ]
       }
     ]
@@ -1835,10 +1835,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 295,
     "badge": "Terrace OG",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
-    "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
+    "imageUrl": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white.jpg",
+    "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white.jpg",
     "gallery": [
-      "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg"
+      "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white.jpg"
     ],
     "description": "Classic terrace shoe crafted with full-grain leather, T-toe suede bumper, and gum cupsole.",
     "features": [
@@ -1867,9 +1867,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Cloud White / Core Black / Gum",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
+        "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white.jpg",
         "gallery": [
-          "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg"
+          "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white.jpg"
         ]
       }
     ]
@@ -1890,10 +1890,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 210,
     "badge": "Hot Drop",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
-    "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
+    "imageUrl": "/media/sneakers/m-lt-07-new-balance-550-white-green.jpg",
+    "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green.jpg",
     "gallery": [
-      "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg"
+      "/media/sneakers/m-lt-07-new-balance-550-white-green.jpg"
     ],
     "description": "Recreated 1989 basketball classic with perforated leather panels and forest green accents.",
     "features": [
@@ -1922,9 +1922,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Sea Salt / Forest Green",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
+        "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green.jpg",
         "gallery": [
-          "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg"
+          "/media/sneakers/m-lt-07-new-balance-550-white-green.jpg"
         ]
       }
     ]
@@ -1945,10 +1945,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 165,
     "badge": "Cult Classic",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
-    "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
+    "imageUrl": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black.jpg",
+    "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black.jpg",
     "gallery": [
-      "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg"
+      "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black.jpg"
     ],
     "description": "Rich black velvety suede construction with white Formstrip and metallic gold branding.",
     "features": [
@@ -1977,9 +1977,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Puma Black / White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
+        "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black.jpg",
         "gallery": [
-          "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg"
+          "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black.jpg"
         ]
       }
     ]
@@ -2055,10 +2055,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 620,
     "badge": "Collab Icon",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
-    "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
+    "imageUrl": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha.jpg",
+    "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha.jpg",
     "gallery": [
-      "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg"
+      "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha.jpg"
     ],
     "description": "Reverse oversized Swoosh, rich earth-toned dark mocha nubuck, and aged yellowed sail midsole.",
     "features": [
@@ -2087,9 +2087,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Sail / Dark Mocha / University Red",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
+        "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha.jpg",
         "gallery": [
-          "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg"
+          "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha.jpg"
         ]
       }
     ]
@@ -2165,10 +2165,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 215,
     "badge": "Handcrafted USA",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
-    "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
+    "imageUrl": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock.jpg",
+    "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock.jpg",
     "gallery": [
-      "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg"
+      "/media/sneakers/m-rc-16-new-balance-990v6-castlerock.jpg"
     ],
     "description": "Handcrafted pinnacle lifestyle runner engineered in Massachusetts with FuelCell foam and pigskin suede.",
     "features": [
@@ -2197,9 +2197,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Castlerock Grey / Marblehead",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
+        "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock.jpg",
         "gallery": [
-          "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg"
+          "/media/sneakers/m-rc-16-new-balance-990v6-castlerock.jpg"
         ]
       }
     ]
@@ -2220,10 +2220,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 320,
     "badge": "Speed Daily",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
-    "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
+    "imageUrl": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40.jpg",
+    "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40.jpg",
     "gallery": [
-      "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg"
+      "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40.jpg"
     ],
     "description": "Resilient daily road running shoe combining Nike React foam with dual Zoom Air units.",
     "features": [
@@ -2252,9 +2252,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Bright Crimson / White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
+        "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40.jpg",
         "gallery": [
-          "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg"
+          "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40.jpg"
         ]
       }
     ]
@@ -2275,10 +2275,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 270,
     "badge": "Ultralight BOOST",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
-    "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
+    "imageUrl": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon.jpg",
+    "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon.jpg",
     "gallery": [
-      "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg"
+      "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon.jpg"
     ],
     "description": "Experience epic kinetic energy with the lightest BOOST ever and an adaptive Primeknit+ upper.",
     "features": [
@@ -2307,9 +2307,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Core Black / Carbon / White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
+        "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon.jpg",
         "gallery": [
-          "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg"
+          "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon.jpg"
         ]
       }
     ]
@@ -2330,10 +2330,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 145,
     "badge": "Marathon Elite",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
-    "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
+    "imageUrl": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint.jpg",
+    "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint.jpg",
     "gallery": [
-      "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg"
+      "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint.jpg"
     ],
     "description": "Podium-dominating marathon super shoe with full-length carbon Flyplate and ZoomX foam.",
     "features": [
@@ -2362,9 +2362,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Electric Green / Screaming Mint",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
+        "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint.jpg",
         "gallery": [
-          "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg"
+          "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint.jpg"
         ]
       }
     ]
@@ -3540,10 +3540,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 140,
     "badge": "Runway Drop",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
-    "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
+    "imageUrl": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole.jpg",
+    "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole.jpg",
     "gallery": [
-      "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg"
+      "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole.jpg"
     ],
     "description": "The definitive chunky dad sneaker built with 3-layered complex sole technology and embroidered toe size.",
     "features": [
@@ -3572,9 +3572,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Off-White / Translucent",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg",
+        "mainImage": "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole.jpg",
         "gallery": [
-          "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole_LWejTil.jpg"
+          "/media/sneakers/m-cs-17-balenciaga-triple-s-clear-sole.jpg"
         ]
       }
     ]
@@ -3595,10 +3595,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 230,
     "badge": "Viral Hit",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
-    "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
+    "imageUrl": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt.jpg",
+    "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt.jpg",
     "gallery": [
-      "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg"
+      "/media/sneakers/m-cs-18-new-balance-9060-sea-salt.jpg"
     ],
     "description": "Futuristic Y2K aesthetic reinterpreting familiar 99X cues with an exaggerated sculpted pod midsole.",
     "features": [
@@ -3627,9 +3627,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Sea Salt / Rain Cloud",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg",
+        "mainImage": "/media/sneakers/m-cs-18-new-balance-9060-sea-salt.jpg",
         "gallery": [
-          "/media/sneakers/m-cs-18-new-balance-9060-sea-salt_dOoPZYR.jpg"
+          "/media/sneakers/m-cs-18-new-balance-9060-sea-salt.jpg"
         ]
       }
     ]
@@ -3650,10 +3650,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 150,
     "badge": "Tech Vibe",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
-    "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
+    "imageUrl": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk.jpg",
+    "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk.jpg",
     "gallery": [
-      "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg"
+      "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk.jpg"
     ],
     "description": "Futuristic runner with distinctive translucent support tubing and sculpted Adiprene+ shock cushioning.",
     "features": [
@@ -3682,9 +3682,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Cloud White / Core Black",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg",
+        "mainImage": "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk.jpg",
         "gallery": [
-          "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk_rSQzn2V.jpg"
+          "/media/sneakers/m-cs-19-adidas-ozweego-pure-chalk.jpg"
         ]
       }
     ]
@@ -3705,10 +3705,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 425,
     "badge": "Design Monument",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
-    "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
+    "imageUrl": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner.jpg",
+    "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner.jpg",
     "gallery": [
-      "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg"
+      "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner.jpg"
     ],
     "description": "The shoe that ignited the chunky luxury wave with grey suede, teal mesh, and full-length drop-in BOOST.",
     "features": [
@@ -3737,9 +3737,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Solid Grey / Chalk White / Teal",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg",
+        "mainImage": "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner.jpg",
         "gallery": [
-          "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner_Q8i2rwv.jpg"
+          "/media/sneakers/m-cs-20-adidas-yeezy-boost-700-waverunner.jpg"
         ]
       }
     ]
@@ -3760,10 +3760,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 420,
     "badge": "Holy Grail",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
-    "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
+    "imageUrl": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago.jpg",
+    "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago.jpg",
     "gallery": [
-      "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg"
+      "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago.jpg"
     ],
     "description": "The iconic 1985 silhouette in vintage red, white, and black with cracked leather collars.",
     "features": [
@@ -3792,9 +3792,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Varsity Red / Black / Sail",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg",
+        "mainImage": "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago.jpg",
         "gallery": [
-          "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago_iig9Yyv.jpg"
+          "/media/sneakers/m-ht-01-air-jordan-1-retro-chicago.jpg"
         ]
       }
     ]
@@ -3815,10 +3815,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 310,
     "badge": "Heritage OG",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
-    "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
+    "imageUrl": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue.jpg",
+    "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue.jpg",
     "gallery": [
-      "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg"
+      "/media/sneakers/m-ht-02-air-jordan-1-royal-blue.jpg"
     ],
     "description": "Opulent royal blue tumbled leather paired with jet-black panels and Air-Sole cushioning.",
     "features": [
@@ -3847,9 +3847,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Royal Blue / Black / White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg",
+        "mainImage": "/media/sneakers/m-ht-02-air-jordan-1-royal-blue.jpg",
         "gallery": [
-          "/media/sneakers/m-ht-02-air-jordan-1-royal-blue_4Es1BJQ.jpg"
+          "/media/sneakers/m-ht-02-air-jordan-1-royal-blue.jpg"
         ]
       }
     ]
@@ -3870,10 +3870,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 240,
     "badge": "Vintage Court",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
-    "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
+    "imageUrl": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage.jpg",
+    "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage.jpg",
     "gallery": [
-      "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg"
+      "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage.jpg"
     ],
     "description": "Old-school basketball styling featuring crisp leather with exposed foam tongue detailing.",
     "features": [
@@ -3902,9 +3902,9 @@ const PRODUCTS_DATA = {
       {
         "name": "White / Black / Sail",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg",
+        "mainImage": "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage.jpg",
         "gallery": [
-          "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage_4KcmN58.jpg"
+          "/media/sneakers/m-ht-03-nike-blazer-mid-77-vintage.jpg"
         ]
       }
     ]
@@ -3925,10 +3925,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 115,
     "badge": "Grail Collab",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
-    "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
+    "imageUrl": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high.jpg",
+    "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high.jpg",
     "gallery": [
-      "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg"
+      "/media/sneakers/m-ht-04-off-white-air-jordan-1-high.jpg"
     ],
     "description": "Virgil Abloh deconstructed high-top masterpiece with exposed foam and industrial print.",
     "features": [
@@ -3957,9 +3957,9 @@ const PRODUCTS_DATA = {
       {
         "name": "White / Sail / Ghosting",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg",
+        "mainImage": "/media/sneakers/m-ht-04-off-white-air-jordan-1-high.jpg",
         "gallery": [
-          "/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg"
+          "/media/sneakers/m-ht-04-off-white-air-jordan-1-high.jpg"
         ]
       }
     ]
@@ -3980,10 +3980,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 380,
     "badge": "Bestseller",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
-    "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
+    "imageUrl": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda.jpg",
+    "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda.jpg",
     "gallery": [
-      "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg"
+      "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda.jpg"
     ],
     "description": "The two-tone hoops legend made with crisp black and white leather overlays.",
     "features": [
@@ -4012,9 +4012,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Black / White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg",
+        "mainImage": "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda.jpg",
         "gallery": [
-          "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda_wY79keO.jpg"
+          "/media/sneakers/m-lt-05-nike-dunk-low-retro-panda.jpg"
         ]
       }
     ]
@@ -4035,10 +4035,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 295,
     "badge": "Terrace OG",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
-    "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
+    "imageUrl": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white.jpg",
+    "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white.jpg",
     "gallery": [
-      "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg"
+      "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white.jpg"
     ],
     "description": "Classic terrace shoe crafted with full-grain leather, T-toe suede bumper, and gum cupsole.",
     "features": [
@@ -4067,9 +4067,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Cloud White / Core Black / Gum",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg",
+        "mainImage": "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white.jpg",
         "gallery": [
-          "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white_6kxYETA.jpg"
+          "/media/sneakers/m-lt-06-adidas-samba-og-cloud-white.jpg"
         ]
       }
     ]
@@ -4090,10 +4090,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 210,
     "badge": "Hot Drop",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
-    "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
+    "imageUrl": "/media/sneakers/m-lt-07-new-balance-550-white-green.jpg",
+    "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green.jpg",
     "gallery": [
-      "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg"
+      "/media/sneakers/m-lt-07-new-balance-550-white-green.jpg"
     ],
     "description": "Recreated 1989 basketball classic with perforated leather panels and forest green accents.",
     "features": [
@@ -4122,9 +4122,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Sea Salt / Forest Green",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg",
+        "mainImage": "/media/sneakers/m-lt-07-new-balance-550-white-green.jpg",
         "gallery": [
-          "/media/sneakers/m-lt-07-new-balance-550-white-green_SNWrjFp.jpg"
+          "/media/sneakers/m-lt-07-new-balance-550-white-green.jpg"
         ]
       }
     ]
@@ -4145,10 +4145,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 165,
     "badge": "Cult Classic",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
-    "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
+    "imageUrl": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black.jpg",
+    "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black.jpg",
     "gallery": [
-      "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg"
+      "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black.jpg"
     ],
     "description": "Rich black velvety suede construction with white Formstrip and metallic gold branding.",
     "features": [
@@ -4177,9 +4177,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Puma Black / White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg",
+        "mainImage": "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black.jpg",
         "gallery": [
-          "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black_YHtrtjN.jpg"
+          "/media/sneakers/m-lt-08-puma-suede-classic-xxi-black.jpg"
         ]
       }
     ]
@@ -4255,10 +4255,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 620,
     "badge": "Collab Icon",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
-    "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
+    "imageUrl": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha.jpg",
+    "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha.jpg",
     "gallery": [
-      "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg"
+      "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha.jpg"
     ],
     "description": "Reverse oversized Swoosh, rich earth-toned dark mocha nubuck, and aged yellowed sail midsole.",
     "features": [
@@ -4287,9 +4287,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Sail / Dark Mocha / University Red",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg",
+        "mainImage": "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha.jpg",
         "gallery": [
-          "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha_QZdhFYV.jpg"
+          "/media/sneakers/m-rc-14-travis-scott-jordan-1-reverse-mocha.jpg"
         ]
       }
     ]
@@ -4365,10 +4365,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 215,
     "badge": "Handcrafted USA",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
-    "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
+    "imageUrl": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock.jpg",
+    "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock.jpg",
     "gallery": [
-      "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg"
+      "/media/sneakers/m-rc-16-new-balance-990v6-castlerock.jpg"
     ],
     "description": "Handcrafted pinnacle lifestyle runner engineered in Massachusetts with FuelCell foam and pigskin suede.",
     "features": [
@@ -4397,9 +4397,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Castlerock Grey / Marblehead",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg",
+        "mainImage": "/media/sneakers/m-rc-16-new-balance-990v6-castlerock.jpg",
         "gallery": [
-          "/media/sneakers/m-rc-16-new-balance-990v6-castlerock_U04PFQ0.jpg"
+          "/media/sneakers/m-rc-16-new-balance-990v6-castlerock.jpg"
         ]
       }
     ]
@@ -4420,10 +4420,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 320,
     "badge": "Speed Daily",
     "badgeClass": "new",
-    "imageUrl": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
-    "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
+    "imageUrl": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40.jpg",
+    "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40.jpg",
     "gallery": [
-      "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg"
+      "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40.jpg"
     ],
     "description": "Resilient daily road running shoe combining Nike React foam with dual Zoom Air units.",
     "features": [
@@ -4452,9 +4452,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Bright Crimson / White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg",
+        "mainImage": "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40.jpg",
         "gallery": [
-          "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40_JYOFyHm.jpg"
+          "/media/sneakers/m-rp-09-nike-air-zoom-pegasus-40.jpg"
         ]
       }
     ]
@@ -4475,10 +4475,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 270,
     "badge": "Ultralight BOOST",
     "badgeClass": "trending",
-    "imageUrl": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
-    "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
+    "imageUrl": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon.jpg",
+    "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon.jpg",
     "gallery": [
-      "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg"
+      "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon.jpg"
     ],
     "description": "Experience epic kinetic energy with the lightest BOOST ever and an adaptive Primeknit+ upper.",
     "features": [
@@ -4507,9 +4507,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Core Black / Carbon / White",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg",
+        "mainImage": "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon.jpg",
         "gallery": [
-          "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon_NfQlX6F.jpg"
+          "/media/sneakers/m-rp-10-adidas-ultraboost-light-carbon.jpg"
         ]
       }
     ]
@@ -4530,10 +4530,10 @@ const PRODUCTS_DATA = {
     "reviewsCount": 145,
     "badge": "Marathon Elite",
     "badgeClass": "limited",
-    "imageUrl": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
-    "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
+    "imageUrl": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint.jpg",
+    "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint.jpg",
     "gallery": [
-      "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg"
+      "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint.jpg"
     ],
     "description": "Podium-dominating marathon super shoe with full-length carbon Flyplate and ZoomX foam.",
     "features": [
@@ -4562,9 +4562,9 @@ const PRODUCTS_DATA = {
       {
         "name": "Electric Green / Screaming Mint",
         "hex": "#111111",
-        "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg",
+        "mainImage": "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint.jpg",
         "gallery": [
-          "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint_tsV4kIV.jpg"
+          "/media/sneakers/m-rp-11-nike-vaporfly-3-electric-mint.jpg"
         ]
       }
     ]
