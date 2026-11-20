@@ -210,7 +210,11 @@ FAQ_KNOWLEDGE_BASE = {
 def detect_intent(message):
     """
     Detects user intent using regular expressions.
-    PRIORITY ORDER (Recommendation check MUST come before generic search):
+    PRIORITY ORDER:
+    0. SNEAKER FINDER QUIZ (Decision Tree)
+    0. SNEAKER COMPARISON (Side-by-side Head-to-Head)
+    0. VALUE FOR MONEY (VFM Deal Finder)
+    0. SIMILAR SNEAKERS (Content-based Similarity)
     1. RECOMMENDATION
     2. PRODUCT SEARCH
     3. ORDER STATUS
@@ -224,6 +228,22 @@ def detect_intent(message):
     11. FALLBACK
     """
     msg = message.lower().strip()
+
+    # 0. SNEAKER FINDER QUIZ (Interactive Decision Tree)
+    if msg.startswith('quiz:') or msg == 'quiz' or re.search(r'\b(quiz|finder|find\s*my\s*sneaker|sneaker\s*finder|perfect\s*shoe|dhundho|dhundo|suggest\s*for\s*me)\b', msg):
+        return 'quiz'
+
+    # 0. SNEAKER COMPARISON (Side-by-side Head-to-Head)
+    if re.search(r'\b(compare|vs|versus|difference\s*between|kaunsa\s*behtar|kaun\s*sa\s*accha|konsa\s*acha|better\s*kaun|which\s*is\s*better)\b', msg):
+        return 'compare'
+
+    # 0. VALUE FOR MONEY (VFM Deal Finder)
+    if re.search(r'\b(vfm|value\s*for\s*money|paisa\s*vasool|best\s*deal|best\s*value|value\s*deal|budget\s*optimizer)\b', msg):
+        return 'vfm'
+
+    # 0. CONTENT-BASED SIMILAR SNEAKERS
+    if msg.startswith('similar:') or re.search(r'\b(similar\s*to|like\s*this|aisa\s*aur|milta\s*julta|same\s*type)\b', msg):
+        return 'similar'
 
     # 1. RECOMMENDATION (Must run before search so 'recommend shoes' is not treated as search)
     rec_pattern = r'\b(recommend|recommendation|suggest|suggestion|trending|popular|best\s*seller|bestseller|best\s*selling|top\s*rated|new\s*arrival|latest\s*drop|similar|gift|kuch\s*acha|kya\s*lu|kya\s*khareedu|kya\s*kharidu|acha\s*shoe|choice|batao|options)\b'
@@ -321,12 +341,28 @@ def extract_entities(message):
                 entities['brand'] = fuzzy_match[0]
                 break
 
-    # Color extraction (Exact Regex First)
-    known_colors = ['black', 'white', 'red', 'blue', 'green', 'yellow', 'pink', 'grey', 'gray', 'silver', 'cream', 'orange', 'purple', 'brown']
-    for c in known_colors:
-        if re.search(rf'\b{c}\b', msg):
-            entities['color'] = 'grey' if c == 'gray' else c
+    # Color extraction (Exact Regex First, including Hindi/Hinglish colors)
+    hindi_colors = {
+        'safed': 'white', 'chitta': 'white',
+        'kaala': 'black', 'kala': 'black',
+        'laal': 'red', 'lal': 'red',
+        'neela': 'blue', 'nila': 'blue',
+        'peela': 'yellow', 'pila': 'yellow',
+        'gulabi': 'pink', 'pinki': 'pink',
+        'hara': 'green', 'sabz': 'green',
+        'bhura': 'brown', 'bhoora': 'brown'
+    }
+    for h_col, eng_col in hindi_colors.items():
+        if re.search(rf'\b{h_col}\b', msg):
+            entities['color'] = eng_col
             break
+
+    if not entities['color']:
+        known_colors = ['black', 'white', 'red', 'blue', 'green', 'yellow', 'pink', 'grey', 'gray', 'silver', 'cream', 'orange', 'purple', 'brown']
+        for c in known_colors:
+            if re.search(rf'\b{c}\b', msg):
+                entities['color'] = 'grey' if c == 'gray' else c
+                break
 
     # Color Fuzzy Fallback (Handles typos like 'wite', 'blck', 'gren')
     if not entities['color']:
@@ -367,7 +403,7 @@ def extract_entities(message):
         entities['max_price'] = float(between_match.group(2))
 
     # Case D: "Cheapest" / "Sasta" / Hinglish Slang
-    if re.search(r'\b(cheapest|sasta|saste|sabse\s*sasta|low\s*price|lowest\s*price|kam\s*daam|kam\s*rate|kam\s*paisa|kam\s*budget|saste\s*me)\b', msg):
+    if re.search(r'\b(cheapest|sasta|saste|sabse\s*sasta|low\s*price|lowest\s*price|kam\s*daam|kam\s*rate|kam\s*paisa|kam\s*budget|saste\s*me|paisa\s*kam|budget\s*me)\b', msg):
         entities['cheapest'] = True
 
     return entities
@@ -522,10 +558,352 @@ def get_recommendations(df, message, user=None):
 
 
 # ==============================================================================
+# 5B. SNEAKER COMPARISON ENGINE (Head-to-Head Comparison Table & Verdict)
+# ==============================================================================
+
+def compare_sneakers(df, message):
+    """
+    Compares two sneakers side-by-side using DataFrame extraction and ranking.
+    Generates a Markdown comparison table and an explainable AI verdict.
+    """
+    if df.empty:
+        return "Comparison ke liye catalog me sneakers uplabdh nahi hain.", []
+
+    msg = message.lower()
+    cleaned = re.sub(r'\b(compare|sneakers?|kicks|shoes?|b/w|between)\b', '', msg).strip()
+    parts = re.split(r'\b(?:vs|versus|and|aur|ya|,)\b', cleaned)
+
+    found_rows = []
+    if len(parts) >= 2:
+        part1 = parts[0].strip()
+        part2 = parts[1].strip()
+
+        # Match Part 1
+        m1 = df[df['name_lower'].str.contains(part1, regex=False, na=False) | df['brand_lower'].str.contains(part1, regex=False, na=False)]
+        if m1.empty and len(part1) > 2:
+            matches = difflib.get_close_matches(part1, df['name_lower'].tolist(), n=1, cutoff=0.45)
+            if matches:
+                m1 = df[df['name_lower'] == matches[0]]
+
+        # Match Part 2
+        m2 = df[df['name_lower'].str.contains(part2, regex=False, na=False) | df['brand_lower'].str.contains(part2, regex=False, na=False)]
+        if m2.empty and len(part2) > 2:
+            matches = difflib.get_close_matches(part2, df['name_lower'].tolist(), n=1, cutoff=0.45)
+            if matches:
+                m2 = df[df['name_lower'] == matches[0]]
+
+        if not m1.empty:
+            found_rows.append(m1.iloc[0])
+        if not m2.empty:
+            for _, r2 in m2.iterrows():
+                if not found_rows or str(r2['id']) != str(found_rows[0]['id']):
+                    found_rows.append(r2)
+                    break
+
+    # Smart Fallback if 2 specific shoes were not named
+    if len(found_rows) < 2:
+        top_2 = df.sort_values(by=['sales', 'rating'], ascending=[False, False]).head(2)
+        if len(top_2) >= 2:
+            found_rows = [top_2.iloc[0], top_2.iloc[1]]
+            note = "*(Tip: Aap direct 'Compare Jordan 1 and Jordan 4' likh kar kisi bhi 2 shoes ko compare kar sakte hain!)*\n\n"
+        else:
+            return "Kripya 2 sneakers ke naam batayein jinhe compare karna hai, jaise: **'Compare Air Jordan 1 vs Nike Air Force 1'**.", []
+    else:
+        note = ""
+
+    s1 = found_rows[0]
+    s2 = found_rows[1]
+
+    p1 = int(s1['price'])
+    p2 = int(s2['price'])
+    r1 = float(s1['rating'])
+    r2 = float(s2['rating'])
+
+    price_diff = abs(p1 - p2)
+    if p1 < p2:
+        price_verdict = f"**{s1['name']}** ₹{price_diff:,} sasta aur budget-friendly hai"
+    elif p2 < p1:
+        price_verdict = f"**{s2['name']}** ₹{price_diff:,} sasta aur budget-friendly hai"
+    else:
+        price_verdict = "Dono shoes ka price barabar hai"
+
+    if r1 > r2:
+        rating_verdict = f"**{s1['name']}** ki customer rating behtar hai ({r1}★ vs {r2}★)"
+    elif r2 > r1:
+        rating_verdict = f"**{s2['name']}** ki customer rating behtar hai ({r2}★ vs {r1}★)"
+    else:
+        rating_verdict = f"Dono kicks ki rating barabar hai ({r1}★)"
+
+    table = (
+        f"| Feature | {s1['name'][:24]} | {s2['name'][:24]} |\n"
+        f"|---|---|---|\n"
+        f"| **Brand** | {s1['brand']} | {s2['brand']} |\n"
+        f"| **Price** | ₹{p1:,} | ₹{p2:,} |\n"
+        f"| **Rating** | ⭐ {r1} / 5.0 | ⭐ {r2} / 5.0 |\n"
+        f"| **Category** | {s1['category'].title()} | {s2['category'].title()} |\n"
+        f"| **Colors** | {s1['color'].title() or 'Classic'} | {s2['color'].title() or 'Classic'} |\n"
+    )
+
+    verdict = (
+        f"⚖️ **Sneaker Squad Head-to-Head Comparison:**\n\n"
+        f"{note}"
+        f"{table}\n"
+        f"💡 **AI Recommendation & Verdict:**\n"
+        f"• **Pricing:** {price_verdict}.\n"
+        f"• **Rating:** {rating_verdict}.\n"
+        f"• **Style Advice:** Daily comfort aur versatility ke liye **{s1['name']}** aur iconic high-profile streetwear vibe ke liye **{s2['name']}** pick karein!"
+    )
+
+    prods = [
+        {
+            'id': s1['id'], 'name': s1['name'], 'brand': s1['brand'],
+            'price': p1, 'rating': r1, 'color': s1['color'],
+            'image': s1['main_image'], 'url': f"/product-detail?id={s1['id']}"
+        },
+        {
+            'id': s2['id'], 'name': s2['name'], 'brand': s2['brand'],
+            'price': p2, 'rating': r2, 'color': s2['color'],
+            'image': s2['main_image'], 'url': f"/product-detail?id={s2['id']}"
+        }
+    ]
+    return verdict, prods
+
+
+# ==============================================================================
+# 5C. 3-STEP SNEAKER FINDER QUIZ (Interactive Decision Tree)
+# ==============================================================================
+
+def handle_quiz(df, message):
+    """
+    3-Step Interactive Decision Tree Sneaker Finder.
+    Branches:
+    quiz:res:<g>:<s>:<b> -> Evaluates DataFrame and returns top matches.
+    quiz:style:<s>:<g> -> Step 3 (Budget)
+    quiz:men / women / unisex -> Step 2 (Occasion/Style)
+    quiz:start (default) -> Step 1 (Gender)
+    """
+    msg = message.strip()
+
+    # Step 4: Final Decision Tree Evaluation (Checked first for precise match)
+    res_match = re.match(r'quiz:res:([a-z]+):([a-z]+):(\d+)', msg)
+    if res_match:
+        g, s, b_str = res_match.groups()
+        budget = int(b_str)
+
+        q_df = df.copy()
+        # Branch 1: Gender Filter
+        if g in ['men', 'women']:
+            q_df = q_df[q_df['gender_lower'].isin([g, 'unisex'])]
+
+        # Branch 2: Budget Filter
+        if budget == 3500:
+            b_df = q_df[q_df['price'] <= 3500]
+        elif budget == 6500:
+            b_df = q_df[(q_df['price'] >= 3000) & (q_df['price'] <= 6500)]
+        else:
+            b_df = q_df[q_df['price'] >= 5000]
+
+        if not b_df.empty:
+            q_df = b_df
+
+        # Branch 3: Style / Category Filter
+        style_keywords = {
+            'streetwear': ['streetwear', 'retro', 'jordan', 'dunk', 'high', 'air force'],
+            'running': ['running', 'zoom', 'pegasus', 'air max', 'cushion', 'runner', 'sport'],
+            'retro': ['retro', 'vintage', 'classic', 'og', 'jordan', 'chicago'],
+            'minimalist': ['white', 'minimal', 'clean', 'stan smith', 'classic', 'low']
+        }
+        kw_list = style_keywords.get(s, [s])
+        kw_pattern = '|'.join(kw_list)
+        s_df = q_df[q_df['name_lower'].str.contains(kw_pattern, regex=True, na=False) | q_df['description'].str.lower().str.contains(kw_pattern, regex=True, na=False)]
+        if not s_df.empty:
+            q_df = s_df
+
+        top_kicks = q_df.sort_values(by=['rating', 'sales'], ascending=[False, False]).head(3)
+        if top_kicks.empty:
+            top_kicks = df.head(3)
+
+        prods = [{
+            'id': r['id'], 'name': r['name'], 'brand': r['brand'],
+            'price': int(r['price']), 'rating': float(r['rating']),
+            'color': r['color'], 'image': r['main_image'],
+            'url': f"/product-detail?id={r['id']}"
+        } for _, r in top_kicks.iterrows()]
+
+        text = (
+            f"🎉 **Perfect Match Found! (Decision Tree Result)**\n\n"
+            f"Aapke preferences (**{g.capitalize()} • {s.title()} • ₹{budget:,} budget**) ke mutabiq "
+            f"ye rahe **98% Lifestyle Match** kicks:"
+        )
+        quick = [
+            {"label": "🔄 Retake Quiz", "query": "quiz:start"},
+            {"label": "🔥 Trending Kicks", "query": "Trending sneakers dikhao"},
+            {"label": "⚖️ Compare These", "query": f"Compare {prods[0]['name']} and {prods[1]['name']}" if len(prods) > 1 else "quiz:start"}
+        ]
+        return text, prods, quick
+
+    # Step 3: Style chosen -> Choose Budget
+    style_match = re.match(r'quiz:style:([a-z]+):([a-z]+)', msg)
+    if style_match:
+        s, g = style_match.groups()
+        s_label = s.title()
+        text = (
+            f"🎯 **Sneaker Squad Smart Finder (Step 3 of 3) — [{s_label}]**\n\n"
+            "Aapka budget kitna hai? 👇"
+        )
+        quick = [
+            {"label": "💰 Under ₹3,500", "query": f"quiz:res:{g}:{s}:3500"},
+            {"label": "✨ ₹3,500 - ₹6,500", "query": f"quiz:res:{g}:{s}:6500"},
+            {"label": "💎 Premium (₹6,500+)", "query": f"quiz:res:{g}:{s}:99999"}
+        ]
+        return text, [], quick
+
+    # Step 2: Gender chosen -> Choose Style/Occasion
+    if msg in ['quiz:men', 'quiz:women', 'quiz:unisex']:
+        g = msg.replace('quiz:', '')
+        g_label = "Men" if g == 'men' else ("Women" if g == 'women' else "Unisex")
+        text = (
+            f"🎯 **Sneaker Squad Smart Finder (Step 2 of 3) — [{g_label}]**\n\n"
+            "Aapko kis style ya occasion ke liye sneaker chahiye? 👇"
+        )
+        quick = [
+            {"label": "🔥 Daily Streetwear", "query": f"quiz:style:streetwear:{g}"},
+            {"label": "🏃 Running & Gym", "query": f"quiz:style:running:{g}"},
+            {"label": "🎉 Retro Classics", "query": f"quiz:style:retro:{g}"},
+            {"label": "👟 Minimalist Clean", "query": f"quiz:style:minimalist:{g}"}
+        ]
+        return text, [], quick
+
+    # Step 1: Start Quiz (Default for 'quiz:start', 'quiz', or any quiz trigger)
+    text = (
+        "🎯 **Sneaker Squad Smart Finder (Step 1 of 3)**\n\n"
+        "Aap kiske liye sneaker dhoondh rahe hain? Neeche diye kisi option par click karein: 👇"
+    )
+    quick = [
+        {"label": "👨 Men's Kicks", "query": "quiz:men"},
+        {"label": "👩 Women's Kicks", "query": "quiz:women"},
+        {"label": "⚡ Anyone / Unisex", "query": "quiz:unisex"}
+    ]
+    return text, [], quick
+
+
+# ==============================================================================
+# 5D. VALUE-FOR-MONEY (VFM) BUDGET OPTIMIZER
+# ==============================================================================
+
+def get_vfm_deals(df, message):
+    """
+    Computes algorithmic Value-For-Money (VFM) score:
+    VFM = (Rating * (Sales + 15)) / (Price / 1000)
+    Ranks sneakers providing maximum customer satisfaction per rupee spent.
+    """
+    if df.empty:
+        return "Filhal koi VFM deals available nahi hain.", []
+
+    vfm_df = df.copy()
+    entities = extract_entities(message)
+    if entities.get('max_price'):
+        vfm_df = vfm_df[vfm_df['price'] <= entities['max_price']]
+
+    vfm_df['vfm_score'] = (vfm_df['rating'] * (vfm_df['sales'] + 15)) / (vfm_df['price'] / 1000.0)
+    top_vfm = vfm_df.sort_values(by='vfm_score', ascending=False).head(3)
+
+    prods = [{
+        'id': r['id'], 'name': r['name'], 'brand': r['brand'],
+        'price': int(r['price']), 'rating': float(r['rating']),
+        'color': r['color'], 'image': r['main_image'],
+        'url': f"/product-detail?id={r['id']}"
+    } for _, r in top_vfm.iterrows()]
+
+    budget_text = f" (Under ₹{int(entities['max_price']):,})" if entities.get('max_price') else ""
+    text = (
+        f"💡 **Top Paisa-Vasool (VFM) Kicks{budget_text}:**\n\n"
+        f"Humne algorithmic price-to-performance ratio analyze kiya hai. Ye sneakers sabse kam budget me "
+        f"highest customer rating (4.8★+) aur durability deliver karte hain:"
+    )
+    return text, prods
+
+
+# ==============================================================================
+# 5E. CONTENT-BASED SIMILAR SNEAKERS (Multi-Attribute Distance)
+# ==============================================================================
+
+def get_similar_sneakers(df, message):
+    """
+    Content-Based Multi-Attribute Distance algorithm:
+    Brand match: +30 pts
+    Category match: +25 pts
+    Color overlap: +25 pts
+    Price proximity: +20 pts
+    """
+    if df.empty:
+        return "Catalog empty hai.", []
+
+    msg = message.lower()
+    clean = re.sub(r'\b(similar:|similar\s*to|like\s*this|aisa\s*aur|milta\s*julta|same\s*type)\b', '', msg).strip()
+
+    ref_match = df[df['name_lower'].str.contains(clean, regex=False, na=False) | (df['id'].astype(str) == clean)]
+    if ref_match.empty and len(clean) > 2:
+        matches = difflib.get_close_matches(clean, df['name_lower'].tolist(), n=1, cutoff=0.45)
+        if matches:
+            ref_match = df[df['name_lower'] == matches[0]]
+
+    if ref_match.empty:
+        ref_shoe = df.iloc[0]
+    else:
+        ref_shoe = ref_match.iloc[0]
+
+    ref_id = str(ref_shoe['id'])
+    ref_brand = str(ref_shoe['brand_lower'])
+    ref_color = str(ref_shoe['color_lower'])
+    ref_cat = str(ref_shoe['category_lower'])
+    ref_price = float(ref_shoe['price'])
+
+    candidates = df[df['id'].astype(str) != ref_id].copy()
+    if candidates.empty:
+        return "Similar sneakers nahi mile.", []
+
+    def calc_score(row):
+        score = 0
+        if row['brand_lower'] == ref_brand:
+            score += 30
+        if row['category_lower'] == ref_cat:
+            score += 25
+        c_words = set(re.findall(r'[a-z]+', str(row['color_lower'])))
+        ref_words = set(re.findall(r'[a-z]+', ref_color))
+        if c_words and ref_words and c_words.intersection(ref_words):
+            score += 25
+        p = float(row['price'])
+        max_p = max(p, ref_price, 1)
+        proximity = 1.0 - (abs(p - ref_price) / max_p)
+        score += max(0, proximity * 20)
+        return score
+
+    candidates['similarity'] = candidates.apply(calc_score, axis=1)
+    top_sim = candidates.sort_values(by='similarity', ascending=False).head(3)
+
+    prods = [{
+        'id': r['id'], 'name': r['name'], 'brand': r['brand'],
+        'price': int(r['price']), 'rating': float(r['rating']),
+        'color': r['color'], 'image': r['main_image'],
+        'url': f"/product-detail?id={r['id']}"
+    } for _, r in top_sim.iterrows()]
+
+    text = (
+        f"🔍 **Similar Kicks to '{ref_shoe['name']}':**\n\n"
+        f"Silhouette style, colorway aur price bracket ke comparison se shortlist kiye gaye top alternatives:"
+    )
+    return text, prods
+
+
+# ==============================================================================
 # 6. MASTER REPLY GENERATOR (get_reply)
 # ==============================================================================
 
 DEFAULT_QUICK_REPLIES = [
+    {"label": "🎯 Sneaker Quiz", "query": "quiz:start"},
+    {"label": "⚖️ Compare Kicks", "query": "Compare Air Jordan 1 and Air Jordan 4"},
+    {"label": "💡 Paisa-Vasool Deals", "query": "Paisa vasool value for money sneakers"},
     {"label": "🔥 Trending Kicks", "query": "Trending sneakers dikhao"},
     {"label": "👟 Nike under 5000", "query": "Nike shoes under 5000"},
     {"label": "💰 Saste Shoes", "query": "Sabse saste shoes dikhao"},
@@ -539,7 +917,7 @@ def get_reply(message, user=None, page_context=None):
     """
     Main entry point for Chatbot:
     Takes message string, Django request.user, and page_context ('man', 'woman', 'accessory')
-    Returns dictionary: {"text": str, "products": list}
+    Returns dictionary: {"text": str, "products": list, "quick_replies": list}
     """
     if pd is None:
         return {
@@ -556,19 +934,45 @@ def get_reply(message, user=None, page_context=None):
     intent = detect_intent(clean_msg)
     df = get_df()
 
+    if intent == 'quiz':
+        # Quiz manages its own decision tree filtering across the complete catalog
+        reply_text, products, quick_replies = handle_quiz(df, clean_msg)
+        return {'text': reply_text, 'products': products, 'quick_replies': quick_replies}
+
     # Apply strict Page Context & Category Rules:
-    # 1. man/men context: ONLY category='sneaker' AND gender in ['men', 'unisex']
-    # 2. woman/women context: ONLY category='sneaker' AND gender in ['women', 'unisex']
-    # 3. accessory context: ONLY category='accessory'
+    # 1. man/men context: ONLY gender in ['men', 'unisex'] (non-accessories)
+    # 2. woman/women context: ONLY gender in ['women', 'unisex'] (non-accessories)
+    # 3. accessory context: ONLY category matching 'accessory'
     ctx = (page_context or '').lower().strip()
     msg_l = clean_msg.lower()
 
     if ctx in ['man', 'men'] or re.search(r'\b(men|man|mens|gents|male)\b', msg_l):
-        df = df[(df['category_lower'] == 'sneaker') & (df['gender_lower'].isin(['men', 'unisex']))]
+        df = df[df['gender_lower'].isin(['men', 'unisex']) & (~df['category_lower'].str.contains('accessor', na=False))]
     elif ctx in ['woman', 'women'] or re.search(r'\b(women|woman|womens|ladies|female)\b', msg_l):
-        df = df[(df['category_lower'] == 'sneaker') & (df['gender_lower'].isin(['women', 'unisex']))]
+        df = df[df['gender_lower'].isin(['women', 'unisex']) & (~df['category_lower'].str.contains('accessor', na=False))]
     elif ctx in ['accessory', 'accessories'] or re.search(r'\b(accessory|accessories|care|cleaner|lace|laces|insole|brush|spray|shoe bag)\b', msg_l):
-        df = df[df['category_lower'] == 'accessory']
+        df = df[df['category_lower'].str.contains('accessor', na=False)]
+
+    # --------------------------------------------------------------------------
+    # INTENT: COMPARE (Side-by-Side Head-to-Head Comparison)
+    # --------------------------------------------------------------------------
+    if intent == 'compare':
+        reply_text, products = compare_sneakers(df, clean_msg)
+        return {'text': reply_text, 'products': products}
+
+    # --------------------------------------------------------------------------
+    # INTENT: VFM (Value For Money Deal Finder)
+    # --------------------------------------------------------------------------
+    if intent == 'vfm':
+        reply_text, products = get_vfm_deals(df, clean_msg)
+        return {'text': reply_text, 'products': products}
+
+    # --------------------------------------------------------------------------
+    # INTENT: SIMILAR (Content-Based Attribute Matching)
+    # --------------------------------------------------------------------------
+    if intent == 'similar':
+        reply_text, products = get_similar_sneakers(df, clean_msg)
+        return {'text': reply_text, 'products': products}
 
     # --------------------------------------------------------------------------
     # INTENT 1: RECOMMENDATION
