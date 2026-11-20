@@ -142,6 +142,22 @@ function initMobileMenu() {
     if (navLink) {
       closeDrawer();
     }
+
+    // Mobile Search Bar Toggle
+    const searchToggle = e.target.closest('#mobile-search-toggle-btn, .mobile-search-toggle-btn');
+    if (searchToggle) {
+      e.preventDefault();
+      e.stopPropagation();
+      const searchBar = document.getElementById('mobile-search-bar');
+      if (searchBar) {
+        searchBar.classList.toggle('open');
+        if (searchBar.classList.contains('open')) {
+          const inp = searchBar.querySelector('input');
+          if (inp) inp.focus();
+        }
+      }
+      return;
+    }
   });
 }
 

@@ -467,21 +467,22 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .squad-chat-launcher {
-    bottom: 18px;
-    right: 18px;
-    width: 52px;
-    height: 52px;
-    font-size: 1.3rem;
+    bottom: 16px !important;
+    right: 16px !important;
+    height: 44px !important;
+    padding: 0 14px !important;
+    z-index: 999 !important;
   }
   .squad-chat-window {
-    bottom: 80px;
-    right: 12px;
-    left: 12px;
-    width: auto;
-    height: calc(100vh - 120px);
-    max-height: 550px;
+    bottom: 72px !important;
+    right: 12px !important;
+    left: 12px !important;
+    width: auto !important;
+    height: calc(100vh - 100px) !important;
+    max-height: 520px !important;
+    z-index: 1000 !important;
   }
 }
 
