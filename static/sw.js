@@ -4,9 +4,10 @@
  * and preserves live dynamic user authentication state on mobile.
  */
 
-const CACHE_NAME = 'sneaker-squad-pwa-v6.0';
+const CACHE_NAME = 'sneaker-squad-pwa-v7.0';
 const STATIC_ASSETS = [
   '/static/css/style.css',
+  '/static/css/landing.css',
   '/static/css/product.css',
   '/static/css/auth.css',
   '/static/css/dashboard.css',
