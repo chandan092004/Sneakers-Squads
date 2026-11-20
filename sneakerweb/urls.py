@@ -24,6 +24,8 @@ urlpatterns = [
     path('accessory/', views.accessories_view),
     path('accessories', views.accessories_view, name='accessories'),
     path('accessories/', views.accessories_view),
+    path('about', views.about_view, name='about'),
+    path('about/', views.about_view, name='about_slash'),
     path('contact', views.contact, name='contact'),
     path('contact/', views.contact),
     
@@ -35,6 +37,7 @@ urlpatterns = [
     path('women.html', views.woman),
     path('accessory.html', views.accessory),
     path('accessories.html', views.accessory),
+    path('about.html', views.about_view),
     path('contact.html', views.contact),
     
     # Product Details (Clean URLs, .html compatibility, and slug/code routing)

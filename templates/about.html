@@ -1,0 +1,266 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | The Sneaker Squad Story & Mission</title>
+  <meta name="description" content="Discover the Sneaker Squad story. India's trusted destination for 100% authentic sneakers, curated footwear collections, and dedicated sneaker care gear.">
+  
+  <script>
+    if (localStorage.getItem('sneaker_store_theme') === 'light') {
+      document.documentElement.classList.add('light-theme');
+    }
+  </script>
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- PWA Manifest & App Icons -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ff5a1f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SneakersSquad">
+  <link rel="apple-touch-icon" href="{% static 'img/pwa-icon-192.png' %}">
+
+  <!-- Core CSS Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=14.0">
+  <link rel="stylesheet" href="{% static 'css/about.css' %}?v=1.0">
+  <link rel="stylesheet" href="{% static 'css/pwa-install.css' %}?v=14.0">
+</head>
+
+<body>
+
+  <!-- Shared Header & Navigation -->
+  {% include 'header.html' %}
+
+  <main class="container">
+    
+    <!-- ====================================================================
+         SECTION 1: HERO & BRAND STORY
+         ==================================================================== -->
+    <section class="about-hero" aria-label="Brand Story and Origin">
+      <div class="about-hero-grid">
+        <div class="about-hero-content">
+          <div class="about-badge">
+            <i class="fa-solid fa-bolt"></i> The Squad Story
+          </div>
+          <h1 class="about-title">
+            More Than Just Footwear — <span>Welcome to Sneaker Squad</span>
+          </h1>
+          <p class="about-lead">
+            Born from a relentless passion for street culture and authentic kicks, Sneaker Squad was founded to bridge the gap between hard-to-find deadstock drops and reliable, transparent online buying.
+          </p>
+          <p class="about-story-text">
+            What started as a close-knit circle of dedicated sneakerheads in 2021 has expanded into India's premier curated marketplace. We believe sneakers aren't just shoes on your feet—they are an extension of your identity, attitude, and creative expression. Every drop we curate passes rigorous squad authentication so you never have to second-guess what arrives at your doorstep.
+          </p>
+          <div class="about-hero-actions">
+            <a href="/men" class="btn btn-primary">
+              <i class="fa-solid fa-shoe-prints"></i> Explore Men's Drops
+            </a>
+            <a href="/women" class="btn btn-secondary" style="border: 1px solid rgba(236,72,153,0.4); color: #ec4899; background: rgba(236,72,153,0.08);">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Explore Women's Drops
+            </a>
+          </div>
+        </div>
+
+        <div class="about-hero-visual">
+          <div class="about-image-card">
+            <img src="{% static 'img/about-hero.jpg' %}" alt="Sneaker Squad Lifestyle Collection" onerror="this.onerror=null; this.src='{% static 'img/men_shoes-banner.jpg' %}';">
+            <div class="about-floating-tag">
+              <div class="tag-info">
+                <i class="fa-solid fa-certificate" style="color: #ff5a1f;"></i>
+                <span>Deadstock Certified Vault</span>
+              </div>
+              <span class="tag-badge">100% Genuine</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: WHY CHOOSE SNEAKER SQUAD (4 FEATURE CARDS)
+         ==================================================================== -->
+    <section class="why-section" aria-label="Why Choose Sneaker Squad">
+      <div class="section-head">
+        <span class="section-pill">The Squad Standard</span>
+        <h2 class="section-h2">Why Choose Sneaker Squad</h2>
+        <p class="section-desc">
+          We take the anxiety out of sneaker hunting by pairing verified authenticity with white-glove customer care.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <article class="feature-card">
+          <div class="feature-icon-box icon-orange">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>100% Authentic & Verified</h3>
+          <p>
+            Every single pair undergoes thorough multi-point inspection by our footwear specialists—verifying stitching, box labels, scent, and sole construction before dispatch.
+          </p>
+        </article>
+
+        <!-- Feature 2 -->
+        <article class="feature-card">
+          <div class="feature-icon-box icon-purple">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <h3>Curated Collection</h3>
+          <p>
+            Dedicated Men's, Women's, and Sneaker Care lineups tailored for modern street style, performance running, and retro collectors. Zero filler, strictly fire kicks.
+          </p>
+        </article>
+
+        <!-- Feature 3 -->
+        <article class="feature-card">
+          <div class="feature-icon-box icon-blue">
+            <i class="fa-solid fa-box-open"></i>
+          </div>
+          <h3>Fast & Box-Protected Delivery</h3>
+          <p>
+            Every pair is double-boxed with reinforced air-cushioned outer armor so your shoebox reaches you in pristine deadstock condition, with live Express air tracking.
+          </p>
+        </article>
+
+        <!-- Feature 4 -->
+        <article class="feature-card">
+          <div class="feature-icon-box icon-green">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3>Easy Returns & 24/7 Support</h3>
+          <p>
+            30-day hassle-free exchanges, verified size recommendations, and responsive 24/7 assistance on WhatsApp and direct phone to support your sneaker journey.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: OUR MISSION & VISION (2 SIDE-BY-SIDE CARDS)
+         ==================================================================== -->
+    <section class="mission-vision-section" aria-label="Our Mission and Vision">
+      <div class="mission-vision-grid">
+        <!-- Mission Card -->
+        <div class="mv-card mission-card">
+          <span class="mv-badge">
+            <i class="fa-solid fa-bullseye"></i> Our Mission
+          </span>
+          <h3>Delivering Genuine Sneaker Culture Transparently</h3>
+          <p>
+            Our mission is to eliminate counterfeit uncertainty and make high-demand, comfortable, and trendsetting sneakers accessible across every zip code in India. We champion honesty, fair pricing, and clear communication—from our climate-controlled vault straight to your feet.
+          </p>
+        </div>
+
+        <!-- Vision Card -->
+        <div class="mv-card vision-card">
+          <span class="mv-badge">
+            <i class="fa-solid fa-compass"></i> Our Vision
+          </span>
+          <h3>Building India's Most Trusted Sneaker Community</h3>
+          <p>
+            We envision an empowered street-culture ecosystem where creators, seasoned collectors, and everyday sneaker lovers connect over genuine craftsmanship. A world where everyone can step out with confidence, knowing their kicks are authentic and built to last.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: BRAND STATS / SOCIAL PROOF STRIP
+         ==================================================================== -->
+    <section class="stats-strip-section" aria-label="Sneaker Squad Milestones">
+      <div class="stats-strip-container">
+        <!-- Stat 1 -->
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="fa-solid fa-shoe-prints"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Curated Sneakers</span>
+          </div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="stat-item">
+          <div class="stat-icon" style="color: #ec4899;">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-number">10,000+</span>
+            <span class="stat-label">Happy Sneakerheads</span>
+          </div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="stat-item">
+          <div class="stat-icon" style="color: #22c55e;">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Quality Checked</span>
+          </div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="stat-item">
+          <div class="stat-icon" style="color: #38bdf8;">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Customer Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: BOTTOM CALL-TO-ACTION (CTA)
+         ==================================================================== -->
+    <section class="about-cta-section" aria-label="Call to Action">
+      <div class="about-cta-banner">
+        <span class="cta-tag">
+          <i class="fa-solid fa-fire"></i> Step Into The Squad
+        </span>
+        <h2 class="cta-heading">Ready to Level Up Your Rotation?</h2>
+        <p class="cta-subtext">
+          Browse our newest deadstock arrivals, grab verified grails, and enjoy box-protected express delivery across India.
+        </p>
+        <div class="cta-btn-group">
+          <a href="/men" class="btn-cta-men">
+            <i class="fa-solid fa-shoe-prints"></i> Shop Men's Collection
+          </a>
+          <a href="/women" class="btn-cta-women">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Shop Women's Collection
+          </a>
+          <a href="/accessories" class="btn-cta-acc">
+            <i class="fa-solid fa-spray-can-sparkles"></i> Sneaker Care & Gear
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  {% include 'footer.html' %}
+
+  <!-- AI Chatbot Assistant Widget -->
+  {% include 'chatbot_widget.html' %}
+
+  <!-- Core JavaScript Libraries -->
+  <script src="{% static 'js/products-data.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+  <script src="{% static 'js/auth-drawer.js' %}"></script>
+  <script src="{% static 'js/pwa-install.js' %}"></script>
+
+</body>
+</html>

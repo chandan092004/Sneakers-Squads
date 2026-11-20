@@ -141,6 +141,24 @@ women = women_view
 accessory = accessories_view
 accessories = accessories_view
 
+
+# 4b. About Us Brand Story & Mission Controller
+def about_view(request):
+    """
+    Brand Story & About Us View:
+    - 5 Core Sections: Hero & Brand Story, Why Choose Sneaker Squad,
+      Mission & Vision, Brand Stats Strip, and Bottom CTA
+    """
+    context = {
+        'page_title': "About Us | The Sneaker Squad Story & Mission",
+        'active_nav': 'about',
+    }
+    return render(request, 'about.html', context)
+
+
+# Alias for backward compatibility
+about = about_view
+
 # 5. Product Detail Page
 def product_detail(request, code=None):
     product = None
