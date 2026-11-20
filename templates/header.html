@@ -262,7 +262,6 @@
         <li><a href="/men" class="nav-link"><span>Men</span></a></li>
         <li><a href="/women" class="nav-link"><span>Women</span></a></li>
         <li><a href="/accessories" class="nav-link"><span>Accessories</span></a></li>
-        <li><a href="/about/" class="nav-link"><span>About Us</span></a></li>
         {% for nav_cat in nav_categories %}
         <li><a href="/{{ nav_cat.slug }}" class="nav-link"><span>{{ nav_cat.name }}</span></a></li>
         {% endfor %}
@@ -284,53 +283,33 @@
     <!-- User, Wishlist, Theme Toggle & Cart Action Icons -->
     <div class="header-actions">
       <!-- Responsive Install App Button (Visible on Desktop & Laptop) -->
-      <button type="button" class="header-pwa-install-btn desktop-only-action" id="header-pwa-install-btn" onclick="window.installSneakerSquadPWA(); return false;" title="Install Sneakers Squad Mobile App" aria-label="Install App">
+      <button type="button" class="header-pwa-install-btn" id="header-pwa-install-btn" onclick="window.installSneakerSquadPWA(); return false;" title="Install Sneakers Squad Mobile App" aria-label="Install App">
         <i class="fa-solid fa-mobile-screen-button"></i>
         <span>Install App</span>
       </button>
 
-      <!-- Mobile Search Icon Toggle (Visible ONLY on Mobile < 768px) -->
-      <button type="button" class="action-btn mobile-search-toggle-btn" id="mobile-search-toggle-btn" title="Search Kicks" aria-label="Search Kicks">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-
-      <!-- Desktop/Tablet Only Action Icons (Moved into drawer on mobile) -->
-      <button type="button" class="action-btn theme-toggle-btn desktop-only-action" id="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+      <button type="button" class="action-btn theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
         <i class="fa-solid fa-moon" id="theme-icon"></i>
       </button>
-
-      <a href="/dashboard#wishlist" class="action-btn desktop-only-action" id="header-wishlist-btn" title="My Wishlist" aria-label="Wishlist">
+      <a href="/dashboard#wishlist" class="action-btn" id="header-wishlist-btn" title="My Wishlist" aria-label="Wishlist">
         <i class="fa-regular fa-heart"></i>
         <span class="wishlist-badge" id="header-wishlist-badge" style="display:none;">0</span>
       </a>
-
       {% if request.user.is_authenticated %}
-      <a href="/dashboard" class="action-btn desktop-only-action" id="auth-btn" title="Signed in as {{ request.user.username }} (Dashboard)" aria-label="Account">
+      <a href="/dashboard" class="action-btn" id="auth-btn" title="Signed in as {{ request.user.username }} (Dashboard)" aria-label="Account">
         <i class="fa-solid fa-user-check" id="header-user-icon" style="color:var(--primary);"></i>
       </a>
       {% else %}
-      <a href="/dashboard" class="action-btn auth-trigger-btn desktop-only-action" id="auth-btn" title="Account Login / Sign Up" aria-label="Account">
+      <a href="/dashboard" class="action-btn auth-trigger-btn" id="auth-btn" title="Account Login / Sign Up" aria-label="Account">
         <i class="fa-regular fa-user" id="header-user-icon"></i>
       </a>
       {% endif %}
-
-      <!-- Shopping Bag Icon (Always Visible on Mobile & Desktop) -->
       <a href="#" class="action-btn" id="cart-btn" title="View Cart" aria-label="Shopping Bag">
         <i class="fa-solid fa-bag-shopping"></i>
         <span class="cart-badge">0</span>
       </a>
     </div>
 
-  </div>
-
-  <!-- Mobile Collapsible Search Row (Toggled by mobile-search-toggle-btn) -->
-  <div class="mobile-search-bar" id="mobile-search-bar">
-    <div class="container">
-      <form class="search-form" role="search" onsubmit="event.preventDefault(); const q=this.querySelector('input').value.trim(); if(q) window.location.href='/men?q='+encodeURIComponent(q);">
-        <input type="text" class="search-input" id="mobile-search-input" placeholder="Search kicks, brands, styles..." aria-label="Search" autocomplete="off">
-        <button type="submit" class="search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
-    </div>
   </div>
 </header>
 
@@ -363,16 +342,6 @@
     </button>
   </div>
 
-  <!-- Mobile Quick Action Shortcuts (Theme Toggle & Wishlist) -->
-  <div class="drawer-quick-row" style="display:flex; gap:8px; margin-bottom:12px;">
-    <button type="button" class="drawer-quick-btn theme-toggle-btn" id="drawer-theme-btn" style="flex:1; background:#141722; border:1px solid rgba(255,255,255,0.1); color:#fff; padding:9px 10px; border-radius:10px; font-size:0.8rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
-      <i class="fa-solid fa-moon" id="drawer-theme-icon"></i> <span>Dark / Light</span>
-    </button>
-    <a href="/dashboard#wishlist" class="drawer-quick-btn" style="flex:1; background:#141722; border:1px solid rgba(255,255,255,0.1); color:#fff; padding:9px 10px; border-radius:10px; font-size:0.8rem; font-weight:700; display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;">
-      <i class="fa-regular fa-heart" style="color:#ef4444;"></i> <span>Wishlist</span>
-    </a>
-  </div>
-
   <!-- Mobile Live Search Box inside Drawer -->
   <div class="drawer-search-box" style="margin-bottom: 12px;">
     <form class="search-form" role="search" onsubmit="event.preventDefault(); const q=this.querySelector('input').value.trim(); if(q) window.location.href='/men?q='+encodeURIComponent(q);" style="width: 100%; border-radius: 10px; padding: 8px 12px; box-sizing: border-box;">
@@ -386,7 +355,6 @@
     <li><a href="/men" class="nav-link"><i class="fa-solid fa-shoe-prints" style="color:#38bdf8;"></i> <span>Men</span></a></li>
     <li><a href="/women" class="nav-link"><i class="fa-solid fa-wand-magic-sparkles" style="color:#ec4899;"></i> <span>Women</span></a></li>
     <li><a href="/accessories" class="nav-link"><i class="fa-solid fa-spray-can-sparkles" style="color:#a855f7;"></i> <span>Accessories</span></a></li>
-    <li><a href="/about/" class="nav-link"><i class="fa-solid fa-circle-info" style="color:#06b6d4;"></i> <span>About Us</span></a></li>
     {% for nav_cat in nav_categories %}
     <li><a href="/{{ nav_cat.slug }}" class="nav-link"><i class="fa-solid fa-tag" style="color:#f59e0b;"></i> <span>{{ nav_cat.name }}</span></a></li>
     {% endfor %}

@@ -120,7 +120,7 @@ CATALOG_DATASET = [
         'reviews_count': 115,
         'stock': 10,
         'tag': 'high-tops off-white limited deconstructed sneaker',
-        'image_url': '/media/sneakers/m-ht-04-off-white-air-jordan-1-high_yCap7lh.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80',
         'description': 'Virgil Abloh deconstructed high-top masterpiece with exposed foam and industrial print.',
     },
 

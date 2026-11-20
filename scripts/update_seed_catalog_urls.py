@@ -53,4 +53,3 @@ with open(SEEDS_FILE, 'w', encoding='utf-8') as f:
     f.write(content)
 
 print("Finished updating seed_catalog.py successfully!")
-

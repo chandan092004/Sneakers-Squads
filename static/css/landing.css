@@ -1,57 +1,34 @@
 /* ==========================================================================
-   SNEAKER SQUAD - HOME & LANDING PAGE STYLES (landing.css)
-   Clean, responsive, modern e-commerce storefront styles
+   LANDING / HOME PAGE STYLING (landing.css)
+   Yeh CSS file sirf Home page (index.html) ke Split-screen layout ke liye hai.
    ========================================================================== */
 
+/* (Shared Header is styled cleanly in style.css) */
+
 /* --------------------------------------------------------------------------
-   1. HERO SPLIT SECTION (MEN vs WOMEN DUAL SHOWCASE)
+   2. SPLIT SCREEN CONTAINER (WOMEN vs MEN 50/50 Layout)
    -------------------------------------------------------------------------- */
-.split-hero-container,
-.home-split-hero {
+.split-container {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 75vh;
-  min-height: 520px;
-  max-height: 720px;
-  padding: 0;
-  margin: 0;
+  min-height: calc(100vh - 130px);
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid var(--border);
-  background: #0b0d13;
 }
 
-.split-hero-card,
 .split-side {
-  flex: 1 1 50%;
-  width: 50%;
-  height: 100%;
+  flex: 1;
   position: relative;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: var(--text-white);
-  transition: flex 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  transition: flex 0.4s ease;
 }
 
-.split-hero-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  z-index: 1;
-  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.split-hero-card:hover .split-hero-img {
-  transform: scale(1.06);
+.split-side:hover {
+  flex: 1.15;
 }
 
 .split-bg {
@@ -59,71 +36,49 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  z-index: 1;
-  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s ease;
 }
 
 .split-side:hover .split-bg {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
-.split-hero-overlay,
 .split-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.25));
+  background: rgba(11, 13, 19, 0.65);
   transition: background 0.4s ease;
-  z-index: 2;
 }
 
-.split-hero-card:hover .split-hero-overlay,
 .split-side:hover .split-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.15));
+  background: rgba(11, 13, 19, 0.4);
 }
 
-.split-hero-content,
 .split-box {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   text-align: center;
   padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 440px;
-  margin: 0 auto;
 }
 
-.split-hero-badge,
 .split-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  display: inline-block;
   padding: 6px 16px;
-  background: rgba(20, 23, 31, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid var(--border);
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 700;
   margin-bottom: 12px;
-  letter-spacing: 0.3px;
 }
 
-.split-hero-title,
 .split-title {
   font-size: 3.5rem;
   font-weight: 900;
   letter-spacing: 2px;
-  margin: 0 0 16px 0;
-  color: #ffffff;
-  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
-  line-height: 1;
+  margin-bottom: 16px;
 }
 
-.split-hero-btn,
 .split-btn {
   display: inline-flex;
   align-items: center;
@@ -134,410 +89,108 @@
   border-radius: 30px;
   font-weight: 700;
   font-size: 0.95rem;
-  box-shadow: 0 4px 16px rgba(255, 90, 31, 0.35);
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.split-hero-card:hover .split-hero-btn,
 .split-side:hover .split-btn {
   transform: translateY(-3px);
   background: var(--primary-hover);
-  box-shadow: 0 8px 22px rgba(255, 90, 31, 0.55);
 }
 
 .divider-line {
-  display: none;
+  width: 2px;
+  background: var(--border);
+  position: relative;
+  z-index: 5;
 }
 
 /* --------------------------------------------------------------------------
-   2. VALUE PROPOSITIONS & TRUST STRIP
+   3. BOTTOM GUARANTEE BAR
    -------------------------------------------------------------------------- */
-.home-features-bar {
+.footer-bar {
+  height: 60px;
   background: var(--bg-card);
-  border-bottom: 1px solid var(--border);
-  padding: 22px 0;
-}
-
-.home-features-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.home-feature-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.home-feature-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: rgba(255, 90, 31, 0.12);
-  border: 1px solid rgba(255, 90, 31, 0.28);
-  color: var(--primary);
+  border-top: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
-  flex-shrink: 0;
+  gap: 40px;
+  padding: 0 20px;
 }
 
-.home-feature-title {
-  font-size: 0.92rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 2px;
-}
-
-.home-feature-desc {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-/* --------------------------------------------------------------------------
-   3. SECTION HEADERS
-   -------------------------------------------------------------------------- */
-.home-section {
-  padding: 55px 0 40px;
-}
-
-.home-section-header {
+.footer-badge {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 28px;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.home-section-tag {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 4px;
-}
-
-.home-section-title {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #ffffff;
-}
-
-.home-section-link {
+  align-items: center;
+  gap: 10px;
   font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--primary);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.home-section-link:hover {
-  color: var(--primary-hover);
-  transform: translateX(3px);
-}
-
-/* --------------------------------------------------------------------------
-   4. CATEGORY EXPLORE CARDS (MEN, WOMEN, ACCESSORIES)
-   -------------------------------------------------------------------------- */
-.home-category-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-bottom: 20px;
-}
-
-.home-cat-card {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  min-height: 220px;
-  display: flex;
-  align-items: flex-end;
-  padding: 24px;
-  text-decoration: none;
-  background: #141722;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.home-cat-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(255, 90, 31, 0.5);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-}
-
-.home-cat-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease;
-}
-
-.home-cat-card:hover .home-cat-bg {
-  transform: scale(1.05);
-}
-
-.home-cat-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(11, 13, 19, 0.2) 0%, rgba(11, 13, 19, 0.88) 100%);
-}
-
-.home-cat-content {
-  position: relative;
-  z-index: 2;
-}
-
-.home-cat-pill {
-  font-size: 0.74rem;
-  font-weight: 800;
-  color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 4px;
-  display: block;
-}
-
-.home-cat-title {
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: #ffffff;
-  margin-bottom: 4px;
-}
-
-.home-cat-action {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #cbd5e1;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: color 0.2s ease;
-}
-
-.home-cat-card:hover .home-cat-action {
-  color: var(--primary);
-}
-
-/* --------------------------------------------------------------------------
-   5. BRAND STORY STRIP
-   -------------------------------------------------------------------------- */
-.home-brand-strip {
-  background: linear-gradient(135deg, #121622 0%, #0d1017 100%);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 50px 0;
-  margin-top: 40px;
-}
-
-.home-brand-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.home-brand-text {
-  flex: 1.5;
-  min-width: 280px;
-}
-
-.home-brand-badge {
-  display: inline-block;
-  background: rgba(255, 90, 31, 0.15);
-  border: 1px solid rgba(255, 90, 31, 0.3);
-  color: var(--primary);
-  padding: 5px 14px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.home-brand-heading {
-  font-size: 2.1rem;
-  font-weight: 900;
-  color: #ffffff;
-  margin-bottom: 12px;
-  line-height: 1.25;
-}
-
-.home-brand-desc {
-  font-size: 0.95rem;
+  font-weight: 600;
   color: var(--text-muted);
-  line-height: 1.6;
-  max-width: 620px;
-}
-
-.home-brand-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 13px 28px;
-  background: var(--primary);
-  color: #ffffff;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: background 0.25s ease, transform 0.25s ease;
-  flex-shrink: 0;
-}
-
-.home-brand-cta:hover {
-  background: var(--primary-hover);
-  transform: translateY(-2px);
 }
 
 /* --------------------------------------------------------------------------
-   6. RESPONSIVE BREAKPOINTS (Mobile & Tablet)
+   4. MOBILE RESPONSIVE
    -------------------------------------------------------------------------- */
-@media (max-width: 900px) {
-  .home-features-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .home-category-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home-cat-card:last-child {
-    grid-column: 1 / -1;
-  }
-}
-
 @media (max-width: 768px) {
-  .split-hero-container,
-  .home-split-hero {
+  .split-container {
     flex-direction: column;
-    height: auto;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    gap: 0;
+    min-height: auto;
+    padding: 12px 14px;
+    gap: 14px;
   }
 
   .divider-line {
     display: none;
   }
 
-  .split-hero-card,
   .split-side {
-    width: 100%;
+    height: 270px;
     flex: none;
-    height: 45vh;
-    min-height: 300px;
-    border-radius: 0;
+    border-radius: 18px;
     overflow: hidden;
-    border: none;
-    box-shadow: none;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   }
 
-  .split-hero-content,
   .split-box {
     padding: 20px;
   }
 
-  .split-hero-badge,
   .split-tag {
-    font-size: 0.8rem;
-    padding: 5px 14px;
-    margin-bottom: 10px;
+    font-size: 0.78rem;
+    padding: 4px 12px;
+    margin-bottom: 8px;
   }
 
-  .split-hero-title,
   .split-title {
     font-size: 2.2rem;
     letter-spacing: 1px;
     margin-bottom: 12px;
   }
 
-  .split-hero-btn,
   .split-btn {
     padding: 9px 22px;
     font-size: 0.88rem;
   }
 
-  .home-section {
-    padding: 38px 0 25px;
-  }
-
-  .home-section-title {
-    font-size: 1.6rem;
-  }
-
-  .home-category-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .home-cat-card:last-child {
-    grid-column: auto;
-  }
-
-  .home-cat-card {
-    min-height: 180px;
-    padding: 18px;
-  }
-
-  .home-brand-box {
+  .footer-bar {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    height: auto;
+    padding: 14px 16px;
+    gap: 8px;
+    text-align: center;
   }
 
-  .home-brand-heading {
-    font-size: 1.65rem;
-  }
-
-  .home-brand-cta {
-    width: 100%;
-    justify-content: center;
+  .footer-badge {
+    font-size: 0.8rem;
   }
 }
 
-@media (max-width: 500px) {
-  .home-features-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+@media (max-width: 480px) {
+  .split-side {
+    height: 240px;
   }
 
-  .split-hero-title,
   .split-title {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
   }
-}
-
-/* --------------------------------------------------------------------------
-   7. STOREFRONT LIGHT THEME OVERRIDES
-   -------------------------------------------------------------------------- */
-body.light-theme .home-features-bar {
-  background: #edf1f6;
-  border-color: #cbd5e1;
-}
-
-body.light-theme .home-feature-title,
-body.light-theme .home-section-title,
-body.light-theme .home-brand-heading {
-  color: #0f172a;
-}
-
-body.light-theme .home-brand-strip {
-  background: #edf1f6;
-  border-color: #cbd5e1;
-}
-
-body.light-theme .home-cat-card {
-  background: #edf1f6;
-  border-color: #cbd5e1;
 }

@@ -7,7 +7,7 @@ def global_categories(request):
             is_active=True,
             show_in_navbar=True
         ).exclude(
-            slug__in=['men', 'women', 'accessories', 'unisex', 'home', 'contact', 'about']
+            slug__in=['men', 'women', 'accessories', 'unisex', 'home', 'contact']
         ).order_by('display_order', 'name')
     except Exception:
         nav_cats = []

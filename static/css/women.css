@@ -96,94 +96,44 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .hero-content-wrapper {
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: 24px !important;
+    flex-direction: column;
+    text-align: center;
   }
   
-  .hero-text {
-    width: 100% !important;
-    flex: none !important;
-  }
-
-  .hero-visual {
-    width: 100% !important;
-    flex: none !important;
-  }
-
   .hero-cta-group {
-    justify-content: center !important;
+    justify-content: center;
   }
   
   .hero-title {
-    font-size: 1.85rem !important;
+    font-size: 2rem;
   }
 
   .brand-tech-bar .container {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 10px !important;
-  }
-
-  .brand-tech-list {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    white-space: nowrap !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    width: 100% !important;
-    padding-bottom: 4px !important;
-  }
-
-  .brand-tech-list::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  .brand-pill {
-    flex-shrink: 0 !important;
+    justify-content: center;
   }
 }
 
 /* --------------------------------------------------------------------------
-   4. STRICT 4-COLUMN DESKTOP, 3-COLUMN TABLET & 2-COLUMN MOBILE GRID
+   4. STRICT 4-COLUMN DESKTOP & 2-COLUMN MOBILE BALANCED GRID
    -------------------------------------------------------------------------- */
 .product-grid {
   display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(4, 1fr) !important;
   gap: 24px !important;
   margin-bottom: 60px;
 }
 
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (max-width: 1200px) {
   .product-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 16px !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 768px) {
   .product-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-  }
-
-  .product-card {
-    padding: 10px 8px !important;
-    border-radius: 14px !important;
-  }
-
-  .product-image-box {
-    aspect-ratio: 1 / 1 !important;
-    height: auto !important;
-    max-height: 155px !important;
-  }
-
-  .btn-view-product,
-  .btn-add-cart {
-    min-height: 36px !important;
-    padding: 8px 6px !important;
-    font-size: 0.8rem !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
   }
 }
 

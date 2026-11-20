@@ -6,28 +6,11 @@ from accounts.models import Category, SubCategory, Product, ContactMessage
 
 # 1. Home / Landing Page
 def home(request):
-    trending_kicks = list(Product.objects.filter(
-        is_active=True, is_trending=True
-    ).prefetch_related('product_images')[:4])
-
-    if len(trending_kicks) < 4:
-        trending_kicks = list(Product.objects.filter(
-            is_active=True, category__slug__in=['men', 'women']
-        ).prefetch_related('product_images').order_by('-rating')[:4])
-
-    featured_men = list(Product.objects.filter(
-        is_active=True, category__slug='men'
-    ).prefetch_related('product_images')[:4])
-    
-    featured_women = list(Product.objects.filter(
-        is_active=True, category__slug='women'
-    ).prefetch_related('product_images')[:4])
-
-    featured_kicks = featured_men + featured_women
-
+    featured_kicks = Product.objects.filter(is_active=True, is_featured=True)[:8]
+    trending_kicks = Product.objects.filter(is_active=True, is_trending=True)[:8]
     context = {
-        'trending_kicks': trending_kicks,
         'featured_kicks': featured_kicks,
+        'trending_kicks': trending_kicks,
     }
     return render(request, 'index.html', context)
 
@@ -35,24 +18,16 @@ def home(request):
 def men_view(request):
     """
     Men's Collection View:
-    - Strictly Men's & Unisex sneakers (no apparel, heels, casual non-sneakers, or accessories)
+    - Strictly Men's & Unisex sneakers (no apparel, heels, casual non-sneakers)
     - Relational Category filtering (slug='men')
     - URL subcategory filtering (?type=high-tops, ?type=low-tops)
-    - Zero duplicate images guaranteed across all cards
+    - Uses .prefetch_related('product_images').distinct() to guarantee zero duplicate product cards
     """
     cat_obj = Category.objects.filter(slug='men').first()
     queryset = Product.objects.filter(
         is_active=True,
         category__slug='men',
         gender__in=['men', 'unisex']
-    ).exclude(
-        category__slug__in=['women', 'accessories']
-    ).exclude(
-        tag__icontains='apparel'
-    ).exclude(
-        tag__icontains='clothing'
-    ).exclude(
-        tag__icontains='accessories'
     ).prefetch_related('product_images').distinct()
 
     # Subcategory Filter via URL param ?type=
@@ -66,21 +41,12 @@ def men_view(request):
             Q(tag__icontains=subcat_filter)
         ).distinct()
 
-    # Guarantee zero duplicate images across rendered product cards
-    unique_products = []
-    seen_images = set()
-    for p in queryset:
-        img = p.primary_image_url
-        if img not in seen_images:
-            seen_images.add(img)
-            unique_products.append(p)
-
-    products = unique_products
+    products = queryset
     subcategories = SubCategory.objects.filter(category=cat_obj) if cat_obj else []
 
     context = {
         'products': products,
-        'products_count': len(products),
+        'products_count': products.count(),
         'page_title': "Men's Sneakers & Performance Footwear",
         'active_filter': active_filter,
         'subcategories': subcategories,
@@ -92,24 +58,16 @@ def men_view(request):
 def women_view(request):
     """
     Women's Collection View:
-    - Strictly Women's & Unisex sneakers (no heels, flats, boots, apparel, or accessories)
+    - Strictly Women's & Unisex sneakers (no heels, flats, boots, apparel)
     - Relational Category filtering (slug='women')
     - URL subcategory filtering (?type=platform-sneakers, ?type=slip-on-sneakers)
-    - Zero duplicate images guaranteed across all cards
+    - Uses .prefetch_related('product_images').distinct() to guarantee zero duplicate product cards
     """
     cat_obj = Category.objects.filter(slug='women').first()
     queryset = Product.objects.filter(
         is_active=True,
         category__slug='women',
         gender__in=['women', 'unisex']
-    ).exclude(
-        category__slug__in=['men', 'accessories']
-    ).exclude(
-        tag__icontains='apparel'
-    ).exclude(
-        tag__icontains='clothing'
-    ).exclude(
-        tag__icontains='accessories'
     ).prefetch_related('product_images').distinct()
 
     # Subcategory Filter via URL param ?type=
@@ -123,21 +81,12 @@ def women_view(request):
             Q(tag__icontains=subcat_filter)
         ).distinct()
 
-    # Guarantee zero duplicate images across rendered product cards
-    unique_products = []
-    seen_images = set()
-    for p in queryset:
-        img = p.primary_image_url
-        if img not in seen_images:
-            seen_images.add(img)
-            unique_products.append(p)
-
-    products = unique_products
+    products = queryset
     subcategories = SubCategory.objects.filter(category=cat_obj) if cat_obj else []
 
     context = {
         'products': products,
-        'products_count': len(products),
+        'products_count': products.count(),
         'page_title': "Women's Designer Sneaker Collection",
         'active_filter': active_filter,
         'subcategories': subcategories,
@@ -152,15 +101,12 @@ def accessories_view(request):
     - Strictly sneaker-specific care & utility products (kits, laces, crease protectors, crates, odor, socks)
     - Relational Category filtering (slug='accessories')
     - URL subcategory filtering (?type=cleaning-kits, ?type=premium-shoelaces)
-    - Strictly exclude shoes/sneakers
-    - Zero duplicate images guaranteed across all cards
+    - Uses .prefetch_related('product_images').distinct() to guarantee zero duplicate product cards
     """
     cat_obj = Category.objects.filter(slug='accessories').first()
     queryset = Product.objects.filter(
         is_active=True,
         category__slug='accessories'
-    ).exclude(
-        category__slug__in=['men', 'women']
     ).prefetch_related('product_images').distinct()
 
     # Subcategory Filter via URL param ?type=
@@ -174,21 +120,12 @@ def accessories_view(request):
             Q(tag__icontains=subcat_filter)
         ).distinct()
 
-    # Guarantee zero duplicate images across rendered product cards
-    unique_products = []
-    seen_images = set()
-    for p in queryset:
-        img = p.primary_image_url
-        if img not in seen_images:
-            seen_images.add(img)
-            unique_products.append(p)
-
-    products = unique_products
+    products = queryset
     subcategories = SubCategory.objects.filter(category=cat_obj) if cat_obj else []
 
     context = {
         'products': products,
-        'products_count': len(products),
+        'products_count': products.count(),
         'page_title': "Sneaker Care, Laces & Display Accessories",
         'active_filter': active_filter,
         'subcategories': subcategories,
@@ -203,19 +140,6 @@ woman = women_view
 women = women_view
 accessory = accessories_view
 accessories = accessories_view
-
-
-# 4.5. About Us Page Controller
-def about_view(request):
-    """
-    About Us Page View:
-    Renders the dedicated brand story, why choose us features, mission & vision,
-    social proof stats, and direct CTA navigation to Men's and Women's collections.
-    """
-    return render(request, 'about.html')
-
-
-about = about_view
 
 # 5. Product Detail Page
 def product_detail(request, code=None):
