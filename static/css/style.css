@@ -2270,12 +2270,12 @@ body.light-theme .split-tag {
 
 body.light-theme .split-btn {
   color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.15) !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: var(--primary, #ff5a1f) !important;
+  border: none !important;
 }
 
 body.light-theme .split-btn:hover {
-  background: var(--primary) !important;
+  background: var(--primary-hover, #e04b14) !important;
   color: #ffffff !important;
 }
 
