@@ -262,6 +262,7 @@
         <li><a href="/men" class="nav-link"><span>Men</span></a></li>
         <li><a href="/women" class="nav-link"><span>Women</span></a></li>
         <li><a href="/accessories" class="nav-link"><span>Accessories</span></a></li>
+        <li><a href="/about/" class="nav-link"><span>About Us</span></a></li>
         {% for nav_cat in nav_categories %}
         <li><a href="/{{ nav_cat.slug }}" class="nav-link"><span>{{ nav_cat.name }}</span></a></li>
         {% endfor %}
@@ -355,6 +356,7 @@
     <li><a href="/men" class="nav-link"><i class="fa-solid fa-shoe-prints" style="color:#38bdf8;"></i> <span>Men</span></a></li>
     <li><a href="/women" class="nav-link"><i class="fa-solid fa-wand-magic-sparkles" style="color:#ec4899;"></i> <span>Women</span></a></li>
     <li><a href="/accessories" class="nav-link"><i class="fa-solid fa-spray-can-sparkles" style="color:#a855f7;"></i> <span>Accessories</span></a></li>
+    <li><a href="/about/" class="nav-link"><i class="fa-solid fa-circle-info" style="color:#06b6d4;"></i> <span>About Us</span></a></li>
     {% for nav_cat in nav_categories %}
     <li><a href="/{{ nav_cat.slug }}" class="nav-link"><i class="fa-solid fa-tag" style="color:#f59e0b;"></i> <span>{{ nav_cat.name }}</span></a></li>
     {% endfor %}

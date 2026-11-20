@@ -78,3 +78,4 @@ with open(out_file, 'w', encoding='utf-8') as f:
     f.write(js_content)
 
 print(f"Successfully generated {out_file} with {len(data_dict)} product entries ({len(products)} master items)!")
+

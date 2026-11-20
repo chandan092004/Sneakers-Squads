@@ -13,7 +13,10 @@ Final-Year CS Project Architecture:
 
 import re
 import difflib
-import pandas as pd
+try:
+    import pandas as pd
+except ImportError:
+    pd = None
 from django.db.models import Q
 from accounts.models import Product, Order, WishlistItem
 from .models import Offer
@@ -538,6 +541,11 @@ def get_reply(message, user=None, page_context=None):
     Takes message string, Django request.user, and page_context ('man', 'woman', 'accessory')
     Returns dictionary: {"text": str, "products": list}
     """
+    if pd is None:
+        return {
+            'text': "Welcome to **Sneaker Squad**! 👟 Our chatbot assistant is warming up. Please browse our latest kicks using the top menu!",
+            'products': []
+        }
     clean_msg = message.strip()
     if not clean_msg:
         return {
