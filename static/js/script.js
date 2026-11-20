@@ -894,23 +894,23 @@ function isCardMatchingCategory(card, filterValue) {
   if (f === 'minimalist-white' || f === 'white') {
     return cardTag.includes('white') || cardTag.includes('minimalist') || title.includes('white');
   }
-  if (f === 'cleaning-kits' || f === 'cleaning') {
-    return cardTag.includes('clean') || cardTag.includes('wipe') || cardTag.includes('brush') || cardTag.includes('spray') || cardSubcat.includes('cleaning');
+  if (f === 'levitating-displays' || f === 'levitating' || f === 'display-crates' || f === 'display') {
+    return cardTag.includes('levitat') || cardTag.includes('magnetic') || cardTag.includes('display') || cardTag.includes('floating') || cardSubcat.includes('levitating') || title.includes('levitat');
   }
-  if (f === 'premium-shoelaces' || f === 'laces') {
+  if (f === 'crease-protectors' || f === 'crease' || f === 'protection') {
+    return cardTag.includes('crease') || cardTag.includes('shield') || cardTag.includes('guard') || cardSubcat.includes('crease') || title.includes('crease');
+  }
+  if (f === 'cleaning-kits' || f === 'cleaning') {
+    return cardTag.includes('clean') || cardTag.includes('wipe') || cardTag.includes('brush') || cardSubcat.includes('cleaning') || title.includes('clean');
+  }
+  if (f === 'hydrophobic-sprays' || f === 'hydrophobic' || f === 'spray' || f === 'waterproof') {
+    return cardTag.includes('hydro') || cardTag.includes('spray') || cardTag.includes('waterproof') || cardTag.includes('repel') || cardSubcat.includes('hydrophobic') || title.includes('spray') || title.includes('repellent');
+  }
+  if (f === 'custom-shoelaces' || f === 'premium-shoelaces' || f === 'laces') {
     return cardTag.includes('lace') || cardTag.includes('rope') || cardSubcat.includes('shoelaces') || title.includes('lace');
   }
-  if (f === 'crease-protectors' || f === 'protection') {
-    return cardTag.includes('crease') || cardTag.includes('shield') || cardTag.includes('guard') || cardSubcat.includes('crease');
-  }
-  if (f === 'display-crates' || f === 'storage') {
-    return cardTag.includes('crate') || cardTag.includes('case') || cardTag.includes('box') || cardSubcat.includes('crates');
-  }
-  if (f === 'odor-eliminators' || f === 'odor') {
-    return cardTag.includes('odor') || cardTag.includes('charcoal') || cardTag.includes('fresh') || cardSubcat.includes('odor');
-  }
-  if (f === 'athletic-socks' || f === 'socks') {
-    return cardTag.includes('sock') || cardTag.includes('crew') || cardSubcat.includes('socks') || title.includes('sock');
+  if (f === 'deodorizer-balls' || f === 'odor-eliminators' || f === 'odor' || f === 'deodorizer') {
+    return cardTag.includes('deodor') || cardTag.includes('odor') || cardTag.includes('ball') || cardTag.includes('pill') || cardTag.includes('sphere') || cardSubcat.includes('deodorizer') || title.includes('deodorizer');
   }
 
   // 2. Token & Substring Matching
