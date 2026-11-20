@@ -6,11 +6,28 @@ from accounts.models import Category, SubCategory, Product, ContactMessage
 
 # 1. Home / Landing Page
 def home(request):
-    featured_kicks = Product.objects.filter(is_active=True, is_featured=True)[:8]
-    trending_kicks = Product.objects.filter(is_active=True, is_trending=True)[:8]
+    trending_kicks = list(Product.objects.filter(
+        is_active=True, is_trending=True
+    ).prefetch_related('product_images')[:4])
+
+    if len(trending_kicks) < 4:
+        trending_kicks = list(Product.objects.filter(
+            is_active=True, category__slug__in=['men', 'women']
+        ).prefetch_related('product_images').order_by('-rating')[:4])
+
+    featured_men = list(Product.objects.filter(
+        is_active=True, category__slug='men'
+    ).prefetch_related('product_images')[:4])
+    
+    featured_women = list(Product.objects.filter(
+        is_active=True, category__slug='women'
+    ).prefetch_related('product_images')[:4])
+
+    featured_kicks = featured_men + featured_women
+
     context = {
-        'featured_kicks': featured_kicks,
         'trending_kicks': trending_kicks,
+        'featured_kicks': featured_kicks,
     }
     return render(request, 'index.html', context)
 

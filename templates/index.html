@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SNEAKER SQUAD | Men & Women Footwear</title>
-  <meta name="description" content="Discover premium sneakers for Men & Women at Sneaker Squad.">
+  <title>SNEAKER SQUAD | 100% Authentic Deadstock Sneakers & Streetwear</title>
+  <meta name="description" content="India's premier destination for 100% verified authentic sneakers, retro classics, and sneaker care accessories. Shop Men's and Women's collections now.">
   
   <script>
     if (localStorage.getItem('sneaker_store_theme') === 'light') {
@@ -16,7 +16,7 @@
   <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- PWA Manifest & Mobile App Capabilities -->
@@ -27,7 +27,7 @@
   <meta name="apple-mobile-web-app-title" content="SneakersSquad">
   <link rel="apple-touch-icon" href="{% static 'img/pwa-icon-192.png' %}">
 
-  <!-- CSS Files -->
+  <!-- Core Stylesheets -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="{% static 'css/landing.css' %}">
   <link rel="stylesheet" href="{% static 'css/pwa-install.css' %}">
@@ -35,20 +35,23 @@
 
 <body>
 
+  <!-- Sticky Navbar Header -->
   {% include 'header.html' %}
 
-  <!-- Simple Men & Women Split Screen -->
-  <main class="split-container">
+  <!-- ====================================================================
+       1. HERO SPLIT SHOWCASE (MEN vs WOMEN)
+       ==================================================================== -->
+  <section class="home-split-hero" aria-label="Hero Split Showcase">
 
     <!-- MEN SECTION (Left on Laptop, Top on Mobile) -->
-    <a href="/men" class="split-side" aria-label="Shop Men's Collection">
+    <a href="/men" class="split-side" aria-label="Shop Men's Sneaker Collection">
       <div class="split-bg" style="background-image: url('{% static 'img/men_shoes-banner.jpg' %}');"></div>
       <div class="split-overlay"></div>
       <div class="split-box">
         <span class="split-tag"><i class="fa-solid fa-fire" style="color: #ff5a1f;"></i> Men's Kicks</span>
         <h2 class="split-title">MEN</h2>
         <span class="split-btn">
-          Shop Men <i class="fa-solid fa-arrow-right"></i>
+          Shop Men's Drop <i class="fa-solid fa-arrow-right"></i>
         </span>
       </div>
     </a>
@@ -57,53 +60,249 @@
     <div class="divider-line"></div>
 
     <!-- WOMEN SECTION (Right on Laptop, Bottom on Mobile) -->
-    <a href="/women" class="split-side" aria-label="Shop Women's Collection">
+    <a href="/women" class="split-side" aria-label="Shop Women's Sneaker Collection">
       <div class="split-bg" style="background-image: url('{% static 'img/women_shoes-banner.jpg' %}');"></div>
       <div class="split-overlay"></div>
       <div class="split-box">
-        <span class="split-tag"><i class="fa-solid fa-sparkles"></i> Women's Kicks</span>
+        <span class="split-tag"><i class="fa-solid fa-wand-magic-sparkles" style="color: #ec4899;"></i> Women's Kicks</span>
         <h2 class="split-title">WOMEN</h2>
         <span class="split-btn">
-          Shop Women <i class="fa-solid fa-arrow-right"></i>
+          Shop Women's Drop <i class="fa-solid fa-arrow-right"></i>
         </span>
       </div>
     </a>
 
-  </main>
+  </section>
 
-  <!-- Clean Bottom Bar -->
-  <div class="footer-bar">
-    <div class="footer-badge">
-      <i class="fa-solid fa-shield-halved" style="color: #ff5a1f;"></i>
-      <span>100% Verified Authentic Sneakers</span>
-    </div>
-    <div class="footer-badge">
-      <i class="fa-solid fa-truck-fast" style="color: #ff5a1f;"></i>
-      <span>Free Express Shipping Across India</span>
+  <!-- ====================================================================
+       2. VALUE PROPOSITIONS & TRUST BADGES
+       ==================================================================== -->
+  <div class="home-features-bar">
+    <div class="container">
+      <div class="home-features-grid">
+        <div class="home-feature-item">
+          <div class="home-feature-icon"><i class="fa-solid fa-shield-check"></i></div>
+          <div>
+            <div class="home-feature-title">100% Deadstock Verified</div>
+            <div class="home-feature-desc">Physical inspection on every pair</div>
+          </div>
+        </div>
+        <div class="home-feature-item">
+          <div class="home-feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <div>
+            <div class="home-feature-title">Free Express Shipping</div>
+            <div class="home-feature-desc">Box-protected delivery over ₹2,999</div>
+          </div>
+        </div>
+        <div class="home-feature-item">
+          <div class="home-feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+          <div>
+            <div class="home-feature-title">7-Day Easy Returns</div>
+            <div class="home-feature-desc">Hassle-free size exchanges</div>
+          </div>
+        </div>
+        <div class="home-feature-item">
+          <div class="home-feature-icon"><i class="fa-solid fa-headset"></i></div>
+          <div>
+            <div class="home-feature-title">24/7 Squad Support</div>
+            <div class="home-feature-desc">Direct WhatsApp & phone assistance</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Slide-over Cart Drawer Component -->
-  <div class="cart-drawer-overlay" id="cart-drawer-overlay" onclick="closeCartDrawer()"></div>
-  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
-    <div class="cart-drawer-header">
-      <h3><i class="fa-solid fa-bag-shopping" style="color: var(--primary);"></i> Your Bag</h3>
-      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Bag" onclick="closeCartDrawer()"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <div class="cart-drawer-body" id="cart-drawer-body"></div>
-    <div class="cart-drawer-footer">
-      <div class="cart-subtotal-row">
-        <span>Subtotal</span>
-        <span id="cart-subtotal">₹0</span>
-      </div>
-      <button class="btn-checkout" id="btn-checkout">Proceed to Checkout</button>
-    </div>
-  </aside>
+  <main>
+    <!-- ====================================================================
+         3. TRENDING DROPS (4 HYPE PAIRS)
+         ==================================================================== -->
+    <section class="home-section" id="trending-kicks">
+      <div class="container">
+        
+        <div class="home-section-header">
+          <div>
+            <span class="home-section-tag">🛹 Hype Drops</span>
+            <h2 class="home-section-title">Trending Sneaker Drops</h2>
+          </div>
+          <a href="/men" class="home-section-link">View All Men's Drops <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
 
-  <script src="{% static 'js/products-data.js' %}?v=6.0"></script>
-  <script src="{% static 'js/script.js' %}?v=6.0"></script>
-  <script src="{% static 'js/auth-drawer.js' %}?v=6.0"></script>
-  <script src="{% static 'js/pwa-install.js' %}?v=6.0"></script>
+        <div class="product-grid">
+          {% for product in trending_kicks %}
+          <article class="product-card" data-id="{{ product.code }}" data-category="{{ product.category.slug|default:'' }}" data-price="{{ product.price }}" data-rating="{{ product.rating }}">
+            <div class="product-image-box">
+              {% if product.badge_text %}
+                <span class="product-badge {{ product.badge_style }}">{{ product.badge_text }}</span>
+              {% elif product.is_trending %}
+                <span class="product-badge hot">Trending</span>
+              {% elif product.gender == 'unisex' %}
+                <span class="product-badge" style="background:#8b5cf6;">Unisex</span>
+              {% endif %}
+              <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <a href="/product-detail?id={{ product.code }}" class="product-img-link" title="{{ product.title|default:product.name }}">
+                <img src="{{ product.primary_image_url }}" alt="{{ product.title|default:product.name }}" onerror="this.onerror=null; this.src='/static/img/shoe-1.jpg';" loading="lazy">
+              </a>
+            </div>
+            <div class="product-info">
+              <span class="product-category-meta">{{ product.brand }} • {% if product.subcategory %}{{ product.subcategory.name }}{% elif product.gender == 'unisex' %}Unisex{% else %}{{ product.category.name|capfirst }}{% endif %}</span>
+              <h3 class="product-title"><a href="/product-detail?id={{ product.code }}">{{ product.title|default:product.name }}</a></h3>
+              <div class="product-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-value">{{ product.rating }}</span>
+                <span class="rating-count">({{ product.reviews_count }})</span>
+              </div>
+              <div class="product-price-row">
+                <span class="current-price">₹{{ product.price|floatformat:0 }}</span>
+                {% if product.original_price and product.original_price > product.price %}
+                  <span class="original-price">₹{{ product.original_price|floatformat:0 }}</span>
+                  <span class="discount-badge">-{{ product.get_discount_percentage }}%</span>
+                {% endif %}
+              </div>
+              <div class="product-action-row">
+                <a href="/product-detail?id={{ product.code }}" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+                <button class="btn-add-cart" onclick="addToCart('{{ product.code }}')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. EXPLORE CATEGORIES (3 CARDS: MEN, WOMEN, ACCESSORIES)
+         ==================================================================== -->
+    <section class="home-section" style="padding-top: 10px;">
+      <div class="container">
+        
+        <div class="home-section-header">
+          <div>
+            <span class="home-section-tag">Explore By Category</span>
+            <h2 class="home-section-title">The Complete Squad Lineup</h2>
+          </div>
+        </div>
+
+        <div class="home-category-grid">
+          
+          <!-- Card 1: Men's Sneakers -->
+          <a href="/men" class="home-cat-card" aria-label="Men's Sneaker Lineup">
+            <div class="home-cat-bg" style="background-image: url('{% static 'img/men_shoes-banner.jpg' %}');"></div>
+            <div class="home-cat-overlay"></div>
+            <div class="home-cat-content">
+              <span class="home-cat-pill">Performance & Street</span>
+              <h3 class="home-cat-title">Men's Sneakers</h3>
+              <span class="home-cat-action">Shop High-Tops & Retro Kicks <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- Card 2: Women's Sneakers -->
+          <a href="/women" class="home-cat-card" aria-label="Women's Sneaker Lineup">
+            <div class="home-cat-bg" style="background-image: url('{% static 'img/women_shoes-banner.jpg' %}');"></div>
+            <div class="home-cat-overlay"></div>
+            <div class="home-cat-content">
+              <span class="home-cat-pill">Platform & Pastel</span>
+              <h3 class="home-cat-title">Women's Sneakers</h3>
+              <span class="home-cat-action">Shop Platforms & Runners <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- Card 3: Shoe Care & Accessories -->
+          <a href="/accessories" class="home-cat-card" aria-label="Shoe Care and Accessories">
+            <div class="home-cat-bg" style="background-image: url('{% static 'img/accessories-2.jpg' %}');"></div>
+            <div class="home-cat-overlay"></div>
+            <div class="home-cat-content">
+              <span class="home-cat-pill">Laces, Kits & Crates</span>
+              <h3 class="home-cat-title">Shoe Accessories</h3>
+              <span class="home-cat-action">Shop Care & Display Crates <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. FEATURED SQUAD ROTATION (8 SNEAKERS: 4 MEN + 4 WOMEN)
+         ==================================================================== -->
+    <section class="home-section" id="featured-kicks">
+      <div class="container">
+        
+        <div class="home-section-header">
+          <div>
+            <span class="home-section-tag">🔥 Squad Curated</span>
+            <h2 class="home-section-title">Featured Sneaker Rotation</h2>
+          </div>
+          <a href="/women" class="home-section-link">View All Women's Drops <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="product-grid">
+          {% for product in featured_kicks %}
+          <article class="product-card" data-id="{{ product.code }}" data-category="{{ product.category.slug|default:'' }}" data-price="{{ product.price }}" data-rating="{{ product.rating }}">
+            <div class="product-image-box">
+              {% if product.badge_text %}
+                <span class="product-badge {{ product.badge_style }}">{{ product.badge_text }}</span>
+              {% elif product.is_trending %}
+                <span class="product-badge hot">Trending</span>
+              {% elif product.gender == 'unisex' %}
+                <span class="product-badge" style="background:#8b5cf6;">Unisex</span>
+              {% endif %}
+              <button class="wishlist-btn" title="Add to Wishlist" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <a href="/product-detail?id={{ product.code }}" class="product-img-link" title="{{ product.title|default:product.name }}">
+                <img src="{{ product.primary_image_url }}" alt="{{ product.title|default:product.name }}" onerror="this.onerror=null; this.src='/static/img/shoe-1.jpg';" loading="lazy">
+              </a>
+            </div>
+            <div class="product-info">
+              <span class="product-category-meta">{{ product.brand }} • {% if product.subcategory %}{{ product.subcategory.name }}{% elif product.gender == 'unisex' %}Unisex{% else %}{{ product.category.name|capfirst }}{% endif %}</span>
+              <h3 class="product-title"><a href="/product-detail?id={{ product.code }}">{{ product.title|default:product.name }}</a></h3>
+              <div class="product-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="rating-value">{{ product.rating }}</span>
+                <span class="rating-count">({{ product.reviews_count }})</span>
+              </div>
+              <div class="product-price-row">
+                <span class="current-price">₹{{ product.price|floatformat:0 }}</span>
+                {% if product.original_price and product.original_price > product.price %}
+                  <span class="original-price">₹{{ product.original_price|floatformat:0 }}</span>
+                  <span class="discount-badge">-{{ product.get_discount_percentage }}%</span>
+                {% endif %}
+              </div>
+              <div class="product-action-row">
+                <a href="/product-detail?id={{ product.code }}" class="btn-view-product"><i class="fa-solid fa-eye"></i> View</a>
+                <button class="btn-add-cart" onclick="addToCart('{{ product.code }}')"><i class="fa-solid fa-cart-plus"></i> Add</button>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. BRAND STORY HIGHLIGHT STRIP
+         ==================================================================== -->
+    <section class="home-brand-strip">
+      <div class="container">
+        <div class="home-brand-box">
+          <div class="home-brand-text">
+            <span class="home-brand-badge"><i class="fa-solid fa-bolt"></i> The Deadstock Movement</span>
+            <h2 class="home-brand-heading">Built By Sneakerheads, For Sneakerheads.</h2>
+            <p class="home-brand-desc">
+              Zero counterfeits. Zero crushed boxes. Every pair passes physical verification before dispatch so your unboxing experience is 100% legendary.
+            </p>
+          </div>
+          <a href="/about/" class="home-brand-cta">
+            Learn About Us & Our Mission <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Complete Site Footer with Auth Drawer, Checkout Modal, & AI Chatbot Widget -->
+  {% include 'footer.html' %}
+
 </body>
 </html>
-
